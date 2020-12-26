@@ -6,17 +6,17 @@ import RoutinesList from '../components/RoutinesList';
 
 class RoutinesPage extends Component {
     constructor(props) {
-        super(props);
-        this.state = {routines: []}
+        super(props)
+        this.state = {}
     }
 
-    
+
     //   componentDidMount(){
-        //     // this.props.fetchRoutines()
-        // }
-        render() { 
+    //     // this.props.fetchRoutines()
+    // }
+  render() { 
             return (<>
-                {console.log(this.props)}
+                {console.log('<ROUTINESPAGE/>',this.props.routines)}
         <p> Routines Page</p>
         {/* <NewRoutineForm routines={this.props.routines}/> */}
         <RoutinesList routines={this.props.routines}/>
