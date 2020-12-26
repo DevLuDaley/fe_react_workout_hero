@@ -173,15 +173,15 @@ const RoutinesList = (props) =>  {
   return (
     <Fragment>
     {/* {console.log(props.routines.length())} */}
-    {console.log(props)}
-         {props.routines && props.routines.map(routine =>
+    {console.log('props from <RoutinesList/>',props.routines)}
+         {props.routines ? props.routines.map(routine =>
             <ul key={routine.id} className='routines-list' style={{listStyleType: 'none'}}>
                   <li key={routine.id}>
                       <Link to={`/routines/${routine.id}`}>
-                            {routine.name}
-                            <button>
-                                {routine.recipes ? routine.recipes.length : null}
-                            </button>
+                            {routine.routine_name}
+                            {<button>
+                                {routine.routine_name.length ? routine.routine_name.length : null}
+                            </button> }
                       </Link>
 
                   </li>
@@ -190,7 +190,7 @@ const RoutinesList = (props) =>  {
                                 {/* Delete
                             </button> */}
             </ul>
-            )
+            ) : "nothing"
             }
         {/* </Fragment> */}
 
