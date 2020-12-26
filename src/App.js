@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Routines from './components/RoutinesList'
+// import logo from './logo.svg';
+// import './App.css';
+// import Routines from './components/RoutinesList'
 import MainContainer from './containers/MainContainer'
-import RoutinesContainer from './containers/RoutinesContainer'
+// import RoutinesContainer from './containers/RoutinesContainer'
 
 
 
