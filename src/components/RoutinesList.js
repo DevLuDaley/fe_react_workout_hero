@@ -174,19 +174,28 @@ const RoutinesList = (props) =>  {
     <Fragment>
     {/* {console.log(props.routines.length())} */}
     {console.log('props from <RoutinesList/>',props.routines)}
-         {props.routines ? props.routines.map(routine =>
-            <ul key={routine.id} className='routines-list all-routines' style={{listStyleType: 'none'}}>
-                  <li key={routine.id}>
-                      <Link to={`/routines/${routine.id}`}>
-                      <h1 className='routine-names'>
-                            {routine.routine_name}
-                      </h1>
-                            {<button className='btns-all'>
-                                {routine.workouts ? routine.workouts.length : null}
-                            </button> }
+         {props.routines ? 
+              props.routines.map(routine =>
+                <ul key={routine.id} className='routines-list all-routines' style={{listStyleType: 'none'}}>
+                <div className='routine-name-btns-wrapper'>
+                  
+                    <li key={routine.id}>
+                        <Link to={`/routines/${routine.id}`}>
+                        <h1 className='routine-names'>
+                              {routine.routine_name}
+                        </h1>
+                          {<button className='btns-all'>
+                                  {routine.workouts ? routine.workouts.length 
+                                  
+                                  : null}
+                           </button> }
                       </Link>
+                               {routine.workouts ? routine.workouts.length 
+                                
+                                : null}
 
                   </li>
+                </div>
                             {/* <button onClick={handleDeleteroutine} id={`btn-delete-routine-${routine.id}`} className='btn-delete-routine'> */}
                             {/* <button onClick={deleteroutine} id={routine.id} className='btn-delete-routine'> */}
                                 {/* Delete
