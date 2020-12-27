@@ -175,12 +175,14 @@ const RoutinesList = (props) =>  {
     {/* {console.log(props.routines.length())} */}
     {console.log('props from <RoutinesList/>',props.routines)}
          {props.routines ? props.routines.map(routine =>
-            <ul key={routine.id} className='routines-list' style={{listStyleType: 'none'}}>
+            <ul key={routine.id} className='routines-list all-routines' style={{listStyleType: 'none'}}>
                   <li key={routine.id}>
                       <Link to={`/routines/${routine.id}`}>
+                      <h1 className='routine-names'>
                             {routine.routine_name}
-                            {<button>
-                                {routine.routine_name.length ? routine.routine_name.length : null}
+                      </h1>
+                            {<button className='btns-all'>
+                                {routine.workouts ? routine.workouts.length : null}
                             </button> }
                       </Link>
 

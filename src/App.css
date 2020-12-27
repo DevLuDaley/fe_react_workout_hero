@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+* {
+    margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-image: url('./styles/static/free-weights-gym-equipment.jpg');
+    background-repeat: no-repeat,
+        repeat;
+    background-color: #25657c;
+    background-blend-mode: lighten;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    display: grid;
+    opacity: 95%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#main-container {
+    padding: 250px;
+    margin: 50px;
+    height: auto;
+    width: auto;
+    background: rgb(44, 22, 66);
+    opacity: 95%;
 }
 
-.App-link {
-  color: #61dafb;
+.btns-all {
+    border-radius: 8px;
+    font-size: 13px;
+    background-color: #4c9baf;
+    color: rgb(87, 31, 40);
+    opacity: 0.9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#btn-toggle-forms {
+    height: 15px;
+    width: 100px;
+}
+
+.all-routines {
+    padding: 15px;
+    margin: auto;
+    height: auto;
+    width: auto;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.all-routine-edit-btns {
+    font-size: 13px;
+}
+
+.routine-names {
+    color: rgb(55, 167, 204);
+    font-size: 20px;
+}
+
+.routine-name-btns-wrapper {
+    background-color: rgb(10, 25, 43);
+    display: flex;
+    padding: 1;
+    grid-column-gap: 1em;
+    opacity: 70%;
+}
+
+.routine-workout-block {
+    grid-template-rows: 25% auto;
+    grid-template-columns: 25% 10px 10px auto;
+}
+
+.all-routine-workouts {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 1;
+    border: 2px solid pink;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.routine-workout-names {
+    color: rgb(139, 139, 89);
+    border: 2px solid rgb(149, 169, 187);
+    border-radius: 5px;
+    padding: 7px;
+    margin: 5px;
+}
+
+#routines-container {
+    background: rgb(45, 59, 87)
+}
+
+
+input {
+    font-size: 1.0em;
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.87;
+}
+
+.delete-workout-link {
+    color: red;
+}
+
+.workout-list {
+    background-color: #25657c;
+}
+
+#new-routine-container {
+    background-color: rgb(44, 22, 66);
+}
+
+#new-routine-form>label {
+    color: rgb(139, 139, 89);
+}
+
+#new-routine-form {
+    text-align: center
+}
+
+.input-text {
+    background-color: #25657c;
+    color: rgb(87, 31, 40);
+}
+
+#app-title {
+    color: rgb(55, 167, 204);
+    font-size: 30px;
+    /* position: center; */
+    text-align: center
+}
+
+.edit-forms {
+    padding: 10px;
+    border: 2px dotted rgb(27, 44, 27);
+    border-radius: 5px;
 }
