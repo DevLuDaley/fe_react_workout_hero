@@ -182,7 +182,7 @@ const RoutinesList = (props) =>  {
                             {routine.routine_name}
                       </h1>
                             {<button className='btns-all'>
-                                {routine.routine_name.length ? routine.routine_name.length : null}
+                                {routine.workouts ? routine.workouts.length : null}
                             </button> }
                       </Link>
 
