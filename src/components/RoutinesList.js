@@ -206,7 +206,7 @@ const RoutinesList = (props) =>  {
                             )}
                         </section>
                       : null}
-
+ 
                   </li>
                             {/* <button onClick={handleDeleteroutine} id={`btn-delete-routine-${routine.id}`} className='btn-delete-routine'> */}
                             {/* <button onClick={deleteroutine} id={routine.id} className='btn-delete-routine'> */}
