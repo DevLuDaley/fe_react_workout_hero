@@ -3,14 +3,14 @@ import {Link} from 'react-router-dom';
 
 
 const RoutinesList = (props) =>  {
-  // constructor(props) {
+    // constructor(props) {
     // this.routines = []
     // this.initBindingsAndEventListeners()
     // this.adapter = new RoutinesAdapter()
     // this.fetchAndLoadRoutines()
     // this.assignRoutines()
     // this.state = {routines: []}
-  // }
+    // }
 
   // const initBindingsAndEventListeners = () => {
   //   this.routinesNode = document.getElementById('routines-container')
