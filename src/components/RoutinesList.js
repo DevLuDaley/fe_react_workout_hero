@@ -177,30 +177,43 @@ const RoutinesList = (props) =>  {
          {props.routines ? 
               props.routines.map(routine =>
                 <ul key={routine.id} className='routines-list all-routines' style={{listStyleType: 'none'}}>
-                <div className='routine-name-btns-wrapper'>
                   
                     <li key={routine.id}>
+                      <div className='routine-name-btns-wrapper'>
                         <Link to={`/routines/${routine.id}`}>
                         <h1 className='routine-names'>
                               {routine.routine_name}
-                        </h1>
-                          {<button className='btns-all'>
-                                  {routine.workouts ? routine.workouts.length 
-                                  
-                                  : null}
-                           </button> }
-                      </Link>
-                               {routine.workouts ? routine.workouts.length 
-                                
-                                : null}
+
+                                  {routine.workouts.length > 0 ?
+                            <button className='btns-all'>
+                                  {routine.workouts.length }
+                           </button> 
+                      : null}
+                          </h1>
+                        </Link>
+                      </div>
+                      
+                      {
+                        routine.workouts ? 
+                        <section id={`routine-${routine.id}-workouts`} className='all-routine-workouts'>
+                            {routine.workouts.map(workout => 
+                            <div class='routine-workout-names'>
+                                {workout.workout_name}
+                    
+                                <section class='routine-workout-details'>
+                                </section>
+                            </div>                      
+                            )}
+                        </section>
+                      : null}
 
                   </li>
-                </div>
                             {/* <button onClick={handleDeleteroutine} id={`btn-delete-routine-${routine.id}`} className='btn-delete-routine'> */}
                             {/* <button onClick={deleteroutine} id={routine.id} className='btn-delete-routine'> */}
                                 {/* Delete
                             </button> */}
             </ul>
+            
             ) : "nothing"
             }
         {/* </Fragment> */}
