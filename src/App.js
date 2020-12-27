@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 // import Routines from './components/RoutinesList'
 import MainContainer from './containers/MainContainer'
 // import RoutinesContainer from './containers/RoutinesContainer'
@@ -11,10 +11,10 @@ function App() {
   return (
     <Fragment>
       
-    <div className="App">
+    <div className="App container">
       <header className="App-header">
       </header>
-      <MainContainer/>
+      <MainContainer id="main-container" />
     </div>
     </Fragment>
   );
