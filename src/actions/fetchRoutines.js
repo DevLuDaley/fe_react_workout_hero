@@ -3,7 +3,8 @@ export function fetchRoutines() {
     // ! bring in dispatch so that we can async if not the connect will handle synchronously
     // fetch('https://be-hoop-drills.herokuapp.com/api/v1/routines'
     return(dispatch) => { 
-        fetch('http://localhost:3000/api/v1/routines', 
+        // fetch('http://localhost:3000/api/v1/routines', 
+        fetch('https://be-workout-hero.herokuapp.com/api/v1/routines', 
         {
             headers: {
                 "Content-Type": "application/json",
