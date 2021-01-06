@@ -15,12 +15,12 @@ class RoutinesPage extends Component {
     //     // this.props.fetchRoutines()
     // }
   render() { 
-            return (<>
-                {console.log('<ROUTINESPAGE/>',this.props.routines)}
-        <p> Routines Page</p>
-        {/* <NewRoutineForm routines={this.props.routines}/> */}
-        <RoutinesList routines={this.props.routines}/>
-         </>  );
+            return (
+            <>
+                {/* <NewRoutineForm routines={this.props.routines}/> */}
+                <RoutinesList routines={this.props.routines}/>
+            </>
+            );
     }
 }
  
