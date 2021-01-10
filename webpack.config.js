@@ -16,14 +16,11 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
-            }, 
+            },
             {
-        test: /\.(png|jpg)$/,
-        loader: 'url-loader',
-        query: {
-          limit: 8192
-        }
-    }
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader'
+            }
         ]
     },
     resolve: { extensions: ['*', '.js', '.jsx'] },
