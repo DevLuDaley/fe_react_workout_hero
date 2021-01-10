@@ -1,2 +1,2 @@
-{ "root": "build/", "routes": { "/**": "index.html" } }
+{ "root": "public/", "routes": { "/**": "index.html" } }
 
