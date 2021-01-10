@@ -19,7 +19,9 @@
   "scripts": {
     "start": "PORT=3005 react-scripts start",
     "heroku-start": "react-scripts index.js",
-    "build": "react-scripts build",
+    "sbuild": "react-scripts build",
+    "build": "webpack --mode production",
+    "dev": "webpack serve",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -46,6 +48,8 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.1",
     "webpack": "^5.12.3",
     "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.1"
