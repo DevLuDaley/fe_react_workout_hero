@@ -1,7 +1,5 @@
 {
   "root": "dist/",
-  "clean_urls": false,
-   "encoding": "UTF-8",
   "routes":
    {
       "/**": "index.html" 
