@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ManifestPlugin = require('webpack-manifest-plugin')
+
 
 module.exports = {
     entry: './src/index.js',
@@ -42,6 +44,9 @@ module.exports = {
         new HtmlWebpackPlugin({
          template: path.resolve( __dirname, 'public/index.html' ),
          filename: 'index.html'
-      }), new webpack.NoEmitOnErrorsPlugin()
+      }), new webpack.NoEmitOnErrorsPlugin(),
+       new ManifestPlugin({
+      fileName: 'manifest.json'
+    })
 ]
 };

@@ -1,0 +1,5 @@
+{
+  "main.js": "/dist/bundle.js",
+  "1.bundle.js": "/dist/1.bundle.js",
+  "index.html": "/dist/index.html"
+}
