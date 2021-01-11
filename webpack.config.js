@@ -42,7 +42,7 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(), 
         new HtmlWebpackPlugin({
-         template: path.resolve( __dirname, 'dist/index.html' ),
+         template: path.resolve( __dirname, 'public/index.html' ),
          filename: 'index.html'
       }), new webpack.NoEmitOnErrorsPlugin(),
     //    new ManifestPlugin({
