@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react'
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux'
+
 import deleteRoutine from '../actions/deleteRoutine'
 
 
@@ -234,4 +236,5 @@ const RoutinesList = (props) =>  {
     </Fragment>
   )
 }
-export default RoutinesList
+// export default RoutinesList
+export default connect(null, {deleteRoutine}) (RoutinesList);
