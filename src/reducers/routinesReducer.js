@@ -18,7 +18,7 @@ export default function routinesReducer(state = intialState, action) {
             const filteredRoutines = state.routines.filter(routine => routine.id !== action.payload);
             return {...state, routines: filteredRoutines}
 
-        // case 'ADD_ROUTINE_WORKOUT':
+        // case 'ADD_ROUTINE_WORKOUT': 
             
         //     let routineRecipes =  state.routines.map(routine => {
         //         if (routine.id == action.payload.id) {
