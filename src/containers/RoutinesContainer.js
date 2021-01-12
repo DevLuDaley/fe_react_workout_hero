@@ -27,7 +27,7 @@ class RoutinesContainer extends Component {
         // this.fetchRoutines()
         this.props.fetchRoutines()
     }
-    render() { 
+    render() {
         return (
             <Fragment>
             {/* <p> Routines Container</p> */}
@@ -39,19 +39,19 @@ class RoutinesContainer extends Component {
             <Route exact path='/routines' render={(routerProps) => <RoutinesPage {...routerProps} routines={this.props.routines} rando="words"/>}/>
 
             {/* <Route exact path='/routines/new' render={(routerProps) => <NewRoutinesContainer {...routerProps} routines={this.props.routines}/>}/> */}
-            
-            {/* <Route exact path='/routines/:id' render={(routerProps) => <Routine {...routerProps} routines={this.props.routines}  
+
+            {/* <Route exact path='/routines/:id' render={(routerProps) => <Routine {...routerProps} routines={this.props.routines}
              />}/> */}
             {/* <Route exact path='/routiney' render={(routerProps) => <UpdateRoutineForm {...routerProps} routines={this.props.routines}
              />}/> */}
 
             {/* <Route exact path='/routines/:id/edit' render={(routerProps) => <UpdateRoutinePage {...routerProps} routines={this.props.routines}
              />}/> */}
-            
+
             </Switch>
         </Fragment> );
-            
-            
+
+
             // console.log('RoutinesContainer -> render -> this.props.routines', this.props.routines);
     }
 }
