@@ -205,9 +205,9 @@ const RoutinesList = (props) =>  {
                       
                           </h1>
                         </Link>
-                                              <button onClick={handleDeleteRoutine} id={`btn-delete-routine-${routine.id}`} className='btn-delete-routine'>
+                                <button onClick={handleDeleteRoutine} id={`btn-delete-routine-${routine.id}`} className='btn-delete-routine'>
                             {/* <button onClick={deleteRoutine} id={routine.id} className='btn-delete-routine'> */}
-                                Delete
+                                Delete Routine
                             </button>
                       </div>
                       
