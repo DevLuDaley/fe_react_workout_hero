@@ -32,6 +32,8 @@ class RoutinesContainer extends Component {
             <Fragment>
             {/* <p> Routines Container</p> */}
             <Switch>
+            <Route exact path='/' render={(routerProps) => <RoutinesPage {...routerProps} routines={this.props.routines} rando="words"/>}/>
+
             <Route exact path='/' component={HomePage}/>
 
             <Route exact path='/routines' render={(routerProps) => <RoutinesPage {...routerProps} routines={this.props.routines} rando="words"/>}/>
