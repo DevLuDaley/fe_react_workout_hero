@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import {Link} from 'react-router-dom';
+import deleteRoutine from '../actions/deleteRoutine'
 
 
 const RoutinesList = (props) =>  {
@@ -169,11 +170,21 @@ const RoutinesList = (props) =>  {
   // routinesHTML() {
   //   return this.routines.map( routine => 
   //     routine.assignRoutines()).join('')
+
+
   //   }
+      const handleDeleteRoutine = (e) => {
+          if (props.routines){
+        const targetId = e.target.id.replace("btn-delete-routine-", "")
+        const clickedRoutine = props.routines.find(routine => routine.id == targetId)
+        props.deleteRoutine(clickedRoutine)
+//      this.props.delete(clickedRoutine)
+        }
+    }
   return (
     <Fragment>
     {/* {console.log(props.routines.length())} */}
-    {console.log('props from <RoutinesList/>',props.routines)}
+    {/* {console.log('props from <RoutinesList/>',props.routines)} */}
          {props.routines ? 
               props.routines.map(routine =>
                 <ul key={routine.id} className='routines-list all-routines' style={{listStyleType: 'none'}}>
@@ -189,8 +200,13 @@ const RoutinesList = (props) =>  {
                                   {routine.workouts.length }
                            </button> 
                       : null}
+                      
                           </h1>
                         </Link>
+                                              <button onClick={handleDeleteRoutine} id={`btn-delete-routine-${routine.id}`} className='btn-delete-routine'>
+                            {/* <button onClick={deleteRoutine} id={routine.id} className='btn-delete-routine'> */}
+                                Delete
+                            </button>
                       </div>
                       
                       {
