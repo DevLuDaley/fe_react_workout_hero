@@ -2,6 +2,7 @@ const intialState = {routines: []}
 
 export default function routinesReducer(state = intialState, action) {
 // debugger;
+console.log(action);
     switch (action.type) {
         case 'FETCH_ROUTINES':        // debugger;
             return {routines: action.payload}
@@ -15,7 +16,7 @@ export default function routinesReducer(state = intialState, action) {
         //     return {routines: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)}
         //         // return Object.assign({}, state, {routines: currentRoutines, routine: currentRoutine})
         case 'DELETE_ROUTINE':
-            const filteredRoutines = state.routines.filter(routine => routine.id !== action.payload);
+            const filteredRoutines = state.routines.filter(routine => routine.id !== action.payload.routineId);
             return {...state, routines: filteredRoutines}
 
         // case 'ADD_ROUTINE_WORKOUT': 
