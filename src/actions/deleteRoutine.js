@@ -2,14 +2,12 @@ export const deleteRoutine = (routineData) => {
 
     console.log('🚀 ~ file: deleteRoutine.js ~ line 2 ~ deleteRoutine ~ routineData', routineData);
 
-    const baseUrl = 'http://localhost:3000/api/v1/routines/'
+    // const baseUrl = 'http://localhost:3000/api/v1/routines/'
+    const baseUrl = 'https://be-workout-hero2.herokuapp.com/api/v1/routines/'
     const deleteRoutineUrl = (baseUrl + routineData.id)
-    // console.log('🚀 ~ file: deleteRoutine.js ~ line 3 ~ deleteRoutine ~ baseUrl', baseUrl);
-    // console.log('🚀 ~ file: deleteRoutine.js ~ line 5 ~ deleteRoutine ~ routineUrl', routineUrl);
-    // console.log('🚀 ~ file: deleteRoutine.js ~ line 7 ~ deleteRoutine ~ data.id', routineData.id);
-    // console.log('🚀 ~ file: deleteRoutine.js ~ line 8 ~ return ~ data', routineData);
+
     return (dispatch) => {
-        fetch(deleteRoutineUrl, { 
+        fetch(deleteRoutineUrl, {
                 method: 'DELETE'
     })
         .then(response => response.json())
