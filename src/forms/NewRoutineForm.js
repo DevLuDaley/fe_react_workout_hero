@@ -8,7 +8,7 @@ import {addRoutine} from '../actions/addRoutine'
 
 class NewRoutineForm extends Component {
     state = {
-        name:''
+        routine_name:''
     }
     
     handleChange = (e) => {
@@ -17,6 +17,9 @@ class NewRoutineForm extends Component {
         this.setState({
             [e.target.name]: e.target.value
         })
+            console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.routine_name', e.target.routine_name);
+        console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.name', e.target.name);
+        console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.value', e.target.value);
         // console.log('NewRoutineForm -> e.target.image_url', e.target.image_url);
     }
 
@@ -26,7 +29,7 @@ class NewRoutineForm extends Component {
         this.props.addRoutine(this.state)
         // alert(`${[this.state.name]} created!`)
         this.setState({
-      name: ''
+      routine_name: ''
       })
     }
 
@@ -37,17 +40,16 @@ class NewRoutineForm extends Component {
         {/* <RoutinesList/> */}
             <form id='new-routine-form' onSubmit={this.handleSubmit}>
 
-                <label> Routine Name:</label> 
-                    <input type="text" placeholder='enter routine name...' value={this.state.name} name="name" onChange={this.handleChange}/>
-                        <button type="submit">Create Routine</button>
-                    {/* {console.log('NewRoutineForm -> render -> this.state.image_url', this.state.image_url)}
-                    {console.log('NewRoutineForm -> render -> this.state.category', this.state.category)} */}
-            </form>  
+                <label> Routine Name: </label>
+                <input type="text" placeholder='enter routine name...' value={this.state.name} name="routine_name" routine_name="blank" onChange={this.handleChange}/>
+
+                <button type="submit">Create Routine</button>
+            </form>
             {/* <DrillsContainer/>       */}
             {/* <Route exact path='/routines' render={(routerProps) => <RoutinesList {...routerProps} routines={this.props.routines}/>}/> */}
             {/* <RoutinesList/> */}
             {/* <RoutinesList props={this.props}/> */}
-        </Fragment>  
+        </Fragment>
         );
     }
 }
