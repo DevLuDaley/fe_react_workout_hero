@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import fetchRoutines from '../actions/fetchRoutines'
 import RoutinesList from '../components/RoutinesList';
-// import NewRoutineForm from '../forms/NewRoutineForm';
+import NewRoutineForm from '../forms/NewRoutineForm';
 
 
 class RoutinesPage extends Component {
@@ -17,7 +17,7 @@ class RoutinesPage extends Component {
   render() { 
             return (
             <>
-                {/* <NewRoutineForm routines={this.props.routines}/> */}
+                <NewRoutineForm routines={this.props.routines}/>
                 <RoutinesList routines={this.props.routines}/>
             </>
             );
