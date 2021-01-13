@@ -18,7 +18,7 @@ class RoutinesPage extends Component {
   render() { 
             return (
             <>
-                <OldRoutineForm routines={this.props.routines}/>
+                {/* <OldRoutineForm routines={this.props.routines}/> */}
                 <NewRoutineForm routines={this.props.routines}/>
                 <RoutinesList routines={this.props.routines}/>
             </>

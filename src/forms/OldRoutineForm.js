@@ -1,20 +1,16 @@
-import React, { Component, Fragment } from 'react'
-import { connect, useState, useSelector } from 'react-redux'
-import {Route, Switch} from 'react-router-dom'
-
+import React, { Fragment } from 'react'
+import { connect, useState } from 'react-redux'
 
 import {addRoutine} from '../actions/addRoutine'
-// import RoutinesList from '../components/RoutinesList'
-
 
 const OldRoutineForm = () => {
-    const [name, setName] = useState("");
+    const [routine_name, setRoutineName] = useState("") //;
     // const [itemName, setItemName] = useState("");
 
     const handleChange = (e) => {
 
-        setName({
-            [name]: e.target.value,
+        setRoutineName({
+            [routine_name]: e.target.value,
             [e.target.name]: e.target.value
         })
         // console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.routine_name', e.target.routine_name);
@@ -26,11 +22,11 @@ const OldRoutineForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         // debugger
-        const routineInfo = {routine_name: name}
+        const routineInfo = {routine_name: routine_name}
         // props.addRoutine(e.target.name)
         addRoutine(routineInfo)
         // alert(`${[this.state.name]} created!`)
-        setName({
+        setRoutineName({
       routine_name: ''
       })
     }
@@ -43,7 +39,7 @@ const OldRoutineForm = () => {
             <form id='new-routine-form' onSubmit={handleSubmit}>
 
                 <label> Routine Name: </label>
-                <input type="text" placeholder='enter routine name...' value={name} name="routine_name" routine_name="blank" onChange={handleChange}/>
+                <input type="text" placeholder='enter routine name...' value={routine_name} name="routine_name" routine_name="blank" onChange={handleChange}/>
 
                 <button type="submit">Create Routine</button>
             </form>
@@ -58,8 +54,3 @@ const OldRoutineForm = () => {
 
 
 export default connect(null, {addRoutine})(OldRoutineForm);
-// ! doesn't need mapStateToProps
-// ! doesn't need access to prop
-//  ! doesn;t need to know what is currently in store...only responsible for adding new routine and updating
-
-// ! instead of mapDispatchToProps we're calling {addRutine} and use the connect component

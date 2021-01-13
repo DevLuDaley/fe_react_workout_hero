@@ -5,12 +5,11 @@ import {Route, Switch} from 'react-router-dom'
 import {addRoutine} from '../actions/addRoutine'
 // import RoutinesList from '../components/RoutinesList'
 
-
 class NewRoutineForm extends Component {
     state = {
         routine_name:''
     }
-    
+
     handleChange = (e) => {
         // e.target.value
         // console.log('NewRoutineForm -> e.target.value', e.target.value);
