@@ -7,9 +7,9 @@ console.log(action);
         case 'FETCH_ROUTINES':        // debugger;
             return {routines: action.payload}
 
-        // case 'ADD_ROUTINE':
-        //     let newRoutine = action.payload
-        //     return {...state.routines, routines: state.routines.concat(newRoutine)}
+        case 'ADD_ROUTINE':
+            let newRoutine = action.payload
+            return {...state.routines, routines: state.routines.concat(newRoutine)}
 
         // case 'UPDATE_ROUTINE':
         //     const payloadId = action.payload.id
