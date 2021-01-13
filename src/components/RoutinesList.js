@@ -20,21 +20,21 @@ const RoutinesList = (props) =>  {
   //   this.routineCard = document.getElementById('routine-card')
   //   this.editRoutineForm = document.getElementById('edit-routine-form')
   //   this.newRoutineName = document.getElementById('new-routine-name')
-    
+
     //! Btns
     // this.btnsDelete = document.querySelectorAll('btn-delete')
     // this.deleteBtns = document.getElementsByClassName('all-routine-delete-btns')
-    
+
     // ! bindings that have event listeners
-    
+
     // ! HandleAdd
     // this.routinesForm = document.getElementById('new-routine-form')
     // this.routinesForm.addEventListener('submit', this.handleAddRoutine.bind(this))
-    
+
     // ! HandleDelete
     // this.spaContainer = document.getElementById('spa-container')
     // this.spaContainer.addEventListener('click',this.handleDeleteRoutine.bind(this))
-    
+
     // ! HandleEdit
     // this.spaContainer.addEventListener('click',this.toggleAddWorkoutForm.bind(this))
     // this.spaContainer.addEventListener('submit',this.handleAddWorkout.bind(this))
@@ -44,7 +44,7 @@ const RoutinesList = (props) =>  {
   // const fetchAndLoadRoutines = () => {
   //   this.adapter.getRoutines()
   //   .then(routinesJSON => {
-  //     routinesJSON.forEach( routine => { 
+  //     routinesJSON.forEach( routine => {
   //       this.routines
   //       // push(routine)
   //       // ! create new note instance
@@ -75,7 +75,7 @@ const RoutinesList = (props) =>  {
   //       routineEditForm.classList.remove('hidden')
   //       else {routineEditForm.classList.add('hidden')}
   //     }
-  //   // else{ 
+  //   // else{
   //     // console.log("Lu THE IF STATEMENT IS FALSE")
   //   // }
   // }
@@ -89,15 +89,15 @@ const RoutinesList = (props) =>  {
 
   //   this.adapter.createRoutine(routineParams)
   //   .then(
-  //     (routineJSON) => 
+  //     (routineJSON) =>
   //       this.routines.push(new Routine(routineJSON)) )
   //   .then(
   //     this.assignRoutines.bind(this) )
   //   .then(
-  //     this.routinesForm.reset() 
+  //     this.routinesForm.reset()
   //   )
   // }
-    
+
   // const handleAddWorkout = (event) => {
   //     event.preventDefault()
   //     let targetId = event.target.id.replace("edit-routine-", "")
@@ -105,7 +105,7 @@ const RoutinesList = (props) =>  {
   //     if(event.target != null && event.target.id.includes(`edit-routine-${targetId}`))
   //     {
   //         let id = targetId
-  //         let inputName = document.getElementById(`input-routine-${id}-workout-name`)  
+  //         let inputName = document.getElementById(`input-routine-${id}-workout-name`)
 
   //      const updateRoutineParams = {
   //        "id": id,
@@ -128,20 +128,20 @@ const RoutinesList = (props) =>  {
   //   const { workouts } = addWorkoutResponse
 
   //   let editForm = document.getElementById(`edit-routine-${addWorkoutResponse["id"]}`)
-    
+
   //   let routinesElement = document.getElementById(`routine-${addWorkoutResponse["id"]}-workouts`)
 
   //   // console.log('Routines -> addWorkout -> addWorkoutResponse["id"]', addWorkoutResponse["id"]);
 
   //       let updatedRoutinesElement = addWorkoutResponse["workouts"].map(workout =>
   //         `
-  //         <section 
+  //         <section
   //           class="routine-workout-block"
   //             id='workout-${workout.id}'>
 
   //               <div class='routine-workout-names'>
   //                 ${workout.workout_name}
-  //                 <section 
+  //                 <section
   //                   class='routine-workout-details'>
   //                 </section>
   //               </div>
@@ -163,14 +163,14 @@ const RoutinesList = (props) =>  {
   //     .then( resp => this.removeDeletedRoutine(resp) )
   //   }
   // }
-  
+
   // const removeDeletedRoutine = (deleteResponse) => {
   //   this.routines = this.routines.filter(routine => routine.id !== deleteResponse.routineId)
   //   this.assignRoutines()
   // }
 
   // routinesHTML() {
-  //   return this.routines.map( routine => 
+  //   return this.routines.map( routine =>
   //     routine.assignRoutines()).join('')
 
 
@@ -187,22 +187,22 @@ const RoutinesList = (props) =>  {
     <Fragment>
     {/* {console.log(props.routines.length())} */}
     {/* {console.log('props from <RoutinesList/>',props.routines)} */}
-         {props.routines ? 
+         {props.routines ?
               props.routines.map(routine =>
                 <ul key={routine.id} className='routines-list all-routines' style={{listStyleType: 'none'}}>
-                  
+
                     <li key={routine.id}>
                       <div className='routine-name-btns-wrapper'>
                         <Link to={`/routines/${routine.id}`}>
                         <h1 className='routine-names'>
                               {routine.routine_name}
 
-                                  {routine.workouts.length > 0 ?
+                                  {routine.workouts && routine.workouts.length != 0 ?
                             <button className='btns-all'>
                                   {routine.workouts.length }
-                           </button> 
+                           </button>
                       : null}
-                      
+
                           </h1>
                         </Link>
                                 <button onClick={handleDeleteRoutine} id={`btn-delete-routine-${routine.id}`} className='btn-delete-routine'>
@@ -210,17 +210,17 @@ const RoutinesList = (props) =>  {
                                 Delete Routine
                             </button>
                       </div>
-                      
+
                       {
-                        routine.workouts ? 
+                        routine.workouts ?
                         <section id={`routine-${routine.id}-workouts`} className='all-routine-workouts'>
-                            {routine.workouts.map(workout => 
+                            {routine.workouts.map(workout =>
                             <div class='routine-workout-names'>
                                 {workout.workout_name}
-                    
+
                                 <section class='routine-workout-details'>
                                 </section>
-                            </div>                      
+                            </div>
                             )}
                         </section>
                       : null}
@@ -230,7 +230,7 @@ const RoutinesList = (props) =>  {
                                 {/* Delete
                             </button> */}
             </ul>
-            
+
             ) : "nothing"
             }
     </Fragment>
