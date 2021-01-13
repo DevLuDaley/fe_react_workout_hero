@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import fetchRoutines from '../actions/fetchRoutines'
 import RoutinesList from '../components/RoutinesList';
-// import NewRoutineForm from '../forms/NewRoutineForm';
+import NewRoutineForm from '../forms/NewRoutineForm';
 
 
 class RoutinesPage extends Component {
