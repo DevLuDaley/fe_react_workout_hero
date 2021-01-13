@@ -1,8 +1,8 @@
 const intialState = {routines: []}
 
 export default function routinesReducer(state = intialState, action) {
+// console.log('🚀 ~ file: routinesReducer.js ~ line 4 ~ routinesReducer ~ action', action);
 // debugger;
-console.log(action);
     switch (action.type) {
         case 'FETCH_ROUTINES':        // debugger;
             return {routines: action.payload}
