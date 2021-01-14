@@ -27,9 +27,9 @@ class NewRoutineForm extends Component {
         // debugger
         this.props.addRoutine(this.state)
         // alert(`${[this.state.name]} created!`)
-        this.setState({
-      routine_name: ''
-      })
+        this.setState({ 
+        name: ''
+    })
     }
 
 // export default connect(mapStateToProps)(App);
