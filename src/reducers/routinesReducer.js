@@ -11,10 +11,10 @@ export default function routinesReducer(state = intialState, action) {
             let newRoutine = action.payload
             return {...state.routines, routines: state.routines.concat(newRoutine)}
 
-        // case 'UPDATE_ROUTINE':
-        //     const payloadId = action.payload.id
-        //     return {routines: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)}
-        //         // return Object.assign({}, state, {routines: currentRoutines, routine: currentRoutine})
+        case 'UPDATE_ROUTINE':
+            const payloadId = action.payload.id
+            return {routines: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)}
+                // return Object.assign({}, state, {routines: currentRoutines, routine: currentRoutine})
         case 'DELETE_ROUTINE':
             const filteredRoutines = state.routines.filter(routine => routine.id !== action.payload.routineId);
             return {...state, routines: filteredRoutines}
