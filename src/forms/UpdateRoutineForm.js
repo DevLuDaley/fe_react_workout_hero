@@ -4,6 +4,7 @@ import {Route, Switch} from 'react-router-dom'
 //import {Route, Switch, useLocation, withRouter} from 'react-router-dom'
 // import { createBrowserHistory } from "history";
 import {updateRoutine} from '../actions/updateRoutine'
+import {routinesReducer} from '../reducers/routinesReducer'
 // import Routine from '../components/Routine'
 // import RoutineList from '../components/RoutineList'
 // import {addRoutine} from '../actions/addRoutine'
@@ -16,15 +17,18 @@ class UpdateRoutineForm extends Component {
     // this.routines = this.props.routines
     // this.id = parseInt(window.location.href.replace("http://localhost:3001/routines/", ""))
     this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+    //? this.id = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", ""))
     this.routine = this.props.routines.find(routine => routine.id == this.id)
+    // this.reducer = routinesReducer
 
     this.state = {
         // routine:this.routine
         // id: parseInt(window.location.href.replace("http://localhost:3001/routines/", "")),
-        id: this.props.routineToUpdate.id,
-        // id: this.id,
+        // id: this.props.routineToUpdate.id,
+        id: this.id,
         // routine_name: this.props.routineToUpdate.routine_name,
-        routine_name: "",
+        routine_name: ""
+        // routine_name: this.routine.routine_name
         }
         // this.loadRoutineInfo = this.loadRoutineInfo.bind(this)
     }
@@ -36,26 +40,8 @@ class UpdateRoutineForm extends Component {
         loadRoutineInfo(){
         // console.log('HARLEM SON1')
         if (this.props.routines){
-            
-            // console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 55 ~ UpdateRoutineForm ~ componentDidMount ~ this.props.routines', this.props.routines);
-
-            // console.log('HARLEM SON2')
             // var routineId = parseInt(window.location.href.replace("http://localhost:3001/routines/", ""))
-
-            // var routine = this.props.routines.filter(routine => routine.id == routineId)
             // ! this.routine = this.props.routines.find(routine => routine.id == this.id);
-            // console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 46 ~ UpdateRoutineForm ~ loadRoutineInfo ~ this.id', this.id);
-            // console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 47 ~ UpdateRoutineForm ~ loadRoutineInfo ~ this.routine', this.routine);
-            // this.array = ["words from line 49"]
-            // this.routineInfo = (
-            //     <div>
-            //         <form id='update-routine-form' onSubmit={console.log("SUBMITTED")}>
-            //             <label> Routine Name:</label>
-            //                 <input type="text" placeholder={"words"} value={"this.props.routine_name"} name="name" onChange={console.log("CHANGED")}/>
-            //                     <button type="submit">Update Routine</button>
-            //         </form>
-            //     </div>
-            //         )
 
         }
         }
@@ -66,54 +52,78 @@ class UpdateRoutineForm extends Component {
     
         handleChange = (e) => {
             this.setState({
-                [e.target.id]: e.target.value,
-                [e.target.name]: e.target.value,
-                [e.target.category]: e.target.value,
-                [e.target.url]: e.target.value,
-                [e.target.image_url]: e.target.value,
-                [e.target.cooking_time]: e.target.value
+                [e.target.name]: e.target.value
             })
         }
 
     
-    handleSubmit = (e) => {
+        handleSubmit = (e) => {
         e.preventDefault()
         // debugger
+        // console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 87 ~ UpdateRoutineForm ~ this.state', this.state);
         this.props.updateRoutine(this.state)
+        // console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 87 ~ UpdateRoutineForm ~ this.state---after submitted to <updateRoutine/>', this.state);
         // alert(`${[this.state.name]} created!`)
-        this.selectedRoutine = {}
+
+        // this.selectedRoutine = {}
+        // console.log("YO LINE 67 this.routinesReducer data", this.routinesReducer.state);
+        // console.log("YO LINE 67 this.reducer data", this.reducer);
+        // console.log("YO LINE 67 this.reducer data", this.reducer.state);
+        // console.log("YO LINE 67 this.routinesReducer data", this.routinesReducer.case);
+        // console.log("YO LINE 68 this.routineToUpdate", this.props.routineToUpdate);
         this.setState({
-            name: '',
-            category: '',
-            url: '',
-            image_url: '',
-            cooking_time: ''
+            // routine_name: '',
+            routine_name: ''
         })
-    }
+        }
+        // handlePlaceholder = (e) => {
+        // // console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 78 ~ UpdateRoutineForm ~ e', e)
+        //     // this.state.routine_name
+        //     // "WORDS"
+        //     // !this.state.routine_name ? this.state.routine_name : this.routine.routine_name
+        //     // console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 80 ~ UpdateRoutineForm ~ this.routine.routine_name FINALLY', this.routine.routine_name);
+        //     // if ( this.routine.routine_name && this.routine.routine_name !== this.state.routine_name) {
+        //         // return 
+        //         // console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 81 ~ UpdateRoutineForm ~ this.state.routine_name', this.state.routine_name);
+        //         // this.state.routine_name
+        //     // }
+
+        //     // else {
+        //     // return
+        //     // this.routine.routine_name
+        //         // {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 81 ~ UpdateRoutineForm ~ this.routine.routine_name', this.routine.routine_name)
+        //     // }
+        //         // this.state.routine_name
+                
+        //         // {this.routine.routine_name}
+        //     }
 
 // export default connect(mapStateToProps)(App);
     render() {
         // this.loadRoutines
         return (
             <Fragment>
-                {console.log("ROOOT", this.props)}
-                { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 136 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)}
-                {/* {this.array} */}
-                {/* {console.log("ROOOT", this.array)} */}
+                {console.log("THIS.PROPS", this.props)}
+                {/* { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 136 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)} */}
+
+                {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)}
+
+                
+                {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.state.routine_name', this.state.routine_name)}
             {
                 this.props.routines ?
                     <section> 
-                        routineInfo will go here 
                         {/* {this.routineInfo} */}
                         <form onSubmit={this.handleSubmit} id='update-routine-form'>
                             <label> Routine Name: </label> 
-                            <input type="text" placeholder={this.routine.routine_name} value={this.state.name} name="name" onChange={this.handleChange}/>
+                            <input type="text" placeholder={this.state.routine_name == "" ? this.routine.routine_name : this.state.routine_name} value={this.state.routine_name} name="routine_name" onChange={this.handleChange}/>
 
                             <button type="submit">Update Routine</button>
                         </form>
                     </section> 
                     : 
                     <p>NOTHING TO SEE HERE</p> 
+                    
                 }
         {/* <RoutinesList/> */}
 
