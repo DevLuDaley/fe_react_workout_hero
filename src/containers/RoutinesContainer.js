@@ -4,7 +4,7 @@ import {Route, Switch} from 'react-router-dom'
 
 import {fetchRoutines} from '../actions/fetchRoutines'
 import RoutinesPage from './RoutinesPage';
-// import Routine from '../components/Routine'
+import Routine from '../components/Routine'
 // import UpdateRoutinePage from '../components/UpdateRoutinePage'
 // import UpdateRoutineForm from '../forms/UpdateRoutineForm'
 import HomePage from '../components/HomePage'
@@ -40,8 +40,8 @@ class RoutinesContainer extends Component {
 
             {/* <Route exact path='/routines/new' render={(routerProps) => <NewRoutinesContainer {...routerProps} routines={this.props.routines}/>}/> */}
 
-            {/* <Route exact path='/routines/:id' render={(routerProps) => <Routine {...routerProps} routines={this.props.routines}
-             />}/> */}
+            <Route exact path='/routines/:id' render={(routerProps) => <Routine {...routerProps} routines={this.props.routines}
+             />}/>
             {/* <Route exact path='/routiney' render={(routerProps) => <UpdateRoutineForm {...routerProps} routines={this.props.routines}
              />}/> */}
 

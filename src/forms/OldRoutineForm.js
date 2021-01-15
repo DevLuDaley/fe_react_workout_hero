@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
-import { connect, useState } from 'react-redux'
+import React, { Fragment,  useState } from 'react'
+import { connect } from 'react-redux'
 
 import {addRoutine} from '../actions/addRoutine'
 
