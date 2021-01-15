@@ -32,18 +32,18 @@ const Routine = (props) => {
         {
             props.routines.map(routine => 
         routine.id == props.match.params.id ? 
-        <p>
-        <br></br>
-            name: {routine.routine_name} 
-        <br></br>
+        <section key={routine.id}>
+            <br></br>
+                name: {routine.routine_name} 
+            <br></br>
             {/* id: {routine.id} */}
-        <br></br>
-        <br></br>
-            <h3>Recipes:</h3> { 
+            <br></br>
+            <br></br>
+                <h3 key={routine.id}>Recipes:</h3> { 
                 routine.workouts.length > 0 ?
 
                     routine.workouts.map(workout =>
-                        <p>
+                        <div key={workout.id}>
                             {/* id: {workout.id}
                             <br></br> */}
                             name: {workout.workout_name}
@@ -55,10 +55,10 @@ const Routine = (props) => {
                             workout.duration: {workout.duration ? workout.duration + " minutes" : "please enter duration"}
                             <br></br>
                             <br></br>
-                        </p>
+                        </div>
                     ) : <p> No Recipes Created Yet </p>
                     }
-                </p>
+                </section>
                 : null )
         }
         
@@ -68,10 +68,10 @@ const Routine = (props) => {
     }
     {/* <p>{filtered.name}</p> */}
     {props.routines ?
-    {/* <UpdateRoutineForm routines={props.routines} 
+    <UpdateRoutineForm routines={props.routines} 
             routineToUpdate={props.routines.find(routine => 
          routine.id == props.match.params.id)}
-    /> */}
+    />
     //routineToUpdate={props.routines.find(routine => 
     //     routine.id == props.match.params.id)}
     
