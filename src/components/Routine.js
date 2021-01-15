@@ -2,20 +2,11 @@ import React, { Fragment, useState, useEffect } from 'react';
 // import {Redirect} from 'react-router-dom'
 import { Switch, Link } from 'react-router-dom'
 
-import { connect , useSelector } from 'react-redux'
+// import { connect } from 'react-redux'
 import UpdateRoutineForm from '../forms/UpdateRoutineForm'
 
 const Routine = (props) => {
-//     if (props.routines){
-//     const filtered = props.routines.find((routine) => {
-//         return routine.id == props.match.params.id 
-//     }
-//     )
-//             // console.log('🚀 ~ file: Routine.js ~ line 35 ~ Routine ~ filtered', filtered);
-    
-//     // console.log('🚀 ~ file: Routine.js ~ line 14 ~ filtered ~ filtered', filtered);
-// }
-    // filtered
+
     return(
     <Fragment>
                     <Switch>
