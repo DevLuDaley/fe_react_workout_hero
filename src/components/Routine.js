@@ -27,7 +27,7 @@ const Routine = (props) => {
         Current Routine Info:
         {
             props.routines.map(routine => 
-        routine.id == props.match.params.id ? 
+                routine.id == props.match.params.id ? 
         <section key={routine.id}>
             <br></br>
                 name: {routine.routine_name} 
