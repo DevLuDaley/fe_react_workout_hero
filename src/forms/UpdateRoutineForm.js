@@ -116,9 +116,9 @@ class UpdateRoutineForm extends Component {
                         {/* {this.routineInfo} */}
                         <form onSubmit={this.handleSubmit} id='update-routine-form'>
                             <label> Routine Name: </label> 
-                            <input type="text" placeholder={this.state.routine_name == "" ? this.routine.routine_name : this.state.routine_name} value={this.state.routine_name} name="routine_name" onChange={this.handleChange}/>
+                            <input type="text" placeholder={this.state.routine_name == this.props.routine.routine_name ? this.routine.routine_name : this.props.routine.routine_name} value={this.state.routine_name} name="routine_name" onChange={this.handleChange}/>
 
-                            <button type="submit">Update Routine</button>
+                            <button type="submit">Update Routine </button>
                         </form>
                     </section> 
                     : 
@@ -137,8 +137,19 @@ class UpdateRoutineForm extends Component {
     }
 }
 
+function mapStateToProps(state) {
+//   const { routines } = state
+  const routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+//   console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 143 ~ UpdateRoutineForm ~ mapStateToProps ~ routineId', routineId);
+  const currentRoutine = state.routinesReducer.routines.filter(routine => routine.id == routineId)
+//   console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 146 ~ UpdateRoutineForm ~ mapStateToProps ~ state.routinesReducer.routines.filter(routine => routine.id == routineId)', currentRoutine[0]);
+  return { routines: state.routinesReducer.routines, 
+           routine: currentRoutine[0]
+ }
+}
 
-export default connect(null, {updateRoutine})(UpdateRoutineForm);
+
+export default connect(mapStateToProps, {updateRoutine})(UpdateRoutineForm);
 // ! doesn't need mapStateToProps
 // ! doesn't need access to prop
 //  ! doesn;t need to know what is currently in store...only responsible for adding new routine and updating
