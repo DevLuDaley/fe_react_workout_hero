@@ -23,15 +23,11 @@ const Routine = (props) => {
                     </Switch>
     {
         props.routines ?
-        <p>
-        {/* name: {props.routines[props.match.params.id-1].name}
-        <br></br>
-        id: {props.routines[props.match.params.id-2].id}
-        <br></br> */}
+        <section>
         Current Routine Info:
         {
             props.routines.map(routine => 
-        routine.id == props.match.params.id ? 
+                routine.id == props.match.params.id ? 
         <section key={routine.id}>
             <br></br>
                 name: {routine.routine_name} 
@@ -62,7 +58,7 @@ const Routine = (props) => {
                 : null )
         }
         
-        </p>
+        </section>
         :
         'no routine here bub'
     }
