@@ -5,10 +5,6 @@ import {Route, Switch} from 'react-router-dom'
 // import { createBrowserHistory } from "history";
 import {updateRoutine} from '../actions/updateRoutine'
 import {routinesReducer} from '../reducers/routinesReducer'
-// import Routine from '../components/Routine'
-// import RoutineList from '../components/RoutineList'
-// import {addRoutine} from '../actions/addRoutine'
-// import RoutinesList from '../components/RoutinesList'
 
 
 class UpdateRoutineForm extends Component {
@@ -103,13 +99,12 @@ class UpdateRoutineForm extends Component {
         // this.loadRoutines
         return (
             <Fragment>
-                {console.log("THIS.PROPS", this.props)}
+                {/* {console.log("THIS.PROPS", this.props)} */}
                 {/* { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 136 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)} */}
 
-                {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)}
-
+                {/* {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)} */}
                 
-                {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.state.routine_name', this.state.routine_name)}
+                {/* {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.state.routine_name', this.state.routine_name)} */}
             {
                 this.props.routines ?
                     <section> 
@@ -123,15 +118,9 @@ class UpdateRoutineForm extends Component {
                     </section> 
                     : 
                     <p>NOTHING TO SEE HERE</p> 
-                    
-                }
-        {/* <RoutinesList/> */}
 
-            {/* NewRoutineForm */}
-            {/* <DrillsContainer/>       */}
-            {/* <Route exact path='/routines' render={(routerProps) => <RoutinesList {...routerProps} routines={this.props.routines}/>}/> */}
-            {/* <RoutinesList/> */}
-            {/* <RoutinesList props={this.props}/> */}
+                }
+
         </Fragment>  
         );
     }
@@ -150,8 +139,3 @@ function mapStateToProps(state) {
 
 
 export default connect(mapStateToProps, {updateRoutine})(UpdateRoutineForm);
-// ! doesn't need mapStateToProps
-// ! doesn't need access to prop
-//  ! doesn;t need to know what is currently in store...only responsible for adding new routine and updating
-
-// ! instead of mapDispatchToProps we're calling {addRutine} and use the connect component
