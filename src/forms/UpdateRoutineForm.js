@@ -12,8 +12,8 @@ class UpdateRoutineForm extends Component {
     super(props)
     // this.routines = this.props.routines
     // this.id = parseInt(window.location.href.replace("http://localhost:3001/routines/", ""))
-    this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
-    //? this.id = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", ""))
+    // this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+    this.id = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", ""))
     this.routine = this.props.routines.find(routine => routine.id == this.id)
     // this.reducer = routinesReducer
 
