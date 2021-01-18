@@ -31,10 +31,12 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
-        // contentBase: path.join(__dirname, 'public/'),
-        contentBase: path.join(__dirname, './dist'),
+        contentBase: path.join(__dirname, 'public/'),
+        // contentBase: path.join(__dirname, './dist'),
         port: 3003,
         historyApiFallback: true,
+        open: true,
+        // host: 'localhost',
         // ,
         // publicPath: 'http://localhost:3000/dist/'
         // ,
@@ -44,9 +46,12 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(), 
         new HtmlWebpackPlugin({
+        //  template: path.resolve( __dirname, 'dist/index.html' ),
          template: path.resolve( __dirname, 'public/index.html' ),
-         filename: 'index.html'
+         filename: 'index.html',
+         favicon: 'public/favicon.ico'
       }), new webpack.NoEmitOnErrorsPlugin(),
+      
     //    new ManifestPlugin({
     //   fileName: 'manifest.json'
     // })
