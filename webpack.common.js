@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
  module.exports = {
 //    entry: {
@@ -34,7 +36,28 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
      new HtmlWebpackPlugin({
        title: 'Production',
      }),
-   ],
+     
+   
+    ],
+    optimization: {
+    // minimize: true,
+    minimize: false,
+    minimizer: [
+      new HtmlMinimizerPlugin(),
+      new HtmlMinimizerPlugin({
+        minimizerOptions: {
+          collapseWhitespace: true,
+        },
+        minify: (data, minimizerOptions) => {
+          const htmlMinifier = require("html-minifier-terser");
+          const [[filename, input]] = Object.entries(data);
+
+          return htmlMinifier.minify(input, minimizerOptions);
+        },
+      }),
+        // new HtmlMinimizerPlugin(),
+    ],
+  },
    output: {
     //  filename: '[name].bundle.js',
      filename: 'bundle.js',
