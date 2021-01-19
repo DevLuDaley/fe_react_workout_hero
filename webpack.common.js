@@ -8,7 +8,6 @@ const CopyPlugin = require("copy-webpack-plugin");
  module.exports = {
    entry: {
      app: './src/index.js',
-     routine: './src/components/Routine.js',
    },
 //    entry: './src/index.js',
    module: {
@@ -66,5 +65,6 @@ const CopyPlugin = require("copy-webpack-plugin");
     //  filename: '[name].bundle.js',
      filename: 'bundle.js',
      path: path.resolve(__dirname, 'dist'),
+     publicPath: "/", 
    },
  };
