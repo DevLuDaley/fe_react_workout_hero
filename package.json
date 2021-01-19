@@ -27,16 +27,14 @@
     "webpack-merge": "^5.7.3"
   },
   "scripts": {
-    "start": "PORT=3005 react-scripts start",
-    "heroku-start": "react-scripts index.js",
-    "sbuild": "react-scripts build",
-    "old-build": "webpack --mode production",
-    "build-prod": "webpack -p",
+    "start-dev": "webpack serve --open --config webpack.dev.js",
+    "build-prod": "webpack --config webpack.prod.js",
     "dev": "webpack serve",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-by-webpack": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "react-start": "PORT=3005 react-scripts start",
+    "heroku-start": "react-scripts index.js",
+    "old-build": "webpack --mode production"
   },
   "eslintConfig": {
     "extends": [
