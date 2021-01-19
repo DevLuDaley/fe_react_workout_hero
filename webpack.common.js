@@ -35,6 +35,9 @@ const CopyPlugin = require("copy-webpack-plugin");
      new CleanWebpackPlugin(),
      new HtmlWebpackPlugin({
        title: 'Production',
+       template: path.resolve( __dirname, 'public/index.html' ),
+         filename: 'index.html',
+         favicon: 'public/favicon.ico'
      }),
      
    
@@ -43,7 +46,7 @@ const CopyPlugin = require("copy-webpack-plugin");
     // minimize: true,
     minimize: false,
     minimizer: [
-      new HtmlMinimizerPlugin(),
+    //   new HtmlMinimizerPlugin(),
       new HtmlMinimizerPlugin({
         minimizerOptions: {
           collapseWhitespace: true,
