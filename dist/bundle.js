@@ -6981,9 +6981,12 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
           }));
         }
       }), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        exact: true,
-        path: "/",
-        component: components_HomePage
+        path: "/routines/:id",
+        render: function render(routerProps) {
+          return /*#__PURE__*/react_default.a.createElement(components_Routine, RoutinesContainer_extends({}, routerProps, {
+            routines: _this2.props.routines
+          }));
+        }
       }), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         exact: true,
         path: "/routines",
@@ -6991,14 +6994,6 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
           return /*#__PURE__*/react_default.a.createElement(containers_RoutinesPage, RoutinesContainer_extends({}, routerProps, {
             routines: _this2.props.routines,
             rando: "words"
-          }));
-        }
-      }), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        exact: true,
-        path: "/routines/:id",
-        render: function render(routerProps) {
-          return /*#__PURE__*/react_default.a.createElement(components_Routine, RoutinesContainer_extends({}, routerProps, {
-            routines: _this2.props.routines
           }));
         }
       }))); // console.log('RoutinesContainer -> render -> this.props.routines', this.props.routines);
