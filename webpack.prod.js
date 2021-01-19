@@ -22,19 +22,19 @@ module.exports = merge(common, {
     // minimize: true,
     minimize: false,
     minimizer: [
-      // new HtmlMinimizerPlugin(),
-      // new HtmlMinimizerPlugin({
-      //   minimizerOptions: {
-      //     collapseWhitespace: true,
-      //   },
-      //   minify: (data, minimizerOptions) => {
-      //     const htmlMinifier = require("html-minifier-terser");
-      //     const [[filename, input]] = Object.entries(data);
+      new HtmlMinimizerPlugin(),
+      new HtmlMinimizerPlugin({
+        minimizerOptions: {
+          collapseWhitespace: true,
+        },
+        minify: (data, minimizerOptions) => {
+          const htmlMinifier = require("html-minifier-terser");
+          const [[filename, input]] = Object.entries(data);
 
-      //     return htmlMinifier.minify(input, minimizerOptions);
-      //   },
-      // }),
-        new HtmlMinimizerPlugin(),
+          return htmlMinifier.minify(input, minimizerOptions);
+        },
+      }),
+        // new HtmlMinimizerPlugin(),
     ],
   }
 });
