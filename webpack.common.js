@@ -6,10 +6,11 @@ const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
  module.exports = {
-//    entry: {
-//      app: './src/index.js',
-//    },
-   entry: './src/index.js',
+   entry: {
+     app: './src/index.js',
+     routine: './src/components/Routine.js',
+   },
+//    entry: './src/index.js',
    module: {
         rules: [
             {
