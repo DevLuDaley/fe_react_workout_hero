@@ -35,8 +35,8 @@ const CopyPlugin = require("copy-webpack-plugin");
      new CleanWebpackPlugin(),
      new HtmlWebpackPlugin({
        title: 'Workout-Hero (Production)',
-    //    template: path.resolve( __dirname, 'public/index.html' ),
-    //      filename: 'index.html',
+       template: path.resolve( __dirname, 'public/index.html' ),
+         filename: 'index.html',
          favicon: 'public/favicon.ico'
      }),
      
