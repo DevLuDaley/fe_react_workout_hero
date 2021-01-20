@@ -182,7 +182,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/*";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
@@ -6971,7 +6971,7 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(react_router_Route, {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Router, null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         exact: true,
         path: "/",
         render: function render(routerProps) {
@@ -6996,7 +6996,7 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
             rando: "words"
           }));
         }
-      }))); // console.log('RoutinesContainer -> render -> this.props.routines', this.props.routines);
+      })))); // console.log('RoutinesContainer -> render -> this.props.routines', this.props.routines);
     }
   }]);
 
