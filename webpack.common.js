@@ -63,8 +63,8 @@ const CopyPlugin = require("copy-webpack-plugin");
   },
    output: {
     //  filename: '[name].bundle.js',
-     filename: 'bundle.js',
-     path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
      publicPath: '/', 
     // publicPath: 'http://localhost:3000/dist/'
    },

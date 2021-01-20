@@ -31,12 +31,13 @@ class RoutinesContainer extends Component {
         return (
             <Fragment>
             {/* <p> Routines Container</p> */}
+            {/* <Router> */}
             <Switch>
             <Route exact path='/' render={(routerProps) => <RoutinesPage {...routerProps} routines={this.props.routines} rando="words"/>}/>
 
             <Route path='/routines/:id' render={(routerProps) => <Routine {...routerProps} routines={this.props.routines}
              />}/>
-             
+
             {/* <Route exact path='/' component={HomePage}/> */}
 
             <Route exact path='/routines' render={(routerProps) => <RoutinesPage {...routerProps} routines={this.props.routines} rando="words"/>}/>
@@ -51,6 +52,7 @@ class RoutinesContainer extends Component {
              />}/> */}
 
             </Switch>
+            {/* </Router> */}
         </Fragment> );
 
 
