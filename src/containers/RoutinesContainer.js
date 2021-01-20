@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import {connect} from 'react-redux'
-import {Route, Router, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 
 import {fetchRoutines} from '../actions/fetchRoutines'
 import RoutinesPage from './RoutinesPage';
@@ -31,7 +31,7 @@ class RoutinesContainer extends Component {
         return (
             <Fragment>
             {/* <p> Routines Container</p> */}
-            <Router>
+            {/* <Router> */}
             <Switch>
             <Route exact path='/' render={(routerProps) => <RoutinesPage {...routerProps} routines={this.props.routines} rando="words"/>}/>
 
@@ -52,7 +52,7 @@ class RoutinesContainer extends Component {
              />}/> */}
 
             </Switch>
-            </Router>
+            {/* </Router> */}
         </Fragment> );
 
 
