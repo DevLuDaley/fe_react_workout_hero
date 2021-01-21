@@ -44,3 +44,6 @@ versions.json
 yarn.lock
 package-lock.json
 .eslintcache
+
+# Local Netlify folder
+.netlify
