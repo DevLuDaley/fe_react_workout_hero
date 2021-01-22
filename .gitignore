@@ -41,7 +41,7 @@ versions.json
 /test-results.xml
 .temp-eslintcache
 /tests/fixtures/autofix-integration/temp.js
-yarn.lock
+# yarn.lock
 package-lock.json
 .eslintcache
 
