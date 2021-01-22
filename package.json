@@ -2,7 +2,6 @@
   "name": "fe_react_workout_hero",
   "version": "0.1.0",
   "engines": {
-    "node": "15.x",
     "npm": "6.x"
   },
   "main": "src/index.js",
