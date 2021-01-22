@@ -59,6 +59,7 @@ const CopyPlugin = require("copy-webpack-plugin");
         },
       }),
         // new HtmlMinimizerPlugin(),
+        
     ],
   },
    output: {
