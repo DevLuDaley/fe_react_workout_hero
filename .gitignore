@@ -10,7 +10,7 @@
 test.js
 
 # production
-/build
+# /build
 npm-debug.log
 
 # misc
