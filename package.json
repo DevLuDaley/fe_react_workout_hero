@@ -1,9 +1,6 @@
 {
   "name": "fe_react_workout_hero",
   "version": "0.1.0",
-  "engines": {
-    "npm": "6.x"
-  },
   "main": "src/index.js",
   "homepage": "src/index.js",
   "private": true,
