@@ -30,7 +30,7 @@ debug/
 jsdoc/
 versions.json
 *.iml
-.eslintcache
+# .eslintcache
 .cache
 /packages/**/node_modules
 /tools/internal-rules/node_modules
@@ -46,4 +46,4 @@ versions.json
 .eslintcache
 
 # Local Netlify folder
-.netlify
+# .netlify
