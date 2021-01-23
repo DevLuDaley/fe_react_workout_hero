@@ -6577,7 +6577,8 @@ var updateRoutine = function updateRoutine(data) {
 
   return function (dispatch) {
     // fetch(`http://localhost:3000/api/v1/routines/${data.id}`, {
-    fetch("https://be-workout-hero2.herokuapp.com/api/v1/routines/".concat(data.id), {
+    fetch("https://be-workout-hero2.herokuapp.com/api/v1/routines/" + data.id, {
+      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/routines/${data.id}`, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
@@ -6780,7 +6781,7 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, this.props.routines && this.state ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, this.props.routines && this.props.routine ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         id: "update-routine-form"
       }, /*#__PURE__*/react_default.a.createElement("label", null, " Routine Name: "), /*#__PURE__*/react_default.a.createElement("input", {
