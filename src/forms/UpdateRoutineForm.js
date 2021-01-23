@@ -107,8 +107,10 @@ class UpdateRoutineForm extends Component {
 }
 
 function mapStateToProps(state, ownProps) {
-  const routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
-  const currentRoutine = state.routinesReducer.routines.filter(routine => routine.id == routineId)
+  let routineId
+  window.location.href.includes('https://fe-workout-hero.herokuapp.com/routines/') ?
+  routineId = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+   const currentRoutine = state.routinesReducer.routines.filter(routine => routine.id == routineId)
 
   return { routines: state.routinesReducer.routines,
         //    routine: [ownProps.routines.filter(routine => routine.id == routineId)]
