@@ -3,7 +3,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Switch, Link } from 'react-router-dom'
 
 // import { connect } from 'react-redux'
-import UpdateRoutineForm from '../forms/UpdateRoutineForm'
+// import UpdateRoutineForm from '../forms/UpdateRoutineForm'
 
 const Routine = (props) => {
 
