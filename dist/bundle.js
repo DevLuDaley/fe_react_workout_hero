@@ -6786,7 +6786,7 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
         id: "update-routine-form"
       }, /*#__PURE__*/react_default.a.createElement("label", null, " Routine Name: "), /*#__PURE__*/react_default.a.createElement("input", {
         type: "text",
-        placeholder: this.props.routine.routine_name // placeholder={this.state.routine_name == this.props.routine.routine_name ? this.routine.routine_name : this.props.routine.routine_name} 
+        placeholder: this.props.routineToUpdate.routine_name // placeholder={this.state.routine_name == this.props.routine.routine_name ? this.routine.routine_name : this.props.routine.routine_name} 
         ,
         value: this.state.routine_name,
         name: "routine_name",
