@@ -6781,7 +6781,7 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, this.props.routines ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, console.log("~ line 66", "THIS.PROPS", this.props), console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 67 ~ UpdateRoutineForm ~ render ~ this.routine', this.routine), console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 68 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name), this.props.routines && this.props.routineToUpdate ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         id: "update-routine-form"
       }, /*#__PURE__*/react_default.a.createElement("label", null, " Routine Name: "), /*#__PURE__*/react_default.a.createElement("input", {
@@ -6805,13 +6805,14 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
   return UpdateRoutineForm;
 }(react["Component"]);
 
-function UpdateRoutineForm_mapStateToProps(state) {
+function UpdateRoutineForm_mapStateToProps(state, ownProps) {
   var routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""));
   var currentRoutine = state.routinesReducer.routines.filter(function (routine) {
     return routine.id == routineId;
   });
   return {
     routines: state.routinesReducer.routines,
+    //    routine: [ownProps.routines.filter(routine => routine.id == routineId)]
     routine: currentRoutine[0]
   };
 }
