@@ -6743,7 +6743,8 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
       });
     });
 
-    _this.id = parseInt(window.location.href.includes('heroku')) ? parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : parseInt(window.location.href.replace("http://localhost:3003/routines/", ""));
+    _this.currentUrl = window.location.href;
+    parseInt(_this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines')) ? _this.id = parseInt(_this.currentUrl.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : _this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""));
     _this.routine = _this.props.routines.find(function (routine) {
       return routine.id == _this.id;
     }); // this.routines = this.props.routines
