@@ -75,7 +75,13 @@ class UpdateRoutineForm extends Component {
                         {/* {this.routineInfo} */}
                         <form onSubmit={this.handleSubmit} id='update-routine-form'>
                             <label> Routine Name: </label>
-                            <input type="text" placeholder={this.state.routine_name == this.props.routine.routine_name ? this.routine.routine_name : this.props.routine.routine_name} value={this.state.routine_name} name="routine_name" onChange={this.handleChange}/>
+                            <input 
+                            type="text" 
+                            // placeholder={this.state.routine_name == this.props.routine.routine_name ? this.routine.routine_name : this.props.routine.routine_name} 
+                            
+                            value={this.state.routine_name} 
+                            name="routine_name" 
+                            onChange={this.handleChange}/>
 
                             <button type="submit">Update Routine </button>
                         </form>
