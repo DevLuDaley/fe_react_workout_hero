@@ -88,7 +88,7 @@ class UpdateRoutineForm extends Component {
                     <section>
                         {/* {this.routineInfo} */}
                         <form onSubmit={this.handleSubmit} id='update-routine-form'>
-                            <label> Routine Name: </label>
+                            <label> </label>
                             <input 
                             type="text" 
                             placeholder={this.props.routineToUpdate.routine_name} 
@@ -105,7 +105,7 @@ class UpdateRoutineForm extends Component {
                             value={this.id} 
                             name="id" />
 
-                            <button type="submit">Update Routine </button>
+                            <button type="submit">Change Routine Name </button>
                         </form>
                     </section>
                     :
