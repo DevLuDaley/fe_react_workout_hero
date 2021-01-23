@@ -6789,7 +6789,7 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, console.log("~ line 66", "THIS.PROPS", this.props), console.log("~ line 66", "THIS.STATE", this.state), console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 69 ~ UpdateRoutineForm ~ render ~ this.props.routineToUpdate', this.props.routineToUpdate), this.props.routines && this.props.routineToUpdate ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         id: "update-routine-form"
-      }, /*#__PURE__*/react_default.a.createElement("label", null, " Routine Name: "), /*#__PURE__*/react_default.a.createElement("input", {
+      }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
         type: "text",
         placeholder: this.props.routineToUpdate.routine_name // placeholder={this.state.routine_name == this.props.routine.routine_name ? this.routine.routine_name : this.props.routine.routine_name} 
         ,
@@ -6803,7 +6803,7 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
         name: "id"
       }), /*#__PURE__*/react_default.a.createElement("button", {
         type: "submit"
-      }, "Update Routine "))) : /*#__PURE__*/react_default.a.createElement("p", null, "NOTHING TO SEE HERE"));
+      }, "Change Routine Name "))) : /*#__PURE__*/react_default.a.createElement("p", null, "NOTHING TO SEE HERE"));
     }
   }]);
 
@@ -6836,24 +6836,24 @@ function UpdateRoutineForm_mapStateToProps(state, ownProps) {
 var Routine_Routine = function Routine(props) {
   return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(Link, {
     to: '/routines'
-  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " Return to Routines "), " ")), props.routines ? /*#__PURE__*/react_default.a.createElement("section", null, "Current Routine Info:", props.routines.map(function (routine) {
+  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " Return to Routines "), " ")), props.routines ? /*#__PURE__*/react_default.a.createElement("section", null, props.routines.map(function (routine) {
     return routine.id == props.match.params.id ? /*#__PURE__*/react_default.a.createElement("section", {
       key: routine.id
-    }, /*#__PURE__*/react_default.a.createElement("br", null), "name: ", routine.routine_name, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h3", {
+    }, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h1", null, routine.routine_name, " "), /*#__PURE__*/react_default.a.createElement("br", null), props.routines ? /*#__PURE__*/react_default.a.createElement(forms_UpdateRoutineForm, {
+      routines: props.routines,
+      routineToUpdate: props.routines.find(function (routine) {
+        return routine.id == props.match.params.id;
+      })
+    }) //routineToUpdate={props.routines.find(routine => 
+    //     routine.id == props.match.params.id)}
+    : null, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h3", {
       key: routine.id
-    }, "Recipes:"), " ", routine.workouts.length > 0 ? routine.workouts.map(function (workout) {
+    }, "Workouts: "), " ", routine.workouts.length > 0 ? routine.workouts.map(function (workout) {
       return /*#__PURE__*/react_default.a.createElement("div", {
         key: workout.id
       }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance ? workout.distance + " miles" : "please enter distance", /*#__PURE__*/react_default.a.createElement("br", null), "workout.duration: ", workout.duration ? workout.duration + " minutes" : "please enter duration", /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null));
-    }) : /*#__PURE__*/react_default.a.createElement("p", null, " No Recipes Created Yet ")) : null;
-  })) : 'no routine here bub', props.routines ? /*#__PURE__*/react_default.a.createElement(forms_UpdateRoutineForm, {
-    routines: props.routines,
-    routineToUpdate: props.routines.find(function (routine) {
-      return routine.id == props.match.params.id;
-    })
-  }) //routineToUpdate={props.routines.find(routine => 
-  //     routine.id == props.match.params.id)}
-  : null);
+    }) : /*#__PURE__*/react_default.a.createElement("p", null, " No Workouts Created Yet ")) : null;
+  })) : 'no routine here bub');
 }; // const mapStateToProps = (state, ownProps) => {
 //     const { routines1 } = state
 //     const { routines } = ownProps
