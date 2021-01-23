@@ -3,7 +3,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Switch, Link } from 'react-router-dom'
 
 // import { connect } from 'react-redux'
-// import UpdateRoutineForm from '../forms/UpdateRoutineForm'
+import UpdateRoutineForm from '../forms/UpdateRoutineForm'
 
 const Routine = (props) => {
 
@@ -54,7 +54,7 @@ const Routine = (props) => {
         'no routine here bub'
     }
     {/* <p>{filtered.name}</p> */}
-    {/* {props.routines ?
+    {props.routines ?
     <UpdateRoutineForm routines={props.routines} 
             routineToUpdate={props.routines.find(routine => 
          routine.id == props.match.params.id)}
@@ -63,7 +63,7 @@ const Routine = (props) => {
     //     routine.id == props.match.params.id)}
     
 
-    : null } */}
+    : null }
         </Fragment>
     )
 }
