@@ -6791,6 +6791,11 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
         value: this.state.routine_name,
         name: "routine_name",
         onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement("input", {
+        type: "text",
+        hidden: "true",
+        value: this.id,
+        name: "id"
       }), /*#__PURE__*/react_default.a.createElement("button", {
         type: "submit"
       }, "Update Routine "))) : /*#__PURE__*/react_default.a.createElement("p", null, "NOTHING TO SEE HERE"));
