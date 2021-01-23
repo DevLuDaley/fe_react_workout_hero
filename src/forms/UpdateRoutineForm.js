@@ -63,14 +63,16 @@ class UpdateRoutineForm extends Component {
         render() {
         return (
             <Fragment>
-                {/* {console.log("THIS.PROPS", this.props)} */}
-                {/* { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 136 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)} */}
+                {console.log("~ line 66", "THIS.PROPS", this.props)}
+                { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 67 ~ UpdateRoutineForm ~ render ~ this.routine', this.routine)}
+                { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 68 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)}
+                { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 69 ~ UpdateRoutineForm ~ render ~ this.props.routineToUpdate', this.props.routineToUpdate)}
 
                 {/* {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)} */}
 
                 {/* {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.state.routine_name', this.state.routine_name)} */}
             {
-                this.props.routines ?
+                this.props.routines && this.props.routineToUpdate ?
                     <section>
                         {/* {this.routineInfo} */}
                         <form onSubmit={this.handleSubmit} id='update-routine-form'>
@@ -104,11 +106,12 @@ class UpdateRoutineForm extends Component {
     }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
   const routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
   const currentRoutine = state.routinesReducer.routines.filter(routine => routine.id == routineId)
 
   return { routines: state.routinesReducer.routines,
+        //    routine: [ownProps.routines.filter(routine => routine.id == routineId)]
            routine: currentRoutine[0]
  }
 }
