@@ -15,18 +15,30 @@ const Routine = (props) => {
     {
         props.routines ?
         <section>
-        Current Routine Info:
+        {/* Routine Info: */}
         {
             props.routines.map(routine => 
                 routine.id == props.match.params.id ? 
         <section key={routine.id}>
             <br></br>
-                name: {routine.routine_name} 
+                <h1>{routine.routine_name} </h1>
             <br></br>
             {/* id: {routine.id} */}
+
+            {/* <p>{filtered.name}</p> */}
+    {props.routines ?
+    <UpdateRoutineForm routines={props.routines} 
+            routineToUpdate={props.routines.find(routine => 
+         routine.id == props.match.params.id)}
+    />
+    //routineToUpdate={props.routines.find(routine => 
+    //     routine.id == props.match.params.id)}
+    
+
+    : null }
             <br></br>
             <br></br>
-                <h3 key={routine.id}>Recipes:</h3> { 
+                <h3 key={routine.id}>Workouts: </h3> { 
                 routine.workouts.length > 0 ?
 
                     routine.workouts.map(workout =>
@@ -43,7 +55,7 @@ const Routine = (props) => {
                             <br></br>
                             <br></br>
                         </div>
-                    ) : <p> No Recipes Created Yet </p>
+                    ) : <p> No Workouts Created Yet </p>
                     }
                 </section>
                 : null )
@@ -53,17 +65,7 @@ const Routine = (props) => {
         :
         'no routine here bub'
     }
-    {/* <p>{filtered.name}</p> */}
-    {props.routines ?
-    <UpdateRoutineForm routines={props.routines} 
-            routineToUpdate={props.routines.find(routine => 
-         routine.id == props.match.params.id)}
-    />
-    //routineToUpdate={props.routines.find(routine => 
-    //     routine.id == props.match.params.id)}
     
-
-    : null }
         </Fragment>
     )
 }
