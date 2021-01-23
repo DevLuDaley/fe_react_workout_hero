@@ -11,10 +11,20 @@ class UpdateRoutineForm extends Component {
     constructor(props) {
     super(props)
     this.currentUrl = window.location.href
-    parseInt(this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines')) ?
-    this.id = parseInt(this.currentUrl.replace("https://fe-workout-hero.herokuapp.com/routines/", ""))
+
+    console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 14 ~ UpdateRoutineForm ~ constructor ~ this.currentUrl', this.currentUrl);
+
+    this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines') ?
+        this.id = parseInt(this.currentUrl.replace("https://fe-workout-hero.herokuapp.com/routines/", ""))
        :
-       this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+        this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+       
+        console.log("Deployed1?", parseInt(this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines')));
+
+        console.log("Deployed2?", this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines'));
+
+        console.log("Local?", this.currentUrl.includes('http://localhost:3003/routines/'));
+
        this.routine = this.props.routines.find(routine => routine.id == this.id)
        // this.routines = this.props.routines
        // this.id = parseInt(window.location.href.replace("http://localhost:3001/routines/", ""))
