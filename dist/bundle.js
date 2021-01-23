@@ -6567,11 +6567,257 @@ var RoutinesPage_RoutinesPage = /*#__PURE__*/function (_Component) {
 }(react["Component"]);
 
 /* harmony default export */ var containers_RoutinesPage = (RoutinesPage_RoutinesPage);
+// CONCATENATED MODULE: ./src/actions/updateRoutine.js
+var updateRoutine = function updateRoutine(data) {
+  console.log('updateRoutine -> data', data); // console.log('updateRoutine -> data.id', data.id);
+  // debugger
+  // ! return dispatch so that we have access to dispatch function, thanks to thunk.
+  // ! thunk is allowing us to pass in dispatch to the thunk function that we have inside of our action creator
+  // ${id}
+
+  return function (dispatch) {
+    // fetch(`http://localhost:3000/api/v1/routines/${data.id}`, {
+    fetch("https://be-workout-hero2.herokuapp.com/api/v1/routines/".concat(data.id), {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      method: 'PATCH',
+      body: JSON.stringify(data)
+    }).then(function (resp) {
+      return resp.json();
+    }) // .then(routine => console.log('🚀 ~ file: updateRoutine.js ~ line 22 ~ return ~ routine', routine))
+    .then(function (routine) {
+      return dispatch({
+        type: 'UPDATE_ROUTINE',
+        payload: routine
+      });
+    }); // debugger
+  };
+}; // create index
+// read index
+// update index/id
+// delete index/id
+// CONCATENATED MODULE: ./src/reducers/routinesReducer.js
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { routinesReducer_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function routinesReducer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// const intialState = {routines: [], routine: {}}
+var intialState = [];
+function routinesReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : intialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  // console.log('🚀 ~ file: routinesReducer.js ~ line 4 ~ routinesReducer ~ action', action);
+  // debugger;
+  switch (action.type) {
+    case 'FETCH_ROUTINES':
+      // debugger;
+      return {
+        routines: action.payload
+      };
+
+    case 'ADD_ROUTINE':
+      var newRoutine = action.payload;
+      return _objectSpread(_objectSpread({}, state.routines), {}, {
+        routines: state.routines.concat(newRoutine)
+      });
+
+    case 'UPDATE_ROUTINE':
+      var payloadId = action.payload.id;
+      var updatedRoutine = action.payload;
+      var selectedRoutine = state.routines.filter(function (routine) {
+        return routine.id == payloadId;
+      });
+      console.log('🚀 ~~line 17 ~ ~ UPDATED-ROUTINE', updatedRoutine);
+      console.log('🚀 ~~ line 16 ~ ~ PAYLOAD-ID', payloadId);
+      console.log('🚀 ~~ line 20 ~ ~  state.routines.FILTER', state.routines.filter(function (routine) {
+        return routine.id == payloadId;
+      }));
+      console.log('🚀 ~ file: routinesReducer.js ~ line 19 ~ routinesReducer ~ selectedRoutine', selectedRoutine);
+      console.log('STATE', state);
+      return {
+        routines: state.routines.map(function (routine) {
+          return routine.id == payloadId ? action.payload : routine;
+        }) // routines: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
+        // routines: updatedRoutine
+        // routines: state.routines,
+        // routine: 
+        // updatedRoutine
+        // ,
+        // routine: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
+        // routines: state.routines,
+        // routine: updatedRoutine
+        // routine: state.routines.filter(routine => 
+        //     routine.id == payloadId ? 
+        //     routine = updatedRoutine : null
+        // ? routine = updatedRoutine : null 
+        // )
+
+      };
+    // return Object.assign({}, state, {routines: currentRoutines, routine: currentRoutine})
+
+    case 'DELETE_ROUTINE':
+      var filteredRoutines = state.routines.filter(function (routine) {
+        return routine.id !== action.payload.routineId;
+      });
+      return _objectSpread(_objectSpread({}, state), {}, {
+        routines: filteredRoutines
+      });
+    // case 'ADD_ROUTINE_WORKOUT': 
+    //     let routineRecipes =  state.routines.map(routine => {
+    //         if (routine.id == action.payload.id) {
+    //             return action.payload
+    //             } else {
+    //                 return routine
+    //             }
+    //           }
+    //         )
+    //     return {...state, routines: routineRecipes}
+
+    default:
+      // return {...state}
+      return state;
+  }
+}
+// CONCATENATED MODULE: ./src/forms/UpdateRoutineForm.js
+function UpdateRoutineForm_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { UpdateRoutineForm_typeof = function _typeof(obj) { return typeof obj; }; } else { UpdateRoutineForm_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return UpdateRoutineForm_typeof(obj); }
+
+function UpdateRoutineForm_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function UpdateRoutineForm_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function UpdateRoutineForm_createClass(Constructor, protoProps, staticProps) { if (protoProps) UpdateRoutineForm_defineProperties(Constructor.prototype, protoProps); if (staticProps) UpdateRoutineForm_defineProperties(Constructor, staticProps); return Constructor; }
+
+function UpdateRoutineForm_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) UpdateRoutineForm_setPrototypeOf(subClass, superClass); }
+
+function UpdateRoutineForm_setPrototypeOf(o, p) { UpdateRoutineForm_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return UpdateRoutineForm_setPrototypeOf(o, p); }
+
+function UpdateRoutineForm_createSuper(Derived) { var hasNativeReflectConstruct = UpdateRoutineForm_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = UpdateRoutineForm_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = UpdateRoutineForm_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return UpdateRoutineForm_possibleConstructorReturn(this, result); }; }
+
+function UpdateRoutineForm_possibleConstructorReturn(self, call) { if (call && (UpdateRoutineForm_typeof(call) === "object" || typeof call === "function")) { return call; } return UpdateRoutineForm_assertThisInitialized(self); }
+
+function UpdateRoutineForm_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function UpdateRoutineForm_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function UpdateRoutineForm_getPrototypeOf(o) { UpdateRoutineForm_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return UpdateRoutineForm_getPrototypeOf(o); }
+
+function UpdateRoutineForm_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+ //import {Route, Switch, useLocation, withRouter} from 'react-router-dom'
+// import { createBrowserHistory } from "history";
+
+
+
+
+var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
+  UpdateRoutineForm_inherits(UpdateRoutineForm, _Component);
+
+  var _super = UpdateRoutineForm_createSuper(UpdateRoutineForm);
+
+  function UpdateRoutineForm(props) {
+    var _this;
+
+    UpdateRoutineForm_classCallCheck(this, UpdateRoutineForm);
+
+    _this = _super.call(this, props);
+
+    UpdateRoutineForm_defineProperty(UpdateRoutineForm_assertThisInitialized(_this), "handleChange", function (e) {
+      _this.setState(UpdateRoutineForm_defineProperty({}, e.target.name, e.target.value));
+    });
+
+    UpdateRoutineForm_defineProperty(UpdateRoutineForm_assertThisInitialized(_this), "handleSubmit", function (e) {
+      e.preventDefault();
+
+      _this.props.updateRoutine(_this.state);
+
+      _this.setState({
+        routine_name: ''
+      });
+    });
+
+    _this.id = parseInt(window.location.href.includes('heroku')) ? parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : parseInt(window.location.href.replace("http://localhost:3003/routines/", ""));
+    _this.routine = _this.props.routines.find(function (routine) {
+      return routine.id == _this.id;
+    }); // this.routines = this.props.routines
+    // this.id = parseInt(window.location.href.replace("http://localhost:3001/routines/", ""))
+    // this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+
+    _this.state = {
+      id: _this.id,
+      routine_name: "" // routine:this.routine
+      // id: parseInt(window.location.href.replace("http://localhost:3001/routines/", "")),
+      // id: this.props.routineToUpdate.id,
+      // routine_name: this.props.routineToUpdate.routine_name,
+      // routine_name: this.routine.routine_name
+
+    }; // this.loadRoutineInfo = this.loadRoutineInfo.bind(this)
+
+    return _this;
+  }
+
+  UpdateRoutineForm_createClass(UpdateRoutineForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {// this.loadRoutineInfo()
+    }
+  }, {
+    key: "loadRoutineInfo",
+    value: function loadRoutineInfo() {
+      // console.log('HARLEM SON1')
+      if (this.props.routines) {// var routineId = parseInt(window.location.href.replace("http://localhost:3001/routines/", ""))
+        // ! this.routine = this.props.routines.find(routine => routine.id == this.id);
+      }
+    } // this.id = parseInt(window.location.href.replace("http://localhost:3001/routines/", ""))
+    // this.routinesList = this.props.routines
+    // this.routine = [this.props.routines].find(routine => routine.id == this.id)
+
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, this.props.routines && this.state ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
+        id: "update-routine-form"
+      }, /*#__PURE__*/react_default.a.createElement("label", null, " Routine Name: "), /*#__PURE__*/react_default.a.createElement("input", {
+        type: "text",
+        placeholder: this.state.routine_name == this.props.routine.routine_name ? this.routine.routine_name : this.props.routine.routine_name,
+        value: this.state.routine_name,
+        name: "routine_name",
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement("button", {
+        type: "submit"
+      }, "Update Routine "))) : /*#__PURE__*/react_default.a.createElement("p", null, "NOTHING TO SEE HERE"));
+    }
+  }]);
+
+  return UpdateRoutineForm;
+}(react["Component"]);
+
+function UpdateRoutineForm_mapStateToProps(state) {
+  var routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""));
+  var currentRoutine = state.routinesReducer.routines.filter(function (routine) {
+    return routine.id == routineId;
+  });
+  return {
+    routines: state.routinesReducer.routines,
+    routine: currentRoutine[0]
+  };
+}
+
+/* harmony default export */ var forms_UpdateRoutineForm = (connect_connect(UpdateRoutineForm_mapStateToProps, {
+  updateRoutine: updateRoutine
+})(UpdateRoutineForm_UpdateRoutineForm));
 // CONCATENATED MODULE: ./src/components/Routine.js
  // import {Redirect} from 'react-router-dom'
 
  // import { connect } from 'react-redux'
-// import UpdateRoutineForm from '../forms/UpdateRoutineForm'
+
+
 
 var Routine_Routine = function Routine(props) {
   return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(Link, {
@@ -6586,7 +6832,14 @@ var Routine_Routine = function Routine(props) {
         key: workout.id
       }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance ? workout.distance + " miles" : "please enter distance", /*#__PURE__*/react_default.a.createElement("br", null), "workout.duration: ", workout.duration ? workout.duration + " minutes" : "please enter duration", /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null));
     }) : /*#__PURE__*/react_default.a.createElement("p", null, " No Recipes Created Yet ")) : null;
-  })) : 'no routine here bub');
+  })) : 'no routine here bub', props.routines ? /*#__PURE__*/react_default.a.createElement(forms_UpdateRoutineForm, {
+    routines: props.routines,
+    routineToUpdate: props.routines.find(function (routine) {
+      return routine.id == props.match.params.id;
+    })
+  }) //routineToUpdate={props.routines.find(routine => 
+  //     routine.id == props.match.params.id)}
+  : null);
 }; // const mapStateToProps = (state, ownProps) => {
 //     const { routines1 } = state
 //     const { routines } = ownProps
@@ -6945,91 +7198,6 @@ var logger = function logger(store) {
 };
 
 /* harmony default export */ var middleware_logger = (logger);
-// CONCATENATED MODULE: ./src/reducers/routinesReducer.js
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { routinesReducer_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function routinesReducer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-// const intialState = {routines: [], routine: {}}
-var intialState = [];
-function routinesReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : intialState;
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
-  // console.log('🚀 ~ file: routinesReducer.js ~ line 4 ~ routinesReducer ~ action', action);
-  // debugger;
-  switch (action.type) {
-    case 'FETCH_ROUTINES':
-      // debugger;
-      return {
-        routines: action.payload
-      };
-
-    case 'ADD_ROUTINE':
-      var newRoutine = action.payload;
-      return _objectSpread(_objectSpread({}, state.routines), {}, {
-        routines: state.routines.concat(newRoutine)
-      });
-
-    case 'UPDATE_ROUTINE':
-      var payloadId = action.payload.id;
-      var updatedRoutine = action.payload;
-      var selectedRoutine = state.routines.filter(function (routine) {
-        return routine.id == payloadId;
-      });
-      console.log('🚀 ~~line 17 ~ ~ UPDATED-ROUTINE', updatedRoutine);
-      console.log('🚀 ~~ line 16 ~ ~ PAYLOAD-ID', payloadId);
-      console.log('🚀 ~~ line 20 ~ ~  state.routines.FILTER', state.routines.filter(function (routine) {
-        return routine.id == payloadId;
-      }));
-      console.log('🚀 ~ file: routinesReducer.js ~ line 19 ~ routinesReducer ~ selectedRoutine', selectedRoutine);
-      console.log('STATE', state);
-      return {
-        routines: state.routines.map(function (routine) {
-          return routine.id == payloadId ? action.payload : routine;
-        }) // routines: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
-        // routines: updatedRoutine
-        // routines: state.routines,
-        // routine: 
-        // updatedRoutine
-        // ,
-        // routine: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
-        // routines: state.routines,
-        // routine: updatedRoutine
-        // routine: state.routines.filter(routine => 
-        //     routine.id == payloadId ? 
-        //     routine = updatedRoutine : null
-        // ? routine = updatedRoutine : null 
-        // )
-
-      };
-    // return Object.assign({}, state, {routines: currentRoutines, routine: currentRoutine})
-
-    case 'DELETE_ROUTINE':
-      var filteredRoutines = state.routines.filter(function (routine) {
-        return routine.id !== action.payload.routineId;
-      });
-      return _objectSpread(_objectSpread({}, state), {}, {
-        routines: filteredRoutines
-      });
-    // case 'ADD_ROUTINE_WORKOUT': 
-    //     let routineRecipes =  state.routines.map(routine => {
-    //         if (routine.id == action.payload.id) {
-    //             return action.payload
-    //             } else {
-    //                 return routine
-    //             }
-    //           }
-    //         )
-    //     return {...state, routines: routineRecipes}
-
-    default:
-      // return {...state}
-      return state;
-  }
-}
 // CONCATENATED MODULE: ./src/reducers/reducer.js
 
 
