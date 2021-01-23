@@ -6744,7 +6744,11 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
     });
 
     _this.currentUrl = window.location.href;
-    parseInt(_this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines')) ? _this.id = parseInt(_this.currentUrl.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : _this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""));
+    console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 14 ~ UpdateRoutineForm ~ constructor ~ this.currentUrl', _this.currentUrl);
+    _this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines') ? _this.id = parseInt(_this.currentUrl.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : _this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""));
+    console.log("Deployed1?", parseInt(_this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines')));
+    console.log("Deployed2?", _this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines'));
+    console.log("Local?", _this.currentUrl.includes('http://localhost:3003/routines/'));
     _this.routine = _this.props.routines.find(function (routine) {
       return routine.id == _this.id;
     }); // this.routines = this.props.routines
