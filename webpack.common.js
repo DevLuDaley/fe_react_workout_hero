@@ -16,7 +16,8 @@ const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules)/,
                 loader: 'babel-loader',
-                options: { presets: ["@babel/env"] }
+                options: { presets: ["@babel/env", "@babel/react"],
+                plugins: ['@babel/plugin-proposal-object-rest-spread'] }
             },
             {
                 test: /\.css$/,
