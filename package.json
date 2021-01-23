@@ -30,8 +30,8 @@
   },
   "scripts": {
     "start-dev": "webpack serve --open --config webpack.dev.js",
-    "build-prod": "webpack --config webpack.prod.js",
-    "build": "react-scripts build",
+    "build": "webpack --config webpack.prod.js",
+    "build-react": "react-scripts build",
     "deploy-heroku": "git push heroku optimize-for-prod:main && heroku open",
     "dev": "webpack serve",
     "test": "react-scripts test",
