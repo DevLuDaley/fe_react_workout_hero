@@ -10,10 +10,21 @@ import {routinesReducer} from '../reducers/routinesReducer'
 class UpdateRoutineForm extends Component {
     constructor(props) {
     super(props)
-    this.id = parseInt(window.location.href.includes('heroku')) ?
-    parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", ""))
+    this.currentUrl = window.location.href
+
+    console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 14 ~ UpdateRoutineForm ~ constructor ~ this.currentUrl', this.currentUrl);
+
+    this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines') ?
+        this.id = parseInt(this.currentUrl.replace("https://fe-workout-hero.herokuapp.com/routines/", ""))
        :
-       parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+        this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+       
+        console.log("Deployed1?", parseInt(this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines')));
+
+        console.log("Deployed2?", this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines'));
+
+        console.log("Local?", this.currentUrl.includes('http://localhost:3003/routines/'));
+
        this.routine = this.props.routines.find(routine => routine.id == this.id)
        // this.routines = this.props.routines
        // this.id = parseInt(window.location.href.replace("http://localhost:3001/routines/", ""))
@@ -63,21 +74,38 @@ class UpdateRoutineForm extends Component {
         render() {
         return (
             <Fragment>
-                {/* {console.log("THIS.PROPS", this.props)} */}
-                {/* { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 136 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)} */}
+                {console.log("~ line 66", "THIS.PROPS", this.props)}
+                {console.log("~ line 66", "THIS.STATE", this.state)}
+                {/* { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 67 ~ UpdateRoutineForm ~ render ~ this.routine', this.routine)} */}
+                {/* { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 68 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)} */}
+                { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 69 ~ UpdateRoutineForm ~ render ~ this.props.routineToUpdate', this.props.routineToUpdate)}
 
                 {/* {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)} */}
 
                 {/* {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.state.routine_name', this.state.routine_name)} */}
             {
-                this.props.routines ?
+                this.props.routines && this.props.routineToUpdate ?
                     <section>
                         {/* {this.routineInfo} */}
                         <form onSubmit={this.handleSubmit} id='update-routine-form'>
-                            <label> Routine Name: </label>
-                            <input type="text" placeholder={this.state.routine_name == this.props.routine.routine_name ? this.routine.routine_name : this.props.routine.routine_name} value={this.state.routine_name} name="routine_name" onChange={this.handleChange}/>
+                            <label> </label>
+                            <input 
+                            type="text" 
+                            placeholder={this.props.routineToUpdate.routine_name} 
+                            // placeholder={this.state.routine_name == this.props.routine.routine_name ? this.routine.routine_name : this.props.routine.routine_name} 
+                            
+                            value={this.state.routine_name} 
+                            name="routine_name" 
+                            onChange={this.handleChange}/>
 
-                            <button type="submit">Update Routine </button>
+
+                            <input 
+                            type="text" 
+                            hidden="true    "
+                            value={this.id} 
+                            name="id" />
+
+                            <button type="submit">Change Routine Name </button>
                         </form>
                     </section>
                     :
@@ -90,11 +118,14 @@ class UpdateRoutineForm extends Component {
     }
 }
 
-function mapStateToProps(state) {
-  const routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
-  const currentRoutine = state.routinesReducer.routines.filter(routine => routine.id == routineId)
+function mapStateToProps(state, ownProps) {
+  let routineId
+  window.location.href.includes('https://fe-workout-hero.herokuapp.com/routines/') ?
+  routineId = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+   const currentRoutine = state.routinesReducer.routines.filter(routine => routine.id == routineId)
 
   return { routines: state.routinesReducer.routines,
+        //    routine: [ownProps.routines.filter(routine => routine.id == routineId)]
            routine: currentRoutine[0]
  }
 }

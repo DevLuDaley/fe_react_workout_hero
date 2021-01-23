@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+// const CopyPlugin = require("copy-webpack-plugin");
 
  module.exports = {
    entry: {
@@ -16,7 +16,8 @@ const CopyPlugin = require("copy-webpack-plugin");
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules)/,
                 loader: 'babel-loader',
-                options: { presets: ["@babel/env"] }
+                options: { presets: ["@babel/env", "@babel/react"],
+                plugins: ['@babel/plugin-proposal-object-rest-spread'] }
             },
             {
                 test: /\.css$/,
@@ -59,6 +60,7 @@ const CopyPlugin = require("copy-webpack-plugin");
         },
       }),
         // new HtmlMinimizerPlugin(),
+
     ],
   },
    output: {
