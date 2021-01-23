@@ -6806,7 +6806,8 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
 }(react["Component"]);
 
 function UpdateRoutineForm_mapStateToProps(state, ownProps) {
-  var routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""));
+  var routineId;
+  window.location.href.includes('https://fe-workout-hero.herokuapp.com/routines/') ? routineId = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""));
   var currentRoutine = state.routinesReducer.routines.filter(function (routine) {
     return routine.id == routineId;
   });
