@@ -10,10 +10,11 @@ import {routinesReducer} from '../reducers/routinesReducer'
 class UpdateRoutineForm extends Component {
     constructor(props) {
     super(props)
-    this.id = parseInt(window.location.href.includes('heroku')) ?
-    parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", ""))
+    this.currentUrl = window.location.href
+    parseInt(this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines')) ?
+    this.id = parseInt(this.currentUrl.replace("https://fe-workout-hero.herokuapp.com/routines/", ""))
        :
-       parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+       this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
        this.routine = this.props.routines.find(routine => routine.id == this.id)
        // this.routines = this.props.routines
        // this.id = parseInt(window.location.href.replace("http://localhost:3001/routines/", ""))
