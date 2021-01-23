@@ -77,6 +77,7 @@ class UpdateRoutineForm extends Component {
                             <label> Routine Name: </label>
                             <input 
                             type="text" 
+                            placeholder={this.props.routine.routine_name} 
                             // placeholder={this.state.routine_name == this.props.routine.routine_name ? this.routine.routine_name : this.props.routine.routine_name} 
                             
                             value={this.state.routine_name} 
