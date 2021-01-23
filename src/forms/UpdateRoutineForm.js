@@ -70,7 +70,7 @@ class UpdateRoutineForm extends Component {
 
                 {/* {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.state.routine_name', this.state.routine_name)} */}
             {
-                this.props.routines && this.props.routine ?
+                this.props.routines ?
                     <section>
                         {/* {this.routineInfo} */}
                         <form onSubmit={this.handleSubmit} id='update-routine-form'>
