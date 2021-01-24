@@ -30,7 +30,7 @@ const Routine = (props) => {
     {
         props.routines ?
     <UpdateRoutineForm routines={props.routines} 
-            routineOfInterest={props.routines.find(routine => 
+            routineToUpdate={props.routines.find(routine => 
          routine.id == props.match.params.id)}
     />
     : null 
