@@ -6668,16 +6668,20 @@ function routinesReducer() {
       return _objectSpread(_objectSpread({}, state), {}, {
         routines: filteredRoutines
       });
-    // case 'ADD_ROUTINE_WORKOUT': 
-    //     let routineRecipes =  state.routines.map(routine => {
-    //         if (routine.id == action.payload.id) {
-    //             return action.payload
-    //             } else {
-    //                 return routine
-    //             }
-    //           }
-    //         )
-    //     return {...state, routines: routineRecipes}
+
+    case 'ADD_ROUTINE_WORKOUT':
+      var routineWorkouts = state.routines.map(function (routine) {
+        if (routine.id == action.payload.id) {
+          console.log('🚀 ~ file: routinesReducer.js ~ line 52 ~ routinesReducer ~ action.payload', action.payload);
+          return action.payload;
+        } else {
+          return routine;
+        }
+      });
+      console.log('🚀 ~ file: routinesReducer.js ~ line 57 ~ routinesReducer ~ routineWorkouts', routineWorkouts);
+      return _objectSpread(_objectSpread({}, state), {}, {
+        routines: routineWorkouts
+      });
 
     default:
       // return {...state}
@@ -6826,10 +6830,159 @@ function UpdateRoutineForm_mapStateToProps(state, ownProps) {
 /* harmony default export */ var forms_UpdateRoutineForm = (connect_connect(UpdateRoutineForm_mapStateToProps, {
   updateRoutine: updateRoutine
 })(UpdateRoutineForm_UpdateRoutineForm));
+// CONCATENATED MODULE: ./src/actions/addRoutineWorkout.js
+var addRoutineWorkout = function addRoutineWorkout(data) {
+  console.log('🚀 ~ file: addRoutineWorkout.js ~ line 2 ~ addRoutineWorkout ~ data', data); // debugger
+
+  return function (dispatch) {
+    // fetch(`http://localhost:3000/api/v1/routines/${data.id}`, {
+    fetch("https://be-workout-hero2.herokuapp.com/api/v1/routines/".concat(data.id), {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      method: 'PATCH',
+      body: JSON.stringify(data)
+    }).then(function (res) {
+      return res.json();
+    }).then(function (routine) {
+      return dispatch({
+        type: 'ADD_ROUTINE_WORKOUT',
+        payload: routine
+      });
+    });
+  };
+};
+// CONCATENATED MODULE: ./src/forms/NewRoutineWorkoutForm.js
+function NewRoutineWorkoutForm_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { NewRoutineWorkoutForm_typeof = function _typeof(obj) { return typeof obj; }; } else { NewRoutineWorkoutForm_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return NewRoutineWorkoutForm_typeof(obj); }
+
+function NewRoutineWorkoutForm_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function NewRoutineWorkoutForm_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function NewRoutineWorkoutForm_createClass(Constructor, protoProps, staticProps) { if (protoProps) NewRoutineWorkoutForm_defineProperties(Constructor.prototype, protoProps); if (staticProps) NewRoutineWorkoutForm_defineProperties(Constructor, staticProps); return Constructor; }
+
+function NewRoutineWorkoutForm_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) NewRoutineWorkoutForm_setPrototypeOf(subClass, superClass); }
+
+function NewRoutineWorkoutForm_setPrototypeOf(o, p) { NewRoutineWorkoutForm_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return NewRoutineWorkoutForm_setPrototypeOf(o, p); }
+
+function NewRoutineWorkoutForm_createSuper(Derived) { var hasNativeReflectConstruct = NewRoutineWorkoutForm_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = NewRoutineWorkoutForm_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = NewRoutineWorkoutForm_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return NewRoutineWorkoutForm_possibleConstructorReturn(this, result); }; }
+
+function NewRoutineWorkoutForm_possibleConstructorReturn(self, call) { if (call && (NewRoutineWorkoutForm_typeof(call) === "object" || typeof call === "function")) { return call; } return NewRoutineWorkoutForm_assertThisInitialized(self); }
+
+function NewRoutineWorkoutForm_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function NewRoutineWorkoutForm_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function NewRoutineWorkoutForm_getPrototypeOf(o) { NewRoutineWorkoutForm_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return NewRoutineWorkoutForm_getPrototypeOf(o); }
+
+function NewRoutineWorkoutForm_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var NewRoutineWorkoutForm_NewRoutineWorkoutForm = /*#__PURE__*/function (_Component) {
+  NewRoutineWorkoutForm_inherits(NewRoutineWorkoutForm, _Component);
+
+  var _super = NewRoutineWorkoutForm_createSuper(NewRoutineWorkoutForm);
+
+  function NewRoutineWorkoutForm(props) {
+    var _this;
+
+    NewRoutineWorkoutForm_classCallCheck(this, NewRoutineWorkoutForm);
+
+    _this = _super.call(this, props);
+
+    NewRoutineWorkoutForm_defineProperty(NewRoutineWorkoutForm_assertThisInitialized(_this), "handleChange", function (e) {
+      var _this$setState;
+
+      console.log(e.target);
+
+      _this.setState((_this$setState = {}, NewRoutineWorkoutForm_defineProperty(_this$setState, e.target.name, e.target.value), NewRoutineWorkoutForm_defineProperty(_this$setState, "id", _this.props.currentRoutine['id']), _this$setState));
+    });
+
+    NewRoutineWorkoutForm_defineProperty(NewRoutineWorkoutForm_assertThisInitialized(_this), "handleSubmit", function (e) {
+      e.preventDefault();
+
+      _this.props.addRoutineWorkout(_this.state);
+
+      _this.setState({
+        id: '',
+        workout_name: "",
+        workout_type: "",
+        distance: "",
+        duration: "" //   routines: [],
+
+      }); //! formData object/hash
+      // let formData  = { 
+      //   [e.target.drill_name]: this.state.drill_name,
+      //   [e.target.reps]: this.state.reps,
+      //   [e.target.sets]: this.state.sets,
+      //   id: this.props.workout['id']
+      //  }
+
+    });
+
+    _this.state = {
+      id: '',
+      workout_name: "",
+      workout_type: "",
+      distance: "",
+      duration: "" //,
+      // routines: []
+
+    };
+    return _this;
+  }
+
+  NewRoutineWorkoutForm_createClass(NewRoutineWorkoutForm, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react_default.a.createElement("div", null, /*#__PURE__*/react_default.a.createElement("form", {
+        onSubmit: this.handleSubmit
+      }, /*#__PURE__*/react_default.a.createElement("label", null, "Name: "), /*#__PURE__*/react_default.a.createElement("input", {
+        type: "text",
+        placeholder: "enter name...",
+        value: this.state.workout_name,
+        name: "workout_name",
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement("label", null, "Workout Type: "), /*#__PURE__*/react_default.a.createElement("input", {
+        type: "text",
+        placeholder: "enter type...",
+        value: this.state.workout_type,
+        name: "workout_type",
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement("label", null, " Distance: "), /*#__PURE__*/react_default.a.createElement("input", {
+        type: "text",
+        placeholder: "enter distance...",
+        value: this.state.distance,
+        name: "distance",
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement("label", null, " Duration: "), /*#__PURE__*/react_default.a.createElement("input", {
+        type: "text",
+        placeholder: "enter duration...",
+        value: this.state.duration,
+        name: "duration",
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement("button", {
+        type: "submit"
+      }, "Add Workout")));
+    } // debugger
+
+  }]);
+
+  return NewRoutineWorkoutForm;
+}(react["Component"]);
+
+/* harmony default export */ var forms_NewRoutineWorkoutForm = (connect_connect(null, {
+  addRoutineWorkout: addRoutineWorkout
+})(NewRoutineWorkoutForm_NewRoutineWorkoutForm));
 // CONCATENATED MODULE: ./src/components/Routine.js
  // import {Redirect} from 'react-router-dom'
 
  // import { connect } from 'react-redux'
+
 
 
 
@@ -6841,17 +6994,20 @@ var Routine_Routine = function Routine(props) {
       key: routine.id
     }, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h1", null, routine.routine_name, " "), /*#__PURE__*/react_default.a.createElement("br", null), props.routines ? /*#__PURE__*/react_default.a.createElement(forms_UpdateRoutineForm, {
       routines: props.routines,
-      routineToUpdate: props.routines.find(function (routine) {
+      routineOfInterest: props.routines.find(function (routine) {
         return routine.id == props.match.params.id;
       })
-    }) //routineToUpdate={props.routines.find(routine => 
-    //     routine.id == props.match.params.id)}
-    : null, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h3", {
+    }) : null, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h1", null, " Add a new Workout"), /*#__PURE__*/react_default.a.createElement(forms_NewRoutineWorkoutForm, {
+      routines: props.routines,
+      currentRoutine: props.routines.find(function (routine) {
+        return routine.id == props.match.params.id;
+      })
+    }), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h3", {
       key: routine.id
-    }, "Workouts: "), " ", routine.workouts.length > 0 ? routine.workouts.map(function (workout) {
+    }, "Workouts List: "), routine.workouts.length > 0 ? routine.workouts.map(function (workout) {
       return /*#__PURE__*/react_default.a.createElement("div", {
         key: workout.id
-      }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance ? workout.distance + " miles" : "please enter distance", /*#__PURE__*/react_default.a.createElement("br", null), "workout.duration: ", workout.duration ? workout.duration + " minutes" : "please enter duration", /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null));
+      }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null));
     }) : /*#__PURE__*/react_default.a.createElement("p", null, " No Workouts Created Yet ")) : null;
   })) : 'no routine here bub');
 }; // const mapStateToProps = (state, ownProps) => {
