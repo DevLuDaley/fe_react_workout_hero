@@ -46,7 +46,9 @@ const RoutinesList = (props) =>  {
                         <section key={"workouts-section-key-" + routine.id} id={`routine-${routine.routine_name} + "" + ${routine.id}-workouts`} className='all-routine-workouts'>
                             {routine.workouts.map(workout =>
                             <div key={"section-div-key-" + workout.id} className='routine-workout-names'>
+                                <button> edit </button>
                                 {workout.workout_name}
+                                <button> delete </button>
 
                                 <section key={"nested-section-key-" + workout.id} className='routine-workout-details'>
                                 </section>
