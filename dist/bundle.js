@@ -6994,7 +6994,7 @@ var Routine_Routine = function Routine(props) {
       key: routine.id
     }, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h1", null, routine.routine_name, " "), /*#__PURE__*/react_default.a.createElement("br", null), props.routines ? /*#__PURE__*/react_default.a.createElement(forms_UpdateRoutineForm, {
       routines: props.routines,
-      routineOfInterest: props.routines.find(function (routine) {
+      routineToUpdate: props.routines.find(function (routine) {
         return routine.id == props.match.params.id;
       })
     }) : null, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h1", null, " Add a new Workout"), /*#__PURE__*/react_default.a.createElement(forms_NewRoutineWorkoutForm, {
