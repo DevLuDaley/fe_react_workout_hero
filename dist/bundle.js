@@ -6010,9 +6010,9 @@ function fetchRoutines() {
   // ! bring in dispatch so that we can async if not the connect will handle synchronously
   // fetch('https://be-hoop-drills.herokuapp.com/api/v1/routines'
   return function (dispatch) {
-    fetch('http://localhost:3000/api/v1/routines', // fetch('https://be-workout-hero.herokuapp.com/api/v1/routines', 
-    // fetch('https://be-workout-hero2.herokuapp.com/api/v1/routines', 
-    {
+    // fetch('http://localhost:3000/api/v1/routines', 
+    // fetch('https://be-workout-hero.herokuapp.com/api/v1/routines', 
+    fetch('https://be-workout-hero2.herokuapp.com/api/v1/routines', {
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -6366,7 +6366,7 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
       return /*#__PURE__*/react_default.a.createElement("div", {
         key: "section-div-key-" + workout.id,
         className: "routine-workout-names"
-      }, workout.workout_name, /*#__PURE__*/react_default.a.createElement("section", {
+      }, /*#__PURE__*/react_default.a.createElement("button", null, " edit "), workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", null, " delete "), /*#__PURE__*/react_default.a.createElement("section", {
         key: "nested-section-key-" + workout.id,
         className: "routine-workout-details"
       }));
@@ -6576,8 +6576,8 @@ var updateRoutine = function updateRoutine(data) {
   // ${id}
 
   return function (dispatch) {
-    fetch("http://localhost:3000/api/v1/routines/".concat(data.id), {
-      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/routines/` + data.id, {
+    // fetch(`http://localhost:3000/api/v1/routines/${data.id}`, {
+    fetch("https://be-workout-hero2.herokuapp.com/api/v1/routines/" + data.id, {
       // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/routines/${data.id}`, {
       headers: {
         'Content-Type': 'application/json',
@@ -6835,8 +6835,8 @@ var addRoutineWorkout = function addRoutineWorkout(data) {
   console.log('🚀 ~ file: addRoutineWorkout.js ~ line 2 ~ addRoutineWorkout ~ data', data); // debugger
 
   return function (dispatch) {
-    fetch("http://localhost:3000/api/v1/routines/".concat(data.id), {
-      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/routines/${data.id}`, {
+    // fetch(`http://localhost:3000/api/v1/routines/${data.id}`, {
+    fetch("https://be-workout-hero2.herokuapp.com/api/v1/routines/".concat(data.id), {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
