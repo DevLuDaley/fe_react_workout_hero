@@ -45,17 +45,19 @@ export default function routinesReducer(state = intialState, action) {
             const filteredRoutines = state.routines.filter(routine => routine.id !== action.payload.routineId);
             return {...state, routines: filteredRoutines}
 
-        // case 'ADD_ROUTINE_WORKOUT': 
+        case 'ADD_ROUTINE_WORKOUT': 
             
-        //     let routineRecipes =  state.routines.map(routine => {
-        //         if (routine.id == action.payload.id) {
-        //             return action.payload
-        //             } else {
-        //                 return routine
-        //             }
-        //           }
-        //         )
-        //     return {...state, routines: routineRecipes}
+            let routineWorkouts =  state.routines.map(routine => {
+                if (routine.id == action.payload.id) {
+                    console.log('🚀 ~ file: routinesReducer.js ~ line 52 ~ routinesReducer ~ action.payload', action.payload);
+                    return action.payload
+                } else {
+                    return routine
+                }
+            }
+            )
+            console.log('🚀 ~ file: routinesReducer.js ~ line 57 ~ routinesReducer ~ routineWorkouts', routineWorkouts);
+            return {...state, routines: routineWorkouts}
 
         default:
             // return {...state}
