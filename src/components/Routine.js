@@ -4,6 +4,7 @@ import { Switch, Link } from 'react-router-dom'
 
 // import { connect } from 'react-redux'
 import UpdateRoutineForm from '../forms/UpdateRoutineForm'
+import NewRoutineWorkoutForm from '../forms/NewRoutineWorkoutForm'
 
 const Routine = (props) => {
 
@@ -26,19 +27,27 @@ const Routine = (props) => {
             {/* id: {routine.id} */}
 
             {/* <p>{filtered.name}</p> */}
-    {props.routines ?
+    {
+        props.routines ?
     <UpdateRoutineForm routines={props.routines} 
-            routineToUpdate={props.routines.find(routine => 
+            routineOfInterest={props.routines.find(routine => 
          routine.id == props.match.params.id)}
     />
-    //routineToUpdate={props.routines.find(routine => 
-    //     routine.id == props.match.params.id)}
-    
-
-    : null }
+    : null 
+    }
             <br></br>
             <br></br>
-                <h3 key={routine.id}>Workouts: </h3> { 
+            <h1> Add a new Workout</h1>
+                {<NewRoutineWorkoutForm 
+                    routines={props.routines}
+                    currentRoutine={props.routines.find(
+                        routine => routine.id == props.match.params.id)}
+                />}
+            <br></br>
+            <br></br>
+                <h3 key={routine.id}>Workouts List: </h3> 
+                { 
+                    
                 routine.workouts.length > 0 ?
 
                     routine.workouts.map(workout =>
@@ -49,9 +58,11 @@ const Routine = (props) => {
                             <br></br>
                             category: {workout.workout_type}
                             <br></br>
-                            distance: {workout.distance ? workout.distance + " miles" : "please enter distance"} 
+                            distance: {workout.distance} 
+                            {/* ? workout.distance + " miles" : "please enter distance"}  */}
                             <br></br>
-                            workout.duration: {workout.duration ? workout.duration + " minutes" : "please enter duration"}
+                            duration: {workout.duration}
+                             {/* ? workout.duration + " minutes" : "please enter duration"} */}
                             <br></br>
                             <br></br>
                         </div>
