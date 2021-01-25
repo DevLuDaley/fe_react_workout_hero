@@ -7146,9 +7146,8 @@ function fetchWorkouts() {
   // ! bring in dispatch so that we can async if not the connect will handle synchronously
   // fetch('https://be-hoop-drills.herokuapp.com/api/v1/workouts'
   return function (dispatch) {
-    fetch('http://localhost:3000/api/v1/workouts', // fetch('https://be-workout-hero.herokuapp.com/api/v1/workouts', 
-    // fetch('https://be-workout-hero2.herokuapp.com/api/v1/workouts', 
-    {
+    // fetch('http://localhost:3000/api/v1/workouts', 
+    fetch('https://be-workout-hero2.herokuapp.com/api/v1/workouts', {
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -7174,8 +7173,8 @@ var updateWorkout = function updateWorkout(data) {
   // ${id}
 
   return function (dispatch) {
-    fetch("http://localhost:3000/api/v1/workouts/".concat(data.id), {
-      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/` + data.id, {
+    // fetch(`http://localhost:3000/api/v1/workouts/${data.id}`, {
+    fetch("https://be-workout-hero2.herokuapp.com/api/v1/workouts/" + data.id, {
       // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/${data.id}`, {
       headers: {
         'Content-Type': 'application/json',
