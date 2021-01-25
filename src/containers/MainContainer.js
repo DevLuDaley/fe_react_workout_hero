@@ -10,6 +10,7 @@ import {Route, Switch} from 'react-router-dom'
 // import Footer from '../components/Footer'
 // import HomePage from '../components/HomePage'
 import RoutinesContainer from './RoutinesContainer'
+import WorkoutsContainer from './WorkoutsContainer'
 // import RecipesContainer from './RecipesContainer'
 // import Home from '../components/Home'
 // import {fetchRoutines} from '../actions/fetchRoutines'
@@ -39,6 +40,8 @@ class MainContainer extends Component {
                     {/* <Switch>
                         <Route exact path='/' component={HomePage}/>
                     </Switch> */}
+                <WorkoutsContainer routines={this.props.workouts}/>
+
                 <RoutinesContainer routines={this.props.routines}/>
                 {/* <Footer id="footer"/> */}
             </Fragment> );
