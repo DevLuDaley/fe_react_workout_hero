@@ -41,24 +41,7 @@ const RoutinesList = (props) =>  {
                                 Delete Routine
                             </button>
                       </div>
-                      {
-                        routine.workouts ?
-                        <section key={"workouts-section-key-" + routine.id} id={`routine-${routine.routine_name} + "" + ${routine.id}-workouts`} className='all-routine-workouts'>
-                            {routine.workouts.map(workout =>
-                            <div key={"section-div-key-" + workout.id} className='routine-workout-names'>
-
-                                 <Link key={"routine-url-key-" + routine.id} to={`/workouts/${workout.id}`}>
-                                 <button> edit </button>
-                                 </Link>
-                                {workout.workout_name} 
-                                <button> delete </button>
-
-                                <section key={"nested-section-key-" + workout.id} className='routine-workout-details'>
-                                </section>
-                            </div>
-                            )}
-                        </section>
-                      : null}
+                    
                   </li>
                             {/* <button onClick={handleDeleteroutine} id={`btn-delete-routine-${routine.id}`} className='btn-delete-routine'> */}
                             {/* <button onClick={deleteroutine} id={routine.id} className='btn-delete-routine'> */}
