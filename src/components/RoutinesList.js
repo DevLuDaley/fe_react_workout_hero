@@ -50,7 +50,7 @@ const RoutinesList = (props) =>  {
                                  <Link key={"routine-url-key-" + routine.id} to={`/workouts/${workout.id}`}>
                                  <button> edit </button>
                                  </Link>
-                                {workout.workout_name}
+                                {workout.workout_name} 
                                 <button> delete </button>
 
                                 <section key={"nested-section-key-" + workout.id} className='routine-workout-details'>
