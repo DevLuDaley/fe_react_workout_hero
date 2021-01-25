@@ -31,14 +31,7 @@
   "scripts": {
     "start-dev": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "build-react": "react-scripts build",
-    "deploy-heroku": "git push heroku optimize-for-prod:main && heroku open",
-    "dev": "webpack serve",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "react-start": "PORT=3005 react-scripts start",
-    "heroku-start": "react-scripts index.js",
-    "old-build": "webpack --mode production"
+
   },
   "eslintConfig": {
     "extends": [
