@@ -3,7 +3,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Switch, Link } from 'react-router-dom'
 
 // import { connect } from 'react-redux'
-// import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
+import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
 // import NewWorkoutWorkoutForm from '../forms/NewWorkoutWorkoutForm'
 
 const Workout = (props) => {
@@ -19,7 +19,7 @@ const {currentWorkout : workout} = props
     {/* {props.currentWorkout} */}
                     <Switch>
                    
-                   <Link to={'/routines'}> <button> Return to Routines </button> </Link>
+                   <Link to={'/routines'}> <button> View Routines </button> </Link>
                     </Switch>
                    {/* <Link to={'/workouts'}> <button> Return to Workouts </button> </Link> */}
                    
@@ -42,7 +42,7 @@ const {currentWorkout : workout} = props
                         </div>
                         </div>
 
-    
+    <UpdateWorkoutForm/>
         </Fragment>
     )
 }
