@@ -30,8 +30,7 @@
   },
   "scripts": {
     "start-dev": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-
+    "build": "webpack --config webpack.prod.js"
   },
   "eslintConfig": {
     "extends": [
