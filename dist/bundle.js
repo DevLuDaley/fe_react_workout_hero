@@ -6345,7 +6345,7 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
       key: "div-key-" + routine.id,
       className: "routine-name-btns-wrapper"
     }, /*#__PURE__*/react_default.a.createElement(Link, {
-      key: "routine_url-key-" + routine.id,
+      key: "routine-url-key-" + routine.id,
       to: "/routines/".concat(routine.id)
     }, /*#__PURE__*/react_default.a.createElement("h1", {
       key: "h1-" + routine.id,
@@ -6366,7 +6366,10 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
       return /*#__PURE__*/react_default.a.createElement("div", {
         key: "section-div-key-" + workout.id,
         className: "routine-workout-names"
-      }, /*#__PURE__*/react_default.a.createElement("button", null, " edit "), workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", null, " delete "), /*#__PURE__*/react_default.a.createElement("section", {
+      }, /*#__PURE__*/react_default.a.createElement(Link, {
+        key: "routine-url-key-" + routine.id,
+        to: "/workouts/".concat(workout.id)
+      }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", null, " delete "), /*#__PURE__*/react_default.a.createElement("section", {
         key: "nested-section-key-" + workout.id,
         className: "routine-workout-details"
       }));
@@ -7021,6 +7024,32 @@ var Routine_Routine = function Routine(props) {
 
 
 /* harmony default export */ var components_Routine = (Routine_Routine);
+// CONCATENATED MODULE: ./src/components/Workout.js
+ // import {Redirect} from 'react-router-dom'
+
+ // import { connect } from 'react-redux'
+// import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
+// import NewWorkoutWorkoutForm from '../forms/NewWorkoutWorkoutForm'
+
+var Workout_Workout = function Workout(props) {
+  console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props', props);
+  console.log('🚀 ~ file: Workout.js ~ line 11 ~ Workout ~ props', props); // console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props-routine', props.current_routine);
+  // console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props-routine', props.routine);
+
+  return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(Link, {
+    to: '/routines'
+  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " Return to Routines "), " ")));
+}; // const mapStateToProps = (state, ownProps) => {
+//     const { workouts1 } = state
+//     const { workouts } = ownProps
+//     return {
+//         workoutsArr: workouts
+//     }
+// }
+// export default connect(mapStateToProps)(Workout);
+
+
+/* harmony default export */ var components_Workout = (Workout_Workout);
 // CONCATENATED MODULE: ./src/components/HomePage.js
 function HomePage_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { HomePage_typeof = function _typeof(obj) { return typeof obj; }; } else { HomePage_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return HomePage_typeof(obj); }
 
@@ -7096,6 +7125,7 @@ function RoutinesContainer_assertThisInitialized(self) { if (self === void 0) { 
 function RoutinesContainer_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function RoutinesContainer_getPrototypeOf(o) { RoutinesContainer_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return RoutinesContainer_getPrototypeOf(o); }
+
 
 
 
@@ -7184,6 +7214,127 @@ var RoutinesContainer_mapStateToProps = function mapStateToProps(state) {
 /* harmony default export */ var containers_RoutinesContainer = (connect_connect(RoutinesContainer_mapStateToProps, {
   fetchRoutines: fetchRoutines
 })(RoutinesContainer_RoutinesContainer));
+// CONCATENATED MODULE: ./src/actions/fetchWorkouts.js
+function fetchWorkouts() {
+  // ! thunk allows us to use dispatch here
+  // ! bring in dispatch so that we can async if not the connect will handle synchronously
+  // fetch('https://be-hoop-drills.herokuapp.com/api/v1/workouts'
+  return function (dispatch) {
+    // fetch('http://localhost:3000/api/v1/workouts', 
+    // fetch('https://be-workout-hero.herokuapp.com/api/v1/workouts', 
+    fetch('https://be-workout-hero2.herokuapp.com/api/v1/workouts', {
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      }
+    }).then(function (resp) {
+      return resp.json();
+    }).then(function (data) {
+      return dispatch({
+        type: 'FETCH_WORKOUTS',
+        payload: data
+      });
+    });
+  }; // .then(jsonResponse =>
+  //   console.log('App -> componentDidMount -> jsonResponse', jsonResponse))
+} // return action.payload
+// export fetchWorkouts
+// CONCATENATED MODULE: ./src/containers/WorkoutsContainer.js
+function WorkoutsContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { WorkoutsContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { WorkoutsContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return WorkoutsContainer_typeof(obj); }
+
+function WorkoutsContainer_extends() { WorkoutsContainer_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return WorkoutsContainer_extends.apply(this, arguments); }
+
+function WorkoutsContainer_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function WorkoutsContainer_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function WorkoutsContainer_createClass(Constructor, protoProps, staticProps) { if (protoProps) WorkoutsContainer_defineProperties(Constructor.prototype, protoProps); if (staticProps) WorkoutsContainer_defineProperties(Constructor, staticProps); return Constructor; }
+
+function WorkoutsContainer_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) WorkoutsContainer_setPrototypeOf(subClass, superClass); }
+
+function WorkoutsContainer_setPrototypeOf(o, p) { WorkoutsContainer_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return WorkoutsContainer_setPrototypeOf(o, p); }
+
+function WorkoutsContainer_createSuper(Derived) { var hasNativeReflectConstruct = WorkoutsContainer_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = WorkoutsContainer_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = WorkoutsContainer_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return WorkoutsContainer_possibleConstructorReturn(this, result); }; }
+
+function WorkoutsContainer_possibleConstructorReturn(self, call) { if (call && (WorkoutsContainer_typeof(call) === "object" || typeof call === "function")) { return call; } return WorkoutsContainer_assertThisInitialized(self); }
+
+function WorkoutsContainer_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function WorkoutsContainer_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function WorkoutsContainer_getPrototypeOf(o) { WorkoutsContainer_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return WorkoutsContainer_getPrototypeOf(o); }
+
+
+
+
+ // import WorkoutsPage from './WorkoutsPage';
+
+ // import Workout from '../components/Workout'
+// import UpdateWorkoutPage from '../components/UpdateWorkoutPage'
+// import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
+
+ // import Home from '../components/Home'
+// import {fetchWorkouts} from '../actions/fetchWorkouts'
+// import NewWorkoutForm from '../components/NewWorkoutForm'
+// import WorkoutsList from '../components/WorkoutsList'
+// import NewWorkoutsContainer from '../containers/NewWorkoutsContainer'
+
+var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
+  WorkoutsContainer_inherits(WorkoutsContainer, _Component);
+
+  var _super = WorkoutsContainer_createSuper(WorkoutsContainer);
+
+  function WorkoutsContainer(props) {
+    var _this;
+
+    WorkoutsContainer_classCallCheck(this, WorkoutsContainer);
+
+    _this = _super.call(this, props);
+    _this.fetchWorkouts = fetchWorkouts;
+    _this.state = {
+      workouts: []
+    };
+    return _this;
+  }
+
+  WorkoutsContainer_createClass(WorkoutsContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // console.log('THIS.PROPS 1', this.props)
+      // this.fetchWorkouts()
+      this.props.fetchWorkouts();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(react_router_Route, {
+        path: "/workouts/:id",
+        render: function render(routerProps) {
+          return /*#__PURE__*/react_default.a.createElement(components_Workout, WorkoutsContainer_extends({}, routerProps, {
+            workouts: _this2.props.workouts,
+            currentWorkout: _this2.props.workouts["id"]
+          }));
+        }
+      }))); // console.log('WorkoutsContainer -> render -> this.props.workouts', this.props.workouts);
+    }
+  }]);
+
+  return WorkoutsContainer;
+}(react["Component"]); //! redux store
+
+
+var WorkoutsContainer_mapStateToProps = function mapStateToProps(state) {
+  return {
+    workouts: state.workoutsReducer.workouts // recipes: state.recipesReducer.recipes
+
+  };
+};
+
+/* harmony default export */ var containers_WorkoutsContainer = (connect_connect(WorkoutsContainer_mapStateToProps, {
+  fetchWorkouts: fetchWorkouts
+})(WorkoutsContainer_WorkoutsContainer));
 // CONCATENATED MODULE: ./src/containers/MainContainer.js
 function MainContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { MainContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { MainContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return MainContainer_typeof(obj); }
 
@@ -7217,6 +7368,7 @@ function MainContainer_getPrototypeOf(o) { MainContainer_getPrototypeOf = Object
 // import Navbar from  '../components/Navbar'
 // import Footer from '../components/Footer'
 // import HomePage from '../components/HomePage'
+
 
  // import RecipesContainer from './RecipesContainer'
 // import Home from '../components/Home'
@@ -7253,7 +7405,9 @@ var MainContainer_MainContainer = /*#__PURE__*/function (_Component) {
   MainContainer_createClass(MainContainer, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(containers_RoutinesContainer, {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(containers_WorkoutsContainer, {
+        routines: this.props.workouts
+      }), /*#__PURE__*/react_default.a.createElement(containers_RoutinesContainer, {
         routines: this.props.routines
       })); // console.log('MainContainer -> render -> this.props.routines', this.props.routines);
     }
@@ -7368,11 +7522,102 @@ var logger = function logger(store) {
 };
 
 /* harmony default export */ var middleware_logger = (logger);
+// CONCATENATED MODULE: ./src/reducers/workoutsReducer.js
+function workoutsReducer_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function workoutsReducer_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { workoutsReducer_ownKeys(Object(source), true).forEach(function (key) { workoutsReducer_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { workoutsReducer_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function workoutsReducer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// const intialState = {workouts: [], workout: {}}
+var workoutsReducer_intialState = [];
+function workoutsReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : workoutsReducer_intialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  // console.log('🚀 ~ file: workoutsReducer.js ~ line 4 ~ workoutsReducer ~ action', action);
+  // debugger;
+  switch (action.type) {
+    case 'FETCH_WORKOUTS':
+      // debugger;
+      return {
+        workouts: action.payload
+      };
+
+    case 'ADD_WORKOUT':
+      var newWorkout = action.payload;
+      return workoutsReducer_objectSpread(workoutsReducer_objectSpread({}, state.workouts), {}, {
+        workouts: state.workouts.concat(newWorkout)
+      });
+
+    case 'UPDATE_WORKOUT':
+      var payloadId = action.payload.id;
+      var updatedWorkout = action.payload;
+      var selectedWorkout = state.workouts.filter(function (workout) {
+        return workout.id == payloadId;
+      });
+      console.log('🚀 ~~line 17 ~ ~ UPDATED-WORKOUT', updatedWorkout);
+      console.log('🚀 ~~ line 16 ~ ~ PAYLOAD-ID', payloadId);
+      console.log('🚀 ~~ line 20 ~ ~  state.workouts.FILTER', state.workouts.filter(function (workout) {
+        return workout.id == payloadId;
+      }));
+      console.log('🚀 ~ file: workoutsReducer.js ~ line 19 ~ workoutsReducer ~ selectedWorkout', selectedWorkout);
+      console.log('STATE', state);
+      return {
+        workouts: state.workouts.map(function (workout) {
+          return workout.id == payloadId ? action.payload : workout;
+        }) // workouts: state.workouts.map(workout => workout.id == payloadId ? action.payload : workout)
+        // workouts: updatedWorkout
+        // workouts: state.workouts,
+        // workout: 
+        // updatedWorkout
+        // ,
+        // workout: state.workouts.map(workout => workout.id == payloadId ? action.payload : workout)
+        // workouts: state.workouts,
+        // workout: updatedWorkout
+        // workout: state.workouts.filter(workout => 
+        //     workout.id == payloadId ? 
+        //     workout = updatedWorkout : null
+        // ? workout = updatedWorkout : null 
+        // )
+
+      };
+    // return Object.assign({}, state, {workouts: currentWorkouts, workout: currentWorkout})
+
+    case 'DELETE_WORKOUT':
+      var filteredWorkouts = state.workouts.filter(function (workout) {
+        return workout.id !== action.payload.workoutId;
+      });
+      return workoutsReducer_objectSpread(workoutsReducer_objectSpread({}, state), {}, {
+        workouts: filteredWorkouts
+      });
+
+    case 'ADD_WORKOUT_WORKOUT':
+      var workoutWorkouts = state.workouts.map(function (workout) {
+        if (workout.id == action.payload.id) {
+          console.log('🚀 ~ file: workoutsReducer.js ~ line 52 ~ workoutsReducer ~ action.payload', action.payload);
+          return action.payload;
+        } else {
+          return workout;
+        }
+      });
+      console.log('🚀 ~ file: workoutsReducer.js ~ line 57 ~ workoutsReducer ~ workoutWorkouts', workoutWorkouts);
+      return workoutsReducer_objectSpread(workoutsReducer_objectSpread({}, state), {}, {
+        workouts: workoutWorkouts
+      });
+
+    default:
+      // return {...state}
+      return state;
+  }
+}
 // CONCATENATED MODULE: ./src/reducers/reducer.js
 
 
+
 var rootReducer = Object(redux["combineReducers"])({
-  routinesReducer: routinesReducer
+  routinesReducer: routinesReducer,
+  workoutsReducer: workoutsReducer
 });
 /* harmony default export */ var reducer = (rootReducer);
 // CONCATENATED MODULE: ./src/store/configureStore.js
