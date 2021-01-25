@@ -7010,7 +7010,10 @@ var Routine_Routine = function Routine(props) {
     }, "Workouts List: "), routine.workouts.length > 0 ? routine.workouts.map(function (workout) {
       return /*#__PURE__*/react_default.a.createElement("div", {
         key: workout.id
-      }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null));
+      }, /*#__PURE__*/react_default.a.createElement(Link, {
+        key: "routine-url-key-" + routine.id,
+        to: "/workouts/".concat(workout.id)
+      }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", null, " delete "), /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null));
     }) : /*#__PURE__*/react_default.a.createElement("p", null, " No Workouts Created Yet ")) : null;
   })) : 'no routine here bub');
 }; // const mapStateToProps = (state, ownProps) => {
@@ -7143,9 +7146,9 @@ function fetchWorkouts() {
   // ! bring in dispatch so that we can async if not the connect will handle synchronously
   // fetch('https://be-hoop-drills.herokuapp.com/api/v1/workouts'
   return function (dispatch) {
-    // fetch('http://localhost:3000/api/v1/workouts', 
-    // fetch('https://be-workout-hero.herokuapp.com/api/v1/workouts', 
-    fetch('https://be-workout-hero2.herokuapp.com/api/v1/workouts', {
+    fetch('http://localhost:3000/api/v1/workouts', // fetch('https://be-workout-hero.herokuapp.com/api/v1/workouts', 
+    // fetch('https://be-workout-hero2.herokuapp.com/api/v1/workouts', 
+    {
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -7162,12 +7165,203 @@ function fetchWorkouts() {
   //   console.log('App -> componentDidMount -> jsonResponse', jsonResponse))
 } // return action.payload
 // export fetchWorkouts
+// CONCATENATED MODULE: ./src/actions/updateWorkout.js
+var updateWorkout = function updateWorkout(data) {
+  console.log('updateWorkout -> data', data); // console.log('updateWorkout -> data.id', data.id);
+  // debugger
+  // ! return dispatch so that we have access to dispatch function, thanks to thunk.
+  // ! thunk is allowing us to pass in dispatch to the thunk function that we have inside of our action creator
+  // ${id}
+
+  return function (dispatch) {
+    fetch("http://localhost:3000/api/v1/workouts/".concat(data.id), {
+      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/` + data.id, {
+      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/${data.id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      method: 'PATCH',
+      body: JSON.stringify(data)
+    }).then(function (resp) {
+      return resp.json();
+    }) // .then(workout => console.log('🚀 ~ file: updateWorkout.js ~ line 22 ~ return ~ workout', workout))
+    .then(function (workout) {
+      return dispatch({
+        type: 'UPDATE_WORKOUT',
+        payload: workout
+      });
+    }); // debugger
+  };
+}; // create index
+// read index
+// update index/id
+// delete index/id
+// CONCATENATED MODULE: ./src/forms/UpdateWorkoutForm.js
+function UpdateWorkoutForm_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { UpdateWorkoutForm_typeof = function _typeof(obj) { return typeof obj; }; } else { UpdateWorkoutForm_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return UpdateWorkoutForm_typeof(obj); }
+
+function UpdateWorkoutForm_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function UpdateWorkoutForm_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function UpdateWorkoutForm_createClass(Constructor, protoProps, staticProps) { if (protoProps) UpdateWorkoutForm_defineProperties(Constructor.prototype, protoProps); if (staticProps) UpdateWorkoutForm_defineProperties(Constructor, staticProps); return Constructor; }
+
+function UpdateWorkoutForm_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) UpdateWorkoutForm_setPrototypeOf(subClass, superClass); }
+
+function UpdateWorkoutForm_setPrototypeOf(o, p) { UpdateWorkoutForm_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return UpdateWorkoutForm_setPrototypeOf(o, p); }
+
+function UpdateWorkoutForm_createSuper(Derived) { var hasNativeReflectConstruct = UpdateWorkoutForm_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = UpdateWorkoutForm_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = UpdateWorkoutForm_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return UpdateWorkoutForm_possibleConstructorReturn(this, result); }; }
+
+function UpdateWorkoutForm_possibleConstructorReturn(self, call) { if (call && (UpdateWorkoutForm_typeof(call) === "object" || typeof call === "function")) { return call; } return UpdateWorkoutForm_assertThisInitialized(self); }
+
+function UpdateWorkoutForm_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function UpdateWorkoutForm_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function UpdateWorkoutForm_getPrototypeOf(o) { UpdateWorkoutForm_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return UpdateWorkoutForm_getPrototypeOf(o); }
+
+function UpdateWorkoutForm_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+ //import {Route, Switch, useLocation, withRouter} from 'react-router-dom'
+// import { createBrowserHistory } from "history";
+
+ // import {workoutsReducer} from '../reducers/workoutsReducer'
+
+var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
+  UpdateWorkoutForm_inherits(UpdateWorkoutForm, _Component);
+
+  var _super = UpdateWorkoutForm_createSuper(UpdateWorkoutForm);
+
+  function UpdateWorkoutForm(props) {
+    var _this;
+
+    UpdateWorkoutForm_classCallCheck(this, UpdateWorkoutForm);
+
+    _this = _super.call(this, props); // this.currentUrl = window.location.href
+
+    UpdateWorkoutForm_defineProperty(UpdateWorkoutForm_assertThisInitialized(_this), "handleChange", function (e) {
+      _this.setState(UpdateWorkoutForm_defineProperty({}, e.target.name, e.target.value));
+    });
+
+    UpdateWorkoutForm_defineProperty(UpdateWorkoutForm_assertThisInitialized(_this), "handleSubmit", function (e) {
+      e.preventDefault();
+
+      _this.props.updateWorkout(_this.state); //     this.setState({
+      //     // workout_name: this.state.workout_name,
+      // //     workout_name: "",
+      //     // workout_type: this.state.workout_type,
+      // //     distance: "",
+      // //     duration: ""
+      // })
+
+    });
+
+    _this.currentUrl = window.location.pathname; // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 15 ~ UpdateWorkoutForm ~ constructor ~ this.currentUrlPath', this.currentUrlPath);
+
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 14 ~ UpdateWorkoutForm ~ constructor ~ this.currentUrl', _this.currentUrl);
+    _this.id = parseInt(_this.currentUrl.replace('/workouts/', ''));
+    _this.workout = _this.props.workouts.find(function (workout) {
+      return workout.id == _this.id;
+    });
+    _this.state = {
+      id: _this.id,
+      workout_name: _this.workout.workout_name,
+      workout_type: _this.workout.workout_type,
+      distance: _this.workout.distance,
+      duration: _this.workout.duration // workout:this.workout
+      // id: parseInt(window.location.href.replace("http://localhost:3001/workouts/", "")),
+      // id: this.props.workoutToUpdate.id,
+      // workout_name: this.props.workoutToUpdate.workout_name,
+      // workout_name: this.workout.workout_name
+
+    }; // this.loadWorkoutInfo = this.loadWorkoutInfo.bind(this)
+
+    return _this;
+  }
+
+  UpdateWorkoutForm_createClass(UpdateWorkoutForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {// this.loadWorkoutInfo()
+    }
+  }, {
+    key: "loadWorkoutInfo",
+    value: function loadWorkoutInfo() {
+      // console.log('HARLEM SON1')
+      if (this.props.workouts) {// var workoutId = parseInt(window.location.href.replace("http://localhost:3001/workouts/", ""))
+        // ! this.workout = this.props.workouts.find(workout => workout.id == this.id);
+      }
+    } // this.id = parseInt(window.location.href.replace("http://localhost:3001/workouts/", ""))
+    // this.workoutsList = this.props.workouts
+    // this.workout = [this.props.workouts].find(workout => workout.id == this.id)
+
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, this.props.workouts && this.props.workout ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
+        id: "update-workout-form"
+      }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
+        type: "text",
+        placeholder: this.props.workout.workout_name,
+        value: this.state.workout_name,
+        name: "workout_name",
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
+        type: "text",
+        placeholder: this.props.workout.workout_type,
+        value: this.state.workout_type,
+        name: "workout_type",
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
+        type: "text",
+        placeholder: this.props.workout.distance,
+        value: this.state.distance,
+        name: "distance",
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
+        type: "text",
+        placeholder: this.props.workout.duration,
+        value: this.state.duration,
+        name: "duration",
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement("input", {
+        type: "text",
+        hidden: "true    ",
+        value: this.id,
+        name: "id"
+      }), /*#__PURE__*/react_default.a.createElement("button", {
+        type: "submit"
+      }, "Update Workout "))) : /*#__PURE__*/react_default.a.createElement("p", null, "NOTHING TO SEE HERE"));
+    }
+  }]);
+
+  return UpdateWorkoutForm;
+}(react["Component"]);
+
+function UpdateWorkoutForm_mapStateToProps(state, ownProps) {
+  var workoutId;
+  window.location.href.includes('https://fe-workout-hero.herokuapp.com/workouts/') ? workoutId = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/workouts/", "")) : workoutId = parseInt(window.location.href.replace("http://localhost:3003/workouts/", ""));
+  var currentWorkout = state.workoutsReducer.workouts.filter(function (workout) {
+    return workout.id == workoutId;
+  });
+  return {
+    workouts: state.workoutsReducer.workouts,
+    //    workout: [ownProps.workouts.filter(workout => workout.id == workoutId)]
+    workout: currentWorkout[0]
+  };
+}
+
+/* harmony default export */ var forms_UpdateWorkoutForm = (connect_connect(UpdateWorkoutForm_mapStateToProps, {
+  updateWorkout: updateWorkout
+})(UpdateWorkoutForm_UpdateWorkoutForm));
 // CONCATENATED MODULE: ./src/components/Workout.js
  // import {Redirect} from 'react-router-dom'
 
  // import { connect } from 'react-redux'
-// import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
-// import NewWorkoutWorkoutForm from '../forms/NewWorkoutWorkoutForm'
+
+ // import NewWorkoutWorkoutForm from '../forms/NewWorkoutWorkoutForm'
 
 var Workout_Workout = function Workout(props) {
   console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ WORKOUT props', props);
@@ -7177,9 +7371,9 @@ var Workout_Workout = function Workout(props) {
 
   return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(Link, {
     to: '/routines'
-  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " Return to Routines "), " ")), /*#__PURE__*/react_default.a.createElement("div", null, "id: ", workout.id, /*#__PURE__*/react_default.a.createElement("div", {
+  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " View Routines "), " ")), /*#__PURE__*/react_default.a.createElement("div", null, "id: ", workout.id, /*#__PURE__*/react_default.a.createElement("div", {
     key: workout.id
-  }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null))));
+  }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null))), /*#__PURE__*/react_default.a.createElement(forms_UpdateWorkoutForm, null));
 }; // const mapStateToProps = (state, ownProps) => {
 //     const { workouts1 } = state
 //     const { workouts } = ownProps
