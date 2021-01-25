@@ -54,7 +54,11 @@ const Routine = (props) => {
                         <div key={workout.id}>
                             {/* id: {workout.id}
                             <br></br> */}
+                             <Link key={"routine-url-key-" + routine.id} to={`/workouts/${workout.id}`}>
+                                 <button> edit </button>
+                                 </Link>
                             name: {workout.workout_name}
+                                <button> delete </button>
                             <br></br>
                             category: {workout.workout_type}
                             <br></br>
