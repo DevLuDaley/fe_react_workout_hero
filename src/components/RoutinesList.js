@@ -24,7 +24,7 @@ const RoutinesList = (props) =>  {
                     <li key={"li-key-" + routine.id}>
                     {/* {console.log('🚀 ~ file: RoutinesList.js ~ line 25 ~ RoutinesList ~ routine.routine_name + " " + routine.id', routine.routine_name + "-routine-number-" + routine.id)} */}
                       <div key={"div-key-" + routine.id} className='routine-name-btns-wrapper'>
-                            <Link key={"routine_url-key-" + routine.id} to={`/routines/${routine.id}`}>
+                            <Link key={"routine-url-key-" + routine.id} to={`/routines/${routine.id}`}>
                         <h1 key={"h1-" + routine.id}className='routine-names'>
                               {routine.routine_name}
 
@@ -46,7 +46,12 @@ const RoutinesList = (props) =>  {
                         <section key={"workouts-section-key-" + routine.id} id={`routine-${routine.routine_name} + "" + ${routine.id}-workouts`} className='all-routine-workouts'>
                             {routine.workouts.map(workout =>
                             <div key={"section-div-key-" + workout.id} className='routine-workout-names'>
-                                {workout.workout_name}
+
+                                 <Link key={"routine-url-key-" + routine.id} to={`/workouts/${workout.id}`}>
+                                 <button> edit </button>
+                                 </Link>
+                                {workout.workout_name} 
+                                <button> delete </button>
 
                                 <section key={"nested-section-key-" + workout.id} className='routine-workout-details'>
                                 </section>

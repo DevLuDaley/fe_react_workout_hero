@@ -5,9 +5,10 @@ import {Route, Switch} from 'react-router-dom'
 import {fetchRoutines} from '../actions/fetchRoutines'
 import RoutinesPage from './RoutinesPage';
 import Routine from '../components/Routine'
+// import Workout from '../components/Workout'
 // import UpdateRoutinePage from '../components/UpdateRoutinePage'
 // import UpdateRoutineForm from '../forms/UpdateRoutineForm'
-import HomePage from '../components/HomePage'
+// import HomePage from '../components/HomePage'
 // import Home from '../components/Home'
 
 // import {fetchRoutines} from '../actions/fetchRoutines'
@@ -37,6 +38,9 @@ class RoutinesContainer extends Component {
 
             <Route path='/routines/:id' render={(routerProps) => <Routine {...routerProps} routines={this.props.routines}
              />}/>
+
+            {/* <Route path='/workouts/:id' render={(routerProps) => <Workout {...routerProps} routines={this.props.routines} workouts={this.props.workouts}
+             />}/> */}
 
             {/* <Route exact path='/' component={HomePage}/> */}
 
