@@ -39,7 +39,7 @@ class RoutinesContainer extends Component {
             <Route path='/routines/:id' render={(routerProps) => <Routine {...routerProps} routines={this.props.routines}
              />}/>
 
-            <Route path='/workouts/:id' render={(routerProps) => <Workout {...routerProps} routines={this.props.routines}
+            <Route path='/workouts/:id' render={(routerProps) => <Workout {...routerProps} routines={this.props.routines} workouts={this.props.workouts}
              />}/>
 
             {/* <Route exact path='/' component={HomePage}/> */}
