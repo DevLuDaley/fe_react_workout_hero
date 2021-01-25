@@ -5,10 +5,10 @@ import {Route, Switch} from 'react-router-dom'
 import {fetchRoutines} from '../actions/fetchRoutines'
 import RoutinesPage from './RoutinesPage';
 import Routine from '../components/Routine'
-import Workout from '../components/Workout'
+// import Workout from '../components/Workout'
 // import UpdateRoutinePage from '../components/UpdateRoutinePage'
 // import UpdateRoutineForm from '../forms/UpdateRoutineForm'
-import HomePage from '../components/HomePage'
+// import HomePage from '../components/HomePage'
 // import Home from '../components/Home'
 
 // import {fetchRoutines} from '../actions/fetchRoutines'
