@@ -6358,22 +6358,7 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
       onClick: handleDeleteRoutine,
       id: "btn-delete-routine-".concat(routine.id),
       className: "btn-delete-routine"
-    }, "Delete Routine")), routine.workouts ? /*#__PURE__*/react_default.a.createElement("section", {
-      key: "workouts-section-key-" + routine.id,
-      id: "routine-".concat(routine.routine_name, " + \"\" + ").concat(routine.id, "-workouts"),
-      className: "all-routine-workouts"
-    }, routine.workouts.map(function (workout) {
-      return /*#__PURE__*/react_default.a.createElement("div", {
-        key: "section-div-key-" + workout.id,
-        className: "routine-workout-names"
-      }, /*#__PURE__*/react_default.a.createElement(Link, {
-        key: "routine-url-key-" + routine.id,
-        to: "/workouts/".concat(workout.id)
-      }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", null, " delete "), /*#__PURE__*/react_default.a.createElement("section", {
-        key: "nested-section-key-" + workout.id,
-        className: "routine-workout-details"
-      }));
-    })) : null));
+    }, "Delete Routine"))));
   }) : "nothing");
 }; // export default RoutinesList
 
