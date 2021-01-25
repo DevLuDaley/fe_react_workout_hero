@@ -7024,83 +7024,6 @@ var Routine_Routine = function Routine(props) {
 
 
 /* harmony default export */ var components_Routine = (Routine_Routine);
-// CONCATENATED MODULE: ./src/components/Workout.js
- // import {Redirect} from 'react-router-dom'
-
- // import { connect } from 'react-redux'
-// import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
-// import NewWorkoutWorkoutForm from '../forms/NewWorkoutWorkoutForm'
-
-var Workout_Workout = function Workout(props) {
-  console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props', props);
-  console.log('🚀 ~ file: Workout.js ~ line 11 ~ Workout ~ props', props); // console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props-routine', props.current_routine);
-  // console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props-routine', props.routine);
-
-  return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: '/routines'
-  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " Return to Routines "), " ")));
-}; // const mapStateToProps = (state, ownProps) => {
-//     const { workouts1 } = state
-//     const { workouts } = ownProps
-//     return {
-//         workoutsArr: workouts
-//     }
-// }
-// export default connect(mapStateToProps)(Workout);
-
-
-/* harmony default export */ var components_Workout = (Workout_Workout);
-// CONCATENATED MODULE: ./src/components/HomePage.js
-function HomePage_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { HomePage_typeof = function _typeof(obj) { return typeof obj; }; } else { HomePage_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return HomePage_typeof(obj); }
-
-function HomePage_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function HomePage_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function HomePage_createClass(Constructor, protoProps, staticProps) { if (protoProps) HomePage_defineProperties(Constructor.prototype, protoProps); if (staticProps) HomePage_defineProperties(Constructor, staticProps); return Constructor; }
-
-function HomePage_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) HomePage_setPrototypeOf(subClass, superClass); }
-
-function HomePage_setPrototypeOf(o, p) { HomePage_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return HomePage_setPrototypeOf(o, p); }
-
-function HomePage_createSuper(Derived) { var hasNativeReflectConstruct = HomePage_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = HomePage_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = HomePage_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return HomePage_possibleConstructorReturn(this, result); }; }
-
-function HomePage_possibleConstructorReturn(self, call) { if (call && (HomePage_typeof(call) === "object" || typeof call === "function")) { return call; } return HomePage_assertThisInitialized(self); }
-
-function HomePage_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function HomePage_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function HomePage_getPrototypeOf(o) { HomePage_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return HomePage_getPrototypeOf(o); }
-
-
-
-var HomePage_HomePage = /*#__PURE__*/function (_Component) {
-  HomePage_inherits(HomePage, _Component);
-
-  var _super = HomePage_createSuper(HomePage);
-
-  function HomePage(props) {
-    var _this;
-
-    HomePage_classCallCheck(this, HomePage);
-
-    _this = _super.call(this, props);
-    _this.state = {};
-    return _this;
-  }
-
-  HomePage_createClass(HomePage, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react_default.a.createElement("p", null, "they call me HomePage");
-    }
-  }]);
-
-  return HomePage;
-}(react["Component"]);
-
-/* harmony default export */ var components_HomePage = (HomePage_HomePage);
 // CONCATENATED MODULE: ./src/containers/RoutinesContainer.js
 function RoutinesContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { RoutinesContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { RoutinesContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return RoutinesContainer_typeof(obj); }
 
@@ -7131,11 +7054,11 @@ function RoutinesContainer_getPrototypeOf(o) { RoutinesContainer_getPrototypeOf 
 
 
 
-
- // import UpdateRoutinePage from '../components/UpdateRoutinePage'
+ // import Workout from '../components/Workout'
+// import UpdateRoutinePage from '../components/UpdateRoutinePage'
 // import UpdateRoutineForm from '../forms/UpdateRoutineForm'
-
- // import Home from '../components/Home'
+// import HomePage from '../components/HomePage'
+// import Home from '../components/Home'
 // import {fetchRoutines} from '../actions/fetchRoutines'
 // import NewRoutineForm from '../components/NewRoutineForm'
 // import RoutinesList from '../components/RoutinesList'
@@ -7239,6 +7162,35 @@ function fetchWorkouts() {
   //   console.log('App -> componentDidMount -> jsonResponse', jsonResponse))
 } // return action.payload
 // export fetchWorkouts
+// CONCATENATED MODULE: ./src/components/Workout.js
+ // import {Redirect} from 'react-router-dom'
+
+ // import { connect } from 'react-redux'
+// import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
+// import NewWorkoutWorkoutForm from '../forms/NewWorkoutWorkoutForm'
+
+var Workout_Workout = function Workout(props) {
+  console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ WORKOUT props', props);
+  var workout = props.currentWorkout; // console.log('🚀 ~ file: Workout.js ~ line 11 ~ Workout ~ props', props);
+  // console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props-routine', props.current_routine);
+  // console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props-routine', props.routine);
+
+  return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(Link, {
+    to: '/routines'
+  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " Return to Routines "), " ")), /*#__PURE__*/react_default.a.createElement("div", null, "id: ", workout.id, /*#__PURE__*/react_default.a.createElement("div", {
+    key: workout.id
+  }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null))));
+}; // const mapStateToProps = (state, ownProps) => {
+//     const { workouts1 } = state
+//     const { workouts } = ownProps
+//     return {
+//         workoutsArr: workouts
+//     }
+// }
+// export default connect(mapStateToProps)(Workout);
+
+
+/* harmony default export */ var components_Workout = (Workout_Workout);
 // CONCATENATED MODULE: ./src/containers/WorkoutsContainer.js
 function WorkoutsContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { WorkoutsContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { WorkoutsContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return WorkoutsContainer_typeof(obj); }
 
@@ -7272,8 +7224,8 @@ function WorkoutsContainer_getPrototypeOf(o) { WorkoutsContainer_getPrototypeOf 
  // import Workout from '../components/Workout'
 // import UpdateWorkoutPage from '../components/UpdateWorkoutPage'
 // import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
-
- // import Home from '../components/Home'
+// import HomePage from '../components/HomePage'
+// import Home from '../components/Home'
 // import {fetchWorkouts} from '../actions/fetchWorkouts'
 // import NewWorkoutForm from '../components/NewWorkoutForm'
 // import WorkoutsList from '../components/WorkoutsList'
@@ -7293,7 +7245,8 @@ var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
     _this.fetchWorkouts = fetchWorkouts;
     _this.state = {
       workouts: []
-    };
+    }; //, routines: []}
+
     return _this;
   }
 
@@ -7309,15 +7262,17 @@ var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(react_router_Route, {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, console.log('🚀 ~ file: WorkoutsContainer.js ~ line 34 ~ WorkoutsContainer ~ componentDidMount ~ this.props', this.props), console.log('🚀 ~ file: WorkoutsContainer.js ~ line 35 ~ WorkoutsContainer ~ componentDidMount ~ this.STATE', this.state), /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, this.props.workouts ? /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         path: "/workouts/:id",
         render: function render(routerProps) {
           return /*#__PURE__*/react_default.a.createElement(components_Workout, WorkoutsContainer_extends({}, routerProps, {
             workouts: _this2.props.workouts,
-            currentWorkout: _this2.props.workouts["id"]
+            currentWorkout: _this2.props.workouts.find(function (workout) {
+              return workout.id == window.location.pathname.replace('/workouts/', '');
+            })
           }));
         }
-      }))); // console.log('WorkoutsContainer -> render -> this.props.workouts', this.props.workouts);
+      }) : null, console.log('🚀 ~ file: WorkoutsContainer.js ~ line 42 ~ render ~ window.location.pathname', window.location.pathname.replace('/workouts/', '')), console.log('🚀 ~ file: WorkoutsContainer.js ~ line 42 ~ render ~ window.location.href', window.location.href))); // console.log('WorkoutsContainer -> render -> this.props.workouts', this.props.workouts);
     }
   }]);
 
