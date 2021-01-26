@@ -6368,7 +6368,7 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
         className: "routine-workout-names"
       }, /*#__PURE__*/react_default.a.createElement(Link, {
         key: "routine-url-key-" + routine.id,
-        to: "/workouts/".concat(workout.id)
+        to: "/routines/".concat(routine.id, "/workouts/").concat(workout.id)
       }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", null, " delete "), /*#__PURE__*/react_default.a.createElement("section", {
         key: "nested-section-key-" + workout.id,
         className: "routine-workout-details"
@@ -6750,12 +6750,12 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
       });
     });
 
-    _this.currentUrl = window.location.href;
-    console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 14 ~ UpdateRoutineForm ~ constructor ~ this.currentUrl', _this.currentUrl);
-    _this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines') ? _this.id = parseInt(_this.currentUrl.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : _this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""));
-    console.log("Deployed1?", parseInt(_this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines')));
-    console.log("Deployed2?", _this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines'));
-    console.log("Local?", _this.currentUrl.includes('http://localhost:3003/routines/'));
+    _this.currentUrl = window.location.href; // console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 14 ~ UpdateRoutineForm ~ constructor ~ this.currentUrl', this.currentUrl);
+
+    _this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines') ? _this.id = parseInt(_this.currentUrl.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : _this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", "")); // console.log("Deployed1?", parseInt(this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines')));
+    // console.log("Deployed2?", this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines'));
+    // console.log("Local?", this.currentUrl.includes('http://localhost:3003/routines/'));
+
     _this.routine = _this.props.routines.find(function (routine) {
       return routine.id == _this.id;
     }); // this.routines = this.props.routines
@@ -6793,7 +6793,7 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, console.log("~ line 66", "THIS.PROPS", this.props), console.log("~ line 66", "THIS.STATE", this.state), console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 69 ~ UpdateRoutineForm ~ render ~ this.props.routineToUpdate', this.props.routineToUpdate), this.props.routines && this.props.routineToUpdate ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, this.props.routines && this.props.routineToUpdate ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         id: "update-routine-form"
       }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
@@ -7412,7 +7412,9 @@ function WorkoutsContainer_getPrototypeOf(o) { WorkoutsContainer_getPrototypeOf 
 
 
 
+
  // import WorkoutsPage from './WorkoutsPage';
+
 
  // import Workout from '../components/Workout'
 // import UpdateWorkoutPage from '../components/UpdateWorkoutPage'
@@ -7436,9 +7438,18 @@ var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, props);
     _this.fetchWorkouts = fetchWorkouts;
+    _this.fetchRoutines = fetchRoutines;
+    _this.currentUrl = window.location.pathname;
+    _this.currentUrlString = _this.currentUrl.replace("/routines/", '');
+    _this.routineId = _this.currentUrlString[0];
+    console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', _this.routineString); // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', this.routineString[0]);
+    // this.routines = this.props.routines
+
     _this.state = {
-      workouts: []
-    }; //, routines: []}
+      workouts: [],
+      routines: []
+    }; // this.routine = this.props.routines.find(routine => routine.id == this.routineId)
+    // parseInt(this.currentUrl.replace('/workouts/',''))}
 
     return _this;
   }
@@ -7449,13 +7460,14 @@ var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
       // console.log('THIS.PROPS 1', this.props)
       // this.fetchWorkouts()
       this.props.fetchWorkouts();
+      this.props.fetchRoutines(); // this.routine = this.props.routines.find(routine => routine.id == this.routineId)
     }
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, console.log('🚀 ~ file: WorkoutsContainer.js ~ line 34 ~ WorkoutsContainer ~ componentDidMount ~ this.props', this.props), console.log('🚀 ~ file: WorkoutsContainer.js ~ line 35 ~ WorkoutsContainer ~ componentDidMount ~ this.STATE', this.state), /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, this.props.workouts ? /*#__PURE__*/react_default.a.createElement(react_router_Route, {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, this.props.workouts ? /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         path: "/workouts/:id",
         render: function render(routerProps) {
           return /*#__PURE__*/react_default.a.createElement(components_Workout, WorkoutsContainer_extends({}, routerProps, {
@@ -7465,7 +7477,7 @@ var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
             })
           }));
         }
-      }) : null, console.log('🚀 ~ file: WorkoutsContainer.js ~ line 42 ~ render ~ window.location.pathname', window.location.pathname.replace('/workouts/', '')), console.log('🚀 ~ file: WorkoutsContainer.js ~ line 42 ~ render ~ window.location.href', window.location.href))); // console.log('WorkoutsContainer -> render -> this.props.workouts', this.props.workouts);
+      }) : null, /*#__PURE__*/react_default.a.createElement("p", null, " Hi Lu - rendered from the WorkoutsContainer "))); // console.log('WorkoutsContainer -> render -> this.props.workouts', this.props.workouts);
     }
   }]);
 
@@ -7473,15 +7485,29 @@ var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
 }(react["Component"]); //! redux store
 
 
-var WorkoutsContainer_mapStateToProps = function mapStateToProps(state) {
+var WorkoutsContainer_mapStateToProps = function mapStateToProps(state, ownProps) {
+  var scrapedUrl = window.location.pathname.replace("/routines/", ''); // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 96 ~ rooString', scrapedUrl);
+
+  var routineId = scrapedUrl[0];
+  var lastChar = scrapedUrl[scrapedUrl.length - 1]; // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 97 ~ rooId', routineId);
+
+  console.log('🚀 ~ file: WorkoutsContainer.js ~ line 98 ~ scrapedUrl LAST', lastChar);
+  console.log('🚀 ~ file: WorkoutsContainer.js ~ line 101 ~ ownProps', ownProps);
+  console.log('🚀 ~ file: WorkoutsContainer.js ~ line 95 ~ mapStateToProps ~ state', state); // let roo = state.routinesReducer.routines.find(routine => routine.id == routineId)
+
+  console.log('🚀 ~ file: WorkoutsContainer.js ~ line 108 ~ mapStateToProps ~ state.routinesReducer.routines', state.routinesReducer.routines);
   return {
-    workouts: state.workoutsReducer.workouts // recipes: state.recipesReducer.recipes
+    workouts: state.workoutsReducer.workouts,
+    routines: state.routinesReducer.routines // ,
+    // routine: ownProps.routines.find(routine => routine.id == routineId)
+    // recipes: state.recipesReducer.recipes
 
   };
 };
 
 /* harmony default export */ var containers_WorkoutsContainer = (connect_connect(WorkoutsContainer_mapStateToProps, {
-  fetchWorkouts: fetchWorkouts
+  fetchWorkouts: fetchWorkouts,
+  fetchRoutines: fetchRoutines
 })(WorkoutsContainer_WorkoutsContainer));
 // CONCATENATED MODULE: ./src/containers/MainContainer.js
 function MainContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { MainContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { MainContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return MainContainer_typeof(obj); }
