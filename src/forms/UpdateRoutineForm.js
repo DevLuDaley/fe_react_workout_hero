@@ -12,18 +12,18 @@ class UpdateRoutineForm extends Component {
     super(props)
     this.currentUrl = window.location.href
 
-    console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 14 ~ UpdateRoutineForm ~ constructor ~ this.currentUrl', this.currentUrl);
+    // console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 14 ~ UpdateRoutineForm ~ constructor ~ this.currentUrl', this.currentUrl);
 
     this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines') ?
         this.id = parseInt(this.currentUrl.replace("https://fe-workout-hero.herokuapp.com/routines/", ""))
        :
         this.id = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
        
-        console.log("Deployed1?", parseInt(this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines')));
+        // console.log("Deployed1?", parseInt(this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines')));
 
-        console.log("Deployed2?", this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines'));
+        // console.log("Deployed2?", this.currentUrl.includes('https://fe-workout-hero.herokuapp.com/routines'));
 
-        console.log("Local?", this.currentUrl.includes('http://localhost:3003/routines/'));
+        // console.log("Local?", this.currentUrl.includes('http://localhost:3003/routines/'));
 
        this.routine = this.props.routines.find(routine => routine.id == this.id)
        // this.routines = this.props.routines
@@ -74,11 +74,11 @@ class UpdateRoutineForm extends Component {
         render() {
         return (
             <Fragment>
-                {console.log("~ line 66", "THIS.PROPS", this.props)}
-                {console.log("~ line 66", "THIS.STATE", this.state)}
+                {/* {console.log("~ line 66", "THIS.PROPS", this.props)} */}
+                {/* {console.log("~ line 66", "THIS.STATE", this.state)} */}
                 {/* { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 67 ~ UpdateRoutineForm ~ render ~ this.routine', this.routine)} */}
                 {/* { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 68 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)} */}
-                { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 69 ~ UpdateRoutineForm ~ render ~ this.props.routineToUpdate', this.props.routineToUpdate)}
+                {/* { console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 69 ~ UpdateRoutineForm ~ render ~ this.props.routineToUpdate', this.props.routineToUpdate)} */}
 
                 {/* {console.log('🚀 ~ file: UpdateRoutineForm.js ~ line 94 ~ UpdateRoutineForm ~ render ~ this.routine.routine_name', this.routine.routine_name)} */}
 
@@ -112,7 +112,7 @@ class UpdateRoutineForm extends Component {
                     <p>NOTHING TO SEE HERE</p>
 
                 }
-
+                
         </Fragment>
         );
     }
