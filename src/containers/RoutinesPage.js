@@ -8,10 +8,12 @@ import NewRoutineForm from '../forms/NewRoutineForm';
 
 class RoutinesPage extends Component {
     constructor(props) {
+        console.log('🚀 ~ file: RoutinesPage.js ~ line 11 ~ RoutinesPage ~ constructor ~ props', props);
         super(props)
-        this.state = {}
+        this.state = {routines: [], workouts: []}
     }
 
+    
 
     //   componentDidMount(){
     //     // this.props.fetchRoutines()
@@ -21,8 +23,12 @@ class RoutinesPage extends Component {
             <>
                 {/* <OldRoutineForm routines={this.props.routines}/> */}
                 <NewRoutineForm routines={this.props.routines}/>
-                <RoutinesList routines={this.props.routines}/>
+
+                <RoutinesList routines={this.props.routines} workouts={this.props.workouts}/>
+
                 {/* <Routine/> */}
+                {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.props', this.props)}
+                {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.state', this.state)}
             </>
             );
     }
