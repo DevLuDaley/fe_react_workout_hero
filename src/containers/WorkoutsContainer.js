@@ -27,7 +27,7 @@ class WorkoutsContainer extends Component {
         this.currentUrl = window.location.pathname
         this.currentUrlString = this.currentUrl.replace(`/routines/`,'')
         this.routineId = this.currentUrlString[0]
-        console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', this.routineString);
+        // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', this.routineString);
         // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', this.routineString[0]);
         // this.routines = this.props.routines
         
@@ -48,42 +48,25 @@ class WorkoutsContainer extends Component {
     render() {
         return (
             <Fragment>
-            {/* {console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.props.routines', this.props.routines)} */}
-            {/* {console.log('🚀 ~ file: WorkoutsContainer.js ~ line 30 ~ WorkoutsContainer ~ constructor ~ THIS.props WORKOUT CONTAINER', this.props)} */}
-            
-            {/* {console.log('🚀 ~ ~ this.currentUrl.replace', this.currentUrl.replace(`/routines/`,''))} */}
-            {/* {console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routines', this.routines)} */}
-            {/* {console.log('🚀 ~ file: WorkoutsContainer.js ~ line 26 ~ WorkoutsContainer ~ constructor ~ this.currentUrl', this.currentUrl)} */}
-            {/* {console.log('🚀 ~ file: WorkoutsContainer.js ~ line 34 ~ WorkoutsContainer ~ componentDidMount ~ this.props', this.props)} */}
-            {/* {console.log('🚀 ~ file: WorkoutsContainer.js ~ line 35 ~ WorkoutsContainer ~ componentDidMount ~ this.STATE', this.state)} */}
-            {/* <p> Workouts Container</p> */}
-            {/* <Router> */}
             <Switch>
             {/* <Route exact path='/' render={(routerProps) => <WorkoutsPage {...routerProps} workouts={this.props.workouts} />}/> */}
             {this.props.workouts ?
 
-            <Route path='/workouts/:id' render={(routerProps) => <Workout {...routerProps} workouts={this.props.workouts} currentWorkout={this.props.workouts.find(workout => workout.id ==  window.location.pathname.replace('/workouts/','')) 
-            }
-              />}/>
-
-    : null
+            <Route path='/routines/:id/workouts/:id' render={(routerProps) => 
+                <Workout {...routerProps} 
+                    workouts={this.props.workouts} 
+                    routines={this.props.routines} 
+                        currentWorkout={this.props.workouts.find(workout => workout.id ==  window.location.pathname.replace('/routines/' + this.routineId + '/workouts/',''))} />}
+            />
+            : null
               }
-            <p> Hi Lu - rendered from the WorkoutsContainer </p>
+
+            {/* { this.props.workouts ? console.log('🚀 ~ file: WorkoutsContainer.js ~ line 66 ~ render ~ this.props.workouts.find', window.location.pathname.replace('/routines/' + this.routineId + '/workouts/',''))
+            :
+            null            
+            } */}
 {/* {            console.log('🚀 ~ file: WorkoutsContainer.js ~ line 42 ~ render ~ window.location.pathname', window.location.pathname.replace('/workouts/',''))}
             {console.log('🚀 ~ file: WorkoutsContainer.js ~ line 42 ~ render ~ window.location.href', window.location.href)} */}
-
-            {/* <Route exact path='/' component={HomePage}/> */}
-
-            {/* <Route exact path='/workouts' render={(routerProps) => <WorkoutsPage {...routerProps} workouts={this.props.workouts}/>}/> */}
-
-            {/* <Route exact path='/workouts/new' render={(routerProps) => <NewWorkoutsContainer {...routerProps} workouts={this.props.workouts}/>}/> */}
-
-
-            {/* <Route exact path='/workouty' render={(routerProps) => <UpdateWorkoutForm {...routerProps} workouts={this.props.workouts}
-             />}/> */}
-
-            {/* <Route exact path='/workouts/:id/edit' render={(routerProps) => <UpdateWorkoutPage {...routerProps} workouts={this.props.workouts}
-             />}/> */}
 
             </Switch>
             {/* </Router> */}
@@ -96,18 +79,11 @@ class WorkoutsContainer extends Component {
  
 //! redux store
 const mapStateToProps = (state, ownProps) => {
-    let scrapedUrl = window.location.pathname.replace(`/routines/`,'')
+    // let scrapedUrl = window.location.pathname.replace(`/routines/`,'')
     // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 96 ~ rooString', scrapedUrl);
-    let routineId = scrapedUrl[0]
-    var lastChar = scrapedUrl[scrapedUrl.length -1]
-    // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 97 ~ rooId', routineId);
-    console.log('🚀 ~ file: WorkoutsContainer.js ~ line 98 ~ scrapedUrl LAST', lastChar);
-    console.log('🚀 ~ file: WorkoutsContainer.js ~ line 101 ~ ownProps', ownProps);
-    console.log('🚀 ~ file: WorkoutsContainer.js ~ line 95 ~ mapStateToProps ~ state', state);
-    // let roo = state.routinesReducer.routines.find(routine => routine.id == routineId)
+    // let routineId = scrapedUrl[0]
+    // var lastChar = scrapedUrl[scrapedUrl.length -1]
 
-    
-    console.log('🚀 ~ file: WorkoutsContainer.js ~ line 108 ~ mapStateToProps ~ state.routinesReducer.routines', state.routinesReducer.routines);
     return(
         {
             workouts: state.workoutsReducer.workouts,
