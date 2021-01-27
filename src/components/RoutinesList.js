@@ -1,11 +1,19 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux'
 
 import deleteRoutine from '../actions/deleteRoutine'
+import deleteWorkout from '../actions/deleteWorkout'
 
 
 const RoutinesList = (props) =>  {
+console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', props);
+
+// const [workouts, setWorkouts] = useState([])
+
+// setWorkouts(workouts =  )
+
+
   const handleDeleteRoutine = (e) => {
     if (props.routines){
       const targetId = e.target.id.replace("btn-delete-routine-", "")
@@ -13,6 +21,19 @@ const RoutinesList = (props) =>  {
       const clickedRoutine = props.routines.find(routine => routine.id == targetId)
       
       props.deleteRoutine(clickedRoutine)
+        }
+    }
+  
+    const handleDeleteWorkout = (e) => {
+      console.log("This here is JAMAICA")
+      console.log('🚀 ~ file: RoutinesList.js ~ line 24 ~ handleDeleteWorkout ~ props.workouts', props.workouts);
+    if (props.routines){
+      const targetId = e.target.id.replace("btn-delete-workout-", "")
+      console.log('🚀 ~ file: RoutinesList.js ~ line 26 ~ handleDeleteWorkout ~ targetId', targetId);
+
+      const clickedWorkout = props.workouts.find(workout => workout.id == targetId)
+      
+      props.deleteWorkout(clickedWorkout)
         }
     }
   return (
@@ -51,7 +72,7 @@ const RoutinesList = (props) =>  {
                                  <button> edit </button>
                                  </Link>
                                 {workout.workout_name} 
-                                <button> delete </button>
+                                <button onClick={handleDeleteWorkout} id={`btn-delete-routine-${workout.id}`}> delete </button>
 
                                 <section key={"nested-section-key-" + workout.id} className='routine-workout-details'>
                                 </section>
@@ -72,4 +93,4 @@ const RoutinesList = (props) =>  {
   )
 }
 // export default RoutinesList
-export default connect(null, {deleteRoutine}) (RoutinesList);
+export default connect(null, {deleteRoutine, deleteWorkout}) (RoutinesList);
