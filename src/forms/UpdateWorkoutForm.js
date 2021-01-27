@@ -10,17 +10,24 @@ import {updateWorkout} from '../actions/updateWorkout'
 class UpdateWorkoutForm extends Component {
     constructor(props) {
     super(props)
-    // this.currentUrl = window.location.href
-    this.currentUrl = window.location.pathname
-    // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 15 ~ UpdateWorkoutForm ~ constructor ~ this.currentUrlPath', this.currentUrlPath);
+    // this.currentPath = window.location.href
+    this.currentPath = window.location.pathname
+    // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 15 ~ UpdateWorkoutForm ~ constructor ~ this.currentPathPath', this.currentPathPath);
 
-    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 14 ~ UpdateWorkoutForm ~ constructor ~ this.currentUrl', this.currentUrl);
-    this.id = parseInt(this.currentUrl.replace('/workouts/',''))
-
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 14 ~ UpdateWorkoutForm ~ constructor ~ this.currentPath', this.currentPath);
+    // this.id = parseInt(this.currentPath.replace('/routines/' + this.routineId + '/workouts/',''))
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 19 ~ UpdateWorkoutForm ~ constructor ~ this.id', this.id);
+    // this.regex = (/\d/.test(this.currentPath))
+    this.id = (/\d{1,5}$/.exec(this.currentPath))[0]
+    // this.id = this.regex[0]
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 21 ~ UpdateWorkoutForm ~ constructor ~ this.id', this.id);
+    // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex', this.regex);
+    // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex[0]', this.regex[0]);
     this.workout = this.props.workouts.find(workout => workout.id == this.id)
 
     this.state = {
-        id: this.id,
+        id: this.id
+        ,
         workout_name: this.workout.workout_name,
         workout_type: this.workout.workout_type,
         distance: this.workout.distance,
@@ -82,15 +89,19 @@ class UpdateWorkoutForm extends Component {
                 {/* {console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 94 ~ UpdateWorkoutForm ~ render ~ this.workout.workout_name', this.workout.workout_name)} */}
 
                 {/* {console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 94 ~ UpdateWorkoutForm ~ render ~ this.state.workout_name', this.state.workout_name)} */}
+                { this.props.detail ?
+                console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', this.props.detail)
+                :
+                console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', "NOPE!")
+                }
             {
-                this.props.workouts && this.props.workout ?
+                 this.props.detail ?
                     <section>
-                        {/* {this.workoutInfo} */}
                         <form onSubmit={this.handleSubmit} id='update-workout-form'>
                             <label> </label>
                             <input 
                             type="text" 
-                            placeholder={this.props.workout.workout_name} 
+                            placeholder={this.props.detail.workout_name} 
                             value={this.state.workout_name} 
                             name="workout_name" 
                             onChange={this.handleChange}/>
@@ -98,7 +109,7 @@ class UpdateWorkoutForm extends Component {
                             <label> </label>
                             <input 
                             type="text" 
-                            placeholder={this.props.workout.workout_type} 
+                            placeholder={this.props.detail.workout_type} 
                             value={this.state.workout_type} 
                             name="workout_type" 
                             onChange={this.handleChange}/>
@@ -106,7 +117,7 @@ class UpdateWorkoutForm extends Component {
                             <label> </label>
                             <input 
                             type="text" 
-                            placeholder={this.props.workout.distance} 
+                            placeholder={this.props.detail.distance} 
                             value={this.state.distance} 
                             name="distance" 
                             onChange={this.handleChange}/>
@@ -114,17 +125,10 @@ class UpdateWorkoutForm extends Component {
                             <label> </label>
                             <input 
                             type="text" 
-                            placeholder={this.props.workout.duration} 
+                            placeholder={this.props.detail.duration} 
                             value={this.state.duration} 
                             name="duration" 
                             onChange={this.handleChange}/>
-
-
-                            <input 
-                            type="text" 
-                            hidden="true    "
-                            value={this.id} 
-                            name="id" />
 
                             <button type="submit">Update Workout </button>
                         </form>
@@ -133,6 +137,7 @@ class UpdateWorkoutForm extends Component {
                     <p>NOTHING TO SEE HERE</p>
 
                 }
+                 
 
         </Fragment>
         );
