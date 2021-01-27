@@ -6798,8 +6798,7 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
         id: "update-routine-form"
       }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
         type: "text",
-        placeholder: this.props.routineToUpdate.routine_name // placeholder={this.state.routine_name == this.props.routine.routine_name ? this.routine.routine_name : this.props.routine.routine_name} 
-        ,
+        placeholder: this.props.routineToUpdate.routine_name,
         value: this.state.routine_name,
         name: "routine_name",
         onChange: this.handleChange
@@ -6807,7 +6806,8 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
         type: "text",
         hidden: "true    ",
         value: this.id,
-        name: "id"
+        name: "id",
+        readOnly: true
       }), /*#__PURE__*/react_default.a.createElement("button", {
         type: "submit"
       }, "Change Routine Name "))) : /*#__PURE__*/react_default.a.createElement("p", null, "NOTHING TO SEE HERE"));
@@ -7012,7 +7012,7 @@ var Routine_Routine = function Routine(props) {
         key: workout.id
       }, /*#__PURE__*/react_default.a.createElement(Link, {
         key: "routine-url-key-" + routine.id,
-        to: "/workouts/".concat(workout.id)
+        to: "".concat(window.location.pathname, "/workouts/").concat(workout.id)
       }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", null, " delete "), /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null));
     }) : /*#__PURE__*/react_default.a.createElement("p", null, " No Workouts Created Yet ")) : null;
   })) : 'no routine here bub');
@@ -7107,6 +7107,7 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
           }));
         }
       }), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
+        exact: true,
         path: "/routines/:id",
         render: function render(routerProps) {
           return /*#__PURE__*/react_default.a.createElement(components_Routine, RoutinesContainer_extends({}, routerProps, {
@@ -7118,8 +7119,7 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
         path: "/routines",
         render: function render(routerProps) {
           return /*#__PURE__*/react_default.a.createElement(containers_RoutinesPage, RoutinesContainer_extends({}, routerProps, {
-            routines: _this2.props.routines,
-            rando: "words"
+            routines: _this2.props.routines
           }));
         }
       }))); // console.log('RoutinesContainer -> render -> this.props.routines', this.props.routines);
@@ -7238,7 +7238,7 @@ var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
 
     UpdateWorkoutForm_classCallCheck(this, UpdateWorkoutForm);
 
-    _this = _super.call(this, props); // this.currentUrl = window.location.href
+    _this = _super.call(this, props); // this.currentPath = window.location.href
 
     UpdateWorkoutForm_defineProperty(UpdateWorkoutForm_assertThisInitialized(_this), "handleChange", function (e) {
       _this.setState(UpdateWorkoutForm_defineProperty({}, e.target.name, e.target.value));
@@ -7257,10 +7257,17 @@ var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
 
     });
 
-    _this.currentUrl = window.location.pathname; // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 15 ~ UpdateWorkoutForm ~ constructor ~ this.currentUrlPath', this.currentUrlPath);
+    _this.currentPath = window.location.pathname; // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 15 ~ UpdateWorkoutForm ~ constructor ~ this.currentPathPath', this.currentPathPath);
 
-    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 14 ~ UpdateWorkoutForm ~ constructor ~ this.currentUrl', _this.currentUrl);
-    _this.id = parseInt(_this.currentUrl.replace('/workouts/', ''));
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 14 ~ UpdateWorkoutForm ~ constructor ~ this.currentPath', _this.currentPath); // this.id = parseInt(this.currentPath.replace('/routines/' + this.routineId + '/workouts/',''))
+
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 19 ~ UpdateWorkoutForm ~ constructor ~ this.id', _this.id); // this.regex = (/\d/.test(this.currentPath))
+
+    _this.id = /\d{1,5}$/.exec(_this.currentPath)[0]; // this.id = this.regex[0]
+
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 21 ~ UpdateWorkoutForm ~ constructor ~ this.id', _this.id); // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex', this.regex);
+    // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex[0]', this.regex[0]);
+
     _this.workout = _this.props.workouts.find(function (workout) {
       return workout.id == _this.id;
     });
@@ -7298,38 +7305,33 @@ var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, this.props.workouts && this.props.workout ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, this.props.detail ? console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', this.props.detail) : console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', "NOPE!"), this.props.detail ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         id: "update-workout-form"
       }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
         type: "text",
-        placeholder: this.props.workout.workout_name,
+        placeholder: this.props.detail.workout_name,
         value: this.state.workout_name,
         name: "workout_name",
         onChange: this.handleChange
       }), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
         type: "text",
-        placeholder: this.props.workout.workout_type,
+        placeholder: this.props.detail.workout_type,
         value: this.state.workout_type,
         name: "workout_type",
         onChange: this.handleChange
       }), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
         type: "text",
-        placeholder: this.props.workout.distance,
+        placeholder: this.props.detail.distance,
         value: this.state.distance,
         name: "distance",
         onChange: this.handleChange
       }), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
         type: "text",
-        placeholder: this.props.workout.duration,
+        placeholder: this.props.detail.duration,
         value: this.state.duration,
         name: "duration",
         onChange: this.handleChange
-      }), /*#__PURE__*/react_default.a.createElement("input", {
-        type: "text",
-        hidden: "true    ",
-        value: this.id,
-        name: "id"
       }), /*#__PURE__*/react_default.a.createElement("button", {
         type: "submit"
       }, "Update Workout "))) : /*#__PURE__*/react_default.a.createElement("p", null, "NOTHING TO SEE HERE"));
@@ -7364,15 +7366,35 @@ function UpdateWorkoutForm_mapStateToProps(state, ownProps) {
 
 var Workout_Workout = function Workout(props) {
   console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ WORKOUT props', props);
-  var workout = props.currentWorkout; // console.log('🚀 ~ file: Workout.js ~ line 11 ~ Workout ~ props', props);
+  var currentPath = window.location.pathname;
+  var routineId = /\d{1,5}/.exec(currentPath)[0];
+  var workoutId = /\d{1,5}$/.exec(currentPath)[0]; // console.log('🚀 ~ file: Workout.js ~ line 12 ~ Workout ~ currentUrl', currentPath); // ? /routines/2/workouts/15
+
+  console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ routineId', routineId);
+  console.log('🚀 ~ file: Workout.js ~ line 15 ~ Workout ~ workoutId', workoutId); // const regExNums = (/\/\d\d/.exec(currentPath))[0]
+  // console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ regExNums', regExNums);
+
+  var workout = props.workouts.find(function (workout) {
+    return workout.id == workoutId;
+  });
+  var routine = props.routines.find(function (routine) {
+    return routine.id == routineId;
+  }); // const {currentWorkout : workout} = props
+  // const work = props.workouts.find(workout => workout.id ==  window.location.pathname.replace('/routines/' + this.routineId + '/workouts/',''))
+  // console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ work', work);
+  // console.log('🚀 ~ file: Workout.js ~ line 11 ~ Workout ~ props', props);
   // console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props-routine', props.current_routine);
   // console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props-routine', props.routine);
 
-  return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(Link, {
+  return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(Link, {
     to: '/routines'
-  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " View Routines "), " ")), /*#__PURE__*/react_default.a.createElement("div", null, "id: ", workout.id, /*#__PURE__*/react_default.a.createElement("div", {
+  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " Routines "), " "), /*#__PURE__*/react_default.a.createElement(Link, {
+    to: '/routines/' + routineId
+  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " ", routine.routine_name, " Routine Page "), " "), /*#__PURE__*/react_default.a.createElement("div", null, "id: ", workout.id, /*#__PURE__*/react_default.a.createElement("div", {
     key: workout.id
-  }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null))), /*#__PURE__*/react_default.a.createElement(forms_UpdateWorkoutForm, null));
+  }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null))), /*#__PURE__*/react_default.a.createElement(forms_UpdateWorkoutForm, {
+    detail: workout
+  }));
 }; // const mapStateToProps = (state, ownProps) => {
 //     const { workouts1 } = state
 //     const { workouts } = ownProps
@@ -7441,8 +7463,8 @@ var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
     _this.fetchRoutines = fetchRoutines;
     _this.currentUrl = window.location.pathname;
     _this.currentUrlString = _this.currentUrl.replace("/routines/", '');
-    _this.routineId = _this.currentUrlString[0];
-    console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', _this.routineString); // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', this.routineString[0]);
+    _this.routineId = _this.currentUrlString[0]; // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', this.routineString);
+    // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', this.routineString[0]);
     // this.routines = this.props.routines
 
     _this.state = {
@@ -7468,16 +7490,17 @@ var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
       var _this2 = this;
 
       return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, this.props.workouts ? /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        path: "/workouts/:id",
+        path: "/routines/:id/workouts/:id",
         render: function render(routerProps) {
           return /*#__PURE__*/react_default.a.createElement(components_Workout, WorkoutsContainer_extends({}, routerProps, {
             workouts: _this2.props.workouts,
+            routines: _this2.props.routines,
             currentWorkout: _this2.props.workouts.find(function (workout) {
-              return workout.id == window.location.pathname.replace('/workouts/', '');
+              return workout.id == window.location.pathname.replace('/routines/' + _this2.routineId + '/workouts/', '');
             })
           }));
         }
-      }) : null, /*#__PURE__*/react_default.a.createElement("p", null, " Hi Lu - rendered from the WorkoutsContainer "))); // console.log('WorkoutsContainer -> render -> this.props.workouts', this.props.workouts);
+      }) : null)); // console.log('WorkoutsContainer -> render -> this.props.workouts', this.props.workouts);
     }
   }]);
 
@@ -7486,16 +7509,10 @@ var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
 
 
 var WorkoutsContainer_mapStateToProps = function mapStateToProps(state, ownProps) {
-  var scrapedUrl = window.location.pathname.replace("/routines/", ''); // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 96 ~ rooString', scrapedUrl);
-
-  var routineId = scrapedUrl[0];
-  var lastChar = scrapedUrl[scrapedUrl.length - 1]; // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 97 ~ rooId', routineId);
-
-  console.log('🚀 ~ file: WorkoutsContainer.js ~ line 98 ~ scrapedUrl LAST', lastChar);
-  console.log('🚀 ~ file: WorkoutsContainer.js ~ line 101 ~ ownProps', ownProps);
-  console.log('🚀 ~ file: WorkoutsContainer.js ~ line 95 ~ mapStateToProps ~ state', state); // let roo = state.routinesReducer.routines.find(routine => routine.id == routineId)
-
-  console.log('🚀 ~ file: WorkoutsContainer.js ~ line 108 ~ mapStateToProps ~ state.routinesReducer.routines', state.routinesReducer.routines);
+  // let scrapedUrl = window.location.pathname.replace(`/routines/`,'')
+  // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 96 ~ rooString', scrapedUrl);
+  // let routineId = scrapedUrl[0]
+  // var lastChar = scrapedUrl[scrapedUrl.length -1]
   return {
     workouts: state.workoutsReducer.workouts,
     routines: state.routinesReducer.routines // ,
