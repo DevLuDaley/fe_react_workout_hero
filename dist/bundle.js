@@ -6433,7 +6433,7 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
         to: "/routines/".concat(routine.id, "/workouts/").concat(workout.id)
       }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", {
         onClick: handleDeleteWorkout,
-        id: "btn-delete-routine-".concat(workout.id)
+        id: "btn-delete-workout-".concat(workout.id)
       }, " delete "), /*#__PURE__*/react_default.a.createElement("section", {
         key: "nested-section-key-" + workout.id,
         className: "routine-workout-details"
@@ -6443,7 +6443,21 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
 }; // export default RoutinesList
 
 
-/* harmony default export */ var components_RoutinesList = (connect_connect(null, {
+function RoutinesList_mapStateToProps(state, ownProps) {
+  // let routineId
+  // window.location.href.includes('https://fe-workout-hero.herokuapp.com/routines/') ?
+  // routineId = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+  //  const currentRoutine = state.routinesReducer.routines.filter(routine => routine.id == routineId)
+  return {
+    routines: state.routinesReducer.routines,
+    workouts: state.workoutsReducer.workouts //    routine: [ownProps.routines.filter(routine => routine.id == routineId)]
+    //  routine: currentRoutine[0]
+
+  };
+} // export default connect(mapStateToProps, {updateRoutine})(UpdateRoutineForm);
+
+
+/* harmony default export */ var components_RoutinesList = (connect_connect(RoutinesList_mapStateToProps, {
   deleteRoutine: actions_deleteRoutine,
   deleteWorkout: actions_deleteWorkout
 })(RoutinesList_RoutinesList));
@@ -6630,10 +6644,10 @@ var RoutinesPage_RoutinesPage = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(forms_NewRoutineForm, {
         routines: this.props.routines
-      }), /*#__PURE__*/react_default.a.createElement(components_RoutinesList, {
+      }), this.props.routines && this.props.workouts ? /*#__PURE__*/react_default.a.createElement(components_RoutinesList, {
         routines: this.props.routines,
         workouts: this.props.workouts
-      }), console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.props', this.props), console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.state', this.state));
+      }) : null, console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.props', this.props), console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.state', this.state));
     }
   }]);
 
@@ -7799,31 +7813,16 @@ function workoutsReducer() {
       var updatedWorkout = action.payload;
       var selectedWorkout = state.workouts.filter(function (workout) {
         return workout.id == payloadId;
-      });
-      console.log('🚀 ~~line 17 ~ ~ UPDATED-WORKOUT', updatedWorkout);
-      console.log('🚀 ~~ line 16 ~ ~ PAYLOAD-ID', payloadId);
-      console.log('🚀 ~~ line 20 ~ ~  state.workouts.FILTER', state.workouts.filter(function (workout) {
-        return workout.id == payloadId;
-      }));
-      console.log('🚀 ~ file: workoutsReducer.js ~ line 19 ~ workoutsReducer ~ selectedWorkout', selectedWorkout);
-      console.log('STATE', state);
+      }); // console.log('🚀 ~~line 17 ~ ~ UPDATED-WORKOUT', updatedWorkout);
+      // console.log('🚀 ~~ line 16 ~ ~ PAYLOAD-ID', payloadId);
+      // console.log('🚀 ~~ line 20 ~ ~  state.workouts.FILTER', state.workouts.filter(workout => workout.id == payloadId))
+      // console.log('🚀 ~ file: workoutsReducer.js ~ line 19 ~ workoutsReducer ~ selectedWorkout', selectedWorkout);
+      // console.log('STATE', state);
+
       return {
         workouts: state.workouts.map(function (workout) {
           return workout.id == payloadId ? action.payload : workout;
-        }) // workouts: state.workouts.map(workout => workout.id == payloadId ? action.payload : workout)
-        // workouts: updatedWorkout
-        // workouts: state.workouts,
-        // workout: 
-        // updatedWorkout
-        // ,
-        // workout: state.workouts.map(workout => workout.id == payloadId ? action.payload : workout)
-        // workouts: state.workouts,
-        // workout: updatedWorkout
-        // workout: state.workouts.filter(workout => 
-        //     workout.id == payloadId ? 
-        //     workout = updatedWorkout : null
-        // ? workout = updatedWorkout : null 
-        // )
+        }) // ? workout = updatedWorkout : null 
 
       };
     // return Object.assign({}, state, {workouts: currentWorkouts, workout: currentWorkout})
@@ -7832,22 +7831,9 @@ function workoutsReducer() {
       var filteredWorkouts = state.workouts.filter(function (workout) {
         return workout.id !== action.payload.workoutId;
       });
+      console.log('🚀 ~ file: workoutsReducer.js ~ line 46 ~ workoutsReducer ~ filteredWorkouts', filteredWorkouts);
       return workoutsReducer_objectSpread(workoutsReducer_objectSpread({}, state), {}, {
         workouts: filteredWorkouts
-      });
-
-    case 'ADD_WORKOUT_WORKOUT':
-      var workoutWorkouts = state.workouts.map(function (workout) {
-        if (workout.id == action.payload.id) {
-          console.log('🚀 ~ file: workoutsReducer.js ~ line 52 ~ workoutsReducer ~ action.payload', action.payload);
-          return action.payload;
-        } else {
-          return workout;
-        }
-      });
-      console.log('🚀 ~ file: workoutsReducer.js ~ line 57 ~ workoutsReducer ~ workoutWorkouts', workoutWorkouts);
-      return workoutsReducer_objectSpread(workoutsReducer_objectSpread({}, state), {}, {
-        workouts: workoutWorkouts
       });
 
     default:
