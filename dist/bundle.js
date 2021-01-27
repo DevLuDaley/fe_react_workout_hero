@@ -6029,6 +6029,30 @@ function fetchRoutines() {
   //   console.log('App -> componentDidMount -> jsonResponse', jsonResponse))
 } // return action.payload
 // export fetchRoutines
+// CONCATENATED MODULE: ./src/actions/fetchWorkouts.js
+function fetchWorkouts() {
+  // ! thunk allows us to use dispatch here
+  // ! bring in dispatch so that we can async if not the connect will handle synchronously
+  // fetch('https://be-hoop-drills.herokuapp.com/api/v1/workouts'
+  return function (dispatch) {
+    // fetch('http://localhost:3000/api/v1/workouts', 
+    fetch('https://be-workout-hero2.herokuapp.com/api/v1/workouts', {
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      }
+    }).then(function (resp) {
+      return resp.json();
+    }).then(function (data) {
+      return dispatch({
+        type: 'FETCH_WORKOUTS',
+        payload: data
+      });
+    });
+  }; // .then(jsonResponse =>
+  //   console.log('App -> componentDidMount -> jsonResponse', jsonResponse))
+} // return action.payload
+// export fetchWorkouts
 // CONCATENATED MODULE: ./node_modules/react-router-dom/esm/react-router-dom.js
 
 
@@ -6315,13 +6339,37 @@ var deleteRoutine = function deleteRoutine(routineData) {
   };
 };
 /* harmony default export */ var actions_deleteRoutine = (deleteRoutine);
+// CONCATENATED MODULE: ./src/actions/deleteWorkout.js
+var deleteWorkout = function deleteWorkout(workoutData) {
+  console.log('🚀 ~ file: deleteWorkout.js ~ line 2 ~ deleteWorkout ~ workoutData', workoutData); // const baseUrl = 'http://localhost:3000/api/v1/workouts/'
+
+  var baseUrl = 'https://be-workout-hero2.herokuapp.com/api/v1/workouts/';
+  var deleteWorkoutUrl = baseUrl + workoutData.id;
+  return function (dispatch) {
+    fetch(deleteWorkoutUrl, {
+      method: 'DELETE'
+    }).then(function (response) {
+      return response.json();
+    }).then(function (workoutId) {
+      return dispatch({
+        type: 'DELETE_WORKOUT',
+        payload: workoutId
+      });
+    });
+  };
+};
+/* harmony default export */ var actions_deleteWorkout = (deleteWorkout);
 // CONCATENATED MODULE: ./src/components/RoutinesList.js
 
 
 
 
 
+
 var RoutinesList_RoutinesList = function RoutinesList(props) {
+  console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', props); // const [workouts, setWorkouts] = useState([])
+  // setWorkouts(workouts =  )
+
   var handleDeleteRoutine = function handleDeleteRoutine(e) {
     if (props.routines) {
       var targetId = e.target.id.replace("btn-delete-routine-", "");
@@ -6329,6 +6377,20 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
         return routine.id == targetId;
       });
       props.deleteRoutine(clickedRoutine);
+    }
+  };
+
+  var handleDeleteWorkout = function handleDeleteWorkout(e) {
+    console.log("This here is JAMAICA");
+    console.log('🚀 ~ file: RoutinesList.js ~ line 24 ~ handleDeleteWorkout ~ props.workouts', props.workouts);
+
+    if (props.routines) {
+      var targetId = e.target.id.replace("btn-delete-workout-", "");
+      console.log('🚀 ~ file: RoutinesList.js ~ line 26 ~ handleDeleteWorkout ~ targetId', targetId);
+      var clickedWorkout = props.workouts.find(function (workout) {
+        return workout.id == targetId;
+      });
+      props.deleteWorkout(clickedWorkout);
     }
   };
 
@@ -6369,7 +6431,10 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
       }, /*#__PURE__*/react_default.a.createElement(Link, {
         key: "routine-url-key-" + routine.id,
         to: "/routines/".concat(routine.id, "/workouts/").concat(workout.id)
-      }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", null, " delete "), /*#__PURE__*/react_default.a.createElement("section", {
+      }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", {
+        onClick: handleDeleteWorkout,
+        id: "btn-delete-routine-".concat(workout.id)
+      }, " delete "), /*#__PURE__*/react_default.a.createElement("section", {
         key: "nested-section-key-" + workout.id,
         className: "routine-workout-details"
       }));
@@ -6379,7 +6444,8 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
 
 
 /* harmony default export */ var components_RoutinesList = (connect_connect(null, {
-  deleteRoutine: actions_deleteRoutine
+  deleteRoutine: actions_deleteRoutine,
+  deleteWorkout: actions_deleteWorkout
 })(RoutinesList_RoutinesList));
 // CONCATENATED MODULE: ./src/actions/addRoutine.js
 var addRoutine = function addRoutine(data) {
@@ -6547,8 +6613,12 @@ var RoutinesPage_RoutinesPage = /*#__PURE__*/function (_Component) {
 
     RoutinesPage_classCallCheck(this, RoutinesPage);
 
+    console.log('🚀 ~ file: RoutinesPage.js ~ line 11 ~ RoutinesPage ~ constructor ~ props', props);
     _this = _super.call(this, props);
-    _this.state = {};
+    _this.state = {
+      routines: [],
+      workouts: []
+    };
     return _this;
   } //   componentDidMount(){
   //     // this.props.fetchRoutines()
@@ -6561,8 +6631,9 @@ var RoutinesPage_RoutinesPage = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(forms_NewRoutineForm, {
         routines: this.props.routines
       }), /*#__PURE__*/react_default.a.createElement(components_RoutinesList, {
-        routines: this.props.routines
-      }));
+        routines: this.props.routines,
+        workouts: this.props.workouts
+      }), console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.props', this.props), console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.state', this.state));
     }
   }]);
 
@@ -7057,6 +7128,7 @@ function RoutinesContainer_getPrototypeOf(o) { RoutinesContainer_getPrototypeOf 
 
 
 
+
  // import Workout from '../components/Workout'
 // import UpdateRoutinePage from '../components/UpdateRoutinePage'
 // import UpdateRoutineForm from '../forms/UpdateRoutineForm'
@@ -7079,8 +7151,10 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, props);
     _this.fetchRoutines = fetchRoutines;
+    _this.fetchWorkouts = fetchWorkouts;
     _this.state = {
-      routines: []
+      routines: [],
+      workouts: []
     };
     return _this;
   }
@@ -7091,19 +7165,19 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
       // console.log('THIS.PROPS 1', this.props)
       // this.fetchRoutines()
       this.props.fetchRoutines();
+      this.props.fetchWorkouts();
     }
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(react_router_Route, {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, console.log('🚀 ~ file: RoutinesContainer.js ~ line 46 ~ RoutinesContainer ~ componentDidMount ~ this.props', this.props), console.log('🚀 ~ file: RoutinesContainer.js ~ line 46 ~ RoutinesContainer ~ componentDidMount ~ this.state', this.state), /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         exact: true,
         path: "/",
         render: function render(routerProps) {
           return /*#__PURE__*/react_default.a.createElement(containers_RoutinesPage, RoutinesContainer_extends({}, routerProps, {
-            routines: _this2.props.routines,
-            rando: "words"
+            routines: _this2.props.routines
           }));
         }
       }), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
@@ -7111,7 +7185,8 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
         path: "/routines/:id",
         render: function render(routerProps) {
           return /*#__PURE__*/react_default.a.createElement(components_Routine, RoutinesContainer_extends({}, routerProps, {
-            routines: _this2.props.routines
+            routines: _this2.props.routines,
+            workouts: _this2.props.workouts
           }));
         }
       }), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
@@ -7119,7 +7194,8 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
         path: "/routines",
         render: function render(routerProps) {
           return /*#__PURE__*/react_default.a.createElement(containers_RoutinesPage, RoutinesContainer_extends({}, routerProps, {
-            routines: _this2.props.routines
+            routines: _this2.props.routines,
+            workouts: _this2.props.workouts
           }));
         }
       }))); // console.log('RoutinesContainer -> render -> this.props.routines', this.props.routines);
@@ -7132,38 +7208,15 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
 
 var RoutinesContainer_mapStateToProps = function mapStateToProps(state) {
   return {
-    routines: state.routinesReducer.routines // recipes: state.recipesReducer.recipes
-
+    routines: state.routinesReducer.routines,
+    workouts: state.workoutsReducer.workouts
   };
 };
 
 /* harmony default export */ var containers_RoutinesContainer = (connect_connect(RoutinesContainer_mapStateToProps, {
-  fetchRoutines: fetchRoutines
+  fetchRoutines: fetchRoutines,
+  fetchWorkouts: fetchWorkouts
 })(RoutinesContainer_RoutinesContainer));
-// CONCATENATED MODULE: ./src/actions/fetchWorkouts.js
-function fetchWorkouts() {
-  // ! thunk allows us to use dispatch here
-  // ! bring in dispatch so that we can async if not the connect will handle synchronously
-  // fetch('https://be-hoop-drills.herokuapp.com/api/v1/workouts'
-  return function (dispatch) {
-    // fetch('http://localhost:3000/api/v1/workouts', 
-    fetch('https://be-workout-hero2.herokuapp.com/api/v1/workouts', {
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      }
-    }).then(function (resp) {
-      return resp.json();
-    }).then(function (data) {
-      return dispatch({
-        type: 'FETCH_WORKOUTS',
-        payload: data
-      });
-    });
-  }; // .then(jsonResponse =>
-  //   console.log('App -> componentDidMount -> jsonResponse', jsonResponse))
-} // return action.payload
-// export fetchWorkouts
 // CONCATENATED MODULE: ./src/actions/updateWorkout.js
 var updateWorkout = function updateWorkout(data) {
   console.log('updateWorkout -> data', data); // console.log('updateWorkout -> data.id', data.id);
