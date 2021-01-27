@@ -47,7 +47,7 @@ const RoutinesList = (props) =>  {
                             {routine.workouts.map(workout =>
                             <div key={"section-div-key-" + workout.id} className='routine-workout-names'>
 
-                                 <Link key={"routine-url-key-" + routine.id} to={`/workouts/${workout.id}`}>
+                                 <Link key={"routine-url-key-" + routine.id} to={`/routines/${routine.id}/workouts/${workout.id}`}>
                                  <button> edit </button>
                                  </Link>
                                 {workout.workout_name} 

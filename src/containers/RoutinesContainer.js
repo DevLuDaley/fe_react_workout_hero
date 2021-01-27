@@ -36,7 +36,7 @@ class RoutinesContainer extends Component {
             <Switch>
             <Route exact path='/' render={(routerProps) => <RoutinesPage {...routerProps} routines={this.props.routines} rando="words"/>}/>
 
-            <Route path='/routines/:id' render={(routerProps) => <Routine {...routerProps} routines={this.props.routines}
+            <Route exact path='/routines/:id' render={(routerProps) => <Routine {...routerProps} routines={this.props.routines}
              />}/>
 
             {/* <Route path='/workouts/:id' render={(routerProps) => <Workout {...routerProps} routines={this.props.routines} workouts={this.props.workouts}
@@ -44,7 +44,7 @@ class RoutinesContainer extends Component {
 
             {/* <Route exact path='/' component={HomePage}/> */}
 
-            <Route exact path='/routines' render={(routerProps) => <RoutinesPage {...routerProps} routines={this.props.routines} rando="words"/>}/>
+            <Route exact path='/routines' render={(routerProps) => <RoutinesPage {...routerProps} routines={this.props.routines} />}/>
 
             {/* <Route exact path='/routines/new' render={(routerProps) => <NewRoutinesContainer {...routerProps} routines={this.props.routines}/>}/> */}
 

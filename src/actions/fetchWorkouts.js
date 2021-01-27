@@ -4,7 +4,6 @@ export function fetchWorkouts() {
     // fetch('https://be-hoop-drills.herokuapp.com/api/v1/workouts'
     return(dispatch) => { 
         // fetch('http://localhost:3000/api/v1/workouts', 
-        // fetch('https://be-workout-hero.herokuapp.com/api/v1/workouts', 
         fetch('https://be-workout-hero2.herokuapp.com/api/v1/workouts', 
         {
             headers: {
