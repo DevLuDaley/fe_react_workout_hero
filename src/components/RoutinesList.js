@@ -72,7 +72,7 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
                                  <button> edit </button>
                                  </Link>
                                 {workout.workout_name} 
-                                <button onClick={handleDeleteWorkout} id={`btn-delete-routine-${workout.id}`}> delete </button>
+                                <button onClick={handleDeleteWorkout} id={`btn-delete-workout-${workout.id}`}> delete </button>
 
                                 <section key={"nested-section-key-" + workout.id} className='routine-workout-details'>
                                 </section>
@@ -93,4 +93,20 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
   )
 }
 // export default RoutinesList
-export default connect(null, {deleteRoutine, deleteWorkout}) (RoutinesList);
+
+function mapStateToProps(state, ownProps) {
+  // let routineId
+  // window.location.href.includes('https://fe-workout-hero.herokuapp.com/routines/') ?
+  // routineId = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+  //  const currentRoutine = state.routinesReducer.routines.filter(routine => routine.id == routineId)
+
+  return { 
+           routines: state.routinesReducer.routines,
+           workouts: state.workoutsReducer.workouts
+        //    routine: [ownProps.routines.filter(routine => routine.id == routineId)]
+          //  routine: currentRoutine[0]
+ }
+}
+
+// export default connect(mapStateToProps, {updateRoutine})(UpdateRoutineForm);
+export default connect(mapStateToProps, {deleteRoutine, deleteWorkout}) (RoutinesList);
