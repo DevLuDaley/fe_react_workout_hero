@@ -13,7 +13,7 @@ class RoutinesPage extends Component {
         this.state = {routines: [], workouts: []}
     }
 
-    
+
 
     //   componentDidMount(){
     //     // this.props.fetchRoutines()
@@ -22,10 +22,14 @@ class RoutinesPage extends Component {
             return (
             <>
                 {/* <OldRoutineForm routines={this.props.routines}/> */}
-                <NewRoutineForm routines={this.props.routines}/>
 
+                <NewRoutineForm routines={this.props.routines}/>
+{
+                    this.props.routines && this.props.workouts ?
                 <RoutinesList routines={this.props.routines} workouts={this.props.workouts}/>
 
+                : null 
+}
                 {/* <Routine/> */}
                 {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.props', this.props)}
                 {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.state', this.state)}

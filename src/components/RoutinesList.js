@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 import { connect } from 'react-redux'
 
 import deleteRoutine from '../actions/deleteRoutine'
-import deleteWorkout from '../actions/deleteWorkout'
+// import updateRoutine from '../actions/updateRoutine'
+import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
 
 
 const RoutinesList = (props) =>  {
@@ -25,15 +26,53 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
     }
   
     const handleDeleteWorkout = (e) => {
-      console.log("This here is JAMAICA")
-      console.log('🚀 ~ file: RoutinesList.js ~ line 24 ~ handleDeleteWorkout ~ props.workouts', props.workouts);
-    if (props.routines){
-      const targetId = e.target.id.replace("btn-delete-workout-", "")
-      console.log('🚀 ~ file: RoutinesList.js ~ line 26 ~ handleDeleteWorkout ~ targetId', targetId);
+    
+      if (props.routines && props.workouts){
+      let targetId = e.target.id
+      console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
 
-      const clickedWorkout = props.workouts.find(workout => workout.id == targetId)
+      let routineString = (/\d{1,5}/.exec(targetId))
+      let workoutString = (/\d{1,5}$/.exec(targetId))
+      // let workoutId = workoutString[0].toString()
+      let workoutIdString = workoutString[0] //.toString()
+      let workoutId = parseInt(workoutIdString) //.toString()
+      let routineId = routineString[0].toString()
       
-      props.deleteWorkout(clickedWorkout)
+      // const routineId = (/\d{1,5}/.exec(e.target.id))
+      console.log('🚀 ~ line 40 ~~ routineId', routineId);
+      console.log('🚀 ~ line 41 ~~ workoutId', workoutId);
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 40 ~ handleDeleteWorkout ~ filteredWorkoutId', filteredWorkoutId);
+
+
+      const clickedRoutine = props.routines.find(routine => routine.id == routineId)
+      // const clickedWorkoutObject = props.workouts.find(workout => workout.id == workoutId)
+      // const clickedWorkout = parseInt(clickedWorkoutObject[0])
+      
+      console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ props.workouts', props.workouts);
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 42 ~ handleDeleteWorkout ~ clickedWorkoutObject', clickedWorkoutObject);
+      console.log('🚀 ~ line 53 ~~ clickedRoutine', clickedRoutine);
+      // console.log('🚀 ~ line 54 ~~ clickedWorkout', clickedWorkout);
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ props.workouts.FIND', props.workouts.find(workout => workout.id === workoutId));
+      
+      // let {id} = clickedRoutine
+      // let {id: workout} = clickedWorkout
+      // let {id} = clickedRoutine
+      // let {id: workout} = clickedWorkout
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 50 ~ handleDeleteWorkout ~ id', id);
+
+      // debugger
+      const outgoingPayload = {
+        "id": clickedRoutine.id,
+        "workout_id_to_delete": workoutId
+        // "workout_id_to_delete": clickedWorkout.id
+      }
+      // debugger
+      props.deleteRoutineWorkout(outgoingPayload)
+      console.log('🚀 ~ file: RoutinesList.js ~ line 59 ~ handleDeleteWorkout ~ outgoingPayload', outgoingPayload);
+      // props.updateRoutine(outgoingPayload)
+
+      // props.updateRoutine(clickedRoutineWorkout)
+      // props.deleteWorkout(clickedWorkout)
         }
     }
   return (
@@ -72,7 +111,7 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
                                  <button> edit </button>
                                  </Link>
                                 {workout.workout_name} 
-                                <button onClick={handleDeleteWorkout} id={`btn-delete-routine-${workout.id}`}> delete </button>
+                                <button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
 
                                 <section key={"nested-section-key-" + workout.id} className='routine-workout-details'>
                                 </section>
@@ -93,4 +132,20 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
   )
 }
 // export default RoutinesList
-export default connect(null, {deleteRoutine, deleteWorkout}) (RoutinesList);
+
+function mapStateToProps(state, ownProps) {
+  // let routineId
+  // window.location.href.includes('https://fe-workout-hero.herokuapp.com/routines/') ?
+  // routineId = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/routines/", "")) : routineId = parseInt(window.location.href.replace("http://localhost:3003/routines/", ""))
+  //  const currentRoutine = state.routinesReducer.routines.filter(routine => routine.id == routineId)
+
+  return { 
+           routines: state.routinesReducer.routines,
+           workouts: state.workoutsReducer.workouts
+        //    routine: [ownProps.routines.filter(routine => routine.id == routineId)]
+          //  routine: currentRoutine[0]
+ }
+}
+
+// export default connect(mapStateToProps, {updateRoutine})(UpdateRoutineForm);
+export default connect(mapStateToProps, {deleteRoutine, deleteRoutineWorkout}) (RoutinesList);
