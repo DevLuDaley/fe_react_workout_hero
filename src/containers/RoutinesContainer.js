@@ -42,7 +42,7 @@ class RoutinesContainer extends Component {
             {/* <p> Routines Container</p> */}
             {/* <Router> */}
             <Switch>
-            <Route exact path='/' render={(routerProps) => <RoutinesPage {...routerProps} routines={this.props.routines} />}/>
+            <Route exact path='/' render={(routerProps) => <RoutinesPage {...routerProps} routines={this.props.routines} workouts={this.props.workouts} />}/>
 
             <Route exact path='/routines/:id' render={(routerProps) => <Routine {...routerProps} routines={this.props.routines} workouts={this.props.workouts} 
              />}/>
