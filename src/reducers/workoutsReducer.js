@@ -26,10 +26,10 @@ export default function workoutsReducer(state = intialState, action) {
                         // ? workout = updatedWorkout : null 
             }
                 // return Object.assign({}, state, {workouts: currentWorkouts, workout: currentWorkout})
-        case 'DELETE_WORKOUT':
-            const filteredWorkouts = state.workouts.filter(workout => workout.id !== action.payload.workoutId);
-            console.log('🚀 ~ file: workoutsReducer.js ~ line 46 ~ workoutsReducer ~ filteredWorkouts', filteredWorkouts);
-            return {...state, workouts: filteredWorkouts}
+        // case 'DELETE_WORKOUT':
+        //     const filteredWorkouts = state.workouts.filter(workout => workout.id !== action.payload.workoutId);
+        //     console.log('🚀 ~ file: workoutsReducer.js ~ line 46 ~ workoutsReducer ~ filteredWorkouts', filteredWorkouts);
+        //     return {...state, workouts: filteredWorkouts}
 
 
         default:
