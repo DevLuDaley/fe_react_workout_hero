@@ -6339,30 +6339,40 @@ var deleteRoutine = function deleteRoutine(routineData) {
   };
 };
 /* harmony default export */ var actions_deleteRoutine = (deleteRoutine);
-// CONCATENATED MODULE: ./src/actions/deleteWorkout.js
-var deleteWorkout = function deleteWorkout(workoutData) {
-  console.log('🚀 ~ file: deleteWorkout.js ~ line 2 ~ deleteWorkout ~ workoutData', workoutData); // const baseUrl = 'http://localhost:3000/api/v1/workouts/'
+// CONCATENATED MODULE: ./src/actions/deleteRoutineWorkout.js
+var deleteRoutineWorkout = function deleteRoutineWorkout(routineData) {
+  console.log('🚀 ~ file: deleteRoutine.js ~ line 2 ~ deleteRoutine ~ routineData', routineData); // const baseUrl = 'http://localhost:3000/api/v1/routines/'
 
-  var baseUrl = 'https://be-workout-hero2.herokuapp.com/api/v1/workouts/';
-  var deleteWorkoutUrl = baseUrl + workoutData.id;
+  var baseUrl = 'https://be-workout-hero2.herokuapp.com/api/v1/routines/';
+  var deleteRoutineWorkoutUrl = baseUrl + routineData.id; // const deleteRoutineWorkoutUrl = ('http://localhost:3000/api/v1/routines/' + routineData.id)
+
+  console.log('🚀 ~ line 8 ~~ deleteRoutineWorkoutUrl', deleteRoutineWorkoutUrl);
   return function (dispatch) {
-    fetch(deleteWorkoutUrl, {
-      method: 'DELETE'
+    fetch(deleteRoutineWorkoutUrl, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      method: 'DELETE',
+      body: JSON.stringify(routineData)
     }).then(function (response) {
       return response.json();
-    }).then(function (workoutId) {
+    }) // .then(d => console.log("return from rails/ruby ap", d))
+    .then(function (routineWorkoutInfo) {
       return dispatch({
-        type: 'DELETE_WORKOUT',
-        payload: workoutId
+        type: 'DELETE_ROUTINE_WORKOUT',
+        payload: routineWorkoutInfo
       });
     });
   };
-};
-/* harmony default export */ var actions_deleteWorkout = (deleteWorkout);
+}; // .then(routineId => dispatch({type: 'DELETE_ROUTINE_WORKOUT', payload: routineId}))
+
+/* harmony default export */ var actions_deleteRoutineWorkout = (deleteRoutineWorkout);
 // CONCATENATED MODULE: ./src/components/RoutinesList.js
 
 
 
+ // import updateRoutine from '../actions/updateRoutine'
 
 
 
@@ -6381,16 +6391,47 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
   };
 
   var handleDeleteWorkout = function handleDeleteWorkout(e) {
-    console.log("This here is JAMAICA");
-    console.log('🚀 ~ file: RoutinesList.js ~ line 24 ~ handleDeleteWorkout ~ props.workouts', props.workouts);
+    if (props.routines && props.workouts) {
+      var targetId = e.target.id;
+      console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
+      var routineString = /\d{1,5}/.exec(targetId);
+      var workoutString = /\d{1,5}$/.exec(targetId); // let workoutId = workoutString[0].toString()
 
-    if (props.routines) {
-      var targetId = e.target.id.replace("btn-delete-workout-", "");
-      console.log('🚀 ~ file: RoutinesList.js ~ line 26 ~ handleDeleteWorkout ~ targetId', targetId);
-      var clickedWorkout = props.workouts.find(function (workout) {
-        return workout.id == targetId;
-      });
-      props.deleteWorkout(clickedWorkout);
+      var workoutIdString = workoutString[0]; //.toString()
+
+      var workoutId = parseInt(workoutIdString); //.toString()
+
+      var routineId = routineString[0].toString(); // const routineId = (/\d{1,5}/.exec(e.target.id))
+
+      console.log('🚀 ~ line 40 ~~ routineId', routineId);
+      console.log('🚀 ~ line 41 ~~ workoutId', workoutId); // console.log('🚀 ~ file: RoutinesList.js ~ line 40 ~ handleDeleteWorkout ~ filteredWorkoutId', filteredWorkoutId);
+
+      var clickedRoutine = props.routines.find(function (routine) {
+        return routine.id == routineId;
+      }); // const clickedWorkoutObject = props.workouts.find(workout => workout.id == workoutId)
+      // const clickedWorkout = parseInt(clickedWorkoutObject[0])
+
+      console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ props.workouts', props.workouts); // console.log('🚀 ~ file: RoutinesList.js ~ line 42 ~ handleDeleteWorkout ~ clickedWorkoutObject', clickedWorkoutObject);
+
+      console.log('🚀 ~ line 53 ~~ clickedRoutine', clickedRoutine); // console.log('🚀 ~ line 54 ~~ clickedWorkout', clickedWorkout);
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ props.workouts.FIND', props.workouts.find(workout => workout.id === workoutId));
+      // let {id} = clickedRoutine
+      // let {id: workout} = clickedWorkout
+      // let {id} = clickedRoutine
+      // let {id: workout} = clickedWorkout
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 50 ~ handleDeleteWorkout ~ id', id);
+      // debugger
+
+      var outgoingPayload = {
+        "id": clickedRoutine.id,
+        "workout_id_to_delete": workoutId // "workout_id_to_delete": clickedWorkout.id
+
+      }; // debugger
+
+      props.deleteRoutineWorkout(outgoingPayload);
+      console.log('🚀 ~ file: RoutinesList.js ~ line 59 ~ handleDeleteWorkout ~ outgoingPayload', outgoingPayload); // props.updateRoutine(outgoingPayload)
+      // props.updateRoutine(clickedRoutineWorkout)
+      // props.deleteWorkout(clickedWorkout)
     }
   };
 
@@ -6433,7 +6474,7 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
         to: "/routines/".concat(routine.id, "/workouts/").concat(workout.id)
       }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", {
         onClick: handleDeleteWorkout,
-        id: "btn-delete-workout-".concat(workout.id)
+        id: "routine-".concat(routine.id, "-btn-delete-workout-").concat(workout.id)
       }, " delete "), /*#__PURE__*/react_default.a.createElement("section", {
         key: "nested-section-key-" + workout.id,
         className: "routine-workout-details"
@@ -6459,7 +6500,7 @@ function RoutinesList_mapStateToProps(state, ownProps) {
 
 /* harmony default export */ var components_RoutinesList = (connect_connect(RoutinesList_mapStateToProps, {
   deleteRoutine: actions_deleteRoutine,
-  deleteWorkout: actions_deleteWorkout
+  deleteRoutineWorkout: actions_deleteRoutineWorkout
 })(RoutinesList_RoutinesList));
 // CONCATENATED MODULE: ./src/actions/addRoutine.js
 var addRoutine = function addRoutine(data) {
@@ -6695,7 +6736,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function routinesReducer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // const intialState = {routines: [], routine: {}}
-var intialState = [];
+var intialState = [{
+  "routines": [],
+  "workouts": []
+}];
 function routinesReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : intialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
@@ -6770,6 +6814,48 @@ function routinesReducer() {
       return _objectSpread(_objectSpread({}, state), {}, {
         routines: routineWorkouts
       });
+
+    case 'DELETE_ROUTINE_WORKOUT':
+      console.log('action :>> ', action); // console.log('ROUTINES-REDUCER');
+      // const {routineId, workoutId} = action.payload
+
+      var routineId = action.payload.routineId;
+      var workoutId = action.payload.workoutId;
+      var routine = state.routines.find(function (r) {
+        return r.id == routineId;
+      });
+      var workout = routine.workouts.find(function (w) {
+        return w.id == workoutId;
+      });
+      var workoutsList = routine.workouts;
+      var filteredWorkoutsList = workoutsList.filter(function (w) {
+        return w.id !== workoutId;
+      }); // filteresWorkoutsList
+      // console.log('🚀 ~ file: routinesReducer.js ~ line 70 ~ routinesReducer ~ WorkoutsList', workoutsList);
+
+      console.log('🚀 ~ file: routinesReducer.js ~ line 70 ~ routinesReducer ~ WorkoutsList.length()', workoutsList.length); // console.log('🚀 ~ file: routinesReducer.js ~ line 85 ~ routinesReducer ~ filteresWorkoutsList', filteresWorkoutsList);
+
+      console.log('🚀 ~ file: routinesReducer.js ~ line 85 ~ routinesReducer ~ filteresWorkoutsList.length()', filteredWorkoutsList.length); // routine.workouts
+      // console.log('🚀 ~ file: routinesReducer.js ~ line 67 ~ routinesReducer ~ routine', routine);
+
+      console.log('🚀 ~ file: routinesReducer.js ~ line 74 ~ routinesReducer ~ routineId', routineId);
+      console.log('🚀 ~ file: routinesReducer.js ~ line 74 ~ routinesReducer ~ WorkoutId', workoutId);
+      console.log('🚀 ~ file: routinesReducer.js ~ line 67 ~ routinesReducer ~ routine[0]', routine);
+      console.log('🚀 ~ file: routinesReducer.js ~ line 69 ~ routinesReducer ~ workout', workout); // state.routines
+
+      console.log('🚀 ~ file: routinesReducer.js ~ line 90 ~ routinesReducer ~ state.routines', state.routines); // console.log('🚀 ~ file: routinesReducer.js ~ line 80 ~ routinesReducer ~ routine.name', routine.name);
+      // console.log('🚀 ~ file: routinesReducer.js ~ line 80 ~ routinesReducer ~ routine.workouts', routine.workouts);
+      // return {...state.routines, routine: routine.workouts}
+      // return {...state.routines, routine: state.routines}
+      // debugger //, workout: workout}
+
+      return _objectSpread(_objectSpread({}, state), {}, {
+        routines: state.routines.map(function (r) {
+          return r;
+        }),
+        routine: routine.workouts = filteredWorkoutsList
+      });
+    // return {...state, routines: state.routines, workouts: filteresWorkoutsList} //, workout: workout}
 
     default:
       // return {...state}
@@ -7191,7 +7277,8 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
         path: "/",
         render: function render(routerProps) {
           return /*#__PURE__*/react_default.a.createElement(containers_RoutinesPage, RoutinesContainer_extends({}, routerProps, {
-            routines: _this2.props.routines
+            routines: _this2.props.routines,
+            workouts: _this2.props.workouts
           }));
         }
       }), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
@@ -7826,15 +7913,10 @@ function workoutsReducer() {
 
       };
     // return Object.assign({}, state, {workouts: currentWorkouts, workout: currentWorkout})
-
-    case 'DELETE_WORKOUT':
-      var filteredWorkouts = state.workouts.filter(function (workout) {
-        return workout.id !== action.payload.workoutId;
-      });
-      console.log('🚀 ~ file: workoutsReducer.js ~ line 46 ~ workoutsReducer ~ filteredWorkouts', filteredWorkouts);
-      return workoutsReducer_objectSpread(workoutsReducer_objectSpread({}, state), {}, {
-        workouts: filteredWorkouts
-      });
+    // case 'DELETE_WORKOUT':
+    //     const filteredWorkouts = state.workouts.filter(workout => workout.id !== action.payload.workoutId);
+    //     console.log('🚀 ~ file: workoutsReducer.js ~ line 46 ~ workoutsReducer ~ filteredWorkouts', filteredWorkouts);
+    //     return {...state, workouts: filteredWorkouts}
 
     default:
       // return {...state}
