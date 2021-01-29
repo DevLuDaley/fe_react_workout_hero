@@ -7155,12 +7155,61 @@ var NewRoutineWorkoutForm_NewRoutineWorkoutForm = /*#__PURE__*/function (_Compon
 // CONCATENATED MODULE: ./src/components/Routine.js
  // import {Redirect} from 'react-router-dom'
 
+
  // import { connect } from 'react-redux'
 
 
 
 
+
 var Routine_Routine = function Routine(props) {
+  var handleDeleteWorkout = function handleDeleteWorkout(e) {
+    console.log("PROPS", props);
+
+    if (props.routines && props.workouts) {
+      var targetId = e.target.id;
+      console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
+      var routineString = /\d{1,5}/.exec(targetId);
+      var workoutString = /\d{1,5}$/.exec(targetId); // let workoutId = workoutString[0].toString()
+
+      var workoutIdString = workoutString[0]; //.toString()
+
+      var workoutId = parseInt(workoutIdString); //.toString()
+
+      var routineId = routineString[0].toString(); // const routineId = (/\d{1,5}/.exec(e.target.id))
+
+      console.log('🚀 ~ line 40 ~~ routineId', routineId);
+      console.log('🚀 ~ line 41 ~~ workoutId', workoutId); // console.log('🚀 ~ file: RoutinesList.js ~ line 40 ~ handleDeleteWorkout ~ filteredWorkoutId', filteredWorkoutId);
+
+      var clickedRoutine = props.routines.find(function (routine) {
+        return routine.id == routineId;
+      }); // const clickedWorkoutObject = props.workouts.find(workout => workout.id == workoutId)
+      // const clickedWorkout = parseInt(clickedWorkoutObject[0])
+
+      console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ props.workouts', props.workouts); // console.log('🚀 ~ file: RoutinesList.js ~ line 42 ~ handleDeleteWorkout ~ clickedWorkoutObject', clickedWorkoutObject);
+
+      console.log('🚀 ~ line 53 ~~ clickedRoutine', clickedRoutine); // console.log('🚀 ~ line 54 ~~ clickedWorkout', clickedWorkout);
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ props.workouts.FIND', props.workouts.find(workout => workout.id === workoutId));
+      // let {id} = clickedRoutine
+      // let {id: workout} = clickedWorkout
+      // let {id} = clickedRoutine
+      // let {id: workout} = clickedWorkout
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 50 ~ handleDeleteWorkout ~ id', id);
+      // debugger
+
+      var outgoingPayload = {
+        "id": clickedRoutine.id,
+        "workout_id_to_delete": workoutId // "workout_id_to_delete": clickedWorkout.id
+
+      }; // debugger
+
+      props.deleteRoutineWorkout(outgoingPayload);
+      console.log('🚀 ~ file: RoutinesList.js ~ line 59 ~ handleDeleteWorkout ~ outgoingPayload', outgoingPayload);
+    }
+
+    console.log("DELETE INFO SENT TO ACTION");
+  };
+
   return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(Link, {
     to: '/routines'
   }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " Return to Routines "), " ")), props.routines ? /*#__PURE__*/react_default.a.createElement("section", null, props.routines.map(function (routine) {
@@ -7184,7 +7233,10 @@ var Routine_Routine = function Routine(props) {
       }, /*#__PURE__*/react_default.a.createElement(Link, {
         key: "routine-url-key-" + routine.id,
         to: "".concat(window.location.pathname, "/workouts/").concat(workout.id)
-      }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", null, " delete "), /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null));
+      }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", {
+        onClick: handleDeleteWorkout,
+        id: "routine-".concat(routine.id, "-btn-delete-workout-").concat(workout.id)
+      }, " delete "), /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null));
     }) : /*#__PURE__*/react_default.a.createElement("p", null, " No Workouts Created Yet ")) : null;
   })) : 'no routine here bub');
 }; // const mapStateToProps = (state, ownProps) => {
@@ -7195,9 +7247,12 @@ var Routine_Routine = function Routine(props) {
 //     }
 // }
 // export default connect(mapStateToProps)(Routine);
+// export default Routine;
 
 
-/* harmony default export */ var components_Routine = (Routine_Routine);
+/* harmony default export */ var components_Routine = (connect_connect(null, {
+  deleteRoutineWorkout: actions_deleteRoutineWorkout
+})(Routine_Routine));
 // CONCATENATED MODULE: ./src/containers/RoutinesContainer.js
 function RoutinesContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { RoutinesContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { RoutinesContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return RoutinesContainer_typeof(obj); }
 
