@@ -1,12 +1,62 @@
 import React, { Fragment, useState, useEffect } from 'react';
 // import {Redirect} from 'react-router-dom'
 import { Switch, Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 // import { connect } from 'react-redux'
 import UpdateRoutineForm from '../forms/UpdateRoutineForm'
 import NewRoutineWorkoutForm from '../forms/NewRoutineWorkoutForm'
+import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
 
 const Routine = (props) => {
+    const handleDeleteWorkout = (e) => {
+        console.log("PROPS", props);
+
+        if (props.routines && props.workouts){
+    let targetId = e.target.id
+      console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
+
+      let routineString = (/\d{1,5}/.exec(targetId))
+      let workoutString = (/\d{1,5}$/.exec(targetId))
+      // let workoutId = workoutString[0].toString()
+      let workoutIdString = workoutString[0] //.toString()
+      let workoutId = parseInt(workoutIdString) //.toString()
+      let routineId = routineString[0].toString()
+      
+      // const routineId = (/\d{1,5}/.exec(e.target.id))
+      console.log('🚀 ~ line 40 ~~ routineId', routineId);
+      console.log('🚀 ~ line 41 ~~ workoutId', workoutId);
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 40 ~ handleDeleteWorkout ~ filteredWorkoutId', filteredWorkoutId);
+
+
+      const clickedRoutine = props.routines.find(routine => routine.id == routineId)
+      // const clickedWorkoutObject = props.workouts.find(workout => workout.id == workoutId)
+      // const clickedWorkout = parseInt(clickedWorkoutObject[0])
+      
+      console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ props.workouts', props.workouts);
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 42 ~ handleDeleteWorkout ~ clickedWorkoutObject', clickedWorkoutObject);
+      console.log('🚀 ~ line 53 ~~ clickedRoutine', clickedRoutine);
+      // console.log('🚀 ~ line 54 ~~ clickedWorkout', clickedWorkout);
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ props.workouts.FIND', props.workouts.find(workout => workout.id === workoutId));
+      
+      // let {id} = clickedRoutine
+      // let {id: workout} = clickedWorkout
+      // let {id} = clickedRoutine
+      // let {id: workout} = clickedWorkout
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 50 ~ handleDeleteWorkout ~ id', id);
+
+      // debugger
+      const outgoingPayload = {
+        "id": clickedRoutine.id,
+        "workout_id_to_delete": workoutId
+        // "workout_id_to_delete": clickedWorkout.id
+      }
+      // debugger
+      props.deleteRoutineWorkout(outgoingPayload)
+      console.log('🚀 ~ file: RoutinesList.js ~ line 59 ~ handleDeleteWorkout ~ outgoingPayload', outgoingPayload);
+        }
+    console.log("DELETE INFO SENT TO ACTION");
+    }
 
     return(
     <Fragment>
@@ -58,7 +108,7 @@ const Routine = (props) => {
                                  <button> edit </button>
                                  </Link>
                             name: {workout.workout_name}
-                                <button> delete </button>
+                                  <button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
                             <br></br>
                             category: {workout.workout_type}
                             <br></br>
@@ -92,4 +142,5 @@ const Routine = (props) => {
     //     }
     // }
     // export default connect(mapStateToProps)(Routine);
-    export default Routine;
+    // export default Routine;
+    export default connect(null, {deleteRoutineWorkout}) (Routine);
