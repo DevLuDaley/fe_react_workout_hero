@@ -109,7 +109,9 @@ const routine = props.routines.find(routine => routine.id == routineId)
                         </div>
 
     <UpdateWorkoutForm detail={workout}/>
-        <button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
+                            <br></br>
+                            <br></br>
+        <button onClick={handleDeleteWorkout} style={{color: "red"}} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete {workout.workout_name} </button>
     
         </Fragment>
     )
