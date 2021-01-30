@@ -19,28 +19,31 @@ class UpdateWorkoutForm extends Component {
     console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 19 ~ UpdateWorkoutForm ~ constructor ~ this.id', this.id);
     // this.regex = (/\d/.test(this.currentPath))
     this.id = (/\d{1,5}$/.exec(this.currentPath))[0]
+    this.currentRoutineId = (/\d{1,5}/.exec(this.currentPath))[0]
     // this.id = this.regex[0]
     console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 21 ~ UpdateWorkoutForm ~ constructor ~ this.id', this.id);
     // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex', this.regex);
     // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex[0]', this.regex[0]);
     this.workout = this.props.workouts.find(workout => workout.id == this.id)
 
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 43 ~ UpdateWorkoutForm ~ constructor ~ this.currentRoutineId', this.currentRoutineId);
+    
     this.state = {
-        id: this.id
-        ,
+        id: this.id,
         workout_name: this.workout.workout_name,
         workout_type: this.workout.workout_type,
         distance: this.workout.distance,
-        duration: this.workout.duration
+        duration: this.workout.duration //,
+        //current_routine_id: this.currentRoutineId
         // workout:this.workout
         // id: parseInt(window.location.href.replace("http://localhost:3001/workouts/", "")),
         // id: this.props.workoutToUpdate.id,
         // workout_name: this.props.workoutToUpdate.workout_name,
         // workout_name: this.workout.workout_name
-        }
+    }
+  
         // this.loadWorkoutInfo = this.loadWorkoutInfo.bind(this)
     }
-
         componentDidMount(){
             // this.loadWorkoutInfo()
         }
@@ -89,11 +92,11 @@ class UpdateWorkoutForm extends Component {
                 {/* {console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 94 ~ UpdateWorkoutForm ~ render ~ this.workout.workout_name', this.workout.workout_name)} */}
 
                 {/* {console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 94 ~ UpdateWorkoutForm ~ render ~ this.state.workout_name', this.state.workout_name)} */}
-                { this.props.detail ?
+                {/* { this.props.detail ?
                 console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', this.props.detail)
                 :
-                console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', "NOPE!")
-                }
+                console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', "NOPE!") */}
+                {/* } */}
             {
                  this.props.detail ?
                     <section>
