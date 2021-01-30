@@ -7468,7 +7468,8 @@ var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
 
     console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 19 ~ UpdateWorkoutForm ~ constructor ~ this.id', _this.id); // this.regex = (/\d/.test(this.currentPath))
 
-    _this.id = /\d{1,5}$/.exec(_this.currentPath)[0]; // this.id = this.regex[0]
+    _this.id = /\d{1,5}$/.exec(_this.currentPath)[0];
+    _this.currentRoutineId = /\d{1,5}/.exec(_this.currentPath)[0]; // this.id = this.regex[0]
 
     console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 21 ~ UpdateWorkoutForm ~ constructor ~ this.id', _this.id); // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex', this.regex);
     // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex[0]', this.regex[0]);
@@ -7476,12 +7477,15 @@ var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
     _this.workout = _this.props.workouts.find(function (workout) {
       return workout.id == _this.id;
     });
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 43 ~ UpdateWorkoutForm ~ constructor ~ this.currentRoutineId', _this.currentRoutineId);
     _this.state = {
       id: _this.id,
       workout_name: _this.workout.workout_name,
       workout_type: _this.workout.workout_type,
       distance: _this.workout.distance,
-      duration: _this.workout.duration // workout:this.workout
+      duration: _this.workout.duration //,
+      //current_routine_id: this.currentRoutineId
+      // workout:this.workout
       // id: parseInt(window.location.href.replace("http://localhost:3001/workouts/", "")),
       // id: this.props.workoutToUpdate.id,
       // workout_name: this.props.workoutToUpdate.workout_name,
@@ -7510,7 +7514,7 @@ var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, this.props.detail ? console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', this.props.detail) : console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', "NOPE!"), this.props.detail ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, this.props.detail ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         id: "update-workout-form"
       }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement("input", {
@@ -7646,10 +7650,13 @@ var Workout_Workout = function Workout(props) {
     key: workout.id
   }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null))), /*#__PURE__*/react_default.a.createElement(forms_UpdateWorkoutForm, {
     detail: workout
-  }), /*#__PURE__*/react_default.a.createElement("button", {
+  }), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("button", {
     onClick: handleDeleteWorkout,
+    style: {
+      color: "red"
+    },
     id: "routine-".concat(routine.id, "-btn-delete-workout-").concat(workout.id)
-  }, " delete "));
+  }, " delete ", workout.workout_name, " "));
 }; // const mapStateToProps = (state, ownProps) => {
 //     const { workouts1 } = state
 //     const { workouts } = ownProps
