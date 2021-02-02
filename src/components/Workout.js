@@ -9,32 +9,30 @@ import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
 // import NewWorkoutWorkoutForm from '../forms/NewWorkoutWorkoutForm'
 
 const Workout = (props) => {
-console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ WORKOUT props', props);
 
 const currentPath = window.location.pathname
 const routineId = (/\d{1,5}/.exec(currentPath))[0]
 const workoutId = (/\d{1,5}$/.exec(currentPath))[0]
 
 
-// console.log('🚀 ~ file: Workout.js ~ line 12 ~ Workout ~ currentUrl', currentPath); // ? /routines/2/workouts/15
-console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ routineId', routineId);
-console.log('🚀 ~ file: Workout.js ~ line 15 ~ Workout ~ workoutId', workoutId);
+// ; // ? /routines/2/workouts/15
 
 // const regExNums = (/\/\d\d/.exec(currentPath))[0]
-// console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ regExNums', regExNums);
+// ;
 
 const workout = props.workouts.find(workout => workout.id == workoutId)
 const routine = props.routines.find(routine => routine.id == routineId)
 // const {currentWorkout : workout} = props
 // const work = props.workouts.find(workout => workout.id ==  window.location.pathname.replace('/routines/' + this.routineId + '/workouts/',''))
-// console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ work', work);
-// console.log('🚀 ~ file: Workout.js ~ line 11 ~ Workout ~ props', props);
-// console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props-routine', props.current_routine);
-// console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ props-routine', props.routine);
+// ;
+// ;
+// ;
+// ;
+
+
     const handleDeleteWorkout = (e) => {
         if (props.routines && props.workouts){
       let targetId = e.target.id
-      console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
 
       let routineString = (/\d{1,5}/.exec(targetId))
       let workoutString = (/\d{1,5}$/.exec(targetId))
@@ -44,26 +42,22 @@ const routine = props.routines.find(routine => routine.id == routineId)
       let routineId = routineString[0].toString()
       
       // const routineId = (/\d{1,5}/.exec(e.target.id))
-      console.log('🚀 ~ line 40 ~~ routineId', routineId);
-      console.log('🚀 ~ line 41 ~~ workoutId', workoutId);
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 40 ~ handleDeleteWorkout ~ filteredWorkoutId', filteredWorkoutId);
+      // ;
 
 
       const clickedRoutine = props.routines.find(routine => routine.id == routineId)
       // const clickedWorkoutObject = props.workouts.find(workout => workout.id == workoutId)
       // const clickedWorkout = parseInt(clickedWorkoutObject[0])
       
-      console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ props.workouts', props.workouts);
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 42 ~ handleDeleteWorkout ~ clickedWorkoutObject', clickedWorkoutObject);
-      console.log('🚀 ~ line 53 ~~ clickedRoutine', clickedRoutine);
-      // console.log('🚀 ~ line 54 ~~ clickedWorkout', clickedWorkout);
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ props.workouts.FIND', props.workouts.find(workout => workout.id === workoutId));
+      // ;
+      // ;
+      // );
       
       // let {id} = clickedRoutine
       // let {id: workout} = clickedWorkout
       // let {id} = clickedRoutine
       // let {id: workout} = clickedWorkout
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 50 ~ handleDeleteWorkout ~ id', id);
+      // ;
 
       // debugger
       const outgoingPayload = {
@@ -73,10 +67,20 @@ const routine = props.routines.find(routine => routine.id == routineId)
       }
       // debugger
       props.deleteRoutineWorkout(outgoingPayload)
-      console.log('🚀 ~ file: RoutinesList.js ~ line 59 ~ handleDeleteWorkout ~ outgoingPayload', outgoingPayload);
 
     }
     }
+
+    //      const [routine, setRoutine] = useState() //;
+    //  const [workout, setWorkout] = useState() //;
+
+    //   setRoutine({
+    //       routine: props.routines.find(routine => routine.id == routineId)
+    //   })
+
+    //   setWorkout({
+    //       workout: props.workouts.find(workout => workout.id == workoutId)
+    //   })
 
     return(
     <Fragment>
