@@ -7,23 +7,25 @@ console.log('updateWorkout -> data', data);
 // ${id}
     return(dispatch) => {
 // fetch(`http://localhost:3000/api/v1/workouts/${data.id}`, {
-fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/` + data.id, {
-// fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/${data.id}`, {
-    headers: {
-        'Content-Type' : 'application/json',
-        'Accept' : 'application/json'
-    },
-    method: 'PATCH',
-    body: JSON.stringify(data)
-})
-.then(resp => resp.json())
+        fetch(`http://localhost:3000/api/v1/routines/${data.id}`, {
+        // fetch(`http://localhost:3000/api/v1/routines/${data.current_routine_id}`, {
+        // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/` + data.id, {
+        // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/${data.id}`, {
+            headers: {
+                'Content-Type' : 'application/json',
+                'Accept' : 'application/json'
+            },
+            method: 'PATCH',
+            body: JSON.stringify(data)
+        })
+        .then(resp => resp.json())
 
-// .then(workout => console.log('🚀 ~ file: updateWorkout.js ~ line 22 ~ return ~ workout', workout))
-.then(workout => dispatch({
-    type: 'UPDATE_WORKOUT',
-    payload: workout
-}))
-// debugger
+        // .then(workout => console.log('🚀 ~ file: updateWorkout.js ~ line 22 ~ return ~ workout', workout))
+        .then(workout => dispatch({
+            type: 'UPDATE_ROUTINE_WORKOUT',
+            payload: workout
+        }))
+        // debugger
     }
 };
 // create index
