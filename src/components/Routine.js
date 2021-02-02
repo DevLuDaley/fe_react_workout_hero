@@ -133,13 +133,20 @@ const Routine = (props) => {
         </Fragment>
     )
 }
-    // const mapStateToProps = (state, ownProps) => {
+    const mapStateToProps = (state, ownProps) => {
     //     const { routines1 } = state
     //     const { routines } = ownProps
     //     return {
     //         routinesArr: routines
     //     }
     // }
+    return { 
+           routines: state.routinesReducer.routines,
+           workouts: state.workoutsReducer.workouts
+        //    routine: [ownProps.routines.filter(routine => routine.id == routineId)]
+          //  routine: currentRoutine[0]
+ }
+ }
     // export default connect(mapStateToProps)(Routine);
     // export default Routine;
-    export default connect(null, {deleteRoutineWorkout}) (Routine);
+    export default connect(mapStateToProps, {deleteRoutineWorkout}) (Routine);
