@@ -2,7 +2,7 @@
 const intialState = []
 
 export default function workoutsReducer(state = intialState, action) {
-// console.log('🚀 ~ file: workoutsReducer.js ~ line 4 ~ workoutsReducer ~ action', action);
+// ;
 // debugger;
     switch (action.type) {
         case 'FETCH_WORKOUTS':        // debugger;
@@ -12,15 +12,52 @@ export default function workoutsReducer(state = intialState, action) {
             let newWorkout = action.payload
             return {...state.workouts, workouts: state.workouts.concat(newWorkout)}
 
+        case 'UPDATE_ROUTINE_WORKOUT':
+
+
+                // const updateRoutineId = action.payload.routineId
+                // const updateRoutine = state.routines.find(routine => routine.id == updateRoutineId)
+                
+                // ;
+                
+                // ;
+                
+                // const updateRoutineWorkouts = updateRoutine.workouts //.filter(w => w.id !== 0 )
+
+                const updateWorkout = state.workouts.find(workout => workout.id == action.payload.workout.id)
+
+                // const readyWorkout = 
+                // let { id, workout_name, workout_type, distance, duration } = updateWorkout
+                let incoming_workout = action.payload.workout
+
+                updateWorkout.workout_name = incoming_workout.workout_name
+                updateWorkout.workout_type = incoming_workout.workout_type
+                updateWorkout.distance = incoming_workout.distance
+                updateWorkout.duration = incoming_workout.duration
+                // action.payload.workout.
+                // debugger
+                
+                                // ;
+                // const updateWorkoutId = action.payload.id
+                // const updateRoutine = state.routines.find(routine => routine.id == updateWorkoutId)
+                // const updatedWorkout = action.payload
+                // const selectedWorkout = state.workouts.filter(workout => workout.id == updateWorkoutId)
+                
+
+                // debugger
+                // ;
+            return {...state,
+                workouts: state.workouts.map(workout => workout.id == incoming_workout.id ? incoming_workout : workout)
+            }
         case 'UPDATE_WORKOUT':
             const payloadId = action.payload.id
             const updatedWorkout = action.payload
             const selectedWorkout = state.workouts.filter(workout => workout.id == payloadId)
-                        // console.log('🚀 ~~line 17 ~ ~ UPDATED-WORKOUT', updatedWorkout);
-                        // console.log('🚀 ~~ line 16 ~ ~ PAYLOAD-ID', payloadId);
-                        // console.log('🚀 ~~ line 20 ~ ~  state.workouts.FILTER', state.workouts.filter(workout => workout.id == payloadId))
-                        // console.log('🚀 ~ file: workoutsReducer.js ~ line 19 ~ workoutsReducer ~ selectedWorkout', selectedWorkout);
-                        // console.log('STATE', state);
+                        // ;
+                        // ;
+                        // )
+                        // ;
+                        // ;
             return {
                     workouts: state.workouts.map(workout => workout.id == payloadId ? action.payload : workout)
                         // ? workout = updatedWorkout : null 
@@ -28,7 +65,7 @@ export default function workoutsReducer(state = intialState, action) {
                 // return Object.assign({}, state, {workouts: currentWorkouts, workout: currentWorkout})
         // case 'DELETE_WORKOUT':
         //     const filteredWorkouts = state.workouts.filter(workout => workout.id !== action.payload.workoutId);
-        //     console.log('🚀 ~ file: workoutsReducer.js ~ line 46 ~ workoutsReducer ~ filteredWorkouts', filteredWorkouts);
+        //     ;
         //     return {...state, workouts: filteredWorkouts}
 
 
