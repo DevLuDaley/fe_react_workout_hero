@@ -29,7 +29,7 @@ class RoutinesContainer extends Component {
         }
     }
     componentDidMount(){
-        // console.log('THIS.PROPS 1', this.props)
+        // 
         // this.fetchRoutines()
         this.props.fetchRoutines()
         this.props.fetchWorkouts()
@@ -37,8 +37,6 @@ class RoutinesContainer extends Component {
     render() {
         return (
             <Fragment>
-        {console.log('🚀 ~ file: RoutinesContainer.js ~ line 46 ~ RoutinesContainer ~ componentDidMount ~ this.props', this.props)}
-        {console.log('🚀 ~ file: RoutinesContainer.js ~ line 46 ~ RoutinesContainer ~ componentDidMount ~ this.state', this.state)}
             {/* <p> Routines Container</p> */}
             {/* <Router> */}
             <Switch>
@@ -68,7 +66,7 @@ class RoutinesContainer extends Component {
         </Fragment> );
 
 
-            // console.log('RoutinesContainer -> render -> this.props.routines', this.props.routines);
+            // ;
     }
 }
  
