@@ -1,7 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
 // import {Redirect} from 'react-router-dom'
 import { Switch, Link } from 'react-router-dom'
-import { connect } from 'react-redux'
+import { connect, useSelector } from 'react-redux'
+
 
 // import { connect } from 'react-redux'
 import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
@@ -11,10 +12,13 @@ import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
 const Workout = (props) => {
 console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ WORKOUT props', props);
 
+
 const currentPath = window.location.pathname
 const routineId = (/\d{1,5}/.exec(currentPath))[0]
 const workoutId = (/\d{1,5}$/.exec(currentPath))[0]
 
+var routines = useSelector(state => state.routinesReducer.routines)
+var workouts = useSelector(state => state.workoutsReducer.workouts)
 
 // console.log('🚀 ~ file: Workout.js ~ line 12 ~ Workout ~ currentUrl', currentPath); // ? /routines/2/workouts/15
 console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ routineId', routineId);
@@ -23,8 +27,10 @@ console.log('🚀 ~ file: Workout.js ~ line 15 ~ Workout ~ workoutId', workoutId
 // const regExNums = (/\/\d\d/.exec(currentPath))[0]
 // console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ regExNums', regExNums);
 
-const workout = props.workouts.find(workout => workout.id == workoutId)
-const routine = props.routines.find(routine => routine.id == routineId)
+const workout = workouts.find(workout => workout.id == workoutId)
+var routine = routines.find(routine => routine.id == routineId)
+console.log('🚀 ~ file: Workout.js ~ line 28 ~ Workout ~ routine', routine);
+console.log('🚀 ~ file: Workout.js ~ line 35 ~ Workout ~ props.routines', props.routines);
 // const {currentWorkout : workout} = props
 // const work = props.workouts.find(workout => workout.id ==  window.location.pathname.replace('/routines/' + this.routineId + '/workouts/',''))
 // console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ work', work);
