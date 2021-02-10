@@ -7,6 +7,7 @@ body {
     background-repeat: no-repeat,
         repeat;
     background-color: #25657c;
+    /* background-color: #005583; */
     background-blend-mode: lighten;
 }
 
@@ -78,7 +79,7 @@ body {
 }
 
 .routine-workout-names {
-    color: rgb(139, 139, 89);
+    color: rgba(64, 10, 151, 0.87);
     border: 2px solid rgb(149, 169, 187);
     border-radius: 5px;
     padding: 7px;
