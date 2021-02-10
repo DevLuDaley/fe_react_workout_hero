@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import {Route, Switch} from 'react-router-dom'
-// import {connect} from 'react-redux'
+import {connect} from 'react-redux'
 // import './MainContainer.css';
 // import {fetchRoutines} from '../actions/fetchRoutines'
 // import RoutinesPage from './RoutinesPage';
@@ -21,10 +21,10 @@ import WorkoutsContainer from './WorkoutsContainer'
 class MainContainer extends Component {
     // constructor(props) {
     //     super(props);
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         // this.fetchRoutines = fetchRoutines
-        console.log('🚀 ~ file: MainContainer.js ~ line 24 ~ MainContainer ~ CONSTRUCTOR ~ props', this.props);
+        // console.log('🚀 ~ file: MainContainer.js ~ line 24 ~ MainContainer ~ CONSTRUCTOR ~ props', this.props);
         // this.state = {routines: []}
     }
     // componentDidMount(){
@@ -37,12 +37,14 @@ class MainContainer extends Component {
         return (
             <Fragment>
                 {/* <Navbar/> */}
+                {/* {console.log('🚀 ~ file: MainContainer.js ~ line 40 ~ MainContainer ~ CONSTRUCTOR ~ THIS.props in RETURN', this.props)} */}
                     {/* <Switch>
                         <Route exact path='/' component={HomePage}/>
                     </Switch> */}
-                <WorkoutsContainer routines={this.props.workouts}/>
+                <RoutinesContainer />
+                <WorkoutsContainer />
 
-                <RoutinesContainer routines={this.props.routines}/>
+                {/* {console.log('🚀 ~ file: MainContainer.js ~ line 40 ~ MainContainer ~ CONSTRUCTOR ~ THIS.props.routines in RETURN', this.props.routines)} */}
                 {/* <Footer id="footer"/> */}
             </Fragment> );
             
@@ -65,3 +67,4 @@ class MainContainer extends Component {
 export default MainContainer;
 // export default connect(null)(MainContainer);
 // export default connect(mapStateToProps, {fetchRoutines})(MainContainer);
+// export default connect(mapStateToProps)(MainContainer);

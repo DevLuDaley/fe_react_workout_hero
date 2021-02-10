@@ -21,6 +21,7 @@ import Routine from '../components/Routine'
 class RoutinesContainer extends Component {
     constructor(props) {
         super(props);
+        console.log('🚀 ~ file: RoutinesContainer.js ~ line 23 ~ RoutinesContainer ~ constructor ~ this.props', this.props);
         this.fetchRoutines = fetchRoutines
         this.fetchWorkouts = fetchWorkouts
         this.state = {

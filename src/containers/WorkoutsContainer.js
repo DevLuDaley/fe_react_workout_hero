@@ -7,13 +7,14 @@ import {fetchRoutines} from '../actions/fetchRoutines'
 // import WorkoutsPage from './WorkoutsPage';
 import Workout from '../components/Workout'
 import Routine from '../components/Routine'
+import RoutineWorkout from '../components/RoutineWorkout'
 // import Workout from '../components/Workout'
-// import UpdateWorkoutPage from '../components/UpdateWorkoutPage'
 // import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
 // import HomePage from '../components/HomePage'
 // import Home from '../components/Home'
 
 // import {fetchWorkouts} from '../actions/fetchWorkouts'
+// import UpdateWorkoutPage from '../components/UpdateWorkoutPage'
 // import NewWorkoutForm from '../components/NewWorkoutForm'
 // import WorkoutsList from '../components/WorkoutsList'
 // import NewWorkoutsContainer from '../containers/NewWorkoutsContainer'
@@ -53,7 +54,7 @@ class WorkoutsContainer extends Component {
             {this.props.workouts ?
 
             <Route path='/routines/:id/workouts/:id' render={(routerProps) => 
-                <Workout {...routerProps} 
+                <Workout {...routerProps}  //<Workout {...routerProps}
                     workouts={this.props.workouts} 
                     routines={this.props.routines} 
                         currentWorkout={this.props.workouts.find(workout => workout.id ==  window.location.pathname.replace('/routines/' + this.routineId + '/workouts/',''))} />}
