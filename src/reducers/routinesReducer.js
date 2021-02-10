@@ -94,6 +94,24 @@ console.log('🚀 ~ file: routinesReducer.js ~ line 90 ~ routinesReducer ~ state
                 return {...state, routines: state.routines.map(r => r), routine: routine.workouts = filteredWorkoutsList }
                 // return {...state, routines: state.routines, workouts: filteresWorkoutsList} //, workout: workout}
                 
+                case 'UPDATE_WORKOUT':
+                    const updateWorkoutPayload = action.payload
+                    const updateWorkoutPayloadId = action.payload.id
+
+                    let updateRoutinePayloadId = updateWorkoutPayload.routines[0].id
+                    let updateableRoutine = state.routines.find(routine => routine.id == updateRoutinePayloadId)
+                    // var updateableWorkout = updateableRoutine.workouts.find(workout => workout.id == updateWorkoutPayloadId)
+                    // updateableWorkout = updateWorkoutPayload
+
+                    // let workoutToUpdate = updateableRoutine.workouts.find(workout => workout.id == updateWorkoutPayloadId)
+
+                    let updateableRoutineWorkoutsList = updateableRoutine.workouts
+                    const filteredUpdateWorkoutsList = updateableRoutineWorkoutsList.map(w => w.id == updateWorkoutPayloadId ? updateWorkoutPayload : w)
+
+                    return {...state, routines: state.routines.map(r => r), routine: updateableRoutine.workouts = filteredUpdateWorkoutsList 
+
+                    }
+
                 default:
             // return {...state}
             return state
