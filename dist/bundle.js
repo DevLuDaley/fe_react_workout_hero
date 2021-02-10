@@ -2760,7 +2760,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_styles_static_free_weights_gym_equipment_jpg__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "* {\n    margin: auto;\n}\n\nbody {\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat,\n        repeat;\n    background-color: #25657c;\n    background-blend-mode: lighten;\n}\n\n.container {\n    display: grid;\n    opacity: 95%;\n}\n\n#main-container {\n    padding: 250px;\n    margin: 50px;\n    height: auto;\n    width: auto;\n    background: rgb(44, 22, 66);\n    opacity: 95%;\n}\n\n.btns-all {\n    border-radius: 8px;\n    font-size: 13px;\n    background-color: #4c9baf;\n    color: rgb(87, 31, 40);\n    opacity: 0.9;\n}\n\n#btn-toggle-forms {\n    height: 15px;\n    width: 100px;\n}\n\n.all-routines {\n    padding: 15px;\n    margin: auto;\n    height: auto;\n    width: auto;\n    padding-top: 30px;\n    padding-bottom: 5px;\n}\n\n.all-routine-edit-btns {\n    font-size: 13px;\n}\n\n.routine-names {\n    color: rgb(55, 167, 204);\n    font-size: 20px;\n}\n\n.routine-name-btns-wrapper {\n    background-color: rgb(10, 25, 43);\n    display: flex;\n    padding: 1;\n    grid-column-gap: 1em;\n    opacity: 70%;\n}\n\n.routine-workout-block {\n    grid-template-rows: 25% auto;\n    grid-template-columns: 25% 10px 10px auto;\n}\n\n.all-routine-workouts {\n    display: grid;\n    grid-template-columns: auto auto auto auto auto;\n    padding: 1;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n}\n\n.routine-workout-names {\n    color: rgb(139, 139, 89);\n    border: 2px solid rgb(149, 169, 187);\n    border-radius: 5px;\n    padding: 7px;\n    margin: 5px;\n}\n\n#routines-container {\n    background: rgb(45, 59, 87)\n}\n\n\ninput {\n    font-size: 1.0em;\n}\n\n.hidden {\n    display: none;\n}\n\n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87;\n}\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n#new-routine-form>label {\n    color: rgb(139, 139, 89);\n}\n\n#new-routine-form {\n    text-align: center\n}\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}", "",{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA;IACI,YAAY;AAChB;;AAEA;IACI,yDAAuE;IACvE;cACU;IACV,yBAAyB;IACzB,8BAA8B;AAClC;;AAEA;IACI,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,cAAc;IACd,YAAY;IACZ,YAAY;IACZ,WAAW;IACX,2BAA2B;IAC3B,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,eAAe;IACf,yBAAyB;IACzB,sBAAsB;IACtB,YAAY;AAChB;;AAEA;IACI,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,YAAY;IACZ,WAAW;IACX,iBAAiB;IACjB,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,wBAAwB;IACxB,eAAe;AACnB;;AAEA;IACI,iCAAiC;IACjC,aAAa;IACb,UAAU;IACV,oBAAoB;IACpB,YAAY;AAChB;;AAEA;IACI,4BAA4B;IAC5B,yCAAyC;AAC7C;;AAEA;IACI,aAAa;IACb,+CAA+C;IAC/C,UAAU;IACV,sBAAsB;IACtB,kBAAkB;IAClB,YAAY;AAChB;;AAEA;IACI,wBAAwB;IACxB,oCAAoC;IACpC,kBAAkB;IAClB,YAAY;IACZ,WAAW;AACf;;AAEA;IACI;AACJ;;;AAGA;IACI,gBAAgB;AACpB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,cAAc;IACd,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;AACjB;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI;AACJ;;AAEA;IACI,yBAAyB;IACzB,sBAAsB;AAC1B;;AAEA;IACI,wBAAwB;IACxB,eAAe;IACf,sBAAsB;IACtB;AACJ;;AAEA;IACI,aAAa;IACb,kCAAkC;IAClC,kBAAkB;AACtB","sourcesContent":["* {\n    margin: auto;\n}\n\nbody {\n    background-image: url('./styles/static/free-weights-gym-equipment.jpg');\n    background-repeat: no-repeat,\n        repeat;\n    background-color: #25657c;\n    background-blend-mode: lighten;\n}\n\n.container {\n    display: grid;\n    opacity: 95%;\n}\n\n#main-container {\n    padding: 250px;\n    margin: 50px;\n    height: auto;\n    width: auto;\n    background: rgb(44, 22, 66);\n    opacity: 95%;\n}\n\n.btns-all {\n    border-radius: 8px;\n    font-size: 13px;\n    background-color: #4c9baf;\n    color: rgb(87, 31, 40);\n    opacity: 0.9;\n}\n\n#btn-toggle-forms {\n    height: 15px;\n    width: 100px;\n}\n\n.all-routines {\n    padding: 15px;\n    margin: auto;\n    height: auto;\n    width: auto;\n    padding-top: 30px;\n    padding-bottom: 5px;\n}\n\n.all-routine-edit-btns {\n    font-size: 13px;\n}\n\n.routine-names {\n    color: rgb(55, 167, 204);\n    font-size: 20px;\n}\n\n.routine-name-btns-wrapper {\n    background-color: rgb(10, 25, 43);\n    display: flex;\n    padding: 1;\n    grid-column-gap: 1em;\n    opacity: 70%;\n}\n\n.routine-workout-block {\n    grid-template-rows: 25% auto;\n    grid-template-columns: 25% 10px 10px auto;\n}\n\n.all-routine-workouts {\n    display: grid;\n    grid-template-columns: auto auto auto auto auto;\n    padding: 1;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n}\n\n.routine-workout-names {\n    color: rgb(139, 139, 89);\n    border: 2px solid rgb(149, 169, 187);\n    border-radius: 5px;\n    padding: 7px;\n    margin: 5px;\n}\n\n#routines-container {\n    background: rgb(45, 59, 87)\n}\n\n\ninput {\n    font-size: 1.0em;\n}\n\n.hidden {\n    display: none;\n}\n\n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87;\n}\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n#new-routine-form>label {\n    color: rgb(139, 139, 89);\n}\n\n#new-routine-form {\n    text-align: center\n}\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "* {\n    margin: auto;\n}\n\nbody {\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat,\n        repeat;\n    background-color: #25657c;\n    /* background-color: #005583; */\n    background-blend-mode: lighten;\n}\n\n.container {\n    display: grid;\n    opacity: 95%;\n}\n\n#main-container {\n    padding: 250px;\n    margin: 50px;\n    height: auto;\n    width: auto;\n    background: rgb(44, 22, 66);\n    opacity: 95%;\n}\n\n.btns-all {\n    border-radius: 8px;\n    font-size: 13px;\n    background-color: #4c9baf;\n    color: rgb(87, 31, 40);\n    opacity: 0.9;\n}\n\n#btn-toggle-forms {\n    height: 15px;\n    width: 100px;\n}\n\n.all-routines {\n    padding: 15px;\n    margin: auto;\n    height: auto;\n    width: auto;\n    padding-top: 30px;\n    padding-bottom: 5px;\n}\n\n.all-routine-edit-btns {\n    font-size: 13px;\n}\n\n.routine-names {\n    color: rgb(55, 167, 204);\n    font-size: 20px;\n}\n\n.routine-name-btns-wrapper {\n    background-color: rgb(10, 25, 43);\n    display: flex;\n    padding: 1;\n    grid-column-gap: 1em;\n    opacity: 70%;\n}\n\n.routine-workout-block {\n    grid-template-rows: 25% auto;\n    grid-template-columns: 25% 10px 10px auto;\n}\n\n.all-routine-workouts {\n    display: grid;\n    grid-template-columns: auto auto auto auto auto;\n    padding: 1;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n}\n\n.routine-workout-names {\n    color: rgba(64, 10, 151, 0.87);\n    border: 2px solid rgb(149, 169, 187);\n    border-radius: 5px;\n    padding: 7px;\n    margin: 5px;\n}\n\n#routines-container {\n    background: rgb(45, 59, 87)\n}\n\n\ninput {\n    font-size: 1.0em;\n}\n\n.hidden {\n    display: none;\n}\n\n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87;\n}\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n#new-routine-form>label {\n    color: rgb(139, 139, 89);\n}\n\n#new-routine-form {\n    text-align: center\n}\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}", "",{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA;IACI,YAAY;AAChB;;AAEA;IACI,yDAAuE;IACvE;cACU;IACV,yBAAyB;IACzB,+BAA+B;IAC/B,8BAA8B;AAClC;;AAEA;IACI,aAAa;IACb,YAAY;AAChB;;AAEA;IACI,cAAc;IACd,YAAY;IACZ,YAAY;IACZ,WAAW;IACX,2BAA2B;IAC3B,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,eAAe;IACf,yBAAyB;IACzB,sBAAsB;IACtB,YAAY;AAChB;;AAEA;IACI,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,YAAY;IACZ,WAAW;IACX,iBAAiB;IACjB,mBAAmB;AACvB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,wBAAwB;IACxB,eAAe;AACnB;;AAEA;IACI,iCAAiC;IACjC,aAAa;IACb,UAAU;IACV,oBAAoB;IACpB,YAAY;AAChB;;AAEA;IACI,4BAA4B;IAC5B,yCAAyC;AAC7C;;AAEA;IACI,aAAa;IACb,+CAA+C;IAC/C,UAAU;IACV,sBAAsB;IACtB,kBAAkB;IAClB,YAAY;AAChB;;AAEA;IACI,8BAA8B;IAC9B,oCAAoC;IACpC,kBAAkB;IAClB,YAAY;IACZ,WAAW;AACf;;AAEA;IACI;AACJ;;;AAGA;IACI,gBAAgB;AACpB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,cAAc;IACd,iBAAiB;IACjB,kBAAkB;IAClB,aAAa;AACjB;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,iCAAiC;AACrC;;AAEA;IACI,wBAAwB;AAC5B;;AAEA;IACI;AACJ;;AAEA;IACI,yBAAyB;IACzB,sBAAsB;AAC1B;;AAEA;IACI,wBAAwB;IACxB,eAAe;IACf,sBAAsB;IACtB;AACJ;;AAEA;IACI,aAAa;IACb,kCAAkC;IAClC,kBAAkB;AACtB","sourcesContent":["* {\n    margin: auto;\n}\n\nbody {\n    background-image: url('./styles/static/free-weights-gym-equipment.jpg');\n    background-repeat: no-repeat,\n        repeat;\n    background-color: #25657c;\n    /* background-color: #005583; */\n    background-blend-mode: lighten;\n}\n\n.container {\n    display: grid;\n    opacity: 95%;\n}\n\n#main-container {\n    padding: 250px;\n    margin: 50px;\n    height: auto;\n    width: auto;\n    background: rgb(44, 22, 66);\n    opacity: 95%;\n}\n\n.btns-all {\n    border-radius: 8px;\n    font-size: 13px;\n    background-color: #4c9baf;\n    color: rgb(87, 31, 40);\n    opacity: 0.9;\n}\n\n#btn-toggle-forms {\n    height: 15px;\n    width: 100px;\n}\n\n.all-routines {\n    padding: 15px;\n    margin: auto;\n    height: auto;\n    width: auto;\n    padding-top: 30px;\n    padding-bottom: 5px;\n}\n\n.all-routine-edit-btns {\n    font-size: 13px;\n}\n\n.routine-names {\n    color: rgb(55, 167, 204);\n    font-size: 20px;\n}\n\n.routine-name-btns-wrapper {\n    background-color: rgb(10, 25, 43);\n    display: flex;\n    padding: 1;\n    grid-column-gap: 1em;\n    opacity: 70%;\n}\n\n.routine-workout-block {\n    grid-template-rows: 25% auto;\n    grid-template-columns: 25% 10px 10px auto;\n}\n\n.all-routine-workouts {\n    display: grid;\n    grid-template-columns: auto auto auto auto auto;\n    padding: 1;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n}\n\n.routine-workout-names {\n    color: rgba(64, 10, 151, 0.87);\n    border: 2px solid rgb(149, 169, 187);\n    border-radius: 5px;\n    padding: 7px;\n    margin: 5px;\n}\n\n#routines-container {\n    background: rgb(45, 59, 87)\n}\n\n\ninput {\n    font-size: 1.0em;\n}\n\n.hidden {\n    display: none;\n}\n\n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87;\n}\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n#new-routine-form>label {\n    color: rgb(139, 139, 89);\n}\n\n#new-routine-form {\n    text-align: center\n}\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -6010,9 +6010,9 @@ function fetchRoutines() {
   // ! bring in dispatch so that we can async if not the connect will handle synchronously
   // fetch('https://be-hoop-drills.herokuapp.com/api/v1/routines'
   return function (dispatch) {
-    // fetch('http://localhost:3000/api/v1/routines', 
-    // fetch('https://be-workout-hero.herokuapp.com/api/v1/routines', 
-    fetch('https://be-workout-hero2.herokuapp.com/api/v1/routines', {
+    fetch('http://localhost:3000/api/v1/routines', // fetch('https://be-workout-hero.herokuapp.com/api/v1/routines', 
+    // fetch('https://be-workout-hero2.herokuapp.com/api/v1/routines', 
+    {
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -6035,8 +6035,8 @@ function fetchWorkouts() {
   // ! bring in dispatch so that we can async if not the connect will handle synchronously
   // fetch('https://be-hoop-drills.herokuapp.com/api/v1/workouts'
   return function (dispatch) {
-    // fetch('http://localhost:3000/api/v1/workouts', 
-    fetch('https://be-workout-hero2.herokuapp.com/api/v1/workouts', {
+    fetch('http://localhost:3000/api/v1/workouts', // fetch('https://be-workout-hero2.herokuapp.com/api/v1/workouts', 
+    {
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -6377,13 +6377,21 @@ var deleteRoutineWorkout = function deleteRoutineWorkout(routineData) {
 
 
 var RoutinesList_RoutinesList = function RoutinesList(props) {
-  console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', props); // const [workouts, setWorkouts] = useState([])
+  console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', props);
+  var routines = useSelector_useSelector(function (state) {
+    return state.routinesReducer.routines;
+  });
+  var workouts = useSelector_useSelector(function (state) {
+    return state.workoutsReducer.workouts;
+  }); // console.log('🚀 ~ file: RoutinesList.js ~ line 16 ~ Routine ~ routines', routines);
+  // console.log('🚀 ~ file: RoutinesList.js ~ line 17 ~ RoutinesList ~ workouts', workouts);
+  // const [workouts, setWorkouts] = useState([])
   // setWorkouts(workouts =  )
 
   var handleDeleteRoutine = function handleDeleteRoutine(e) {
-    if (props.routines) {
+    if (routines) {
       var targetId = e.target.id.replace("btn-delete-routine-", "");
-      var clickedRoutine = props.routines.find(function (routine) {
+      var clickedRoutine = routines.find(function (routine) {
         return routine.id == targetId;
       });
       props.deleteRoutine(clickedRoutine);
@@ -6391,7 +6399,7 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
   };
 
   var handleDeleteWorkout = function handleDeleteWorkout(e) {
-    if (props.routines && props.workouts) {
+    if (routines && workouts) {
       var targetId = e.target.id;
       console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
       var routineString = /\d{1,5}/.exec(targetId);
@@ -6406,15 +6414,15 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
       console.log('🚀 ~ line 40 ~~ routineId', routineId);
       console.log('🚀 ~ line 41 ~~ workoutId', workoutId); // console.log('🚀 ~ file: RoutinesList.js ~ line 40 ~ handleDeleteWorkout ~ filteredWorkoutId', filteredWorkoutId);
 
-      var clickedRoutine = props.routines.find(function (routine) {
+      var clickedRoutine = routines.find(function (routine) {
         return routine.id == routineId;
-      }); // const clickedWorkoutObject = props.workouts.find(workout => workout.id == workoutId)
+      }); // const clickedWorkoutObject = workouts.find(workout => workout.id == workoutId)
       // const clickedWorkout = parseInt(clickedWorkoutObject[0])
 
-      console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ props.workouts', props.workouts); // console.log('🚀 ~ file: RoutinesList.js ~ line 42 ~ handleDeleteWorkout ~ clickedWorkoutObject', clickedWorkoutObject);
+      console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ workouts', workouts); // console.log('🚀 ~ file: RoutinesList.js ~ line 42 ~ handleDeleteWorkout ~ clickedWorkoutObject', clickedWorkoutObject);
 
       console.log('🚀 ~ line 53 ~~ clickedRoutine', clickedRoutine); // console.log('🚀 ~ line 54 ~~ clickedWorkout', clickedWorkout);
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ props.workouts.FIND', props.workouts.find(workout => workout.id === workoutId));
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ workouts.FIND', workouts.find(workout => workout.id === workoutId));
       // let {id} = clickedRoutine
       // let {id: workout} = clickedWorkout
       // let {id} = clickedRoutine
@@ -6435,7 +6443,7 @@ var RoutinesList_RoutinesList = function RoutinesList(props) {
     }
   };
 
-  return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, props.routines ? props.routines.map(function (routine) {
+  return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, routines ? routines.map(function (routine) {
     return /*#__PURE__*/react_default.a.createElement("ul", {
       key: "ul-key-" + routine.id,
       className: "routines-list all-routines",
@@ -6579,11 +6587,11 @@ var NewRoutineForm_NewRoutineForm = /*#__PURE__*/function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "handleChange", function (e) {
       // e.target.value
       // console.log('NewRoutineForm -> e.target.value', e.target.value);
-      _this.setState(_defineProperty({}, e.target.name, e.target.value));
+      _this.setState(_defineProperty({}, e.target.name, e.target.value)); // console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.routine_name', e.target.routine_name);
+      // console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.name', e.target.name);
+      // console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.value', e.target.value);
+      // console.log('NewRoutineForm -> e.target.image_url', e.target.image_url);
 
-      console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.routine_name', e.target.routine_name);
-      console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.name', e.target.name);
-      console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.value', e.target.value); // console.log('NewRoutineForm -> e.target.image_url', e.target.image_url);
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleSubmit", function (e) {
@@ -6663,13 +6671,13 @@ var RoutinesPage_RoutinesPage = /*#__PURE__*/function (_Component) {
 
   var _super = RoutinesPage_createSuper(RoutinesPage);
 
-  function RoutinesPage(props) {
+  function RoutinesPage() {
     var _this;
 
     RoutinesPage_classCallCheck(this, RoutinesPage);
 
-    console.log('🚀 ~ file: RoutinesPage.js ~ line 11 ~ RoutinesPage ~ constructor ~ props', props);
-    _this = _super.call(this, props);
+    // console.log('🚀 ~ file: RoutinesPage.js ~ line 11 ~ RoutinesPage ~ constructor ~ props', props);
+    _this = _super.call(this);
     _this.state = {
       routines: [],
       workouts: []
@@ -6683,12 +6691,7 @@ var RoutinesPage_RoutinesPage = /*#__PURE__*/function (_Component) {
   RoutinesPage_createClass(RoutinesPage, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(forms_NewRoutineForm, {
-        routines: this.props.routines
-      }), this.props.routines && this.props.workouts ? /*#__PURE__*/react_default.a.createElement(components_RoutinesList, {
-        routines: this.props.routines,
-        workouts: this.props.workouts
-      }) : null, console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.props', this.props), console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.state', this.state));
+      return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(forms_NewRoutineForm, null), /*#__PURE__*/react_default.a.createElement(components_RoutinesList, null));
     }
   }]);
 
@@ -6705,8 +6708,8 @@ var updateRoutine = function updateRoutine(data) {
   // ${id}
 
   return function (dispatch) {
-    // fetch(`http://localhost:3000/api/v1/routines/${data.id}`, {
-    fetch("https://be-workout-hero2.herokuapp.com/api/v1/routines/" + data.id, {
+    fetch("http://localhost:3000/api/v1/routines/".concat(data.id), {
+      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/routines/` + data.id, {
       // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/routines/${data.id}`, {
       headers: {
         'Content-Type': 'application/json',
@@ -6778,16 +6781,16 @@ function routinesReducer() {
         }) // routines: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
         // routines: updatedRoutine
         // routines: state.routines,
-        // routine: 
+        // routine:
         // updatedRoutine
         // ,
         // routine: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
         // routines: state.routines,
         // routine: updatedRoutine
-        // routine: state.routines.filter(routine => 
-        //     routine.id == payloadId ? 
+        // routine: state.routines.filter(routine =>
+        //     routine.id == payloadId ?
         //     routine = updatedRoutine : null
-        // ? routine = updatedRoutine : null 
+        // ? routine = updatedRoutine : null
         // )
 
       };
@@ -6815,10 +6818,20 @@ function routinesReducer() {
         routines: routineWorkouts
       });
 
-    case 'DELETE_ROUTINE_WORKOUT':
-      console.log('action :>> ', action); // console.log('ROUTINES-REDUCER');
-      // const {routineId, workoutId} = action.payload
+    case 'UPDATE_ROUTINE_WORKOUT':
+      var workoutPayloadId = action.payload.id;
+      console.log('🚀 ~ file: routinesReducer.js ~ line 65 ~ routinesReducer ~ action.payload', action.payload);
+      return {
+        routines: state.routines.map(function (r) {
+          return r;
+        }) //workouts.map(workout => workout.id == workoutPayloadId ? action.payload : workout)
+        // workouts: state.routines //workouts.map(workout => workout.id == workoutPayloadId ? action.payload : workout)
+        // workouts: state.workouts.map(workout => workout.id == workoutPayloadId ? action.payload : workout)
 
+      };
+
+    case 'DELETE_ROUTINE_WORKOUT':
+      // console.log('action :>> ', action);
       var routineId = action.payload.routineId;
       var workoutId = action.payload.workoutId;
       var routine = state.routines.find(function (r) {
@@ -6830,25 +6843,7 @@ function routinesReducer() {
       var workoutsList = routine.workouts;
       var filteredWorkoutsList = workoutsList.filter(function (w) {
         return w.id !== workoutId;
-      }); // filteresWorkoutsList
-      // console.log('🚀 ~ file: routinesReducer.js ~ line 70 ~ routinesReducer ~ WorkoutsList', workoutsList);
-
-      console.log('🚀 ~ file: routinesReducer.js ~ line 70 ~ routinesReducer ~ WorkoutsList.length()', workoutsList.length); // console.log('🚀 ~ file: routinesReducer.js ~ line 85 ~ routinesReducer ~ filteresWorkoutsList', filteresWorkoutsList);
-
-      console.log('🚀 ~ file: routinesReducer.js ~ line 85 ~ routinesReducer ~ filteresWorkoutsList.length()', filteredWorkoutsList.length); // routine.workouts
-      // console.log('🚀 ~ file: routinesReducer.js ~ line 67 ~ routinesReducer ~ routine', routine);
-
-      console.log('🚀 ~ file: routinesReducer.js ~ line 74 ~ routinesReducer ~ routineId', routineId);
-      console.log('🚀 ~ file: routinesReducer.js ~ line 74 ~ routinesReducer ~ WorkoutId', workoutId);
-      console.log('🚀 ~ file: routinesReducer.js ~ line 67 ~ routinesReducer ~ routine[0]', routine);
-      console.log('🚀 ~ file: routinesReducer.js ~ line 69 ~ routinesReducer ~ workout', workout); // state.routines
-
-      console.log('🚀 ~ file: routinesReducer.js ~ line 90 ~ routinesReducer ~ state.routines', state.routines); // console.log('🚀 ~ file: routinesReducer.js ~ line 80 ~ routinesReducer ~ routine.name', routine.name);
-      // console.log('🚀 ~ file: routinesReducer.js ~ line 80 ~ routinesReducer ~ routine.workouts', routine.workouts);
-      // return {...state.routines, routine: routine.workouts}
-      // return {...state.routines, routine: state.routines}
-      // debugger //, workout: workout}
-
+      });
       return _objectSpread(_objectSpread({}, state), {}, {
         routines: state.routines.map(function (r) {
           return r;
@@ -6856,6 +6851,27 @@ function routinesReducer() {
         routine: routine.workouts = filteredWorkoutsList
       });
     // return {...state, routines: state.routines, workouts: filteresWorkoutsList} //, workout: workout}
+
+    case 'UPDATE_WORKOUT':
+      var updateWorkoutPayload = action.payload;
+      var updateWorkoutPayloadId = action.payload.id;
+      var updateRoutinePayloadId = updateWorkoutPayload.routines[0].id;
+      var updateableRoutine = state.routines.find(function (routine) {
+        return routine.id == updateRoutinePayloadId;
+      }); // var updateableWorkout = updateableRoutine.workouts.find(workout => workout.id == updateWorkoutPayloadId)
+      // updateableWorkout = updateWorkoutPayload
+      // let workoutToUpdate = updateableRoutine.workouts.find(workout => workout.id == updateWorkoutPayloadId)
+
+      var updateableRoutineWorkoutsList = updateableRoutine.workouts;
+      var filteredUpdateWorkoutsList = updateableRoutineWorkoutsList.map(function (w) {
+        return w.id == updateWorkoutPayloadId ? updateWorkoutPayload : w;
+      });
+      return _objectSpread(_objectSpread({}, state), {}, {
+        routines: state.routines.map(function (r) {
+          return r;
+        }),
+        routine: updateableRoutine.workouts = filteredUpdateWorkoutsList
+      });
 
     default:
       // return {...state}
@@ -7078,6 +7094,13 @@ var NewRoutineWorkoutForm_NewRoutineWorkoutForm = /*#__PURE__*/function (_Compon
 
     NewRoutineWorkoutForm_defineProperty(NewRoutineWorkoutForm_assertThisInitialized(_this), "handleSubmit", function (e) {
       e.preventDefault();
+      var createRoutineWorkoutPayload = [{
+        "routine": _this.routine
+      }, {
+        "workout": _this.state
+      }, {
+        "create-workout": true
+      }];
 
       _this.props.addRoutineWorkout(_this.state);
 
@@ -7098,6 +7121,11 @@ var NewRoutineWorkoutForm_NewRoutineWorkoutForm = /*#__PURE__*/function (_Compon
 
     });
 
+    _this.currentPath = window.location.pathname;
+    _this.routineId = /\d{1,5}/.exec(_this.currentPath)[0];
+    _this.routine = _this.props.routines.find(function (routine) {
+      return routine.id == _this.routineId;
+    });
     _this.state = {
       id: '',
       workout_name: "",
@@ -7160,12 +7188,50 @@ var NewRoutineWorkoutForm_NewRoutineWorkoutForm = /*#__PURE__*/function (_Compon
 
 
 
-
+ // import RoutineWorkout from '../RoutineWorkout'
 
 var Routine_Routine = function Routine(props) {
+  console.log('🚀 ~ file: Routine.js ~ line 13 ~ Routine ~ props', props); //     componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.pokemons !== this.state.pokemons) {
+  //     console.log('pokemons state has changed.')
+  //   }
+  // }
+
+  var routines = useSelector_useSelector(function (state) {
+    return state.routinesReducer.routines;
+  });
+  var stateWorkouts = useSelector_useSelector(function (state) {
+    return state.workoutsReducer.workouts;
+  });
+  console.log('🚀 ~ file: Routine.js ~ line 16 ~ Routine ~ stateWorkouts', stateWorkouts);
+  Object(react["useEffect"])(function () {
+    // if (prevObj != currObj)
+    if (stateWorkouts) {
+      // console.log('🚀 ~ file: Routine.js ~ line 25 ~ useEffect ~ currObj', currObj);
+      // console.log('🚀 ~ file: Routine.js ~ line 25 ~ useEffect ~ prevObj', prevObj);
+      return routines && stateWorkouts;
+    } // console.log("Behavior when the value of 'stateWorkouts' changes.")
+    // }, [stateWorkouts]);
+
+  }, [routines, stateWorkouts]); // console.log(prevObj, currObj)
+  // useEffect((prevObj, currObj) => {
+  //     if (prevObj != currObj)
+  //     // console.log("Behavior when the value of 'stateWorkouts' changes.");
+  //     return currObj
+  // }, [routines]);
+
+  if (routines && stateWorkouts) {
+    var currentPath = window.location.pathname;
+    console.log('🚀 ~ file: Routine.js ~ line 19 ~ Routine ~ currentPath', currentPath);
+    var routineId = /\d{1,5}/.exec(currentPath)[0];
+    var routine = routines.find(function (r) {
+      return r.id == routineId;
+    });
+  }
+
   var handleDeleteWorkout = function handleDeleteWorkout(e) {
     // console.log("PROPS", props);
-    if (props.routines && props.workouts) {
+    if (routines && stateWorkouts) {
       var targetId = e.target.id; //   console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
 
       var routineString = /\d{1,5}/.exec(targetId);
@@ -7175,26 +7241,15 @@ var Routine_Routine = function Routine(props) {
 
       var workoutId = parseInt(workoutIdString); //.toString()
 
-      var routineId = routineString[0].toString(); // const routineId = (/\d{1,5}/.exec(e.target.id))
+      var _routineId = routineString[0].toString(); // const routineId = (/\d{1,5}/.exec(e.target.id))
       //   console.log('🚀 ~ line 40 ~~ routineId', routineId);
       //   console.log('🚀 ~ line 41 ~~ workoutId', workoutId);
       // console.log('🚀 ~ file: RoutinesList.js ~ line 40 ~ handleDeleteWorkout ~ filteredWorkoutId', filteredWorkoutId);
 
-      var clickedRoutine = props.routines.find(function (routine) {
-        return routine.id == routineId;
-      }); // const clickedWorkoutObject = props.workouts.find(workout => workout.id == workoutId)
-      // const clickedWorkout = parseInt(clickedWorkoutObject[0])
-      //   console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ props.workouts', props.workouts);
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 42 ~ handleDeleteWorkout ~ clickedWorkoutObject', clickedWorkoutObject);
-      //   console.log('🚀 ~ line 53 ~~ clickedRoutine', clickedRoutine);
-      // console.log('🚀 ~ line 54 ~~ clickedWorkout', clickedWorkout);
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ props.workouts.FIND', props.workouts.find(workout => workout.id === workoutId));
-      // let {id} = clickedRoutine
-      // let {id: workout} = clickedWorkout
-      // let {id} = clickedRoutine
-      // let {id: workout} = clickedWorkout
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 50 ~ handleDeleteWorkout ~ id', id);
-      // debugger
+
+      var clickedRoutine = routines.find(function (routine) {
+        return routine.id == _routineId;
+      }); // debugger
 
       var outgoingPayload = {
         "id": clickedRoutine.id,
@@ -7204,36 +7259,37 @@ var Routine_Routine = function Routine(props) {
 
       props.deleteRoutineWorkout(outgoingPayload); //   console.log('🚀 ~ file: RoutinesList.js ~ line 59 ~ handleDeleteWorkout ~ outgoingPayload', outgoingPayload);
     }
-  };
+  }; // stateWorkouts.filter()
 
-  return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: '/routines'
-  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " Return to Routines "), " ")), props.routines ? /*#__PURE__*/react_default.a.createElement("section", null, props.routines.map(function (routine) {
-    return routine.id == props.match.params.id ? /*#__PURE__*/react_default.a.createElement("section", {
+
+  var workoutMatch = stateWorkouts;
+  return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(Link, {
+    to: "/routines"
+  }, /*#__PURE__*/react_default.a.createElement("button", null, "Return to Routines")), routines && stateWorkouts ? /*#__PURE__*/react_default.a.createElement("section", null, routines.map(function (routine) {
+    return routine.id == /\d{1,5}/.exec(window.location.pathname)[0] ? /*#__PURE__*/react_default.a.createElement("section", {
       key: routine.id
-    }, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h1", null, routine.routine_name, " "), /*#__PURE__*/react_default.a.createElement("br", null), props.routines ? /*#__PURE__*/react_default.a.createElement(forms_UpdateRoutineForm, {
-      routines: props.routines,
-      routineToUpdate: props.routines.find(function (routine) {
-        return routine.id == props.match.params.id;
+    }, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h1", null, routine.routine_name, " "), /*#__PURE__*/react_default.a.createElement("br", null), routines ? /*#__PURE__*/react_default.a.createElement(forms_UpdateRoutineForm, {
+      routines: routines,
+      routineToUpdate: routines.find(function (routine) {
+        return routine.id == /\d{1,5}/.exec(window.location.pathname)[0];
       })
-    }) : null, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h1", null, " Add a new Workout"), /*#__PURE__*/react_default.a.createElement(forms_NewRoutineWorkoutForm, {
-      routines: props.routines,
-      currentRoutine: props.routines.find(function (routine) {
-        return routine.id == props.match.params.id;
-      })
-    }), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h3", {
+    }) : null, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h1", null, " Add a new Workout"), /*#__PURE__*/react_default.a.createElement("div", null, /*#__PURE__*/react_default.a.createElement(forms_NewRoutineWorkoutForm, {
+      routines: routines // currentRoutine={props.routines.find(
+      // routine => routine.id == props.match.params.id)}
+
+    })), "           ", /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h3", {
       key: routine.id
-    }, "Workouts List: "), routine.workouts.length > 0 ? routine.workouts.map(function (workout) {
-      return /*#__PURE__*/react_default.a.createElement("div", {
+    }, "Workouts List: "), routine.workouts.map(function (workout) {
+      return workout.id != workoutMatch ? /*#__PURE__*/react_default.a.createElement("div", {
         key: workout.id
       }, /*#__PURE__*/react_default.a.createElement(Link, {
-        key: "routine-url-key-" + routine.id,
-        to: "".concat(window.location.pathname, "/workouts/").concat(workout.id)
+        to: "".concat(window.location.pathname, "/workouts/").concat(workout.id),
+        key: "routine-url-key-" + routine.id
       }, /*#__PURE__*/react_default.a.createElement("button", null, " edit ")), "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("button", {
         onClick: handleDeleteWorkout,
         id: "routine-".concat(routine.id, "-btn-delete-workout-").concat(workout.id)
-      }, " delete "), /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null));
-    }) : /*#__PURE__*/react_default.a.createElement("p", null, " No Workouts Created Yet ")) : null;
+      }, " delete "), /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null)) : null;
+    })) : null;
   })) : 'no routine here bub');
 }; // const mapStateToProps = (state, ownProps) => {
 //     const { routines1 } = state
@@ -7248,7 +7304,7 @@ var Routine_Routine = function Routine(props) {
 
 /* harmony default export */ var components_Routine = (connect_connect(null, {
   deleteRoutineWorkout: actions_deleteRoutineWorkout
-})(Routine_Routine));
+})(Routine_Routine)); // export default connect(mapStateToProps, {deleteRoutineWorkout}) (Routine);
 // CONCATENATED MODULE: ./src/containers/RoutinesContainer.js
 function RoutinesContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { RoutinesContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { RoutinesContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return RoutinesContainer_typeof(obj); }
 
@@ -7301,6 +7357,7 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
     RoutinesContainer_classCallCheck(this, RoutinesContainer);
 
     _this = _super.call(this, props);
+    console.log('🚀 ~ file: RoutinesContainer.js ~ line 23 ~ RoutinesContainer ~ constructor ~ this.props', _this.props);
     _this.fetchRoutines = fetchRoutines;
     _this.fetchWorkouts = fetchWorkouts;
     _this.state = {
@@ -7378,8 +7435,8 @@ var updateWorkout = function updateWorkout(data) {
   // ${id}
 
   return function (dispatch) {
-    // fetch(`http://localhost:3000/api/v1/workouts/${data.id}`, {
-    fetch("https://be-workout-hero2.herokuapp.com/api/v1/workouts/" + data.id, {
+    fetch("http://localhost:3000/api/v1/workouts/".concat(data.id), {
+      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/` + data.id, {
       // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/${data.id}`, {
       headers: {
         'Content-Type': 'application/json',
@@ -7393,6 +7450,43 @@ var updateWorkout = function updateWorkout(data) {
     .then(function (workout) {
       return dispatch({
         type: 'UPDATE_WORKOUT',
+        payload: workout
+      });
+    }); // debugger
+  };
+}; // create index
+// read index
+// update index/id
+// delete index/id
+// CONCATENATED MODULE: ./src/actions/updateRoutineWorkout.js
+var updateRoutineWorkout = function updateRoutineWorkout(data) {
+  console.log('updateRoutineWorkout -> data', data); // console.log('updateWorkout -> data.id', data.id);
+  // debugger
+
+  console.log('🚀 ~ file: updateRoutineWorkout.js ~ line 11 ~ return ~ data[0]', data[0]); // console.log('🚀 ~ file: updateRoutineWorkout.js ~ line 11 ~ return ~ data[0]ID', data[0]);
+  // ! return dispatch so that we have access to dispatch function, thanks to thunk.
+  // ! thunk is allowing us to pass in dispatch to the thunk function that we have inside of our action creator
+  // ${id}
+  // debugger
+
+  return function (dispatch) {
+    // fetch(`http://localhost:3000/api/v1/workouts/${data.id}`, {
+    fetch("http://localhost:3000/api/v1/routines/1/workouts/".concat(data.id), {
+      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/routines/` + data[0].id, {
+      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/${data.id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      method: 'PATCH',
+      body: JSON.stringify(data)
+    }).then(function (resp) {
+      return resp.json();
+    }) // .then(workout => console.log('🚀 ~ file: updateWorkout.js ~ line 22 ~ return ~ workout', workout))
+    .then(function (workout) {
+      return dispatch({
+        type: 'UPDATE_WORKOUT',
+        // type: 'UPDATE_ROUTINE_WORKOUT',
         payload: workout
       });
     }); // debugger
@@ -7431,6 +7525,7 @@ function UpdateWorkoutForm_defineProperty(obj, key, value) { if (key in obj) { O
  //import {Route, Switch, useLocation, withRouter} from 'react-router-dom'
 // import { createBrowserHistory } from "history";
 
+
  // import {workoutsReducer} from '../reducers/workoutsReducer'
 
 var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
@@ -7451,8 +7546,15 @@ var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
 
     UpdateWorkoutForm_defineProperty(UpdateWorkoutForm_assertThisInitialized(_this), "handleSubmit", function (e) {
       e.preventDefault();
+      var updateRoutineWorkoutPayload = {
+        "id": _this.routineId,
+        "workout": _this.state,
+        "update_workout": true
+      };
+      console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 57 ~ UpdateWorkoutForm ~ updateRoutineWorkoutPayload', updateRoutineWorkoutPayload); // this.props.updateWorkout(this.state)
 
-      _this.props.updateWorkout(_this.state); //     this.setState({
+      _this.props.updateRoutineWorkout(_this.state); // this.props.updateRoutineWorkout(updateRoutineWorkoutPayload)
+      //     this.setState({
       //     // workout_name: this.state.workout_name,
       // //     workout_name: "",
       //     // workout_type: this.state.workout_type,
@@ -7466,18 +7568,22 @@ var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
 
     console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 14 ~ UpdateWorkoutForm ~ constructor ~ this.currentPath', _this.currentPath); // this.id = parseInt(this.currentPath.replace('/routines/' + this.routineId + '/workouts/',''))
 
-    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 19 ~ UpdateWorkoutForm ~ constructor ~ this.id', _this.id); // this.regex = (/\d/.test(this.currentPath))
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 19 ~ UpdateWorkoutForm ~ constructor ~ this.id', _this.workoutId); // this.regex = (/\d/.test(this.currentPath))
 
-    _this.id = /\d{1,5}$/.exec(_this.currentPath)[0]; // this.id = this.regex[0]
+    _this.workoutId = /\d{1,5}$/.exec(_this.currentPath)[0];
+    _this.routineId = /\d{1,5}/.exec(_this.currentPath)[0]; // this.id = this.regex[0]
 
-    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 21 ~ UpdateWorkoutForm ~ constructor ~ this.id', _this.id); // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex', this.regex);
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 21 ~ UpdateWorkoutForm ~ constructor ~ this.id', _this.workoutId); // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex', this.regex);
     // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex[0]', this.regex[0]);
 
     _this.workout = _this.props.workouts.find(function (workout) {
-      return workout.id == _this.id;
+      return workout.id == _this.workoutId;
+    });
+    _this.routine = _this.props.routines.find(function (routine) {
+      return routine.id == _this.routineId;
     });
     _this.state = {
-      id: _this.id,
+      id: _this.workoutId,
       workout_name: _this.workout.workout_name,
       workout_type: _this.workout.workout_type,
       distance: _this.workout.distance,
@@ -7496,17 +7602,6 @@ var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {// this.loadWorkoutInfo()
     }
-  }, {
-    key: "loadWorkoutInfo",
-    value: function loadWorkoutInfo() {
-      // console.log('HARLEM SON1')
-      if (this.props.workouts) {// var workoutId = parseInt(window.location.href.replace("http://localhost:3001/workouts/", ""))
-        // ! this.workout = this.props.workouts.find(workout => workout.id == this.id);
-      }
-    } // this.id = parseInt(window.location.href.replace("http://localhost:3001/workouts/", ""))
-    // this.workoutsList = this.props.workouts
-    // this.workout = [this.props.workouts].find(workout => workout.id == this.id)
-
   }, {
     key: "render",
     value: function render() {
@@ -7554,13 +7649,15 @@ function UpdateWorkoutForm_mapStateToProps(state, ownProps) {
   });
   return {
     workouts: state.workoutsReducer.workouts,
-    //    workout: [ownProps.workouts.filter(workout => workout.id == workoutId)]
-    workout: currentWorkout[0]
+    routines: state.routinesReducer.routines,
+    workout: currentWorkout[0] //    workout: [ownProps.workouts.filter(workout => workout.id == workoutId)]
+
   };
 }
 
 /* harmony default export */ var forms_UpdateWorkoutForm = (connect_connect(UpdateWorkoutForm_mapStateToProps, {
-  updateWorkout: updateWorkout
+  updateWorkout: updateWorkout,
+  updateRoutineWorkout: updateRoutineWorkout
 })(UpdateWorkoutForm_UpdateWorkoutForm));
 // CONCATENATED MODULE: ./src/components/Workout.js
  // import {Redirect} from 'react-router-dom'
@@ -7575,18 +7672,26 @@ var Workout_Workout = function Workout(props) {
   console.log('🚀 ~ file: Workout.js ~ line 10 ~ Workout ~ WORKOUT props', props);
   var currentPath = window.location.pathname;
   var routineId = /\d{1,5}/.exec(currentPath)[0];
-  var workoutId = /\d{1,5}$/.exec(currentPath)[0]; // console.log('🚀 ~ file: Workout.js ~ line 12 ~ Workout ~ currentUrl', currentPath); // ? /routines/2/workouts/15
+  var workoutId = /\d{1,5}$/.exec(currentPath)[0];
+  var routines = useSelector_useSelector(function (state) {
+    return state.routinesReducer.routines;
+  });
+  var workouts = useSelector_useSelector(function (state) {
+    return state.workoutsReducer.workouts;
+  }); // console.log('🚀 ~ file: Workout.js ~ line 12 ~ Workout ~ currentUrl', currentPath); // ? /routines/2/workouts/15
 
   console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ routineId', routineId);
   console.log('🚀 ~ file: Workout.js ~ line 15 ~ Workout ~ workoutId', workoutId); // const regExNums = (/\/\d\d/.exec(currentPath))[0]
   // console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ regExNums', regExNums);
 
-  var workout = props.workouts.find(function (workout) {
+  var workout = workouts.find(function (workout) {
     return workout.id == workoutId;
   });
-  var routine = props.routines.find(function (routine) {
+  var routine = routines.find(function (routine) {
     return routine.id == routineId;
-  }); // const {currentWorkout : workout} = props
+  });
+  console.log('🚀 ~ file: Workout.js ~ line 28 ~ Workout ~ routine', routine);
+  console.log('🚀 ~ file: Workout.js ~ line 35 ~ Workout ~ props.routines', props.routines); // const {currentWorkout : workout} = props
   // const work = props.workouts.find(workout => workout.id ==  window.location.pathname.replace('/routines/' + this.routineId + '/workouts/',''))
   // console.log('🚀 ~ file: Workout.js ~ line 13 ~ Workout ~ work', work);
   // console.log('🚀 ~ file: Workout.js ~ line 11 ~ Workout ~ props', props);
@@ -7663,6 +7768,110 @@ var Workout_Workout = function Workout(props) {
 /* harmony default export */ var components_Workout = (connect_connect(null, {
   deleteRoutineWorkout: actions_deleteRoutineWorkout
 })(Workout_Workout));
+// CONCATENATED MODULE: ./src/components/RoutineWorkout.js
+ // import {Redirect} from 'react-router-dom'
+
+
+ // import { connect } from 'react-redux'
+
+
+ // import NewWorkoutWorkoutForm from '../forms/NewWorkoutWorkoutForm'
+
+var RoutineWorkout_RoutineWorkout = function RoutineWorkout(props) {
+  console.log('🚀 ~ file: RoutineWorkout.js ~ line 10 ~ RoutineWorkout ~ WORKOUT props', props);
+  var currentPath = window.location.pathname;
+  var routineId = /\d{1,5}/.exec(currentPath)[0];
+  var workoutId = /\d{1,5}$/.exec(currentPath)[0];
+  var routines = useSelector_useSelector(function (state) {
+    return state.routinesReducer.routines;
+  });
+  var workouts = useSelector_useSelector(function (state) {
+    return state.workoutsReducer.workouts;
+  }); // console.log('🚀 ~ file: RoutineWorkout.js ~ line 12 ~ RoutineWorkout ~ currentUrl', currentPath); // ? /routines/2/workouts/15
+
+  console.log('🚀 ~ file: RoutineWorkout.js ~ line 13 ~ RoutineWorkout ~ routineId', routineId);
+  console.log('🚀 ~ file: RoutineWorkout.js ~ line 15 ~ RoutineWorkout ~ workoutId', workoutId); // const regExNums = (/\/\d\d/.exec(currentPath))[0]
+  // console.log('🚀 ~ file: RoutineWorkout.js ~ line 13 ~ RoutineWorkout ~ regExNums', regExNums);
+
+  var routineWorkout = props.workouts.find(function (routineWorkout) {
+    return routineWorkout.id == workoutId;
+  });
+  var routine = props.routines.find(function (routine) {
+    return routine.id == routineId;
+  }); // const {currentWorkout : routineWorkout} = props
+  // const work = props.workouts.find(routineWorkout => routineWorkout.id ==  window.location.pathname.replace('/routines/' + this.routineId + '/workouts/',''))
+  // console.log('🚀 ~ file: RoutineWorkout.js ~ line 13 ~ RoutineWorkout ~ work', work);
+  // console.log('🚀 ~ file: RoutineWorkout.js ~ line 11 ~ RoutineWorkout ~ props', props);
+  // console.log('🚀 ~ file: RoutineWorkout.js ~ line 10 ~ RoutineWorkout ~ props-routine', props.current_routine);
+  // console.log('🚀 ~ file: RoutineWorkout.js ~ line 10 ~ RoutineWorkout ~ props-routine', props.routine);
+
+  var handleDeleteWorkout = function handleDeleteWorkout(e) {
+    if (props.routines && props.workouts) {
+      var targetId = e.target.id;
+      console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
+      var routineString = /\d{1,5}/.exec(targetId);
+      var workoutString = /\d{1,5}$/.exec(targetId); // let workoutId = workoutString[0].toString()
+
+      var workoutIdString = workoutString[0]; //.toString()
+
+      var _workoutId = parseInt(workoutIdString); //.toString()
+
+
+      var _routineId = routineString[0].toString(); // const routineId = (/\d{1,5}/.exec(e.target.id))
+
+
+      console.log('🚀 ~ line 40 ~~ routineId', _routineId);
+      console.log('🚀 ~ line 41 ~~ workoutId', _workoutId); // console.log('🚀 ~ file: RoutinesList.js ~ line 40 ~ handleDeleteWorkout ~ filteredWorkoutId', filteredWorkoutId);
+
+      var clickedRoutine = props.routines.find(function (routine) {
+        return routine.id == _routineId;
+      }); // const clickedWorkoutObject = props.workouts.find(routineWorkout => routineWorkout.id == workoutId)
+      // const clickedWorkout = parseInt(clickedWorkoutObject[0])
+
+      console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ props.workouts', props.workouts); // console.log('🚀 ~ file: RoutinesList.js ~ line 42 ~ handleDeleteWorkout ~ clickedWorkoutObject', clickedWorkoutObject);
+
+      console.log('🚀 ~ line 53 ~~ clickedRoutine', clickedRoutine); // console.log('🚀 ~ line 54 ~~ clickedWorkout', clickedWorkout);
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ props.workouts.FIND', props.workouts.find(routineWorkout => routineWorkout.id === workoutId));
+      // let {id} = clickedRoutine
+      // let {id: routineWorkout} = clickedWorkout
+      // let {id} = clickedRoutine
+      // let {id: routineWorkout} = clickedWorkout
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 50 ~ handleDeleteWorkout ~ id', id);
+      // debugger
+
+      var outgoingPayload = {
+        "id": clickedRoutine.id,
+        "workout_id_to_delete": _workoutId // "workout_id_to_delete": clickedWorkout.id
+
+      }; // debugger
+
+      props.deleteRoutineWorkout(outgoingPayload);
+      console.log('🚀 ~ file: RoutinesList.js ~ line 59 ~ handleDeleteWorkout ~ outgoingPayload', outgoingPayload);
+    }
+  };
+
+  return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(Link, {
+    to: '/routines'
+  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " Routines "), " "), /*#__PURE__*/react_default.a.createElement(Link, {
+    to: '/routines/' + routineId
+  }, " ", /*#__PURE__*/react_default.a.createElement("button", null, " ", routine.routine_name, " Routine Page "), " "), /*#__PURE__*/react_default.a.createElement("div", null, "id: ", routineWorkout.id, /*#__PURE__*/react_default.a.createElement("div", {
+    key: routineWorkout.id
+  }, "name: ", routineWorkout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", routineWorkout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", routineWorkout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", routineWorkout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null))), /*#__PURE__*/react_default.a.createElement(forms_UpdateWorkoutForm, {
+    detail: routineWorkout
+  }), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null));
+}; // const mapStateToProps = (state, ownProps) => {
+//     const { workouts1 } = state
+//     const { workouts } = ownProps
+//     return {
+//         workoutsArr: workouts
+//     }
+// }
+// export default connect(mapStateToProps)(RoutineWorkout);
+
+
+/* harmony default export */ var components_RoutineWorkout = (connect_connect(null, {
+  deleteRoutineWorkout: actions_deleteRoutineWorkout
+})(RoutineWorkout_RoutineWorkout));
 // CONCATENATED MODULE: ./src/containers/WorkoutsContainer.js
 function WorkoutsContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { WorkoutsContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { WorkoutsContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return WorkoutsContainer_typeof(obj); }
 
@@ -7695,12 +7904,13 @@ function WorkoutsContainer_getPrototypeOf(o) { WorkoutsContainer_getPrototypeOf 
  // import WorkoutsPage from './WorkoutsPage';
 
 
+
  // import Workout from '../components/Workout'
-// import UpdateWorkoutPage from '../components/UpdateWorkoutPage'
 // import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
 // import HomePage from '../components/HomePage'
 // import Home from '../components/Home'
 // import {fetchWorkouts} from '../actions/fetchWorkouts'
+// import UpdateWorkoutPage from '../components/UpdateWorkoutPage'
 // import NewWorkoutForm from '../components/NewWorkoutForm'
 // import WorkoutsList from '../components/WorkoutsList'
 // import NewWorkoutsContainer from '../containers/NewWorkoutsContainer'
@@ -7750,6 +7960,7 @@ var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
         path: "/routines/:id/workouts/:id",
         render: function render(routerProps) {
           return /*#__PURE__*/react_default.a.createElement(components_Workout, WorkoutsContainer_extends({}, routerProps, {
+            //<Workout {...routerProps}
             workouts: _this2.props.workouts,
             routines: _this2.props.routines,
             currentWorkout: _this2.props.workouts.find(function (workout) {
@@ -7807,8 +8018,8 @@ function MainContainer_isNativeReflectConstruct() { if (typeof Reflect === "unde
 function MainContainer_getPrototypeOf(o) { MainContainer_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return MainContainer_getPrototypeOf(o); }
 
 
- // import {connect} from 'react-redux'
-// import './MainContainer.css';
+
+ // import './MainContainer.css';
 // import {fetchRoutines} from '../actions/fetchRoutines'
 // import RoutinesPage from './RoutinesPage';
 // import Routine from '../components/Routine'
@@ -7832,16 +8043,12 @@ var MainContainer_MainContainer = /*#__PURE__*/function (_Component) {
 
   // constructor(props) {
   //     super(props);
-  function MainContainer(props) {
-    var _this;
-
+  function MainContainer() {
     MainContainer_classCallCheck(this, MainContainer);
 
-    _this = _super.call(this, props); // this.fetchRoutines = fetchRoutines
-
-    console.log('🚀 ~ file: MainContainer.js ~ line 24 ~ MainContainer ~ CONSTRUCTOR ~ props', _this.props); // this.state = {routines: []}
-
-    return _this;
+    return _super.call(this); // this.fetchRoutines = fetchRoutines
+    // console.log('🚀 ~ file: MainContainer.js ~ line 24 ~ MainContainer ~ CONSTRUCTOR ~ props', this.props);
+    // this.state = {routines: []}
   } // componentDidMount(){
   //     // this.props.fetchRoutines()
   //     // console.log('THIS.PROPS 1', this.props)
@@ -7853,11 +8060,7 @@ var MainContainer_MainContainer = /*#__PURE__*/function (_Component) {
   MainContainer_createClass(MainContainer, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(containers_WorkoutsContainer, {
-        routines: this.props.workouts
-      }), /*#__PURE__*/react_default.a.createElement(containers_RoutinesContainer, {
-        routines: this.props.routines
-      })); // console.log('MainContainer -> render -> this.props.routines', this.props.routines);
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(containers_RoutinesContainer, null), /*#__PURE__*/react_default.a.createElement(containers_WorkoutsContainer, null)); // console.log('MainContainer -> render -> this.props.routines', this.props.routines);
     }
   }]);
 
@@ -7875,6 +8078,7 @@ var MainContainer_MainContainer = /*#__PURE__*/function (_Component) {
 
 /* harmony default export */ var containers_MainContainer = (MainContainer_MainContainer); // export default connect(null)(MainContainer);
 // export default connect(mapStateToProps, {fetchRoutines})(MainContainer);
+// export default connect(mapStateToProps)(MainContainer);
 // CONCATENATED MODULE: ./src/App.js
 
 
@@ -7978,7 +8182,8 @@ function workoutsReducer_objectSpread(target) { for (var i = 1; i < arguments.le
 function workoutsReducer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 // const intialState = {workouts: [], workout: {}}
-var workoutsReducer_intialState = [];
+// const intialState = {workouts: [], workout: {}}
+var workoutsReducer_intialState = {};
 function workoutsReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : workoutsReducer_intialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
@@ -7999,11 +8204,9 @@ function workoutsReducer() {
       });
 
     case 'UPDATE_WORKOUT':
-      var payloadId = action.payload.id;
-      var updatedWorkout = action.payload;
-      var selectedWorkout = state.workouts.filter(function (workout) {
-        return workout.id == payloadId;
-      }); // console.log('🚀 ~~line 17 ~ ~ UPDATED-WORKOUT', updatedWorkout);
+      var payloadId = action.payload.id; // const updatedWorkout = action.payload
+      // const selectedWorkout = state.workouts.filter(workout => workout.id == payloadId)
+      // console.log('🚀 ~~line 17 ~ ~ UPDATED-WORKOUT', updatedWorkout);
       // console.log('🚀 ~~ line 16 ~ ~ PAYLOAD-ID', payloadId);
       // console.log('🚀 ~~ line 20 ~ ~  state.workouts.FILTER', state.workouts.filter(workout => workout.id == payloadId))
       // console.log('🚀 ~ file: workoutsReducer.js ~ line 19 ~ workoutsReducer ~ selectedWorkout', selectedWorkout);
