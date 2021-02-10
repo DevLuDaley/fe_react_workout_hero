@@ -6857,6 +6857,27 @@ function routinesReducer() {
       });
     // return {...state, routines: state.routines, workouts: filteresWorkoutsList} //, workout: workout}
 
+    case 'UPDATE_WORKOUT':
+      var updateWorkoutPayload = action.payload;
+      var updateWorkoutPayloadId = action.payload.id;
+      var updateRoutinePayloadId = updateWorkoutPayload.routines[0].id;
+      var updateableRoutine = state.routines.find(function (routine) {
+        return routine.id == updateRoutinePayloadId;
+      }); // var updateableWorkout = updateableRoutine.workouts.find(workout => workout.id == updateWorkoutPayloadId)
+      // updateableWorkout = updateWorkoutPayload
+      // let workoutToUpdate = updateableRoutine.workouts.find(workout => workout.id == updateWorkoutPayloadId)
+
+      var updateableRoutineWorkoutsList = updateableRoutine.workouts;
+      var filteredUpdateWorkoutsList = updateableRoutineWorkoutsList.map(function (w) {
+        return w.id == updateWorkoutPayloadId ? updateWorkoutPayload : w;
+      });
+      return _objectSpread(_objectSpread({}, state), {}, {
+        routines: state.routines.map(function (r) {
+          return r;
+        }),
+        routine: updateableRoutine.workouts = filteredUpdateWorkoutsList
+      });
+
     default:
       // return {...state}
       return state;
