@@ -7,9 +7,9 @@ import NewRoutineForm from '../forms/NewRoutineForm';
 
 
 class RoutinesPage extends Component {
-    constructor(props) {
-        console.log('🚀 ~ file: RoutinesPage.js ~ line 11 ~ RoutinesPage ~ constructor ~ props', props);
-        super(props)
+    constructor() {
+        // console.log('🚀 ~ file: RoutinesPage.js ~ line 11 ~ RoutinesPage ~ constructor ~ props', props);
+        super()
         this.state = {routines: [], workouts: []}
     }
 
@@ -23,16 +23,13 @@ class RoutinesPage extends Component {
             <>
                 {/* <OldRoutineForm routines={this.props.routines}/> */}
 
-                <NewRoutineForm routines={this.props.routines}/>
-{
-                    this.props.routines && this.props.workouts ?
-                <RoutinesList routines={this.props.routines} workouts={this.props.workouts}/>
+                <NewRoutineForm />
 
-                : null 
-}
+                <RoutinesList />
+
                 {/* <Routine/> */}
-                {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.props', this.props)}
-                {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.state', this.state)}
+                {/* {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.props', this.props)}
+                {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.state', this.state)} */}
             </>
             );
     }

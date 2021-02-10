@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import {Link} from 'react-router-dom';
-import { connect } from 'react-redux'
+import { connect, useSelector } from 'react-redux'
 
 import deleteRoutine from '../actions/deleteRoutine'
 // import updateRoutine from '../actions/updateRoutine'
@@ -10,16 +10,22 @@ import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
 const RoutinesList = (props) =>  {
 console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', props);
 
+  const routines = useSelector(state => state.routinesReducer.routines)
+  const workouts = useSelector(state => state.workoutsReducer.workouts)
+  
+  // console.log('🚀 ~ file: RoutinesList.js ~ line 16 ~ Routine ~ routines', routines);
+  // console.log('🚀 ~ file: RoutinesList.js ~ line 17 ~ RoutinesList ~ workouts', workouts);
+
 // const [workouts, setWorkouts] = useState([])
 
 // setWorkouts(workouts =  )
 
 
   const handleDeleteRoutine = (e) => {
-    if (props.routines){
+    if (routines){
       const targetId = e.target.id.replace("btn-delete-routine-", "")
 
-      const clickedRoutine = props.routines.find(routine => routine.id == targetId)
+      const clickedRoutine = routines.find(routine => routine.id == targetId)
       
       props.deleteRoutine(clickedRoutine)
         }
@@ -27,7 +33,7 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
   
     const handleDeleteWorkout = (e) => {
     
-      if (props.routines && props.workouts){
+      if (routines && workouts){
       let targetId = e.target.id
       console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
 
@@ -44,15 +50,15 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
       // console.log('🚀 ~ file: RoutinesList.js ~ line 40 ~ handleDeleteWorkout ~ filteredWorkoutId', filteredWorkoutId);
 
 
-      const clickedRoutine = props.routines.find(routine => routine.id == routineId)
-      // const clickedWorkoutObject = props.workouts.find(workout => workout.id == workoutId)
+      const clickedRoutine = routines.find(routine => routine.id == routineId)
+      // const clickedWorkoutObject = workouts.find(workout => workout.id == workoutId)
       // const clickedWorkout = parseInt(clickedWorkoutObject[0])
       
-      console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ props.workouts', props.workouts);
+      console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ workouts', workouts);
       // console.log('🚀 ~ file: RoutinesList.js ~ line 42 ~ handleDeleteWorkout ~ clickedWorkoutObject', clickedWorkoutObject);
       console.log('🚀 ~ line 53 ~~ clickedRoutine', clickedRoutine);
       // console.log('🚀 ~ line 54 ~~ clickedWorkout', clickedWorkout);
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ props.workouts.FIND', props.workouts.find(workout => workout.id === workoutId));
+      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ workouts.FIND', workouts.find(workout => workout.id === workoutId));
       
       // let {id} = clickedRoutine
       // let {id: workout} = clickedWorkout
@@ -77,8 +83,8 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
     }
   return (
     <Fragment>
-         {props.routines ?
-            props.routines.map(routine =>
+         {routines ?
+            routines.map(routine =>
               <ul key={"ul-key-" + routine.id} className='routines-list all-routines' style={{listStyleType: 'none'}}>
 
                     <li key={"li-key-" + routine.id}>
