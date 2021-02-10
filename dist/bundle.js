@@ -216,11 +216,25 @@ if (true) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _inheritsLoose; });
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _inheritsLoose; });
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
+
 function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
   subClass.prototype.constructor = subClass;
-  subClass.__proto__ = superClass;
+  _setPrototypeOf(subClass, superClass);
 }
 
 /***/ }),
@@ -4280,7 +4294,7 @@ var useSelector_useSelector = /*#__PURE__*/createSelectorHook();
 
 setBatch(react_dom["unstable_batchedUpdates"]);
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js + 1 modules
 var inheritsLoose = __webpack_require__(1);
 
 // CONCATENATED MODULE: ./node_modules/resolve-pathname/esm/resolve-pathname.js
@@ -5337,7 +5351,7 @@ function createMemoryHistory(props) {
 // EXTERNAL MODULE: ./node_modules/mini-create-react-context/dist/esm/index.js
 var esm = __webpack_require__(9);
 
-// EXTERNAL MODULE: ./node_modules/react-router/node_modules/path-to-regexp/index.js
+// EXTERNAL MODULE: ./node_modules/path-to-regexp/index.js
 var path_to_regexp = __webpack_require__(10);
 var path_to_regexp_default = /*#__PURE__*/__webpack_require__.n(path_to_regexp);
 
@@ -6602,8 +6616,8 @@ var NewRoutineForm_NewRoutineForm = /*#__PURE__*/function (_Component) {
 
   _createClass(NewRoutineForm, [{
     key: "render",
-    // export default connect(mapStateToProps)(App);
-    value: function render() {
+    value: // export default connect(mapStateToProps)(App);
+    function render() {
       return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement("form", {
         id: "new-routine-form",
         onSubmit: this.handleSubmit
