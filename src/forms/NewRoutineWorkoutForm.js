@@ -5,6 +5,10 @@ import {addRoutineWorkout} from '../actions/addRoutineWorkout'
 class NewRoutineWorkoutForm extends Component {
   constructor(props) {
     super(props)
+    this.currentPath = window.location.pathname
+    this.routineId = (/\d{1,5}/.exec(this.currentPath))[0]
+    this.routine = this.props.routines.find(routine => routine.id == this.routineId)
+
     this.state = {
       id: '',
       workout_name: "",
@@ -13,6 +17,7 @@ class NewRoutineWorkoutForm extends Component {
       duration: ""//,
       // routines: []
       }
+
 
   }
 
@@ -29,7 +34,23 @@ class NewRoutineWorkoutForm extends Component {
 
     handleSubmit = (e)=> {
         e.preventDefault();
+const createRoutineWorkoutPayload = [
+            {
+                "routine": this.routine
+            }
+        ,   
+            {
+                "workout": this.state 
+            }
+            ,
+            {
+                "create-workout": true
+            }
+    ]
         this.props.addRoutineWorkout(this.state)
+
+
+        
             this.setState({
       id: '',
       workout_name: "",
