@@ -4,6 +4,7 @@ import {Route, Switch} from 'react-router-dom'
 //import {Route, Switch, useLocation, withRouter} from 'react-router-dom'
 // import { createBrowserHistory } from "history";
 import {updateWorkout} from '../actions/updateWorkout'
+import {updateRoutineWorkout} from '../actions/updateRoutineWorkout'
 // import {workoutsReducer} from '../reducers/workoutsReducer'
 
 
@@ -16,17 +17,19 @@ class UpdateWorkoutForm extends Component {
 
     console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 14 ~ UpdateWorkoutForm ~ constructor ~ this.currentPath', this.currentPath);
     // this.id = parseInt(this.currentPath.replace('/routines/' + this.routineId + '/workouts/',''))
-    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 19 ~ UpdateWorkoutForm ~ constructor ~ this.id', this.id);
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 19 ~ UpdateWorkoutForm ~ constructor ~ this.id', this.workoutId);
     // this.regex = (/\d/.test(this.currentPath))
-    this.id = (/\d{1,5}$/.exec(this.currentPath))[0]
+    this.workoutId = (/\d{1,5}$/.exec(this.currentPath))[0]
+    this.routineId = (/\d{1,5}/.exec(this.currentPath))[0]
     // this.id = this.regex[0]
-    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 21 ~ UpdateWorkoutForm ~ constructor ~ this.id', this.id);
+    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 21 ~ UpdateWorkoutForm ~ constructor ~ this.id', this.workoutId);
     // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex', this.regex);
     // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex[0]', this.regex[0]);
-    this.workout = this.props.workouts.find(workout => workout.id == this.id)
+    this.workout = this.props.workouts.find(workout => workout.id == this.workoutId)
+    this.routine = this.props.routines.find(routine => routine.id == this.routineId)
 
     this.state = {
-        id: this.id
+        id: this.workoutId
         ,
         workout_name: this.workout.workout_name,
         workout_type: this.workout.workout_type,
@@ -45,19 +48,6 @@ class UpdateWorkoutForm extends Component {
             // this.loadWorkoutInfo()
         }
 
-        loadWorkoutInfo(){
-        // console.log('HARLEM SON1')
-        if (this.props.workouts){
-            // var workoutId = parseInt(window.location.href.replace("http://localhost:3001/workouts/", ""))
-            // ! this.workout = this.props.workouts.find(workout => workout.id == this.id);
-
-        }
-        }
-
-    // this.id = parseInt(window.location.href.replace("http://localhost:3001/workouts/", ""))
-    // this.workoutsList = this.props.workouts
-    // this.workout = [this.props.workouts].find(workout => workout.id == this.id)
-
         handleChange = (e) => {
             this.setState({
                 [e.target.name]: e.target.value
@@ -66,7 +56,16 @@ class UpdateWorkoutForm extends Component {
 
         handleSubmit = (e) => {
         e.preventDefault()
-        this.props.updateWorkout(this.state)
+        const updateRoutineWorkoutPayload = {
+                "id": this.routineId,
+                "workout": this.state,
+                "update_workout": true
+            }
+    
+        console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 57 ~ UpdateWorkoutForm ~ updateRoutineWorkoutPayload', updateRoutineWorkoutPayload);
+        // this.props.updateWorkout(this.state)
+        this.props.updateRoutineWorkout(this.state)
+        // this.props.updateRoutineWorkout(updateRoutineWorkoutPayload)
     //     this.setState({
     //     // workout_name: this.state.workout_name,
     // //     workout_name: "",
@@ -150,10 +149,12 @@ function mapStateToProps(state, ownProps) {
   workoutId = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/workouts/", "")) : workoutId = parseInt(window.location.href.replace("http://localhost:3003/workouts/", ""))
    const currentWorkout = state.workoutsReducer.workouts.filter(workout => workout.id == workoutId)
 
-  return { workouts: state.workoutsReducer.workouts,
+  return { 
+      workouts: state.workoutsReducer.workouts,
+      routines: state.routinesReducer.routines,
+      workout: currentWorkout[0]
         //    workout: [ownProps.workouts.filter(workout => workout.id == workoutId)]
-           workout: currentWorkout[0]
  }
 }
 
-export default connect(mapStateToProps, {updateWorkout})(UpdateWorkoutForm);
+export default connect(mapStateToProps, {updateWorkout, updateRoutineWorkout})(UpdateWorkoutForm);
