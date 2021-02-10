@@ -23,18 +23,7 @@ const Routine = (props) => {
       let workoutId = parseInt(workoutIdString) //.toString()
       let routineId = routineString[0].toString()
 
-
-
       const clickedRoutine = props.routines.find(routine => routine.id == routineId)
-      // const clickedWorkoutObject = props.workouts.find(workout => workout.id == workoutId)
-      // const clickedWorkout = parseInt(clickedWorkoutObject[0])      
-      // let {id} = clickedRoutine
-      // let {id: workout} = clickedWorkout
-      // let {id} = clickedRoutine
-      // let {id: workout} = clickedWorkout
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 50 ~ handleDeleteWorkout ~ id', id);
-
-      // debugger
       const outgoingPayload = {
         "id": clickedRoutine.id,
         "workout_id_to_delete": workoutId
