@@ -10,15 +10,16 @@ class NewRoutineForm extends Component {
         routine_name:''
     }
 
+
     handleChange = (e) => {
         // e.target.value
         // console.log('NewRoutineForm -> e.target.value', e.target.value);
         this.setState({
             [e.target.name]: e.target.value
         })
-        console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.routine_name', e.target.routine_name);
-        console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.name', e.target.name);
-        console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.value', e.target.value);
+        // console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.routine_name', e.target.routine_name);
+        // console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.name', e.target.name);
+        // console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.value', e.target.value);
         // console.log('NewRoutineForm -> e.target.image_url', e.target.image_url);
     }
 
