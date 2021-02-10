@@ -15,9 +15,9 @@ export default function routinesReducer(state = intialState, action) {
         case 'UPDATE_ROUTINE':
             const payloadId = action.payload.id
             const updatedRoutine = action.payload
-            const selectedRoutine = state.routines.filter(routine => 
+            const selectedRoutine = state.routines.filter(routine =>
                         routine.id == payloadId)
-                        
+
                         console.log('🚀 ~~line 17 ~ ~ UPDATED-ROUTINE', updatedRoutine);
                         console.log('🚀 ~~ line 16 ~ ~ PAYLOAD-ID', payloadId);
                         console.log('🚀 ~~ line 20 ~ ~  state.routines.FILTER', state.routines.filter(routine => routine.id == payloadId))
@@ -28,16 +28,16 @@ export default function routinesReducer(state = intialState, action) {
                     // routines: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
                     // routines: updatedRoutine
                     // routines: state.routines,
-                    // routine: 
+                    // routine:
                     // updatedRoutine
                     // ,
                     // routine: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
                     // routines: state.routines,
                     // routine: updatedRoutine
-                    // routine: state.routines.filter(routine => 
-                    //     routine.id == payloadId ? 
+                    // routine: state.routines.filter(routine =>
+                    //     routine.id == payloadId ?
                     //     routine = updatedRoutine : null
-                        // ? routine = updatedRoutine : null 
+                        // ? routine = updatedRoutine : null
                     // )
             }
                 // return Object.assign({}, state, {routines: currentRoutines, routine: currentRoutine})
@@ -45,8 +45,8 @@ export default function routinesReducer(state = intialState, action) {
             const filteredRoutines = state.routines.filter(routine => routine.id !== action.payload.routineId);
             return {...state, routines: filteredRoutines}
 
-        case 'ADD_ROUTINE_WORKOUT': 
-            
+        case 'ADD_ROUTINE_WORKOUT':
+
             let routineWorkouts =  state.routines.map(routine => {
                 if (routine.id == action.payload.id) {
                     console.log('🚀 ~ file: routinesReducer.js ~ line 52 ~ routinesReducer ~ action.payload', action.payload);
@@ -57,46 +57,71 @@ export default function routinesReducer(state = intialState, action) {
             }
             )
             console.log('🚀 ~ file: routinesReducer.js ~ line 57 ~ routinesReducer ~ routineWorkouts', routineWorkouts);
+
             return {...state, routines: routineWorkouts}
+
+            case 'UPDATE_ROUTINE_WORKOUT':
+            const workoutPayloadId = action.payload.id
+            console.log('🚀 ~ file: routinesReducer.js ~ line 65 ~ routinesReducer ~ action.payload', action.payload)
+
+            return {
+                    routines: state.routines.map(r =>r) //workouts.map(workout => workout.id == workoutPayloadId ? action.payload : workout)
+                    // workouts: state.routines //workouts.map(workout => workout.id == workoutPayloadId ? action.payload : workout)
+                    // workouts: state.workouts.map(workout => workout.id == workoutPayloadId ? action.payload : workout)
+            }
 
 
             case 'DELETE_ROUTINE_WORKOUT':
-                console.log('action :>> ', action);
-                // console.log('ROUTINES-REDUCER');
-                // const {routineId, workoutId} = action.payload
+                // console.log('action :>> ', action);
                 let routineId = action.payload.routineId
                 let workoutId = action.payload.workoutId
-
                 const routine = state.routines.find( r => r.id == routineId)
                 const workout = routine.workouts.find( w => w.id == workoutId)
                 let workoutsList = routine.workouts
                 const filteredWorkoutsList = workoutsList.filter(w => w.id !== workoutId)
-                // filteresWorkoutsList
-                // console.log('🚀 ~ file: routinesReducer.js ~ line 70 ~ routinesReducer ~ WorkoutsList', workoutsList);
-                console.log('🚀 ~ file: routinesReducer.js ~ line 70 ~ routinesReducer ~ WorkoutsList.length()', workoutsList.length);
-                // console.log('🚀 ~ file: routinesReducer.js ~ line 85 ~ routinesReducer ~ filteresWorkoutsList', filteresWorkoutsList);
-                console.log('🚀 ~ file: routinesReducer.js ~ line 85 ~ routinesReducer ~ filteresWorkoutsList.length()', filteredWorkoutsList.length)
-                // routine.workouts
-                // console.log('🚀 ~ file: routinesReducer.js ~ line 67 ~ routinesReducer ~ routine', routine);
-                console.log('🚀 ~ file: routinesReducer.js ~ line 74 ~ routinesReducer ~ routineId', routineId);
-                console.log('🚀 ~ file: routinesReducer.js ~ line 74 ~ routinesReducer ~ WorkoutId', workoutId);
-                console.log('🚀 ~ file: routinesReducer.js ~ line 67 ~ routinesReducer ~ routine[0]', routine);
-                console.log('🚀 ~ file: routinesReducer.js ~ line 69 ~ routinesReducer ~ workout', workout);
-// state.routines
-console.log('🚀 ~ file: routinesReducer.js ~ line 90 ~ routinesReducer ~ state.routines', state.routines);
 
-                // console.log('🚀 ~ file: routinesReducer.js ~ line 80 ~ routinesReducer ~ routine.name', routine.name);
-                // console.log('🚀 ~ file: routinesReducer.js ~ line 80 ~ routinesReducer ~ routine.workouts', routine.workouts);
-                
-                // return {...state.routines, routine: routine.workouts}
-                // return {...state.routines, routine: state.routines}
+                // console.log('🚀 ~ file: routinesReducer.js ~ line 90 ~ routinesReducer ~ state.routines', state.routines);
                 // debugger //, workout: workout}
                 return {...state, routines: state.routines.map(r => r), routine: routine.workouts = filteredWorkoutsList }
                 // return {...state, routines: state.routines, workouts: filteresWorkoutsList} //, workout: workout}
-                
+
+                case 'UPDATE_WORKOUT':
+                    const updateWorkoutPayload = action.payload
+                    const updateWorkoutPayloadId = action.payload.id
+
+                    let updateRoutinePayloadId = updateWorkoutPayload.routines[0].id
+                    let updateableRoutine = state.routines.find(routine => routine.id == updateRoutinePayloadId)
+                    var updateableWorkout = updateableRoutine.workouts.find(workout => workout.id == updateWorkoutPayloadId)
+                    updateableWorkout = updateWorkoutPayload
+                    // updateableRoutine
+                    // console.log('🚀 ~ file: routinesReducer.js ~ line 118 ~ updateableWorkout', updateableWorkout);
+
+                    // console.log('🚀 ~ file: routinesReducer.js ~ line 123 ~ updateableRoutine', updateableRoutine);
+                    let workoutToUpdate = updateableRoutine.workouts.find(workout => workout.id == updateWorkoutPayloadId)
+                    // let workoutToUpdate =
+                    // let assignedWorkout = updateableRoutine.workouts.find(workout => 
+                    //         workout.id == updateWorkoutPayloadId ? 
+                    //         workout = updateWorkoutPayload
+                    //         :
+                    //         console.log('🚀 ~ file: routinesReducer.js ~ line 130 ~ WE GOT NADA!!!'))
+
+                    let updateWorkoutsList = updateableRoutine.workouts
+                    const filteredUpdateWorkoutsList = updateWorkoutsList.map(w => w.id == updateWorkoutPayloadId ? updateWorkoutPayload : w)
+
+                    // console.log('🚀 ~ file: routinesReducer.js ~ line 126 ~ assignedWorkout', assignedWorkout);
+                    // updateableWorkout.workouts[workoutToUpdate.id]
+                    // console.log('🚀 ~ file: routinesReducer.js ~ line 126 ~ updateableRoutine.workouts', updateableRoutine.workouts);
+                    // console.log('🚀 ~ file: routinesReducer.js ~ line 125 ~ workoutToUpdate', workoutToUpdate);
+
+                    // console.log('🚀 ~ file: routinesReducer.js ~ line 110 ~ state', state);
+
+                    return {...state, routines: state.routines.map(r => r), routine: updateableRoutine.workouts = filteredUpdateWorkoutsList 
+
+                    }
+                                    
                 default:
             // return {...state}
-            return state
+                return state
     }
 
 }
