@@ -1,5 +1,6 @@
 // const intialState = {workouts: [], workout: {}}
-const intialState = []
+// const intialState = {workouts: [], workout: {}}
+const intialState = {}
 
 export default function workoutsReducer(state = intialState, action) {
 // console.log('🚀 ~ file: workoutsReducer.js ~ line 4 ~ workoutsReducer ~ action', action);
@@ -14,8 +15,8 @@ export default function workoutsReducer(state = intialState, action) {
 
         case 'UPDATE_WORKOUT':
             const payloadId = action.payload.id
-            const updatedWorkout = action.payload
-            const selectedWorkout = state.workouts.filter(workout => workout.id == payloadId)
+            // const updatedWorkout = action.payload
+            // const selectedWorkout = state.workouts.filter(workout => workout.id == payloadId)
                         // console.log('🚀 ~~line 17 ~ ~ UPDATED-WORKOUT', updatedWorkout);
                         // console.log('🚀 ~~ line 16 ~ ~ PAYLOAD-ID', payloadId);
                         // console.log('🚀 ~~ line 20 ~ ~  state.workouts.FILTER', state.workouts.filter(workout => workout.id == payloadId))
