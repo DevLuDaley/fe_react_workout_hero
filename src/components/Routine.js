@@ -22,23 +22,12 @@ const Routine = (props) => {
       let workoutIdString = workoutString[0] //.toString()
       let workoutId = parseInt(workoutIdString) //.toString()
       let routineId = routineString[0].toString()
-      
-      // const routineId = (/\d{1,5}/.exec(e.target.id))
-    //   console.log('🚀 ~ line 40 ~~ routineId', routineId);
-    //   console.log('🚀 ~ line 41 ~~ workoutId', workoutId);
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 40 ~ handleDeleteWorkout ~ filteredWorkoutId', filteredWorkoutId);
+
 
 
       const clickedRoutine = props.routines.find(routine => routine.id == routineId)
       // const clickedWorkoutObject = props.workouts.find(workout => workout.id == workoutId)
-      // const clickedWorkout = parseInt(clickedWorkoutObject[0])
-      
-    //   console.log('🚀 ~ file: RoutinesList.js ~ line 51 ~ handleDeleteWorkout ~ props.workouts', props.workouts);
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 42 ~ handleDeleteWorkout ~ clickedWorkoutObject', clickedWorkoutObject);
-    //   console.log('🚀 ~ line 53 ~~ clickedRoutine', clickedRoutine);
-      // console.log('🚀 ~ line 54 ~~ clickedWorkout', clickedWorkout);
-      // console.log('🚀 ~ file: RoutinesList.js ~ line 53 ~ handleDeleteWorkout ~ props.workouts.FIND', props.workouts.find(workout => workout.id === workoutId));
-      
+      // const clickedWorkout = parseInt(clickedWorkoutObject[0])      
       // let {id} = clickedRoutine
       // let {id: workout} = clickedWorkout
       // let {id} = clickedRoutine
