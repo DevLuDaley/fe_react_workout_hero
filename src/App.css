@@ -169,7 +169,7 @@ input {
 
 
 .delete-btns { 
-  background-color: #f25f55c4;
+  background-color: #be615ab8;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -181,20 +181,21 @@ input {
   border-radius: 12px;
   transition-duration: 0.4s;
   transition: background 0.4s ease-in-out;
+  /* opacity: .75; */
   /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */
 }
 
-
-
 .delete-btns:hover {
-  background-color: #f83527bb;
-  /* background-color: #d11e12b3; */
+  /* background-color: #ff291aa9; */
+  /* background-color: #d11e12b3;*/
+  background-color: #f2483cc4;
   color: white;
+  opacity: 1
 }
 
 
 .submit-btns { 
-  background-color: #77d78f9c;
+  background-color: #77d78fbc;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -209,16 +210,18 @@ input {
   /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */
 }
 
-
-
 .submit-btns:hover {
-  background-color: #48f273ba;
+  background-color: #41f26dcb;
   /* background-color: #d11e12b3; */
   color: white;
 }
 
+
 .floating-nav-btns { 
-  background-color: #d7ca779c;
+  /* background-color: #d7ca779c; */
+  /* background-color: #f4e1d2; */
+  /* background-color: #618685; */
+  background-color: #a27ec6e4;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -236,7 +239,9 @@ input {
 
 
 .floating-nav-btns:hover {
-  background-color: #f7e255a9;
+  /* background-color: #f7e255a9; */
+  /* background-color: #43bcb8da; */
+  background-color: #9f6bd2;
   /* background-color: #d11e12b3; */
   color: white;
 }
