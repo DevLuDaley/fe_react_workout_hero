@@ -96,7 +96,7 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
 
                           </h1>
                         </Link>
-                                <button key={"delete-routine-btn-key-" + routine.id} onClick={handleDeleteRoutine} id={`btn-delete-routine-${routine.id}`} className='btn-delete-routine'>
+                                <button key={"delete-routine-btn-key-" + routine.id} onClick={handleDeleteRoutine} id={`btn-delete-routine-${routine.id}`} className='btn-delete-routine delete-btns'>
                             {/* <button onClick={deleteRoutine} id={routine.id} className='btn-delete-routine'> */}
                                 Delete Routine
                             </button>
@@ -108,10 +108,10 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
                             <div key={"section-div-key-" + workout.id} className='routine-workout-names'>
 
                                  <Link key={"routine-url-key-" + routine.id} to={`/routines/${routine.id}/workouts/${workout.id}`}>
-                                 <button> edit </button>
+                                 <button className="edit-btns"> edit </button>
                                  </Link>
                                 {workout.workout_name} 
-                                <button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
+                                <button className="delete-btns" onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
 
                                 <section key={"nested-section-key-" + workout.id} className='routine-workout-details'>
                                 </section>

@@ -144,3 +144,35 @@ input {
     border: 2px dotted rgb(27, 44, 27);
     border-radius: 5px;
 }
+
+.edit-btns { 
+  background-color: #008bbaa7; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  padding: 10px 24px;
+  border-radius: 12px;
+}
+
+.delete-btns { 
+  background-color: #f2605592; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  padding: 10px 24px;
+  border-radius: 12px;
+}
+
+
+.button:hover {
+  background-color: #96a3965a; /* Green */
+  color: white;
+}
