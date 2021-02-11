@@ -51,7 +51,8 @@ body {
 }
 
 .routine-names {
-    color: rgb(55, 167, 204);
+    color: rgba(222, 73, 85, 0.49);
+    /* color: rgb(55, 167, 204); */
     font-size: 20px;
 }
 
