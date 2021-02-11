@@ -16,9 +16,9 @@ class NewRoutineForm extends Component {
         this.setState({
             [e.target.name]: e.target.value
         })
-        console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.routine_name', e.target.routine_name);
-        console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.name', e.target.name);
-        console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.value', e.target.value);
+        // console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.routine_name', e.target.routine_name);
+        // console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.name', e.target.name);
+        // console.log('🚀 ~ file: NewRoutineForm.js ~ line 20 ~ NewRoutineForm ~ e.target.value', e.target.value);
         // console.log('NewRoutineForm -> e.target.image_url', e.target.image_url);
     }
 
@@ -42,7 +42,7 @@ class NewRoutineForm extends Component {
                 <label> Routine Name: </label>
                 <input type="text" placeholder='enter routine name...' value={this.state.name} name="routine_name" routine_name="blank" onChange={this.handleChange}/>
 
-                <button type="submit">Create Routine</button>
+                <button className='submit-btns' type="submit">Create Routine</button>
             </form>
             {/* <DrillsContainer/>       */}
             {/* <Route exact path='/routines' render={(routerProps) => <RoutinesList {...routerProps} routines={this.props.routines}/>}/> */}
