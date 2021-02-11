@@ -14,7 +14,6 @@ const Routine = (props) => {
 
         if (props.routines && props.workouts){
     let targetId = e.target.id
-    //   console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
 
       let routineString = (/\d{1,5}/.exec(targetId))
       let workoutString = (/\d{1,5}$/.exec(targetId))
