@@ -38,7 +38,7 @@ const Routine = (props) => {
     return(
     <Fragment>
                     <Switch>
-                   <Link to={'/routines'}> <button> Return to Routines </button> </Link>
+                   <Link to={'/routines'}> <button className='floating-nav-btns'> Return to Routines </button> </Link>
                     </Switch>
     {
         props.routines ?
