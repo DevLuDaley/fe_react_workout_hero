@@ -38,7 +38,7 @@ const Routine = (props) => {
     return(
     <Fragment>
                     <Switch>
-                   <Link to={'/routines'}> <button> Return to Routines </button> </Link>
+                   <Link to={'/routines'}> <button className='floating-nav-btns'> Return to Routines </button> </Link>
                     </Switch>
     {
         props.routines ?
@@ -82,10 +82,10 @@ const Routine = (props) => {
                             {/* id: {workout.id}
                             <br></br> */}
                              <Link key={"routine-url-key-" + routine.id} to={`${window.location.pathname}/workouts/${workout.id}`}>
-                                 <button> edit </button>
+                                 <button className="edit-btns"> edit </button>
                                  </Link>
                             name: {workout.workout_name}
-                                  <button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
+                                  <button className="delete-btns" onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
                             <br></br>
                             category: {workout.workout_type}
                             <br></br>

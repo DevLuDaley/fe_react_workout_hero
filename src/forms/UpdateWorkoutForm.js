@@ -130,7 +130,7 @@ class UpdateWorkoutForm extends Component {
                             name="duration" 
                             onChange={this.handleChange}/>
 
-                            <button type="submit">Update Workout </button>
+                            <button className='submit-btns' type="submit">Update Workout </button>
                         </form>
                     </section>
                     :

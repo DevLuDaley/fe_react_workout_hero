@@ -64,7 +64,7 @@ class NewRoutineWorkoutForm extends Component {
             <label> Duration: </label> 
               <input type="text" placeholder='enter duration...' value={this.state.duration} name="duration" onChange={this.handleChange}/>
 
-                <button type="submit">Add Workout</button>
+                <button className='submit-btns' type="submit">Add Workout</button>
         </form>
         </div>
         );

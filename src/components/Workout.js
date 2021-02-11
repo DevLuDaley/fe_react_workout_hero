@@ -83,9 +83,9 @@ const routine = props.routines.find(routine => routine.id == routineId)
     {/* {props.currentWorkout} */}
                     {/* <Switch> */}
                    
-                   <Link to={'/routines'}> <button> Routines </button> </Link>
+                   <Link to={'/routines'}> <button className='floating-nav-btns'> Routines </button> </Link>
 
-                   <Link to={'/routines/' + routineId}> <button> {routine.routine_name} Routine Page </button> </Link>
+                   <Link to={'/routines/' + routineId}> <button className='floating-nav-btns'> {routine.routine_name} Routine Page </button> </Link>
                     {/* </Switch> */}
                    {/* <Link to={'/workouts'}> <button> Return to Workouts </button> </Link> */}
                    
@@ -109,7 +109,7 @@ const routine = props.routines.find(routine => routine.id == routineId)
                         </div>
 
     <UpdateWorkoutForm detail={workout}/>
-        <button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
+        <button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns'> delete </button>
     
         </Fragment>
     )

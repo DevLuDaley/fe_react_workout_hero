@@ -105,7 +105,7 @@ class UpdateRoutineForm extends Component {
                                 readOnly
                             />
 
-                            <button type="submit">Change Routine Name </button>
+                            <button className='submit-btns' type="submit">Change Routine Name </button>
                         </form>
                     </section>
                     :
