@@ -226,7 +226,8 @@ input {
 
 
 .submit-btns { 
-  background-color: #77d78fbc;
+  /* background-color: #77d78fbc; */
+  background-color: rgba(139, 0, 139, 0.507);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -242,7 +243,9 @@ input {
 }
 
 .submit-btns:hover {
-  background-color: #41f26dcb;
+  background-color: rgba(204, 7, 204, 0.616);
+
+  /* background-color: #41f26dcb; */
   /* background-color: #d11e12b3; */
   color: white;
 }
@@ -272,7 +275,7 @@ input {
 .floating-nav-btns:hover {
   /* background-color: #f7e255a9; */
   /* background-color: #43bcb8da; */
-  background-color: #9f6bd2;
+  background-color: #b076eb;
   /* background-color: #d11e12b3; */
   color: white;
 }
