@@ -105,7 +105,7 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
                         routine.workouts ?
                         <section key={"workouts-section-key-" + routine.id} id={`routine-${routine.routine_name} + "" + ${routine.id}-workouts`} className='all-routine-workouts'>
                             {routine.workouts.map(workout =>
-                            <div key={"section-div-key-" + workout.id} className='routine-workout-names'>
+                            <div key={"section-div-key-" + workout.id} className='routine-workout-name-block'>
 
                                  <Link key={"routine-url-key-" + routine.id} to={`/routines/${routine.id}/workouts/${workout.id}`}>
                                  <button className="edit-btns"> edit </button>
