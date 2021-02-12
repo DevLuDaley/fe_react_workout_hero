@@ -9,10 +9,13 @@ body {
         repeat;
     background-color: #25657c;
     background-blend-mode: lighten;
+    padding: 10px;
+    margin: 50px;
 }
 
 .container {
-    display: grid;
+    /* display: grid; */
+      display: inline-grid;
     opacity: 95%;
     /* grid-gap: 5px 5px; */
 }
@@ -89,7 +92,32 @@ body {
 
 
 input {
-    font-size: 1.0em;
+    /* font-size: 1.0em; */
+    /* background-color: #b4b1b1a3; */
+       background: #b9aaaa61;
+    /* background-color: #8c8c8c; */
+    /* background-color: #acbbe7b0; */
+        /* background: #c71f49; */
+    /* width: 50%; */
+    /* padding: 12px 20px; */
+    /* margin: 8px 0; */
+    /* box-sizing: border-box; */
+    
+      /* width: 50%; */
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: black;
 }
 
 .hidden {
@@ -244,4 +272,47 @@ input {
   background-color: #9f6bd2;
   /* background-color: #d11e12b3; */
   color: white;
+}
+
+.routine-workout-name-block{
+    /* grid:  ; */
+      float: center;
+  width: 33.33%;
+  /* height: 25%; */
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+.delete-workout{
+    /* position: relative; */
+    float: center;
+  /* right: 190px; */
+    /* center: 0px; */
+    /* width: 300px; */
+  /* border: 3px solid #73AD21; */
+  /* padding: 10px; */
+}
+
+.workout-page-floating-links{
+    display: grid;
+    grid-template-columns: 40px 240px auto;
+
+    /* grid-column-gap: 50px; */
+      /* grid-gap: 50px 100px; */
+
+    /* padding: 10px; */
+    /* margin: 200px; */
+
+    /* width: 25%;
+  float: left; */
+}
+
+.routine-detail-page{
+    display: grid;
+    /* grid-template-columns: 80px 240px auto 40px; */
+    /* padding: 30px;
+    margin: 50px; */
+    position: relative;
+
 }
