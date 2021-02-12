@@ -8040,11 +8040,8 @@ function workoutsReducer() {
     case 'ADD_ROUTINE_WORKOUT':
       var routinePayload = action.payload;
       var updateWorkoutsLength = routinePayload.workouts.length;
-      var workoutToCreate = routinePayload.workouts[updateWorkoutsLength - 1]; // let workoutToCreate2 = routinePayload.workouts.find(w => w.id !== payloadWorkoutId)
-      // let workoutToCreate2 = routinePayload.workouts.find(w => w.id !== payloadWorkoutId)
-      // return {...state.workouts}
+      var workoutToCreate = routinePayload.workouts[updateWorkoutsLength - 1]; // return {...state.workouts}
 
-      console.log('🚀 ~ file: workoutsReducer.js ~ line 49 ~ workoutsReducer ~ state', state);
       return workoutsReducer_objectSpread(workoutsReducer_objectSpread({}, state.workouts), {}, {
         workouts: state.workouts.concat(workoutToCreate)
       });
