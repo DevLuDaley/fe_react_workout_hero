@@ -98,15 +98,16 @@ class UpdateWorkoutForm extends Component {
                  this.props.detail ?
                     <section>
                         <form onSubmit={this.handleSubmit} id='update-workout-form'>
-                            <label> </label>
+
+                            <label> name: </label>
                             <input 
                             type="text" 
                             placeholder={this.props.detail.workout_name} 
                             value={this.state.workout_name} 
                             name="workout_name" 
                             onChange={this.handleChange}/>
-                            
-                            <label> </label>
+
+                            <label> category: </label>
                             <input 
                             type="text" 
                             placeholder={this.props.detail.workout_type} 
@@ -114,7 +115,7 @@ class UpdateWorkoutForm extends Component {
                             name="workout_type" 
                             onChange={this.handleChange}/>
 
-                            <label> </label>
+                            <label> distance: </label>
                             <input 
                             type="text" 
                             placeholder={this.props.detail.distance} 
@@ -122,14 +123,13 @@ class UpdateWorkoutForm extends Component {
                             name="distance" 
                             onChange={this.handleChange}/>
 
-                            <label> </label>
+                            <label> duration: </label>
                             <input 
                             type="text" 
                             placeholder={this.props.detail.duration} 
                             value={this.state.duration} 
                             name="duration" 
                             onChange={this.handleChange}/>
-
                             <button className='submit-btns' type="submit">Update Workout </button>
                         </form>
                     </section>
@@ -137,7 +137,6 @@ class UpdateWorkoutForm extends Component {
                     <p>NOTHING TO SEE HERE</p>
 
                 }
-                 
 
         </Fragment>
         );
