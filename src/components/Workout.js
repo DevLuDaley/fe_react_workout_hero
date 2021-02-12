@@ -82,10 +82,19 @@ const routine = props.routines.find(routine => routine.id == routineId)
     <Fragment>
     {/* {props.currentWorkout} */}
                     {/* <Switch> */}
-                   
-                   <Link to={'/routines'}> <button className='floating-nav-btns'> Routines </button> </Link>
+<section className="workout-page-floating-links">
+                     
+                     <Link to={'/routines'}> <button className='floating-nav-btns'> Routines </button> </Link>
+  <br/>
+                     <Link to={'/routines/' + routineId}> <button className='floating-nav-btns'> {routine.routine_name} Routine Page </button> </Link>
 
-                   <Link to={'/routines/' + routineId}> <button className='floating-nav-btns'> {routine.routine_name} Routine Page </button> </Link>
+</section>
+
+ <br/>
+
+    <UpdateWorkoutForm detail={workout}/>
+
+<br/>
                     {/* </Switch> */}
                    {/* <Link to={'/workouts'}> <button> Return to Workouts </button> </Link> */}
                    
@@ -107,9 +116,9 @@ const routine = props.routines.find(routine => routine.id == routineId)
                             <br></br>
                         </div>
                         </div>
+<button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns delete-workout'> delete workout </button>
 
-    <UpdateWorkoutForm detail={workout}/>
-        <button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns'> delete </button>
+        {/* <button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns delete-workout'> delete workout </button> */}
     
         </Fragment>
     )
