@@ -144,7 +144,10 @@ input {
 }
 
 #new-routine-form>label {
-    color: rgb(139, 139, 89);
+    /* color: rgb(139, 139, 89); */
+    /* color: darkmagenta; */
+    color: rgba(139, 0, 139, 0.685);
+    /* color: rgba(238, 69, 196, 0.452);; */
 }
 
 #new-routine-form {
