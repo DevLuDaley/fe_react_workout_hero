@@ -56,8 +56,10 @@ const Routine = (props) => {
                 {/* id: {routine.id} */}
     
                 {/* <p>{filtered.name}</p> */}
+            <h1> Update Routine </h1> 
         {
             props.routines ?
+
         <UpdateRoutineForm routines={props.routines} 
                 routineToUpdate={props.routines.find(routine => 
              routine.id == props.match.params.id)}
