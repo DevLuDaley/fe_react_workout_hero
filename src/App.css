@@ -151,7 +151,9 @@ input {
 }
 
 #new-routine-form {
-    text-align: center
+    /* text-align: center; */
+    display: grid;
+    grid-template-columns: auto 180px auto;
 }
 
 .input-text {
@@ -320,5 +322,22 @@ input {
     /* padding: 30px;
     margin: 50px; */
     position: relative;
+  }
 
+    #update-routine-form{
+    /* position: relative; */
+    /* display: grid; */
+    /* grid-template-columns: 10px 220px 220px; */
+}
+
+#new-routine-workout-form {
+    /* text-align: center; */
+    display: grid;
+    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;
+}
+
+#update-workout-form {
+    /* text-align: center; */
+    display: grid;
+    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;
 }
