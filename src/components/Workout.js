@@ -104,7 +104,7 @@ const routine = props.routines.find(routine => routine.id == routineId)
                         <div  key={workout.id}>
                               <section id="workout-info">
                                 <section id="workout-detail-workout-name">
-                                  name: {workout.workout_name}
+                                  {workout.workout_name}
                                   <br></br>
                                 </section>
                                 id: {workout.id}
