@@ -36,10 +36,9 @@ class NewRoutineForm extends Component {
               <TextField
                 label="Name"
                 id="margin-none"
-                value={this.state.name} name="routine_name" 
+                value={this.state.name} 
+                // name="routine_name" 
                 onChange={this.handleChange}/>
-
-
                 <button className='submit-btns' type="submit">Create Routine</button>
             </form>
         </Fragment>
