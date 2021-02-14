@@ -6194,9 +6194,9 @@ function fetchRoutines() {
   // ! bring in dispatch so that we can async if not the connect will handle synchronously
   // fetch('https://be-hoop-drills.herokuapp.com/api/v1/routines'
   return function (dispatch) {
-    fetch('http://localhost:3000/api/v1/routines', // fetch('https://be-workout-hero.herokuapp.com/api/v1/routines', 
-    // fetch('https://be-workout-hero2.herokuapp.com/api/v1/routines', 
-    {
+    // fetch('http://localhost:3000/api/v1/routines', 
+    // fetch('https://be-workout-hero.herokuapp.com/api/v1/routines', 
+    fetch('https://be-workout-hero2.herokuapp.com/api/v1/routines', {
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -6505,9 +6505,9 @@ if (false) { var ariaCurrentType; }
 
 // CONCATENATED MODULE: ./src/actions/deleteRoutine.js
 var deleteRoutine = function deleteRoutine(routineData) {
-  console.log('🚀 ~ file: deleteRoutine.js ~ line 2 ~ deleteRoutine ~ routineData', routineData);
-  var baseUrl = 'http://localhost:3000/api/v1/routines/'; // const baseUrl = 'https://be-workout-hero2.herokuapp.com/api/v1/routines/'
+  console.log('🚀 ~ file: deleteRoutine.js ~ line 2 ~ deleteRoutine ~ routineData', routineData); // const baseUrl = 'http://localhost:3000/api/v1/routines/'
 
+  var baseUrl = 'https://be-workout-hero2.herokuapp.com/api/v1/routines/';
   var deleteRoutineUrl = baseUrl + routineData.id;
   return function (dispatch) {
     fetch(deleteRoutineUrl, {
@@ -17903,6 +17903,8 @@ var NewRoutineForm_NewRoutineForm = /*#__PURE__*/function (_Component) {
       _this.setState({
         name: ''
       });
+
+      console.log('🚀 ~ file: NewRoutineForm.js ~ line 23 ~ NewRoutineForm ~ this.state', _this.state);
     });
 
     return _this;
@@ -17915,10 +17917,10 @@ var NewRoutineForm_NewRoutineForm = /*#__PURE__*/function (_Component) {
         id: "new-routine-form",
         onSubmit: this.handleSubmit
       }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
-        label: "Name",
+        label: "Routine Name",
         id: "margin-none",
-        value: this.state.name // name="routine_name" 
-        ,
+        value: this.state.name,
+        name: "routine_name",
         onChange: this.handleChange
       }), /*#__PURE__*/react_default.a.createElement("button", {
         className: "submit-btns",
@@ -18064,6 +18066,7 @@ function routinesReducer() {
 
     case 'ADD_ROUTINE':
       var newRoutine = action.payload;
+      console.log('🚀 ~ file: routinesReducer.js ~ line 13 ~ routinesReducer ~ action.payload', action.payload);
       return _objectSpread(_objectSpread({}, state.routines), {}, {
         routines: state.routines.concat(newRoutine)
       });
@@ -20391,7 +20394,7 @@ var Workout_Workout = function Workout(props) {
     id: "workout-info"
   }, /*#__PURE__*/react_default.a.createElement("section", {
     id: "workout-detail-workout-name"
-  }, "name: ", workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null)), "id: ", workout.id, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null))), /*#__PURE__*/react_default.a.createElement("section", {
+  }, workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null)), "id: ", workout.id, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null))), /*#__PURE__*/react_default.a.createElement("section", {
     id: "wrapper-btn-delete-workout"
   }, /*#__PURE__*/react_default.a.createElement("button", {
     onClick: handleDeleteWorkout,
