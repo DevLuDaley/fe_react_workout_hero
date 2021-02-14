@@ -38,7 +38,7 @@ const Routine = (props) => {
     return(
     <Fragment>
     <section className="routine-detail-page">
-        
+
                         <Switch>
                        <Link to={'/routines'}> <button className='floating-nav-btns'> Return to Routines </button> </Link>
                         </Switch>
@@ -47,29 +47,29 @@ const Routine = (props) => {
             <section>
             {/* Routine Info: */}
             {
-                props.routines.map(routine => 
-                    routine.id == props.match.params.id ? 
+                props.routines.map(routine =>
+                    routine.id == props.match.params.id ?
             <section key={routine.id}>
                 <br></br>
                     <h1>{routine.routine_name} </h1>
                 <br></br>
                 {/* id: {routine.id} */}
-    
+
                 {/* <p>{filtered.name}</p> */}
-            <h1> Update Routine </h1> 
+            <h1> Update Routine </h1>
         {
             props.routines ?
 
-        <UpdateRoutineForm routines={props.routines} 
-                routineToUpdate={props.routines.find(routine => 
+        <UpdateRoutineForm routines={props.routines}
+                routineToUpdate={props.routines.find(routine =>
              routine.id == props.match.params.id)}
         />
-        : null 
+        : null
         }
                 <br></br>
                 <br></br>
                 <h1> Add a new Workout</h1>
-                    {<NewRoutineWorkoutForm 
+                    {<NewRoutineWorkoutForm
                         routines={props.routines}
                         currentRoutine={props.routines.find(
                             routine => routine.id == props.match.params.id)}
@@ -77,20 +77,20 @@ const Routine = (props) => {
                 <br></br>
                 <br></br>
 
-                    <h3 key={routine.id}>Workouts List: </h3> 
+                    <h3 key={routine.id}>Workouts List: </h3>
                     <section id="routine-workout-cards">
-                    { 
-                        
+                    {
+
                     routine.workouts.length > 0 ?
-    
+
                         routine.workouts.map(workout =>
                             <div key={workout.id} id="workoutlist-workout-info">
                                 {/* id: {workout.id}
                                 <br></br> */}
-                                 
+
 <section id="workout-info">
                            <section id="routine-detail-workout-name">
-                                             
+
                                         <p>{workout.workout_name}</p>
                            </section>
                                     <br></br>
@@ -104,14 +104,14 @@ const Routine = (props) => {
                                     <br></br>
                                     <br></br>
 <section id="wrapper-btns-routine-workout">
-    
+
     <Link key={"routine-url-key-" + routine.id} to={`${window.location.pathname}/workouts/${workout.id}`}>
                                          <button className="edit-btns"> edit </button>
                                          </Link>
-    
+
                                           <button className="delete-btns routine-detail-page-btn" onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
 </section>
-                                
+
 </section>
                             </div>
                         ) : <p> No Workouts Created Yet </p>
@@ -120,14 +120,14 @@ const Routine = (props) => {
                     </section>
                         : null )
             }
-            
+
             </section>
             :
             'no routine here bub'
         }
 
-    </section>   
-    
+    </section>
+
         </Fragment>
     )
 }
