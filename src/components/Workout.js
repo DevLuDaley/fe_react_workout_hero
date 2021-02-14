@@ -82,44 +82,50 @@ const routine = props.routines.find(routine => routine.id == routineId)
     <Fragment>
     {/* {props.currentWorkout} */}
                     {/* <Switch> */}
-<section className="workout-page-floating-links">
-                     
-                     <Link to={'/routines'}> <button className='floating-nav-btns'> Routines </button> </Link>
+                    <section id="page-workout-detail">
+                      
+  <section className="workout-page-floating-links">
+                       
+                       <Link to={'/routines'}> <button className='floating-nav-btns'> Routines </button> </Link>
+    <br/>
+                       <Link to={'/routines/' + routineId}> <button className='floating-nav-btns'> {routine.routine_name} Routine Page </button> </Link>
+  
+  </section>
+  
+   <br/>
+  
+      <UpdateWorkoutForm detail={workout}/>
+  
   <br/>
-                     <Link to={'/routines/' + routineId}> <button className='floating-nav-btns'> {routine.routine_name} Routine Page </button> </Link>
-
-</section>
-
- <br/>
-
-    <UpdateWorkoutForm detail={workout}/>
-
-<br/>
-                    {/* </Switch> */}
-                   {/* <Link to={'/workouts'}> <button> Return to Workouts </button> </Link> */}
-                   
-                   <div>
-                    id: {workout.id}
-                      <div key={workout.id}>
-                            {/* id: {workout.id}
-                            <br></br> */}
-                            name: {workout.workout_name}
-                            <br></br>
-                            category: {workout.workout_type}
-                            <br></br>
-                            distance: {workout.distance} 
-                            {/* ? workout.distance + " miles" : "please enter distance"}  */}
-                            <br></br>
-                            duration: {workout.duration}
-                             {/* ? workout.duration + " minutes" : "please enter duration"} */}
-                            <br></br>
-                            <br></br>
-                        </div>
-                        </div>
-<button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns delete-workout'> delete workout </button>
-
-        {/* <button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns delete-workout'> delete workout </button> */}
-    
+                      {/* </Switch> */}
+                     {/* <Link to={'/workouts'}> <button> Return to Workouts </button> </Link> */}
+                     
+                     <div id="workout-card">
+                        <div  key={workout.id}>
+                              <section id="workout-info">
+                                <section id="workout-detail-workout-name">
+                                  name: {workout.workout_name}
+                                  <br></br>
+                                </section>
+                                id: {workout.id}
+                                <br></br>
+                                category: {workout.workout_type}
+                                <br></br>
+                                distance: {workout.distance} 
+                                {/* ? workout.distance + " miles" : "please enter distance"}  */}
+                                <br></br>
+                                duration: {workout.duration}
+                                 {/* ? workout.duration + " minutes" : "please enter duration"} */}
+                                <br></br>
+                                <br></br>
+                              </section>
+                          </div>
+  <section id="wrapper-btn-delete-workout"><button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns delete-workout'> delete workout </button></section>
+                          </div>
+  
+          {/* <button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns delete-workout'> delete workout </button> */}
+      
+                    </section>
         </Fragment>
     )
 }

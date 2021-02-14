@@ -76,35 +76,49 @@ const Routine = (props) => {
                     />}
                 <br></br>
                 <br></br>
+
                     <h3 key={routine.id}>Workouts List: </h3> 
+                    <section id="routine-workout-cards">
                     { 
                         
                     routine.workouts.length > 0 ?
     
                         routine.workouts.map(workout =>
-                            <div key={workout.id}>
+                            <div key={workout.id} id="workoutlist-workout-info">
                                 {/* id: {workout.id}
                                 <br></br> */}
-                                 <Link key={"routine-url-key-" + routine.id} to={`${window.location.pathname}/workouts/${workout.id}`}>
-                                     <button className="edit-btns"> edit </button>
-                                     </Link>
-                                name: {workout.workout_name}
-                                      <button className="delete-btns" onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
-                                <br></br>
-                                category: {workout.workout_type}
-                                <br></br>
-                                distance: {workout.distance} 
-                                {/* ? workout.distance + " miles" : "please enter distance"}  */}
-                                <br></br>
-                                duration: {workout.duration}
-                                 {/* ? workout.duration + " minutes" : "please enter duration"} */}
-                                <br></br>
-                                <br></br>
+                                 
+<section id="workout-info">
+                           <section id="routine-detail-workout-name">
+                                             
+                                        <p>{workout.workout_name}</p>
+                           </section>
+                                    <br></br>
+                                    <p>category: {workout.workout_type}</p>
+                                    <br></br>
+                                    <p>distance: {workout.distance} </p>
+                                    {/* ? workout.distance + " miles" : "please enter distance"}  */}
+                                    <br></br>
+                                    <p>duration: {workout.duration}</p>
+                                     {/* ? workout.duration + " minutes" : "please enter duration"} */}
+                                    <br></br>
+                                    <br></br>
+<section id="wrapper-btns-routine-workout">
+    
+    <Link key={"routine-url-key-" + routine.id} to={`${window.location.pathname}/workouts/${workout.id}`}>
+                                         <button className="edit-btns"> edit </button>
+                                         </Link>
+    
+                                          <button className="delete-btns routine-detail-page-btn" onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
+</section>
+                                
+</section>
                             </div>
                         ) : <p> No Workouts Created Yet </p>
                         }
+                        </section>
                     </section>
-                    : null )
+                        : null )
             }
             
             </section>
