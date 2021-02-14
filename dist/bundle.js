@@ -19767,7 +19767,8 @@ var NewRoutineWorkoutForm_NewRoutineWorkoutForm = /*#__PURE__*/function (_Compon
     NewRoutineWorkoutForm_defineProperty(NewRoutineWorkoutForm_assertThisInitialized(_this), "handleChange", function (e) {
       var _this$setState;
 
-      // console.log(e.target);
+      console.log(e.target);
+
       _this.setState((_this$setState = {}, NewRoutineWorkoutForm_defineProperty(_this$setState, e.target.name, e.target.value), NewRoutineWorkoutForm_defineProperty(_this$setState, "id", _this.props.currentRoutine['id']), _this$setState));
     });
 
