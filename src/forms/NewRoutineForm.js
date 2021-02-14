@@ -19,9 +19,12 @@ class NewRoutineForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         this.props.addRoutine(this.state)
+
+        
         this.setState({ 
-        name: ''
-    })
+            name: ''
+        })
+        console.log('🚀 ~ file: NewRoutineForm.js ~ line 23 ~ NewRoutineForm ~ this.state', this.state)
     }
 
     render() {
@@ -34,10 +37,10 @@ class NewRoutineForm extends Component {
 
  <label> </label>
               <TextField
-                label="Name"
+                label="Routine Name"
                 id="margin-none"
                 value={this.state.name} 
-                // name="routine_name" 
+                name="routine_name" 
                 onChange={this.handleChange}/>
                 <button className='submit-btns' type="submit">Create Routine</button>
             </form>
