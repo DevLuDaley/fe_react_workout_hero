@@ -18,9 +18,9 @@ fetch(`${WH_URL}/api/v1/routines/${data.routineId}/workouts`, {
 .then(res => res.json())
 // .then(response => console.log('🚀 ~ file: addRoutineWorkout.js ~ line 18 ~ return ~ response', response)
 // )
-.then(routine => dispatch({
+.then(routineAndWorkout => dispatch({
     type: 'ADD_ROUTINE_WORKOUT', 
-    payload: routine
+    payload: routineAndWorkout
 }
 )
 )

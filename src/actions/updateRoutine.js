@@ -1,6 +1,6 @@
 export const updateRoutine = (data) => {
 console.log('updateRoutine -> data', data);
-// console.log('updateRoutine -> data.id', data.id);
+console.log('updateRoutine -> data.id', data.id);
 
     const WH_URL = process.env.REACT_APP_WH_URL;
 

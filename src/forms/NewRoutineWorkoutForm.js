@@ -13,28 +13,28 @@ class NewRoutineWorkoutForm extends Component {
 
     const currentPath = window.location.pathname
     const routineId = (/\d{1,5}/.exec(currentPath))[0]
-        
+    // const workoutObj = {}
+    // this.workoutObj = {}
+    // console.log(`🚀 ~ file: NewRoutineWorkoutForm.js ~ line 18 ~ NewRoutineWorkoutForm ~ constructor ~ this.workoutObj`, this.workoutObj)
+    // const routineObjs = {}
+    // this.routineObj = {}
+    // this.currentRoutine = this.props.currentRoutine
+    // console.log(`🚀 ~ file: NewRoutineWorkoutForm.js ~ line 21 ~ NewRoutineWorkoutForm ~ constructor ~ this.currentRoutine`, this.currentRoutine)
+    
     this.state = {
       // routine:{routineId},
       // id: '',
-      routineId: routineId,
+      // routineObj:this.currentRoutine,
       workout_name: "",
       workout_type: "",
       distance: "",
-      duration: ""//,
-      // routines: []
+      duration: "",
+      routines: []
       }
-
+// console.log(`🚀 ~ file: NewRoutineWorkoutForm.js ~ line 26 ~ NewRoutineWorkoutForm ~ constructor ~ this.state`, this.state)
   }
 
     handleChange = (e)=> {
-        // console.log(e.target);
-        // console.log('🚀 ~ file: NewRoutineWorkoutForm.js ~ line 30 ~ NewRoutineWorkoutForm ~ e.target.value', e.target.value)
-        // console.log('🚀 ~ file: NewRoutineWorkoutForm.js ~ line 30 ~ NewRoutineWorkoutForm ~ e.target.name', e.target.name)
-
-        // const currentPath = window.location.pathname
-        // const routineId = (/\d{1,5}/.exec(currentPath))[0]
-        // //  this.routineString = (/\d{1,5}$/.exec(currentPath))
          this.setState({
             [e.target.name]: e.target.value,
             // id: this.props.currentRoutine['id']
@@ -47,20 +47,26 @@ class NewRoutineWorkoutForm extends Component {
 
     handleSubmit = (e)=> {
         e.preventDefault();
-        console.log('🚀 ~ file: NewRoutineWorkoutForm.js ~ line 37 ~ NewRoutineWorkoutForm ~ this.state', this.state)
-        this.props.addRoutineWorkout(this.state)
-        
+          const currentPath = window.location.pathname
+          const routineId = (/\d{1,5}/.exec(currentPath))[0]
+        // console.log('🚀 ~ file: NewRoutineWorkoutForm.js ~ line 37 ~ NewRoutineWorkoutForm ~ this.state', this.state)
+        // this.workoutObj = {"workout_name": this.state.workout_name}
+
+        // Parameters: {"routineId"=>"6", "workout_name"=>"Chips", "workout_type"=>"Cardio-Lifting", "distance"=>"3", "duration"=>"14", "routine_id"=>"6", "workout"=>{"workout_type"=>"Cardio-Lifting", "workout_name"=>"Chips", "distance"=>"3", "duration"=>"14"}}
+
+        const newWorkoutPayload = {workout: this.state, routineId: routineId}
+        this.props.addRoutineWorkout(newWorkoutPayload)
+        // this.props.addRoutineWorkout(this.state)
+        // debugger
             this.setState({
-      
-      
               // id: '',
-      routineId: '',
       workout_name: "",
       workout_type: "",
       distance: "",
       duration: "",
-    //   routines: [],
-      })
+      routines: [],
+      }
+      )
       //! formData object/hash
         // let formData  = { 
         //   [e.target.drill_name]: this.state.drill_name,
@@ -89,7 +95,12 @@ class NewRoutineWorkoutForm extends Component {
                 },
                     ];
 
-        return (  
+      // debugger
+
+// const [routineId, workout_name, workout_type,
+// distance, duration ]  = this.state
+
+        return (
           <div>
         <form onSubmit={this.handleSubmit} id="new-routine-workout-form">
               {/* <input type="hidden" placeholder='' value={this.state.id} name="id" onChange={this.handleChange}/> */}
@@ -166,8 +177,6 @@ class NewRoutineWorkoutForm extends Component {
                     value={this.state.duration}
                     onChange={this.handleChange}
                     />
- 
-
                 <button className='submit-btns' type="submit">Add Workout</button>
         </form>
         </div>

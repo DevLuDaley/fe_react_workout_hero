@@ -4,9 +4,9 @@ export function fetchRoutines() {
 
     // const WH_URL = process.env.REACT_APP_WH_URL;
     const WH_URL = process.env.REACT_APP_WH_URL;
-    console.log('🚀 ~ file: fetchRoutines.js ~ line 7 ~ fetchRoutines ~ WH_URL', WH_URL);
+    // console.log('🚀 ~ file: fetchRoutines.js ~ line 7 ~ fetchRoutines ~ WH_URL', WH_URL);
     
-    console.log('🚀 ~ file: fetchRoutines.js ~ line 7 ~ fetchRoutines ~ process.env', process.env);
+    // console.log('🚀 ~ file: fetchRoutines.js ~ line 7 ~ fetchRoutines ~ process.env', process.env);
     // const REACT_APP_NOT_SECRET_CODE = process.env.REACT_APP_NOT_SECRET_CODE
     // fetch('https://be-hoop-drills.herokuapp.com/api/v1/routines'
     return(dispatch) => { 
