@@ -1,4 +1,5 @@
 const path = require('path');
+require("dotenv").config(); // will load .env file in process.env
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -41,6 +42,7 @@ const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
          favicon: 'public/favicon.ico'
      }),
      
+
    
     ],
     optimization: {
