@@ -4,6 +4,7 @@ export const deleteWorkout = (workoutData) => {
 
     // const baseUrl = 'http://localhost:3000/api/v1/workouts/'
     const baseUrl = 'https://be-workout-hero2.herokuapp.com/api/v1/workouts/'
+    
     const deleteWorkoutUrl = (baseUrl + workoutData.id)
 
     return (dispatch) => {

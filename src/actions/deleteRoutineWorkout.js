@@ -1,8 +1,11 @@
 export const deleteRoutineWorkout = (routineData) => {
     console.log('🚀 ~ file: deleteRoutine.js ~ line 2 ~ deleteRoutine ~ routineData', routineData);
+    
+    const WH_URL = process.env.REACT_APP_WH_URL;
 
     // const baseUrl = 'http://localhost:3000/api/v1/routines/'
-    const baseUrl = 'https://be-workout-hero2.herokuapp.com/api/v1/routines/'    
+    // const baseUrl = 'https://be-workout-hero2.herokuapp.com/api/v1/routines/'
+    const baseUrl = `${WH_URL}/api/v1/routines/`
     const deleteRoutineWorkoutUrl = (baseUrl + routineData.id)
     // const deleteRoutineWorkoutUrl = ('http://localhost:3000/api/v1/routines/' + routineData.id)
 
