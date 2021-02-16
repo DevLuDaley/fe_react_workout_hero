@@ -4,6 +4,7 @@ import RoutinesList from '../components/RoutinesList';
 import NewRoutineForm from '../forms/NewRoutineForm';
 // import OldRoutineForm from '../forms/OldRoutineForm';
 // import Routine from '../components/Routine';
+// import '../App.css'
 
 
 class RoutinesPage extends Component {
@@ -22,14 +23,19 @@ class RoutinesPage extends Component {
             return (
             <>
                 {/* <OldRoutineForm routines={this.props.routines}/> */}
-
-                <NewRoutineForm routines={this.props.routines}/>
-{
-                    this.props.routines && this.props.workouts ?
-                <RoutinesList routines={this.props.routines} workouts={this.props.workouts}/>
-
-                : null 
-}
+<section id="comp-routines-page">
+    
+                    <NewRoutineForm routines={this.props.routines}/>
+    {
+                        this.props.routines && this.props.workouts ?
+    
+    <section id="routines-list">
+                        <RoutinesList routines={this.props.routines} workouts={this.props.workouts}/>
+    
+    </section> 
+                    : null 
+    }
+</section>
                 {/* <Routine/> */}
                 {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.props', this.props)}
                 {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.state', this.state)}

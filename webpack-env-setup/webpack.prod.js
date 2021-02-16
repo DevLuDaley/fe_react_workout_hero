@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
+const common = require('../webpack-working/webpack.common.js');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const dotenv = require('dotenv');
 require("dotenv").config()

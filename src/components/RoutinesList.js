@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import deleteRoutine from '../actions/deleteRoutine'
 // import updateRoutine from '../actions/updateRoutine'
 import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
+// import '../App.css
 
 
 const RoutinesList = (props) =>  {
@@ -79,13 +80,13 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
     <Fragment>
          {props.routines ?
             props.routines.map(routine =>
-              <ul key={"ul-key-" + routine.id} className='routines-list all-routines' style={{listStyleType: 'none'}}>
+              <ul key={"ul-key-" + routine.id} className='routines-list workout-names' style={{listStyleType: 'none'}}>
 
                     <li key={"li-key-" + routine.id}>
                     {/* {console.log('🚀 ~ file: RoutinesList.js ~ line 25 ~ RoutinesList ~ routine.routine_name + " " + routine.id', routine.routine_name + "-routine-number-" + routine.id)} */}
-                      <div key={"div-key-" + routine.id} className='routine-name-btns-wrapper'>
+                      <div key={"div-key-" + routine.id} className='routine-name-wrapper'>
                             <Link key={"routine-url-key-" + routine.id} to={`/routines/${routine.id}`}>
-                        <h1 key={"h1-" + routine.id}className='routine-names'>
+                        <h1 key={"h1-" + routine.id} className='routine-names'>
                               {routine.routine_name}
 
                                   {routine.workouts && routine.workouts.length != 0 ?
@@ -103,7 +104,7 @@ console.log('🚀 ~ file: RoutinesList.js ~ line 10 ~ RoutinesList ~ props', pro
                       </div>
                       {
                         routine.workouts ?
-                        <section key={"workouts-section-key-" + routine.id} id={`routine-${routine.routine_name} + "" + ${routine.id}-workouts`} className='all-routine-workouts'>
+                        <section key={"workouts-section-key-" + routine.id} id={`routine-${routine.routine_name} + "" + ${routine.id}-workouts`} className='routine-workout-list'>
                             {routine.workouts.map(workout =>
                             <div key={"section-div-key-" + workout.id} className='routine-workout-name-block'>
 

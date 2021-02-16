@@ -9,14 +9,19 @@ export default function workoutsReducer(state = intialState, action) {
             return {workouts: action.payload}
 
         case 'ADD_WORKOUT':
-            let newWorkout = action.payload
+            // {workout: {…}, routineId: "10"}
+            let newWorkout = action.payload[0]
+            // console.log(`🚀 ~ file: workoutsReducer.js ~ line 13 ~ workoutsReducer ~ action.payload`, action.payload)
+            // console.log(`🚀 ~ file: workoutsReducer.js ~ line 13 ~ workoutsReducer ~ action.payload[0]`, action.payload[0])
             return {...state.workouts, workouts: state.workouts.concat(newWorkout)}
 
         case 'ADD_ROUTINE_WORKOUT':
-            let routinePayload = action.payload
-            let updateWorkoutsLength = routinePayload.workouts.length
-            let workoutToCreate = routinePayload.workouts[updateWorkoutsLength - 1]
+            let workoutToCreate = action.payload.workout
+            // let routinePayload = action.payload[]
+            // let updateWorkoutsLength = routinePayload.workouts.length
+            // let workoutToCreate = routinePayload.workouts[updateWorkoutsLength - 1]
             // return {...state.workouts}
+            // return {...state.workouts, workouts: state.workouts.concat(workoutToCreate)}
             return {...state.workouts, workouts: state.workouts.concat(workoutToCreate)}
 
         case 'UPDATE_WORKOUT':

@@ -5,90 +5,64 @@ import {Route, Switch} from 'react-router-dom'
 // import { createBrowserHistory } from "history";
 import {updateWorkout} from '../actions/updateWorkout'
 // import {workoutsReducer} from '../reducers/workoutsReducer'
+import { TextField, MenuItem } from '@material-ui/core';
+// import { makeStyles } from '@material-ui/core/styles';
 
 
 class UpdateWorkoutForm extends Component {
     constructor(props) {
     super(props)
-    // this.currentPath = window.location.href
     this.currentPath = window.location.pathname
-    // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 15 ~ UpdateWorkoutForm ~ constructor ~ this.currentPathPath', this.currentPathPath);
-
-    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 14 ~ UpdateWorkoutForm ~ constructor ~ this.currentPath', this.currentPath);
-    // this.id = parseInt(this.currentPath.replace('/routines/' + this.routineId + '/workouts/',''))
-    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 19 ~ UpdateWorkoutForm ~ constructor ~ this.id', this.id);
-    // this.regex = (/\d/.test(this.currentPath))
     this.id = (/\d{1,5}$/.exec(this.currentPath))[0]
-    // this.id = this.regex[0]
-    console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 21 ~ UpdateWorkoutForm ~ constructor ~ this.id', this.id);
-    // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex', this.regex);
-    // console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 22 ~ UpdateWorkoutForm ~ constructor ~ this.regex[0]', this.regex[0]);
     this.workout = this.props.workouts.find(workout => workout.id == this.id)
-
     this.state = {
         id: this.id
         ,
         workout_name: this.workout.workout_name,
         workout_type: this.workout.workout_type,
         distance: this.workout.distance,
-        duration: this.workout.duration
-        // workout:this.workout
-        // id: parseInt(window.location.href.replace("http://localhost:3001/workouts/", "")),
-        // id: this.props.workoutToUpdate.id,
-        // workout_name: this.props.workoutToUpdate.workout_name,
-        // workout_name: this.workout.workout_name
+        duration: this.workout.duration,
+        routines: this.workout.routines
         }
-        // this.loadWorkoutInfo = this.loadWorkoutInfo.bind(this)
     }
 
-        componentDidMount(){
-            // this.loadWorkoutInfo()
-        }
-
-        loadWorkoutInfo(){
-        // console.log('HARLEM SON1')
-        if (this.props.workouts){
-            // var workoutId = parseInt(window.location.href.replace("http://localhost:3001/workouts/", ""))
-            // ! this.workout = this.props.workouts.find(workout => workout.id == this.id);
-
-        }
-        }
-
-    // this.id = parseInt(window.location.href.replace("http://localhost:3001/workouts/", ""))
-    // this.workoutsList = this.props.workouts
-    // this.workout = [this.props.workouts].find(workout => workout.id == this.id)
+ 
 
         handleChange = (e) => {
+            console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 77 ~ UpdateWorkoutForm ~ e.target.value', e.target.value);
             this.setState({
                 [e.target.name]: e.target.value
             })
+                console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 77 ~ UpdateWorkoutForm ~ e.target.name', e.target.name);
         }
 
         handleSubmit = (e) => {
         e.preventDefault()
         this.props.updateWorkout(this.state)
-    //     this.setState({
-    //     // workout_name: this.state.workout_name,
-    // //     workout_name: "",
-    //     // workout_type: this.state.workout_type,
-    // //     distance: "",
-    // //     duration: ""
-    
-    // })
         }
 
         render() {
+            const workoutCategories = [
+                {
+                    value: 'Cardio',
+                    label: 'Cardio',
+                },
+                {
+                    value: 'Weight-Lifting',
+                    label: 'Weight-Lifting',
+                },
+                {
+                    value: 'Body-Weight',
+                    label: 'Body-Weight',
+                },
+                {
+                    value: 'Cardio-Lifting',
+                    label: 'Cardio-Lifting',
+                },
+                    ];
+
         return (
             <Fragment>
-                {/* {console.log("~ line 66", "THIS.PROPS", this.props)} */}
-                {/* {console.log("~ line 66", "THIS.STATE", this.state)} */}
-                {/* { console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 67 ~ UpdateWorkoutForm ~ render ~ this.workout', this.workout)} */}
-                {/* { console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 68 ~ UpdateWorkoutForm ~ render ~ this.workout.workout_name', this.workout.workout_name)} */}
-                {/* { console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 69 ~ UpdateWorkoutForm ~ render ~ this.props.workoutToUpdate', this.props.workoutToUpdate)} */}
-
-                {/* {console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 94 ~ UpdateWorkoutForm ~ render ~ this.workout.workout_name', this.workout.workout_name)} */}
-
-                {/* {console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 94 ~ UpdateWorkoutForm ~ render ~ this.state.workout_name', this.state.workout_name)} */}
                 { this.props.detail ?
                 console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', this.props.detail)
                 :
@@ -99,37 +73,102 @@ class UpdateWorkoutForm extends Component {
                     <section>
                         <form onSubmit={this.handleSubmit} id='update-workout-form'>
 
-                            <label> name: </label>
+                            {/* <label> name: </label>
                             <input 
                             type="text" 
                             placeholder={this.props.detail.workout_name} 
                             value={this.state.workout_name} 
                             name="workout_name" 
-                            onChange={this.handleChange}/>
+                            onChange={this.handleChange}/> */}
+                            
+                            <label> </label>
+                            <TextField
+                                label="Name"
+                                id="margin-none"
+                                name="workout_name" 
+                                value={this.state.workout_name} 
+                                // defaultValue="Default Value"
+                                onChange={this.handleChange}
+                                // className={classes.textField}
+                                // helperText="Some important text"
+                                />
 
-                            <label> category: </label>
+                            {/* <label> category: </label>
                             <input 
                             type="text" 
                             placeholder={this.props.detail.workout_type} 
                             value={this.state.workout_type} 
                             name="workout_type" 
-                            onChange={this.handleChange}/>
+                            onChange={this.handleChange}/> */}
 
-                            <label> distance: </label>
+                            <label> </label>
+                            <TextField
+                                id="standard-select-currency"
+                                select label="Type"
+                                name="workout_type"
+                                value={this.state.workout_type}
+                                // placeholder={this.props.detail.workout_type}
+                                // placeholder={this.props.detail.workout_type}
+                                onChange={this.handleChange}
+            >
+
+            {workoutCategories.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                {option.label}
+                </MenuItem>
+            ))}
+            </TextField>
+
+                            {/* 
+                            <label> distance </label>
                             <input 
                             type="text" 
                             placeholder={this.props.detail.distance} 
                             value={this.state.distance} 
                             name="distance" 
-                            onChange={this.handleChange}/>
+                            onChange={this.handleChange}/> */}
+<label> </label>
+                            <TextField
+                                id="outlined-number"
+                                label="Miles"
+                                type="number"
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
+                                name="distance" 
+                                // placeholder={this.props.detail.distance} 
+                                value={this.state.distance}
+                                onChange={this.handleChange}
+                                />
 
-                            <label> duration: </label>
-                            <input 
+                            <label> </label>
+                            <TextField
+                                id="outlined-number"
+                                label="Minutes"
+                                type="number"
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
+                                name="duration" 
+                                // placeholder={this.props.detail.duration} 
+                                value={this.state.duration}
+                                onChange={this.handleChange}
+                                />
+                            
+                            {/* <input 
                             type="text" 
                             placeholder={this.props.detail.duration} 
                             value={this.state.duration} 
                             name="duration" 
-                            onChange={this.handleChange}/>
+                            onChange={this.handleChange}/> */}
+                           {/* <input 
+                            type="text" 
+                            placeholder={this.state.routines[0].routine_name} 
+                            // value={this.state.routines} 
+                            name="duration" 
+                            onChange={this.handleChange}/> */}
+
+                             
                             <button className='submit-btns' type="submit">Update Workout </button>
                         </form>
                     </section>
