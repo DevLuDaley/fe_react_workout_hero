@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "e079deeaa1bc57550323";
+/******/ 	var hotCurrentHash = "748365ca56b4888cf8f9";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -20155,51 +20155,20 @@ function routinesReducer() {
 
     case 'ADD_ROUTINE_WORKOUT':
       var newWorkout = action.payload.workout;
-      console.log("\uD83D\uDE80 ~ file: routinesReducer.js ~ line 52 ~ routinesReducer ~ newWorkout", newWorkout); // let newWorkoutId = action.payload.workout.id 
-      // const createdWorkoutPayloadId = action.payload.id
-      // let creatorRoutinePayloadId = updateWorkoutPayload.routines[0].id
-
       var creatorRoutineId = action.payload.routineId;
       var creatorRoutine = state.routines.find(function (routine) {
         return routine.id == creatorRoutineId;
       });
-      console.log("\uD83D\uDE80 ~ file: routinesReducer.js ~ line 59 ~ routinesReducer ~ creatorRoutine", creatorRoutine);
       var creatorRoutineWorkoutsList = creatorRoutine.workouts;
-      console.log("\uD83D\uDE80 ~ file: routinesReducer.js ~ line 62 ~ routinesReducer ~ creatorRoutineWorkoutsList", creatorRoutineWorkoutsList);
-      var filteredCreatorRoutineWorkoutsList = creatorRoutineWorkoutsList.map(function (w) {
-        return w.id == newWorkout.id ? newWorkout : w;
-      });
-      console.log("\uD83D\uDE80 ~ file: routinesReducer.js ~ line 65 ~ routinesReducer ~ filteredCreatorRoutineWorkoutsList", filteredCreatorRoutineWorkoutsList); // let routineWorkouts =  state.routines.map(routine => {
-      //     if (routine.id == action.payload.routineId) {
-      //         // console.log('🚀 ~ file: routinesReducer.js ~ line 52 ~ routinesReducer ~ action.payload', action.payload);
-      //         // console.log('🚀 ~ file: routinesReducer.js ~ line 52 ~ routinesReducer ~ action.payload', action.payload[1]);
-      //         // console.log('🚀 ~ file: routinesReducer.js ~ line 52 ~ routinesReducer ~ action.payload', _.isEqual(action.payload[1], 1));
-      //         console.log('🚀 ~ file: routinesReducer.js ~ line 52 ~ routinesReducer ~ TRUEEEEEE', routine.routine_name);
-      //         routine.workouts.concat(newWorkout)
-      //         return  routine
-      //         // action.payload[0]
-      //     } else {
-      //         // console.log("IT DIDNT WORK... YET")
-      //         return routine
-      //     }
-      // }
-      // ) 
-      //   return {...state, routines: state.routines.map(r => r), routine: creatorRoutine.workouts = filteredUpdateWorkoutsList 
-
+      var newCreatorRoutineWorkoutsList = creatorRoutineWorkoutsList.concat(newWorkout);
       return _objectSpread(_objectSpread({}, state), {}, {
         routines: state.routines.map(function (r) {
           return r;
         }),
-        routine: creatorRoutine.workouts = filteredCreatorRoutineWorkoutsList
+        routine: creatorRoutine.workouts = newCreatorRoutineWorkoutsList
       });
-    // console.log('🚀 ~ file: routinesReducer.js ~ line 57 ~ routinesReducer ~ routineWorkouts', routineWorkouts);
-    // return {...state, routines: routineWorkouts}
-    // return {...state, routines: state.routines.map(r => r), routine: routine.workouts = filteredWorkoutsList }
 
     case 'DELETE_ROUTINE_WORKOUT':
-      console.log('action :>> ', action); // console.log('ROUTINES-REDUCER');
-      // const {routineId, workoutId} = action.payload
-
       var routineId = action.payload.routineId;
       var workoutId = action.payload.workoutId;
       var routine = state.routines.find(function (r) {
@@ -20211,25 +20180,7 @@ function routinesReducer() {
       var workoutsList = routine.workouts;
       var filteredWorkoutsList = workoutsList.filter(function (w) {
         return w.id !== workoutId;
-      }); // filteresWorkoutsList
-      // console.log('🚀 ~ file: routinesReducer.js ~ line 70 ~ routinesReducer ~ WorkoutsList', workoutsList);
-
-      console.log('🚀 ~ file: routinesReducer.js ~ line 70 ~ routinesReducer ~ WorkoutsList.length()', workoutsList.length); // console.log('🚀 ~ file: routinesReducer.js ~ line 85 ~ routinesReducer ~ filteresWorkoutsList', filteresWorkoutsList);
-
-      console.log('🚀 ~ file: routinesReducer.js ~ line 85 ~ routinesReducer ~ filteresWorkoutsList.length()', filteredWorkoutsList.length); // routine.workouts
-      // console.log('🚀 ~ file: routinesReducer.js ~ line 67 ~ routinesReducer ~ routine', routine);
-      // console.log('🚀 ~ file: routinesReducer.js ~ line 74 ~ routinesReducer ~ routineId', routineId);
-      // console.log('🚀 ~ file: routinesReducer.js ~ line 74 ~ routinesReducer ~ WorkoutId', workoutId);
-      // console.log('🚀 ~ file: routinesReducer.js ~ line 67 ~ routinesReducer ~ routine[0]', routine);
-      // console.log('🚀 ~ file: routinesReducer.js ~ line 69 ~ routinesReducer ~ workout', workout);
-      // state.routines
-
-      console.log('🚀 ~ file: routinesReducer.js ~ line 90 ~ routinesReducer ~ state.routines', state.routines); // console.log('🚀 ~ file: routinesReducer.js ~ line 80 ~ routinesReducer ~ routine.name', routine.name);
-      // console.log('🚀 ~ file: routinesReducer.js ~ line 80 ~ routinesReducer ~ routine.workouts', routine.workouts);
-      // return {...state.routines, routine: routine.workouts}
-      // return {...state.routines, routine: state.routines}
-      // debugger //, workout: workout}
-
+      });
       return _objectSpread(_objectSpread({}, state), {}, {
         routines: state.routines.map(function (r) {
           return r;
@@ -20240,14 +20191,11 @@ function routinesReducer() {
 
     case 'UPDATE_WORKOUT':
       var updateWorkoutPayload = action.payload;
-      var updateWorkout = action.payload.id;
+      var updateWorkoutPayloadId = action.payload.id;
       var updateRoutinePayloadId = updateWorkoutPayload.routines[0].id;
       var updateableRoutine = state.routines.find(function (routine) {
         return routine.id == updateRoutinePayloadId;
-      }); // var updateableWorkout = updateableRoutine.workouts.find(workout => workout.id == updateWorkoutPayloadId)
-      // updateableWorkout = updateWorkoutPayload
-      // let workoutToUpdate = updateableRoutine.workouts.find(workout => workout.id == updateWorkoutPayloadId)
-
+      });
       var updateableRoutineWorkoutsList = updateableRoutine.workouts;
       var filteredUpdateWorkoutsList = updateableRoutineWorkoutsList.map(function (w) {
         return w.id == updateWorkoutPayloadId ? updateWorkoutPayload : w;
@@ -22808,11 +22756,11 @@ var monitorReducerEnhancer = function monitorReducerEnhancer(createStore) {
 var logger = function logger(store) {
   return function (next) {
     return function (action) {
-      // console.group(action.type)
-      // console.info('dispatching', action)
-      var result = next(action); // console.log('next state', store.getState())
-      // console.groupEnd()
-
+      console.group(action.type);
+      console.info('dispatching', action);
+      var result = next(action);
+      console.log('next state', store.getState());
+      console.groupEnd();
       return result;
     };
   };
