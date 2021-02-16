@@ -3,6 +3,10 @@ import {connect} from 'react-redux'
 // import { TextField, MenuItem } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem'; //} from '@material-ui/core';
+import { Button } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
+import { compose } from 'redux';
+import StyledSubmitBtns from './StyledSubmitBtns'
 
 
 import {addRoutineWorkout} from '../actions/addRoutineWorkout'
@@ -99,6 +103,7 @@ class NewRoutineWorkoutForm extends Component {
 
 // const [routineId, workout_name, workout_type,
 // distance, duration ]  = this.state
+        const {classes} = this.props
 
         return (
           <div>
@@ -177,7 +182,7 @@ class NewRoutineWorkoutForm extends Component {
                     value={this.state.duration}
                     onChange={this.handleChange}
                     />
-                <button className='submit-btns' type="submit">Add Workout</button>
+                <Button className={classes.root} type="submit">Add Workout</Button>
         </form>
         </div>
         );
@@ -185,4 +190,4 @@ class NewRoutineWorkoutForm extends Component {
       // debugger
 }
  
-export default connect(null, {addRoutineWorkout}) (NewRoutineWorkoutForm);
+export default compose(connect(null, {addRoutineWorkout},),withStyles(StyledSubmitBtns),) (NewRoutineWorkoutForm);

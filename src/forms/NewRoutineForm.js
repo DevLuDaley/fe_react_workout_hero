@@ -1,14 +1,21 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { TextField, MenuItem } from '@material-ui/core';
+import { TextField, MenuItem, Button } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
+import { compose } from 'redux';
 
 import {addRoutine} from '../actions/addRoutine'
-
+import StyledSubmitBtns from './StyledSubmitBtns'
+// import clsx from 'clsx';
+// import { makesStyles} from '@material-ui/core/styles';
 
 class NewRoutineForm extends Component {
-    state = {
+    constructor(props){
+    super(props)
+    this.state = {
         routine_name:''
     }
+}
 
     handleChange = (e) => {
         this.setState({
@@ -28,6 +35,10 @@ class NewRoutineForm extends Component {
     }
 
     render() {
+
+// const classes = useStyles();
+const {classes} = this.props
+
         return (
         <Fragment>
             <form id='new-routine-form' onSubmit={this.handleSubmit}>
@@ -35,18 +46,25 @@ class NewRoutineForm extends Component {
                 {/* <label> Routine Name: </label>
                 <input type="text" placeholder='enter routine name...' value={this.state.name} name="routine_name" routine_name="blank" onChange={this.handleChange}/> */}
 
- <label> </label>
-              <TextField
-                label="Routine Name"
-                id="margin-none"
-                value={this.state.name} 
-                name="routine_name" 
-                onChange={this.handleChange}/>
-                <button className='submit-btns' type="submit">Create Routine</button>
+                <label> </label>
+                <TextField
+                    label="Routine Name"
+                    id="margin-none"
+                    value={this.state.name} 
+                    name="routine_name" 
+                    onChange={this.handleChange}
+                    />
+                <Button  
+                    className={classes.root}
+                    type="submit" 
+                    >
+                    Create Routine
+                </Button>
             </form>
         </Fragment>
         );
     }
 }
 
-export default connect(null, {addRoutine})(NewRoutineForm);
+// export default connect(null, {addRoutine})(NewRoutineForm);
+export default compose(connect(null, {addRoutine},), withStyles(StyledSubmitBtns),)(NewRoutineForm);
