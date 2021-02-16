@@ -5,8 +5,12 @@ import {Route, Switch} from 'react-router-dom'
 // import { createBrowserHistory } from "history";
 import {updateWorkout} from '../actions/updateWorkout'
 // import {workoutsReducer} from '../reducers/workoutsReducer'
-import { TextField, MenuItem } from '@material-ui/core';
+import { TextField, MenuItem, Button } from '@material-ui/core';
 // import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import { compose } from 'redux';
+import StyledSubmitBtns from './StyledSubmitBtns'
+
 
 
 class UpdateWorkoutForm extends Component {
@@ -60,6 +64,8 @@ class UpdateWorkoutForm extends Component {
                     label: 'Cardio-Lifting',
                 },
                     ];
+
+        const {classes} = this.props
 
         return (
             <Fragment>
@@ -169,7 +175,7 @@ class UpdateWorkoutForm extends Component {
                             onChange={this.handleChange}/> */}
 
                              
-                            <button className='submit-btns' type="submit">Update Workout </button>
+                            <Button className={classes.root}  type="submit">Update Workout </Button>
                         </form>
                     </section>
                     :
@@ -194,4 +200,5 @@ function mapStateToProps(state, ownProps) {
  }
 }
 
-export default connect(mapStateToProps, {updateWorkout})(UpdateWorkoutForm);
+// export default connect(mapStateToProps, {updateWorkout})(UpdateWorkoutForm);
+export default compose(connect(mapStateToProps, {updateWorkout},),withStyles(StyledSubmitBtns),) (UpdateWorkoutForm);

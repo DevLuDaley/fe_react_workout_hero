@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const dotenv = require('dotenv');
 require("dotenv").config()
 // require("dotenv-webpack").config()
-const Dotenv = require('dotenv-webpack');
+// const Dotenv = require('dotenv-webpack');
 
 // const dotenv-webpack = require('dotenv-webpack');
 
@@ -14,20 +14,16 @@ const fs = require('fs'); // to check if the file exists
 module.exports = (env) => {
      // Get the root path (assuming your webpack config is in the root of your project!)
   const currentPath = path.join(__dirname);
-  console.log('🚀 ~ file: webpack.dev.js ~ line 13 ~ currentPath', currentPath);
   
   // Create the fallback path (the production .env)
   const basePath = currentPath + '/.env';
-  console.log('🚀 ~ file: webpack.dev.js ~ line 16 ~ basePath', basePath);
-
+  
   // We're concatenating the environment name to our filename to specify the correct env file!
   const envPath = basePath + '.DEVELOPMENT';
 //   const envPath = basePath + '.' + env.ENVIRONMENT;
-  console.log('🚀 ~ file: webpack.dev.js ~ line 19 ~ envPath', envPath);
 
   // Check if the file exists, otherwise fall back to the production .env
   const finalPath = fs.existsSync(envPath) ? envPath : basePath;
-  console.log('🚀 ~ file: webpack.dev.js ~ line 22 ~ finalPath', finalPath);
 
   // Set the path parameter in the dotenv config
   const fileEnv = dotenv.config({ path: finalPath }).parsed;

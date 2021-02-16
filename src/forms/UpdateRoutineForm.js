@@ -5,7 +5,11 @@ import {Route, Switch} from 'react-router-dom'
 // import { createBrowserHistory } from "history";
 import {updateRoutine} from '../actions/updateRoutine'
 import {routinesReducer} from '../reducers/routinesReducer'
-import { TextField, MenuItem } from '@material-ui/core';
+import { TextField, MenuItem, Button } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
+import { compose } from 'redux';
+import StyledSubmitBtns from './StyledSubmitBtns'
+// import styleSubmitBtns from './NewRoutineForm'
 
 class UpdateRoutineForm extends Component {
     constructor(props) {
@@ -46,6 +50,7 @@ class UpdateRoutineForm extends Component {
         }
 
         render() {
+            const {classes} = this.props
         return (
             <Fragment>
             {
@@ -81,7 +86,10 @@ class UpdateRoutineForm extends Component {
                             name="id" 
                             readOnly
                             />
-                            <button className='submit-btns' type="submit">Change Routine Name </button>
+                            <Button 
+                            className={classes.root}
+                            type="submit" 
+                            >Change Routine Name </Button>
                         </form>
                     </section>
                     :
@@ -104,4 +112,4 @@ function mapStateToProps(state, ownProps) {
  }
 }
 
-export default connect(mapStateToProps, {updateRoutine})(UpdateRoutineForm);
+export default compose(connect(mapStateToProps, {updateRoutine},),withStyles(StyledSubmitBtns),)(UpdateRoutineForm);

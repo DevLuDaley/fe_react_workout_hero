@@ -11,32 +11,28 @@ module.exports = (env) =>
 {
        // Get the root path (assuming your webpack config is in the root of your project!)
   const currentPath = path.join(__dirname);
-  console.log('🚀 ~ file: webpack.dev.js ~ line 13 ~ currentPath', currentPath);
   
   // Create the fallback path (the production .env)
   const basePath = currentPath + '/.env';
-  console.log('🚀 ~ file: webpack.dev.js ~ line 16 ~ basePath', basePath);
 
   // We're concatenating the environment name to our filename to specify the correct env file!
   const envPath = basePath + '.DEVELOPMENT';
 //   const envPath = basePath + '.' + env.ENVIRONMENT;
-  console.log('🚀 ~ file: webpack.dev.js ~ line 19 ~ envPath', envPath);
 
   // Check if the file exists, otherwise fall back to the production .env
   // const finalPath = fs.existsSync(envPath) ? envPath : basePath;
   const finalPath = basePath
-  console.log('🚀 ~ file: webpack.dev.js ~ line 22 ~ finalPath', finalPath);
 
   // Set the path parameter in the dotenv config
   const fileEnv = dotenv.config({ path: finalPath }).parsed;
-  console.log('🚀 ~ file: webpack.dev.js ~ line 29 ~ fileEnv', fileEnv);
+  console.log('🚀 ~ file: webpack.prod.js ~ line 29 ~ fileEnv', fileEnv);
   
   // reduce it to a nice object, the same as before (but with the variables from the file)
   const envKeys = Object.keys(fileEnv).reduce((prev, next) => {
     prev[`process.env.${next}`] = JSON.stringify(fileEnv[next]);
     return prev;
   }, {});
-  console.log('🚀 ~ file: webpack.dev.js ~ line 36 ~ envKeys ~ envKeys', envKeys);
+  console.log('🚀 ~ file: webpack.prod.js ~ line 36 ~ envKeys ~ envKeys', envKeys);
 
   return merge(common, {
       mode: 'production',
