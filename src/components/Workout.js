@@ -2,12 +2,10 @@ import React, { Fragment, useState, useEffect } from 'react';
 // import {Redirect} from 'react-router-dom'
 import { Switch, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-
 // import { connect } from 'react-redux'
 
-import { TextField, MenuItem, Button, Container, FormControl } from '@material-ui/core';
-
-
+import { Box } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 
 import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
 import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
@@ -44,8 +42,8 @@ const routine = props.routines.find(routine => routine.id == routineId)
     }
 
     return(
-      <Container maxWidth="lg">
-          <section id="page-workout-detail">
+      <Container maxWidth="md">
+          <Box id="page-workout-detail">
 
             <section className="workout-page-floating-links">
 
@@ -53,33 +51,31 @@ const routine = props.routines.find(routine => routine.id == routineId)
                   <br/>
                        <Link to={'/routines/' + routineId}> <button className='floating-nav-btns'> {routine.routine_name} Routine Page </button> </Link>
             </section>
-   <br/>
-
-      <UpdateWorkoutForm detail={workout}/>
-  <br/>
-                     <div id="workout-card">
-                        <div  key={workout.id}>
-                              <section id="workout-info">
-                                <section id="workout-detail-workout-name">
-                                  {workout.workout_name}
-                                  <br></br>
-                                </section>
-                                id: {workout.id}
-                                <br></br>
-                                category: {workout.workout_type}
-                                <br></br>
-                                distance: {workout.distance}
-                                {/* ? workout.distance + " miles" : "please enter distance"}  */}
-                                <br></br>
-                                duration: {workout.duration}
-                                 {/* ? workout.duration + " minutes" : "please enter duration"} */}
-                                <br></br>
-                                <br></br>
-                              </section>
-                          </div>
+          <br/>
+          <Box>
+              <UpdateWorkoutForm detail={workout}/>
+          </Box>
+          <br/>
+          <div id="workout-card">
+            <div  key={workout.id}>
+              <section id="workout-info">
+                <section id="workout-detail-workout-name">
+                  {workout.workout_name}
+                <br></br>
+                </section>
+                    id: {workout.id}
+                <br></br>
+                    category: {workout.workout_type}
+                <br></br>
+                    distance: {workout.distance}
+                <br></br>
+                    duration: {workout.duration}
+                <br></br>
+              </section>
+              </div>
   <section id="wrapper-btn-delete-workout"><button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns delete-workout'> delete workout </button></section>
                           </div>
-                    </section>
+                    </Box>
         </Container>
     )
 }
