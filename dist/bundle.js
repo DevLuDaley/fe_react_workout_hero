@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "8b16eb82af5b19cf3780";
+/******/ 	var hotCurrentHash = "b1da90d02ab969c76296";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1062,7 +1062,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return combineReducers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return compose; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return createStore; });
-/* harmony import */ var symbol_observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/* harmony import */ var symbol_observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
 
 
 /**
@@ -1852,7 +1852,8 @@ module.exports = hoistNonReactStatics;
 
 
 /***/ }),
-/* 8 */
+/* 8 */,
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1874,7 +1875,6 @@ function _typeof(obj) {
 }
 
 /***/ }),
-/* 9 */,
 /* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2024,7 +2024,8 @@ function _unsupportedIterableToArray(o, minLen) {
 
 /***/ }),
 /* 15 */,
-/* 16 */
+/* 16 */,
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2041,7 +2042,7 @@ ___CSS_LOADER_EXPORT___.push([module.i, "body {\n  margin: 0;\n  font-family: -a
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2064,7 +2065,7 @@ ___CSS_LOADER_EXPORT___.push([module.i, "* {\n    /* margin: auto; */\n    /* bo
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 var g;
@@ -2090,7 +2091,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2102,7 +2103,7 @@ if (true) {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2125,10 +2126,10 @@ if (typeof self !== 'undefined') {
 var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18), __webpack_require__(57)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(19), __webpack_require__(57)(module)))
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2312,10 +2313,10 @@ var index = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext || create
 
 /* harmony default export */ __webpack_exports__["a"] = (index);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(19)))
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isarray = __webpack_require__(58)
@@ -2747,7 +2748,6 @@ function pathToRegexp (path, keys, options) {
 
 
 /***/ }),
-/* 23 */,
 /* 24 */,
 /* 25 */,
 /* 26 */
@@ -3664,93 +3664,6 @@ exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
-            var content = __webpack_require__(16);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-
-if (true) {
-  if (!content.locals || module.hot.invalidate) {
-    var isEqualLocals = function isEqualLocals(a, b, isNamedExport) {
-  if (!a && b || a && !b) {
-    return false;
-  }
-
-  var p;
-
-  for (p in a) {
-    if (isNamedExport && p === 'default') {
-      // eslint-disable-next-line no-continue
-      continue;
-    }
-
-    if (a[p] !== b[p]) {
-      return false;
-    }
-  }
-
-  for (p in b) {
-    if (isNamedExport && p === 'default') {
-      // eslint-disable-next-line no-continue
-      continue;
-    }
-
-    if (!a[p]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-    var oldLocals = content.locals;
-
-    module.hot.accept(
-      16,
-      function () {
-        content = __webpack_require__(16);
-
-              content = content.__esModule ? content.default : content;
-
-              if (typeof content === 'string') {
-                content = [[module.i, content, '']];
-              }
-
-              if (!isEqualLocals(oldLocals, content.locals)) {
-                module.hot.invalidate();
-
-                return;
-              }
-
-              oldLocals = content.locals;
-
-              update(content);
-      }
-    )
-  }
-
-  module.hot.dispose(function() {
-    update();
-  });
-}
-
-module.exports = content.locals || {};
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(27);
             var content = __webpack_require__(17);
 
             content = content.__esModule ? content.default : content;
@@ -3806,6 +3719,93 @@ if (true) {
       17,
       function () {
         content = __webpack_require__(17);
+
+              content = content.__esModule ? content.default : content;
+
+              if (typeof content === 'string') {
+                content = [[module.i, content, '']];
+              }
+
+              if (!isEqualLocals(oldLocals, content.locals)) {
+                module.hot.invalidate();
+
+                return;
+              }
+
+              oldLocals = content.locals;
+
+              update(content);
+      }
+    )
+  }
+
+  module.hot.dispose(function() {
+    update();
+  });
+}
+
+module.exports = content.locals || {};
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(27);
+            var content = __webpack_require__(18);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+if (true) {
+  if (!content.locals || module.hot.invalidate) {
+    var isEqualLocals = function isEqualLocals(a, b, isNamedExport) {
+  if (!a && b || a && !b) {
+    return false;
+  }
+
+  var p;
+
+  for (p in a) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (a[p] !== b[p]) {
+      return false;
+    }
+  }
+
+  for (p in b) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (!a[p]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+    var oldLocals = content.locals;
+
+    module.hot.accept(
+      18,
+      function () {
+        content = __webpack_require__(18);
 
               content = content.__esModule ? content.default : content;
 
@@ -4225,7 +4225,7 @@ u&&(q.prototype[t]=function(){var t=this.__wrapped__,o=e?[1]:arguments,f=t insta
 var t=hl[n],r=/^(?:push|sort|unshift)$/.test(n)?"tap":"thru",e=/^(?:pop|shift)$/.test(n);q.prototype[n]=function(){var n=arguments;if(e&&!this.__chain__){var u=this.value();return t.apply(yh(u)?u:[],n)}return this[r](function(r){return t.apply(yh(r)?r:[],n)})}}),ee(Bt.prototype,function(n,t){var r=q[t];if(r){var e=r.name+"";yl.call(is,e)||(is[e]=[]),is[e].push({name:t,func:r})}}),is[Ju(Y,hn).name]=[{name:"wrapper",func:Y}],Bt.prototype.clone=Gt,Bt.prototype.reverse=Ht,Bt.prototype.value=Jt,q.prototype.at=Js,
 q.prototype.chain=Xo,q.prototype.commit=nf,q.prototype.next=tf,q.prototype.plant=ef,q.prototype.reverse=uf,q.prototype.toJSON=q.prototype.valueOf=q.prototype.value=of,q.prototype.first=q.prototype.head,Ll&&(q.prototype[Ll]=rf),q},ge=ve(); true?(Xr._=ge,!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(){return ge}).call(exports, __webpack_require__, exports, module),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))):undefined}).call(this);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18), __webpack_require__(64)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(19), __webpack_require__(64)(module)))
 
 /***/ }),
 /* 64 */
@@ -5228,6 +5228,32 @@ var src = __webpack_require__(50);
 // EXTERNAL MODULE: ./src/App.css
 var App = __webpack_require__(51);
 
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+var arrayLikeToArray = __webpack_require__(11);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return Object(arrayLikeToArray["a" /* default */])(arr);
+}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js
+var iterableToArray = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+var unsupportedIterableToArray = __webpack_require__(14);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js
+
+
+
+
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || Object(iterableToArray["a" /* default */])(arr) || Object(unsupportedIterableToArray["a" /* default */])(arr) || _nonIterableSpread();
+}
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -5246,6 +5272,744 @@ function _extends() {
 
   return _extends.apply(this, arguments);
 }
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
+var esm_typeof = __webpack_require__(9);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/utils/esm/deepmerge.js
+
+
+function isPlainObject(item) {
+  return item && Object(esm_typeof["a" /* default */])(item) === 'object' && item.constructor === Object;
+}
+function deepmerge(target, source) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {
+    clone: true
+  };
+  var output = options.clone ? _extends({}, target) : target;
+
+  if (isPlainObject(target) && isPlainObject(source)) {
+    Object.keys(source).forEach(function (key) {
+      // Avoid prototype pollution
+      if (key === '__proto__') {
+        return;
+      }
+
+      if (isPlainObject(source[key]) && key in target) {
+        output[key] = deepmerge(target[key], source[key], options);
+      } else {
+        output[key] = source[key];
+      }
+    });
+  }
+
+  return output;
+}
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/merge.js
+
+
+function merge(acc, item) {
+  if (!item) {
+    return acc;
+  }
+
+  return deepmerge(acc, item, {
+    clone: false // No need to clone deep, it's way faster.
+
+  });
+}
+
+/* harmony default export */ var esm_merge = (merge);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/css.js
+
+
+
+
+
+function omit(input, fields) {
+  var output = {};
+  Object.keys(input).forEach(function (prop) {
+    if (fields.indexOf(prop) === -1) {
+      output[prop] = input[prop];
+    }
+  });
+  return output;
+}
+
+function css_css(styleFunction) {
+  var newStyleFunction = function newStyleFunction(props) {
+    var output = styleFunction(props);
+
+    if (props.css) {
+      return _extends({}, esm_merge(output, styleFunction(_extends({
+        theme: props.theme
+      }, props.css))), omit(props.css, [styleFunction.filterProps]));
+    }
+
+    return output;
+  };
+
+  newStyleFunction.propTypes =  false ? undefined : {};
+  newStyleFunction.filterProps = ['css'].concat(_toConsumableArray(styleFunction.filterProps));
+  return newStyleFunction;
+}
+
+/* harmony default export */ var esm_css = (css_css);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/compose.js
+
+
+
+function compose() {
+  for (var _len = arguments.length, styles = new Array(_len), _key = 0; _key < _len; _key++) {
+    styles[_key] = arguments[_key];
+  }
+
+  var fn = function fn(props) {
+    return styles.reduce(function (acc, style) {
+      var output = style(props);
+
+      if (output) {
+        return esm_merge(acc, output);
+      }
+
+      return acc;
+    }, {});
+  }; // Alternative approach that doesn't yield any performance gain.
+  // const handlers = styles.reduce((acc, style) => {
+  //   style.filterProps.forEach(prop => {
+  //     acc[prop] = style;
+  //   });
+  //   return acc;
+  // }, {});
+  // const fn = props => {
+  //   return Object.keys(props).reduce((acc, prop) => {
+  //     if (handlers[prop]) {
+  //       return merge(acc, handlers[prop](props));
+  //     }
+  //     return acc;
+  //   }, {});
+  // };
+
+
+  fn.propTypes =  false ? undefined : {};
+  fn.filterProps = styles.reduce(function (acc, style) {
+    return acc.concat(style.filterProps);
+  }, []);
+  return fn;
+}
+
+/* harmony default export */ var esm_compose = (compose);
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/breakpoints.js
+
+
+
+
+ // The breakpoint **start** at this value.
+// For instance with the first breakpoint xs: [xs, sm[.
+
+var breakpoints_values = {
+  xs: 0,
+  sm: 600,
+  md: 960,
+  lg: 1280,
+  xl: 1920
+};
+var defaultBreakpoints = {
+  // Sorted ASC by size. That's important.
+  // It can't be configured as it's used statically for propTypes.
+  keys: ['xs', 'sm', 'md', 'lg', 'xl'],
+  up: function up(key) {
+    return "@media (min-width:".concat(breakpoints_values[key], "px)");
+  }
+};
+function handleBreakpoints(props, propValue, styleFromPropValue) {
+  if (false) {}
+
+  if (Array.isArray(propValue)) {
+    var themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
+    return propValue.reduce(function (acc, item, index) {
+      acc[themeBreakpoints.up(themeBreakpoints.keys[index])] = styleFromPropValue(propValue[index]);
+      return acc;
+    }, {});
+  }
+
+  if (Object(esm_typeof["a" /* default */])(propValue) === 'object') {
+    var _themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
+
+    return Object.keys(propValue).reduce(function (acc, breakpoint) {
+      acc[_themeBreakpoints.up(breakpoint)] = styleFromPropValue(propValue[breakpoint]);
+      return acc;
+    }, {});
+  }
+
+  var output = styleFromPropValue(propValue);
+  return output;
+}
+
+function breakpoints_breakpoints(styleFunction) {
+  var newStyleFunction = function newStyleFunction(props) {
+    var base = styleFunction(props);
+    var themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
+    var extended = themeBreakpoints.keys.reduce(function (acc, key) {
+      if (props[key]) {
+        acc = acc || {};
+        acc[themeBreakpoints.up(key)] = styleFunction(_extends({
+          theme: props.theme
+        }, props[key]));
+      }
+
+      return acc;
+    }, null);
+    return esm_merge(base, extended);
+  };
+
+  newStyleFunction.propTypes =  false ? undefined : {};
+  newStyleFunction.filterProps = ['xs', 'sm', 'md', 'lg', 'xl'].concat(_toConsumableArray(styleFunction.filterProps));
+  return newStyleFunction;
+}
+
+/* harmony default export */ var esm_breakpoints = (breakpoints_breakpoints);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/style.js
+
+
+
+
+function getPath(obj, path) {
+  if (!path || typeof path !== 'string') {
+    return null;
+  }
+
+  return path.split('.').reduce(function (acc, item) {
+    return acc && acc[item] ? acc[item] : null;
+  }, obj);
+}
+
+function style_style(options) {
+  var prop = options.prop,
+      _options$cssProperty = options.cssProperty,
+      cssProperty = _options$cssProperty === void 0 ? options.prop : _options$cssProperty,
+      themeKey = options.themeKey,
+      transform = options.transform;
+
+  var fn = function fn(props) {
+    if (props[prop] == null) {
+      return null;
+    }
+
+    var propValue = props[prop];
+    var theme = props.theme;
+    var themeMapping = getPath(theme, themeKey) || {};
+
+    var styleFromPropValue = function styleFromPropValue(propValueFinal) {
+      var value;
+
+      if (typeof themeMapping === 'function') {
+        value = themeMapping(propValueFinal);
+      } else if (Array.isArray(themeMapping)) {
+        value = themeMapping[propValueFinal] || propValueFinal;
+      } else {
+        value = getPath(themeMapping, propValueFinal) || propValueFinal;
+
+        if (transform) {
+          value = transform(value);
+        }
+      }
+
+      if (cssProperty === false) {
+        return value;
+      }
+
+      return _defineProperty({}, cssProperty, value);
+    };
+
+    return handleBreakpoints(props, propValue, styleFromPropValue);
+  };
+
+  fn.propTypes =  false ? undefined : {};
+  fn.filterProps = [prop];
+  return fn;
+}
+
+/* harmony default export */ var esm_style = (style_style);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/borders.js
+
+
+
+function getBorder(value) {
+  if (typeof value !== 'number') {
+    return value;
+  }
+
+  return "".concat(value, "px solid");
+}
+
+var border = esm_style({
+  prop: 'border',
+  themeKey: 'borders',
+  transform: getBorder
+});
+var borderTop = esm_style({
+  prop: 'borderTop',
+  themeKey: 'borders',
+  transform: getBorder
+});
+var borderRight = esm_style({
+  prop: 'borderRight',
+  themeKey: 'borders',
+  transform: getBorder
+});
+var borderBottom = esm_style({
+  prop: 'borderBottom',
+  themeKey: 'borders',
+  transform: getBorder
+});
+var borderLeft = esm_style({
+  prop: 'borderLeft',
+  themeKey: 'borders',
+  transform: getBorder
+});
+var borderColor = esm_style({
+  prop: 'borderColor',
+  themeKey: 'palette'
+});
+var borderRadius = esm_style({
+  prop: 'borderRadius',
+  themeKey: 'shape'
+});
+var borders = esm_compose(border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius);
+/* harmony default export */ var esm_borders = (borders);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/display.js
+
+
+var displayPrint = esm_style({
+  prop: 'displayPrint',
+  cssProperty: false,
+  transform: function transform(value) {
+    return {
+      '@media print': {
+        display: value
+      }
+    };
+  }
+});
+var displayRaw = esm_style({
+  prop: 'display'
+});
+var overflow = esm_style({
+  prop: 'overflow'
+});
+var textOverflow = esm_style({
+  prop: 'textOverflow'
+});
+var visibility = esm_style({
+  prop: 'visibility'
+});
+var whiteSpace = esm_style({
+  prop: 'whiteSpace'
+});
+/* harmony default export */ var esm_display = (esm_compose(displayPrint, displayRaw, overflow, textOverflow, visibility, whiteSpace));
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/flexbox.js
+
+
+var flexBasis = esm_style({
+  prop: 'flexBasis'
+});
+var flexDirection = esm_style({
+  prop: 'flexDirection'
+});
+var flexWrap = esm_style({
+  prop: 'flexWrap'
+});
+var justifyContent = esm_style({
+  prop: 'justifyContent'
+});
+var flexbox_alignItems = esm_style({
+  prop: 'alignItems'
+});
+var flexbox_alignContent = esm_style({
+  prop: 'alignContent'
+});
+var order = esm_style({
+  prop: 'order'
+});
+var flex = esm_style({
+  prop: 'flex'
+});
+var flexGrow = esm_style({
+  prop: 'flexGrow'
+});
+var flexShrink = esm_style({
+  prop: 'flexShrink'
+});
+var alignSelf = esm_style({
+  prop: 'alignSelf'
+});
+var justifyItems = esm_style({
+  prop: 'justifyItems'
+});
+var justifySelf = esm_style({
+  prop: 'justifySelf'
+});
+var flexbox = esm_compose(flexBasis, flexDirection, flexWrap, justifyContent, flexbox_alignItems, flexbox_alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf);
+/* harmony default export */ var esm_flexbox = (flexbox);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/grid.js
+
+
+var gridGap = esm_style({
+  prop: 'gridGap'
+});
+var gridColumnGap = esm_style({
+  prop: 'gridColumnGap'
+});
+var gridRowGap = esm_style({
+  prop: 'gridRowGap'
+});
+var gridColumn = esm_style({
+  prop: 'gridColumn'
+});
+var gridRow = esm_style({
+  prop: 'gridRow'
+});
+var gridAutoFlow = esm_style({
+  prop: 'gridAutoFlow'
+});
+var gridAutoColumns = esm_style({
+  prop: 'gridAutoColumns'
+});
+var gridAutoRows = esm_style({
+  prop: 'gridAutoRows'
+});
+var gridTemplateColumns = esm_style({
+  prop: 'gridTemplateColumns'
+});
+var gridTemplateRows = esm_style({
+  prop: 'gridTemplateRows'
+});
+var gridTemplateAreas = esm_style({
+  prop: 'gridTemplateAreas'
+});
+var gridArea = esm_style({
+  prop: 'gridArea'
+});
+var grid = esm_compose(gridGap, gridColumnGap, gridRowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
+/* harmony default export */ var esm_grid = (grid);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/positions.js
+
+
+var position = esm_style({
+  prop: 'position'
+});
+var zIndex = esm_style({
+  prop: 'zIndex',
+  themeKey: 'zIndex'
+});
+var positions_top = esm_style({
+  prop: 'top'
+});
+var positions_right = esm_style({
+  prop: 'right'
+});
+var positions_bottom = esm_style({
+  prop: 'bottom'
+});
+var positions_left = esm_style({
+  prop: 'left'
+});
+/* harmony default export */ var positions = (esm_compose(position, zIndex, positions_top, positions_right, positions_bottom, positions_left));
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/palette.js
+
+
+var palette_color = esm_style({
+  prop: 'color',
+  themeKey: 'palette'
+});
+var bgcolor = esm_style({
+  prop: 'bgcolor',
+  cssProperty: 'backgroundColor',
+  themeKey: 'palette'
+});
+var palette_palette = esm_compose(palette_color, bgcolor);
+/* harmony default export */ var esm_palette = (palette_palette);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/shadows.js
+
+var boxShadow = esm_style({
+  prop: 'boxShadow',
+  themeKey: 'shadows'
+});
+/* harmony default export */ var shadows = (boxShadow);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/sizing.js
+
+
+
+function sizing_transform(value) {
+  return value <= 1 ? "".concat(value * 100, "%") : value;
+}
+
+var sizing_width = esm_style({
+  prop: 'width',
+  transform: sizing_transform
+});
+var sizing_maxWidth = esm_style({
+  prop: 'maxWidth',
+  transform: sizing_transform
+});
+var minWidth = esm_style({
+  prop: 'minWidth',
+  transform: sizing_transform
+});
+var height = esm_style({
+  prop: 'height',
+  transform: sizing_transform
+});
+var maxHeight = esm_style({
+  prop: 'maxHeight',
+  transform: sizing_transform
+});
+var minHeight = esm_style({
+  prop: 'minHeight',
+  transform: sizing_transform
+});
+var sizeWidth = esm_style({
+  prop: 'size',
+  cssProperty: 'width',
+  transform: sizing_transform
+});
+var sizeHeight = esm_style({
+  prop: 'size',
+  cssProperty: 'height',
+  transform: sizing_transform
+});
+var boxSizing = esm_style({
+  prop: 'boxSizing'
+});
+var sizing = esm_compose(sizing_width, sizing_maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
+/* harmony default export */ var esm_sizing = (sizing);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
+var arrayWithHoles = __webpack_require__(34);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
+var nonIterableRest = __webpack_require__(35);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js
+
+
+
+
+function _slicedToArray(arr, i) {
+  return Object(arrayWithHoles["a" /* default */])(arr) || _iterableToArrayLimit(arr, i) || Object(unsupportedIterableToArray["a" /* default */])(arr, i) || Object(nonIterableRest["a" /* default */])();
+}
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/memoize.js
+function memoize(fn) {
+  var cache = {};
+  return function (arg) {
+    if (cache[arg] === undefined) {
+      cache[arg] = fn(arg);
+    }
+
+    return cache[arg];
+  };
+}
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/spacing.js
+
+
+
+
+
+var properties = {
+  m: 'margin',
+  p: 'padding'
+};
+var directions = {
+  t: 'Top',
+  r: 'Right',
+  b: 'Bottom',
+  l: 'Left',
+  x: ['Left', 'Right'],
+  y: ['Top', 'Bottom']
+};
+var aliases = {
+  marginX: 'mx',
+  marginY: 'my',
+  paddingX: 'px',
+  paddingY: 'py'
+}; // memoize() impact:
+// From 300,000 ops/sec
+// To 350,000 ops/sec
+
+var getCssProperties = memoize(function (prop) {
+  // It's not a shorthand notation.
+  if (prop.length > 2) {
+    if (aliases[prop]) {
+      prop = aliases[prop];
+    } else {
+      return [prop];
+    }
+  }
+
+  var _prop$split = prop.split(''),
+      _prop$split2 = _slicedToArray(_prop$split, 2),
+      a = _prop$split2[0],
+      b = _prop$split2[1];
+
+  var property = properties[a];
+  var direction = directions[b] || '';
+  return Array.isArray(direction) ? direction.map(function (dir) {
+    return property + dir;
+  }) : [property + direction];
+});
+var spacingKeys = ['m', 'mt', 'mr', 'mb', 'ml', 'mx', 'my', 'p', 'pt', 'pr', 'pb', 'pl', 'px', 'py', 'margin', 'marginTop', 'marginRight', 'marginBottom', 'marginLeft', 'marginX', 'marginY', 'padding', 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft', 'paddingX', 'paddingY'];
+function createUnarySpacing(theme) {
+  var themeSpacing = theme.spacing || 8;
+
+  if (typeof themeSpacing === 'number') {
+    return function (abs) {
+      if (false) {}
+
+      return themeSpacing * abs;
+    };
+  }
+
+  if (Array.isArray(themeSpacing)) {
+    return function (abs) {
+      if (false) {}
+
+      return themeSpacing[abs];
+    };
+  }
+
+  if (typeof themeSpacing === 'function') {
+    return themeSpacing;
+  }
+
+  if (false) {}
+
+  return function () {
+    return undefined;
+  };
+}
+
+function getValue(transformer, propValue) {
+  if (typeof propValue === 'string' || propValue == null) {
+    return propValue;
+  }
+
+  var abs = Math.abs(propValue);
+  var transformed = transformer(abs);
+
+  if (propValue >= 0) {
+    return transformed;
+  }
+
+  if (typeof transformed === 'number') {
+    return -transformed;
+  }
+
+  return "-".concat(transformed);
+}
+
+function getStyleFromPropValue(cssProperties, transformer) {
+  return function (propValue) {
+    return cssProperties.reduce(function (acc, cssProperty) {
+      acc[cssProperty] = getValue(transformer, propValue);
+      return acc;
+    }, {});
+  };
+}
+
+function spacing_spacing(props) {
+  var theme = props.theme;
+  var transformer = createUnarySpacing(theme);
+  return Object.keys(props).map(function (prop) {
+    // Using a hash computation over an array iteration could be faster, but with only 28 items,
+    // it's doesn't worth the bundle size.
+    if (spacingKeys.indexOf(prop) === -1) {
+      return null;
+    }
+
+    var cssProperties = getCssProperties(prop);
+    var styleFromPropValue = getStyleFromPropValue(cssProperties, transformer);
+    var propValue = props[prop];
+    return handleBreakpoints(props, propValue, styleFromPropValue);
+  }).reduce(esm_merge, {});
+}
+
+spacing_spacing.propTypes =  false ? undefined : {};
+spacing_spacing.filterProps = spacingKeys;
+/* harmony default export */ var esm_spacing = (spacing_spacing);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/typography.js
+
+
+var typography_fontFamily = esm_style({
+  prop: 'fontFamily',
+  themeKey: 'typography'
+});
+var typography_fontSize = esm_style({
+  prop: 'fontSize',
+  themeKey: 'typography'
+});
+var fontStyle = esm_style({
+  prop: 'fontStyle',
+  themeKey: 'typography'
+});
+var typography_fontWeight = esm_style({
+  prop: 'fontWeight',
+  themeKey: 'typography'
+});
+var typography_letterSpacing = esm_style({
+  prop: 'letterSpacing'
+});
+var typography_lineHeight = esm_style({
+  prop: 'lineHeight'
+});
+var textAlign = esm_style({
+  prop: 'textAlign'
+});
+var typography_typography = esm_compose(typography_fontFamily, typography_fontSize, fontStyle, typography_fontWeight, typography_letterSpacing, typography_lineHeight, textAlign);
+/* harmony default export */ var esm_typography = (typography_typography);
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {};
@@ -5281,24 +6045,6 @@ function _objectWithoutProperties(source, excluded) {
 
   return target;
 }
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-// EXTERNAL MODULE: ./node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-
 // CONCATENATED MODULE: ./node_modules/clsx/dist/clsx.m.js
 function toVal(mix) {
 	var k, y, str='';
@@ -6883,7 +7629,7 @@ var createGenerateId = function createGenerateId(options) {
 /**
  * Cache the value from the first time a function is called.
  */
-var memoize = function memoize(fn) {
+var jss_esm_memoize = function memoize(fn) {
   var value;
   return function () {
     if (!value) value = fn();
@@ -6969,7 +7715,7 @@ var setSelector = function setSelector(cssRule, selectorText) {
  */
 
 
-var getHead = memoize(function () {
+var getHead = jss_esm_memoize(function () {
   return document.querySelector('head');
 });
 /**
@@ -7100,7 +7846,7 @@ function insertStyle(style, options) {
  */
 
 
-var getNonce = memoize(function () {
+var getNonce = jss_esm_memoize(function () {
   var node = document.querySelector('meta[property="csp-nonce"]');
   return node ? node.getAttribute('content') : null;
 });
@@ -8465,32 +9211,6 @@ function defaultUnit(options) {
 
 /* harmony default export */ var jss_plugin_default_unit_esm = (defaultUnit);
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
-var arrayLikeToArray = __webpack_require__(11);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return Object(arrayLikeToArray["a" /* default */])(arr);
-}
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js
-var iterableToArray = __webpack_require__(33);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
-var unsupportedIterableToArray = __webpack_require__(14);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js
-
-
-
-
-function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || Object(iterableToArray["a" /* default */])(arr) || Object(unsupportedIterableToArray["a" /* default */])(arr) || _nonIterableSpread();
-}
 // CONCATENATED MODULE: ./node_modules/css-vendor/dist/css-vendor.esm.js
 
 
@@ -9263,38 +9983,6 @@ function increment() {
 
   return indexCounter;
 }
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
-var esm_typeof = __webpack_require__(8);
-
-// CONCATENATED MODULE: ./node_modules/@material-ui/utils/esm/deepmerge.js
-
-
-function isPlainObject(item) {
-  return item && Object(esm_typeof["a" /* default */])(item) === 'object' && item.constructor === Object;
-}
-function deepmerge(target, source) {
-  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {
-    clone: true
-  };
-  var output = options.clone ? _extends({}, target) : target;
-
-  if (isPlainObject(target) && isPlainObject(source)) {
-    Object.keys(source).forEach(function (key) {
-      // Avoid prototype pollution
-      if (key === '__proto__') {
-        return;
-      }
-
-      if (isPlainObject(source[key]) && key in target) {
-        output[key] = deepmerge(target[key], source[key], options);
-      } else {
-        output[key] = source[key];
-      }
-    });
-  }
-
-  return output;
-}
 // CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/getStylesCreator/getStylesCreator.js
 
 
@@ -9598,51 +10286,34 @@ function makeStyles(stylesOrCreator) {
 
   return useStyles;
 }
-// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/getThemeProps/getThemeProps.js
-/* eslint-disable no-restricted-syntax */
-function getThemeProps(params) {
-  var theme = params.theme,
-      name = params.name,
-      props = params.props;
-
-  if (!theme || !theme.props || !theme.props[name]) {
-    return props;
-  } // Resolve default props, code borrow from React source.
-  // https://github.com/facebook/react/blob/15a8f031838a553e41c0b66eb1bcf1da8448104d/packages/react/src/ReactElement.js#L221
+// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/styled/styled.js
 
 
-  var defaultProps = theme.props[name];
-  var propName;
 
-  for (propName in defaultProps) {
-    if (props[propName] === undefined) {
-      props[propName] = defaultProps[propName];
+
+
+
+
+
+
+function styled_omit(input, fields) {
+  var output = {};
+  Object.keys(input).forEach(function (prop) {
+    if (fields.indexOf(prop) === -1) {
+      output[prop] = input[prop];
     }
-  }
-
-  return props;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/withStyles/withStyles.js
-
+  });
+  return output;
+} // styled-components's API removes the mapping between components and styles.
+// Using components as a low-level styling construct can be simpler.
 
 
+function styled_styled(Component) {
+  var componentCreator = function componentCreator(style) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-
-
-
-
- // Link a style sheet with a component.
-// It does not modify the component passed to it;
-// instead, it returns a new component, with a `classes` property.
-
-var withStyles_withStyles = function withStyles(stylesOrCreator) {
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  return function (Component) {
-    var defaultTheme = options.defaultTheme,
-        _options$withTheme = options.withTheme,
-        withTheme = _options$withTheme === void 0 ? false : _options$withTheme,
-        name = options.name,
-        stylesOptions = _objectWithoutProperties(options, ["defaultTheme", "withTheme", "name"]);
+    var name = options.name,
+        stylesOptions = _objectWithoutProperties(options, ["name"]);
 
     if (false) {}
 
@@ -9650,62 +10321,82 @@ var withStyles_withStyles = function withStyles(stylesOrCreator) {
 
     if (false) { var displayName; }
 
+    var stylesOrCreator = typeof style === 'function' ? function (theme) {
+      return {
+        root: function root(props) {
+          return style(_extends({
+            theme: theme
+          }, props));
+        }
+      };
+    } : {
+      root: style
+    };
     var useStyles = makeStyles(stylesOrCreator, _extends({
-      defaultTheme: defaultTheme,
       Component: Component,
       name: name || Component.displayName,
       classNamePrefix: classNamePrefix
     }, stylesOptions));
-    var WithStyles = /*#__PURE__*/react_default.a.forwardRef(function WithStyles(props, ref) {
-      var classesProp = props.classes,
-          innerRef = props.innerRef,
-          other = _objectWithoutProperties(props, ["classes", "innerRef"]); // The wrapper receives only user supplied props, which could be a subset of
-      // the actual props Component might receive due to merging with defaultProps.
-      // So copying it here would give us the same result in the wrapper as well.
+    var filterProps;
+    var propTypes = {};
+
+    if (style.filterProps) {
+      filterProps = style.filterProps;
+      delete style.filterProps;
+    }
+    /* eslint-disable react/forbid-foreign-prop-types */
 
 
-      var classes = useStyles(_extends({}, Component.defaultProps, props));
-      var theme;
-      var more = other;
-
-      if (typeof name === 'string' || withTheme) {
-        // name and withTheme are invariant in the outer scope
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        theme = useTheme() || defaultTheme;
-
-        if (name) {
-          more = getThemeProps({
-            theme: theme,
-            name: name,
-            props: other
-          });
-        } // Provide the theme to the wrapped component.
-        // So we don't have to use the `withTheme()` Higher-order Component.
+    if (style.propTypes) {
+      propTypes = style.propTypes;
+      delete style.propTypes;
+    }
+    /* eslint-enable react/forbid-foreign-prop-types */
 
 
-        if (withTheme && !more.theme) {
-          more.theme = theme;
-        }
+    var StyledComponent = /*#__PURE__*/react_default.a.forwardRef(function StyledComponent(props, ref) {
+      var children = props.children,
+          classNameProp = props.className,
+          clone = props.clone,
+          ComponentProp = props.component,
+          other = _objectWithoutProperties(props, ["children", "className", "clone", "component"]);
+
+      var classes = useStyles(props);
+      var className = clsx_m(classes.root, classNameProp);
+      var spread = other;
+
+      if (filterProps) {
+        spread = styled_omit(spread, filterProps);
       }
 
-      return /*#__PURE__*/react_default.a.createElement(Component, _extends({
-        ref: innerRef || ref,
-        classes: classes
-      }, more));
+      if (clone) {
+        return /*#__PURE__*/react_default.a.cloneElement(children, _extends({
+          className: clsx_m(children.props.className, className)
+        }, spread));
+      }
+
+      if (typeof children === 'function') {
+        return children(_extends({
+          className: className
+        }, spread));
+      }
+
+      var FinalComponent = ComponentProp || Component;
+      return /*#__PURE__*/react_default.a.createElement(FinalComponent, _extends({
+        ref: ref,
+        className: className
+      }, spread), children);
     });
      false ? undefined : void 0;
 
     if (false) {}
 
-    hoist_non_react_statics_cjs_default()(WithStyles, Component);
-
-    if (false) {}
-
-    return WithStyles;
+    hoist_non_react_statics_cjs_default()(StyledComponent, Component);
+    return StyledComponent;
   };
-};
 
-/* harmony default export */ var esm_withStyles_withStyles = (withStyles_withStyles);
+  return componentCreator;
+}
 // CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createBreakpoints.js
 
 
@@ -10568,277 +11259,13 @@ function createShadow() {
 } // Values from https://github.com/material-components/material-components-web/blob/be8747f94574669cb5e7add1a7c54fa41a89cec7/packages/mdc-elevation/_variables.scss
 
 
-var shadows = ['none', createShadow(0, 2, 1, -1, 0, 1, 1, 0, 0, 1, 3, 0), createShadow(0, 3, 1, -2, 0, 2, 2, 0, 0, 1, 5, 0), createShadow(0, 3, 3, -2, 0, 3, 4, 0, 0, 1, 8, 0), createShadow(0, 2, 4, -1, 0, 4, 5, 0, 0, 1, 10, 0), createShadow(0, 3, 5, -1, 0, 5, 8, 0, 0, 1, 14, 0), createShadow(0, 3, 5, -1, 0, 6, 10, 0, 0, 1, 18, 0), createShadow(0, 4, 5, -2, 0, 7, 10, 1, 0, 2, 16, 1), createShadow(0, 5, 5, -3, 0, 8, 10, 1, 0, 3, 14, 2), createShadow(0, 5, 6, -3, 0, 9, 12, 1, 0, 3, 16, 2), createShadow(0, 6, 6, -3, 0, 10, 14, 1, 0, 4, 18, 3), createShadow(0, 6, 7, -4, 0, 11, 15, 1, 0, 4, 20, 3), createShadow(0, 7, 8, -4, 0, 12, 17, 2, 0, 5, 22, 4), createShadow(0, 7, 8, -4, 0, 13, 19, 2, 0, 5, 24, 4), createShadow(0, 7, 9, -4, 0, 14, 21, 2, 0, 5, 26, 4), createShadow(0, 8, 9, -5, 0, 15, 22, 2, 0, 6, 28, 5), createShadow(0, 8, 10, -5, 0, 16, 24, 2, 0, 6, 30, 5), createShadow(0, 8, 11, -5, 0, 17, 26, 2, 0, 6, 32, 5), createShadow(0, 9, 11, -5, 0, 18, 28, 2, 0, 7, 34, 6), createShadow(0, 9, 12, -6, 0, 19, 29, 2, 0, 7, 36, 6), createShadow(0, 10, 13, -6, 0, 20, 31, 3, 0, 8, 38, 7), createShadow(0, 10, 13, -6, 0, 21, 33, 3, 0, 8, 40, 7), createShadow(0, 10, 14, -6, 0, 22, 35, 3, 0, 8, 42, 7), createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8), createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8)];
-/* harmony default export */ var styles_shadows = (shadows);
+var shadows_shadows = ['none', createShadow(0, 2, 1, -1, 0, 1, 1, 0, 0, 1, 3, 0), createShadow(0, 3, 1, -2, 0, 2, 2, 0, 0, 1, 5, 0), createShadow(0, 3, 3, -2, 0, 3, 4, 0, 0, 1, 8, 0), createShadow(0, 2, 4, -1, 0, 4, 5, 0, 0, 1, 10, 0), createShadow(0, 3, 5, -1, 0, 5, 8, 0, 0, 1, 14, 0), createShadow(0, 3, 5, -1, 0, 6, 10, 0, 0, 1, 18, 0), createShadow(0, 4, 5, -2, 0, 7, 10, 1, 0, 2, 16, 1), createShadow(0, 5, 5, -3, 0, 8, 10, 1, 0, 3, 14, 2), createShadow(0, 5, 6, -3, 0, 9, 12, 1, 0, 3, 16, 2), createShadow(0, 6, 6, -3, 0, 10, 14, 1, 0, 4, 18, 3), createShadow(0, 6, 7, -4, 0, 11, 15, 1, 0, 4, 20, 3), createShadow(0, 7, 8, -4, 0, 12, 17, 2, 0, 5, 22, 4), createShadow(0, 7, 8, -4, 0, 13, 19, 2, 0, 5, 24, 4), createShadow(0, 7, 9, -4, 0, 14, 21, 2, 0, 5, 26, 4), createShadow(0, 8, 9, -5, 0, 15, 22, 2, 0, 6, 28, 5), createShadow(0, 8, 10, -5, 0, 16, 24, 2, 0, 6, 30, 5), createShadow(0, 8, 11, -5, 0, 17, 26, 2, 0, 6, 32, 5), createShadow(0, 9, 11, -5, 0, 18, 28, 2, 0, 7, 34, 6), createShadow(0, 9, 12, -6, 0, 19, 29, 2, 0, 7, 36, 6), createShadow(0, 10, 13, -6, 0, 20, 31, 3, 0, 8, 38, 7), createShadow(0, 10, 13, -6, 0, 21, 33, 3, 0, 8, 40, 7), createShadow(0, 10, 14, -6, 0, 22, 35, 3, 0, 8, 42, 7), createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8), createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8)];
+/* harmony default export */ var styles_shadows = (shadows_shadows);
 // CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/shape.js
 var shape = {
   borderRadius: 4
 };
 /* harmony default export */ var styles_shape = (shape);
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
-var arrayWithHoles = __webpack_require__(34);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
-var nonIterableRest = __webpack_require__(35);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js
-
-
-
-
-function _slicedToArray(arr, i) {
-  return Object(arrayWithHoles["a" /* default */])(arr) || _iterableToArrayLimit(arr, i) || Object(unsupportedIterableToArray["a" /* default */])(arr, i) || Object(nonIterableRest["a" /* default */])();
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/merge.js
-
-
-function merge(acc, item) {
-  if (!item) {
-    return acc;
-  }
-
-  return deepmerge(acc, item, {
-    clone: false // No need to clone deep, it's way faster.
-
-  });
-}
-
-/* harmony default export */ var esm_merge = (merge);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/breakpoints.js
-
-
-
-
- // The breakpoint **start** at this value.
-// For instance with the first breakpoint xs: [xs, sm[.
-
-var breakpoints_values = {
-  xs: 0,
-  sm: 600,
-  md: 960,
-  lg: 1280,
-  xl: 1920
-};
-var defaultBreakpoints = {
-  // Sorted ASC by size. That's important.
-  // It can't be configured as it's used statically for propTypes.
-  keys: ['xs', 'sm', 'md', 'lg', 'xl'],
-  up: function up(key) {
-    return "@media (min-width:".concat(breakpoints_values[key], "px)");
-  }
-};
-function handleBreakpoints(props, propValue, styleFromPropValue) {
-  if (false) {}
-
-  if (Array.isArray(propValue)) {
-    var themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
-    return propValue.reduce(function (acc, item, index) {
-      acc[themeBreakpoints.up(themeBreakpoints.keys[index])] = styleFromPropValue(propValue[index]);
-      return acc;
-    }, {});
-  }
-
-  if (Object(esm_typeof["a" /* default */])(propValue) === 'object') {
-    var _themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
-
-    return Object.keys(propValue).reduce(function (acc, breakpoint) {
-      acc[_themeBreakpoints.up(breakpoint)] = styleFromPropValue(propValue[breakpoint]);
-      return acc;
-    }, {});
-  }
-
-  var output = styleFromPropValue(propValue);
-  return output;
-}
-
-function breakpoints_breakpoints(styleFunction) {
-  var newStyleFunction = function newStyleFunction(props) {
-    var base = styleFunction(props);
-    var themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
-    var extended = themeBreakpoints.keys.reduce(function (acc, key) {
-      if (props[key]) {
-        acc = acc || {};
-        acc[themeBreakpoints.up(key)] = styleFunction(_extends({
-          theme: props.theme
-        }, props[key]));
-      }
-
-      return acc;
-    }, null);
-    return esm_merge(base, extended);
-  };
-
-  newStyleFunction.propTypes =  false ? undefined : {};
-  newStyleFunction.filterProps = ['xs', 'sm', 'md', 'lg', 'xl'].concat(_toConsumableArray(styleFunction.filterProps));
-  return newStyleFunction;
-}
-
-/* harmony default export */ var esm_breakpoints = (breakpoints_breakpoints);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/memoize.js
-function memoize_memoize(fn) {
-  var cache = {};
-  return function (arg) {
-    if (cache[arg] === undefined) {
-      cache[arg] = fn(arg);
-    }
-
-    return cache[arg];
-  };
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/spacing.js
-
-
-
-
-
-var properties = {
-  m: 'margin',
-  p: 'padding'
-};
-var directions = {
-  t: 'Top',
-  r: 'Right',
-  b: 'Bottom',
-  l: 'Left',
-  x: ['Left', 'Right'],
-  y: ['Top', 'Bottom']
-};
-var aliases = {
-  marginX: 'mx',
-  marginY: 'my',
-  paddingX: 'px',
-  paddingY: 'py'
-}; // memoize() impact:
-// From 300,000 ops/sec
-// To 350,000 ops/sec
-
-var getCssProperties = memoize_memoize(function (prop) {
-  // It's not a shorthand notation.
-  if (prop.length > 2) {
-    if (aliases[prop]) {
-      prop = aliases[prop];
-    } else {
-      return [prop];
-    }
-  }
-
-  var _prop$split = prop.split(''),
-      _prop$split2 = _slicedToArray(_prop$split, 2),
-      a = _prop$split2[0],
-      b = _prop$split2[1];
-
-  var property = properties[a];
-  var direction = directions[b] || '';
-  return Array.isArray(direction) ? direction.map(function (dir) {
-    return property + dir;
-  }) : [property + direction];
-});
-var spacingKeys = ['m', 'mt', 'mr', 'mb', 'ml', 'mx', 'my', 'p', 'pt', 'pr', 'pb', 'pl', 'px', 'py', 'margin', 'marginTop', 'marginRight', 'marginBottom', 'marginLeft', 'marginX', 'marginY', 'padding', 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft', 'paddingX', 'paddingY'];
-function createUnarySpacing(theme) {
-  var themeSpacing = theme.spacing || 8;
-
-  if (typeof themeSpacing === 'number') {
-    return function (abs) {
-      if (false) {}
-
-      return themeSpacing * abs;
-    };
-  }
-
-  if (Array.isArray(themeSpacing)) {
-    return function (abs) {
-      if (false) {}
-
-      return themeSpacing[abs];
-    };
-  }
-
-  if (typeof themeSpacing === 'function') {
-    return themeSpacing;
-  }
-
-  if (false) {}
-
-  return function () {
-    return undefined;
-  };
-}
-
-function getValue(transformer, propValue) {
-  if (typeof propValue === 'string' || propValue == null) {
-    return propValue;
-  }
-
-  var abs = Math.abs(propValue);
-  var transformed = transformer(abs);
-
-  if (propValue >= 0) {
-    return transformed;
-  }
-
-  if (typeof transformed === 'number') {
-    return -transformed;
-  }
-
-  return "-".concat(transformed);
-}
-
-function getStyleFromPropValue(cssProperties, transformer) {
-  return function (propValue) {
-    return cssProperties.reduce(function (acc, cssProperty) {
-      acc[cssProperty] = getValue(transformer, propValue);
-      return acc;
-    }, {});
-  };
-}
-
-function spacing_spacing(props) {
-  var theme = props.theme;
-  var transformer = createUnarySpacing(theme);
-  return Object.keys(props).map(function (prop) {
-    // Using a hash computation over an array iteration could be faster, but with only 28 items,
-    // it's doesn't worth the bundle size.
-    if (spacingKeys.indexOf(prop) === -1) {
-      return null;
-    }
-
-    var cssProperties = getCssProperties(prop);
-    var styleFromPropValue = getStyleFromPropValue(cssProperties, transformer);
-    var propValue = props[prop];
-    return handleBreakpoints(props, propValue, styleFromPropValue);
-  }).reduce(esm_merge, {});
-}
-
-spacing_spacing.propTypes =  false ? undefined : {};
-spacing_spacing.filterProps = spacingKeys;
-/* harmony default export */ var esm_spacing = (spacing_spacing);
 // CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createSpacing.js
 
 var warnOnce;
@@ -10971,7 +11398,7 @@ function formatMs(milliseconds) {
 // CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/zIndex.js
 // We need to centralize the zIndex definitions as they work
 // like global values in the browser.
-var zIndex = {
+var zIndex_zIndex = {
   mobileStepper: 1000,
   speedDial: 1050,
   appBar: 1100,
@@ -10980,7 +11407,7 @@ var zIndex = {
   snackbar: 1400,
   tooltip: 1500
 };
-/* harmony default export */ var styles_zIndex = (zIndex);
+/* harmony default export */ var styles_zIndex = (zIndex_zIndex);
 // CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createMuiTheme.js
 
 
@@ -11047,123 +11474,33 @@ function createMuiTheme() {
 
 var defaultTheme_defaultTheme = styles_createMuiTheme();
 /* harmony default export */ var styles_defaultTheme = (defaultTheme_defaultTheme);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/withStyles.js
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/styled.js
 
 
 
 
-function styles_withStyles_withStyles(stylesOrCreator, options) {
-  return esm_withStyles_withStyles(stylesOrCreator, _extends({
-    defaultTheme: styles_defaultTheme
-  }, options));
-}
-
-/* harmony default export */ var styles_withStyles = (styles_withStyles_withStyles);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/capitalize.js
-
-// It should to be noted that this function isn't equivalent to `text-transform: capitalize`.
-//
-// A strict capitalization should uppercase the first letter of each word a the sentence.
-// We only handle the first word.
-function capitalize(string) {
-  if (typeof string !== 'string') {
-    throw new Error( false ? undefined : formatMuiErrorMessage(7));
-  }
-
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Container/Container.js
-
-
-
-
-
-
-
-
-var Container_styles = function styles(theme) {
-  return {
-    /* Styles applied to the root element. */
-    root: _defineProperty({
-      width: '100%',
-      marginLeft: 'auto',
-      boxSizing: 'border-box',
-      marginRight: 'auto',
-      paddingLeft: theme.spacing(2),
-      paddingRight: theme.spacing(2),
-      display: 'block'
-    }, theme.breakpoints.up('sm'), {
-      paddingLeft: theme.spacing(3),
-      paddingRight: theme.spacing(3)
-    }),
-
-    /* Styles applied to the root element if `disableGutters={true}`. */
-    disableGutters: {
-      paddingLeft: 0,
-      paddingRight: 0
-    },
-
-    /* Styles applied to the root element if `fixed={true}`. */
-    fixed: Object.keys(theme.breakpoints.values).reduce(function (acc, breakpoint) {
-      var value = theme.breakpoints.values[breakpoint];
-
-      if (value !== 0) {
-        acc[theme.breakpoints.up(breakpoint)] = {
-          maxWidth: value
-        };
-      }
-
-      return acc;
-    }, {}),
-
-    /* Styles applied to the root element if `maxWidth="xs"`. */
-    maxWidthXs: _defineProperty({}, theme.breakpoints.up('xs'), {
-      maxWidth: Math.max(theme.breakpoints.values.xs, 444)
-    }),
-
-    /* Styles applied to the root element if `maxWidth="sm"`. */
-    maxWidthSm: _defineProperty({}, theme.breakpoints.up('sm'), {
-      maxWidth: theme.breakpoints.values.sm
-    }),
-
-    /* Styles applied to the root element if `maxWidth="md"`. */
-    maxWidthMd: _defineProperty({}, theme.breakpoints.up('md'), {
-      maxWidth: theme.breakpoints.values.md
-    }),
-
-    /* Styles applied to the root element if `maxWidth="lg"`. */
-    maxWidthLg: _defineProperty({}, theme.breakpoints.up('lg'), {
-      maxWidth: theme.breakpoints.values.lg
-    }),
-
-    /* Styles applied to the root element if `maxWidth="xl"`. */
-    maxWidthXl: _defineProperty({}, theme.breakpoints.up('xl'), {
-      maxWidth: theme.breakpoints.values.xl
-    })
+var styles_styled_styled = function styled(Component) {
+  var componentCreator = styled_styled(Component);
+  return function (style, options) {
+    return componentCreator(style, _extends({
+      defaultTheme: styles_defaultTheme
+    }, options));
   };
 };
-var Container_Container = /*#__PURE__*/react["forwardRef"](function Container(props, ref) {
-  var classes = props.classes,
-      className = props.className,
-      _props$component = props.component,
-      Component = _props$component === void 0 ? 'div' : _props$component,
-      _props$disableGutters = props.disableGutters,
-      disableGutters = _props$disableGutters === void 0 ? false : _props$disableGutters,
-      _props$fixed = props.fixed,
-      fixed = _props$fixed === void 0 ? false : _props$fixed,
-      _props$maxWidth = props.maxWidth,
-      maxWidth = _props$maxWidth === void 0 ? 'lg' : _props$maxWidth,
-      other = _objectWithoutProperties(props, ["classes", "className", "component", "disableGutters", "fixed", "maxWidth"]);
 
-  return /*#__PURE__*/react["createElement"](Component, _extends({
-    className: clsx_m(classes.root, className, fixed && classes.fixed, disableGutters && classes.disableGutters, maxWidth !== false && classes["maxWidth".concat(capitalize(String(maxWidth)))]),
-    ref: ref
-  }, other));
+/* harmony default export */ var styles_styled = (styles_styled_styled);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Box/Box.js
+
+
+var Box_styleFunction = esm_css(esm_compose(esm_borders, esm_display, esm_flexbox, esm_grid, positions, esm_palette, shadows, esm_sizing, esm_spacing, esm_typography));
+/**
+ * @ignore - do not document.
+ */
+
+var Box = styles_styled('div')(Box_styleFunction, {
+  name: 'MuiBox'
 });
- false ? undefined : void 0;
-/* harmony default export */ var esm_Container_Container = (styles_withStyles(Container_styles, {
-  name: 'MuiContainer'
-})(Container_Container));
+/* harmony default export */ var Box_Box = (Box);
 // CONCATENATED MODULE: ./node_modules/react-redux/es/components/Context.js
 
 var ReactReduxContext = /*#__PURE__*/react_default.a.createContext(null);
@@ -13450,10 +13787,10 @@ function createMemoryHistory(props) {
 
 
 // EXTERNAL MODULE: ./node_modules/mini-create-react-context/dist/esm/index.js
-var esm = __webpack_require__(21);
+var esm = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/path-to-regexp/index.js
-var path_to_regexp = __webpack_require__(22);
+var path_to_regexp = __webpack_require__(23);
 var path_to_regexp_default = /*#__PURE__*/__webpack_require__.n(path_to_regexp);
 
 // EXTERNAL MODULE: ./node_modules/react-router/node_modules/react-is/index.js
@@ -14174,6 +14511,231 @@ function fetchWorkouts() {
   //   console.log('App -> componentDidMount -> jsonResponse', jsonResponse))
 } // return action.payload
 // export fetchWorkouts
+// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/getThemeProps/getThemeProps.js
+/* eslint-disable no-restricted-syntax */
+function getThemeProps(params) {
+  var theme = params.theme,
+      name = params.name,
+      props = params.props;
+
+  if (!theme || !theme.props || !theme.props[name]) {
+    return props;
+  } // Resolve default props, code borrow from React source.
+  // https://github.com/facebook/react/blob/15a8f031838a553e41c0b66eb1bcf1da8448104d/packages/react/src/ReactElement.js#L221
+
+
+  var defaultProps = theme.props[name];
+  var propName;
+
+  for (propName in defaultProps) {
+    if (props[propName] === undefined) {
+      props[propName] = defaultProps[propName];
+    }
+  }
+
+  return props;
+}
+// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/withStyles/withStyles.js
+
+
+
+
+
+
+
+
+ // Link a style sheet with a component.
+// It does not modify the component passed to it;
+// instead, it returns a new component, with a `classes` property.
+
+var withStyles_withStyles = function withStyles(stylesOrCreator) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  return function (Component) {
+    var defaultTheme = options.defaultTheme,
+        _options$withTheme = options.withTheme,
+        withTheme = _options$withTheme === void 0 ? false : _options$withTheme,
+        name = options.name,
+        stylesOptions = _objectWithoutProperties(options, ["defaultTheme", "withTheme", "name"]);
+
+    if (false) {}
+
+    var classNamePrefix = name;
+
+    if (false) { var displayName; }
+
+    var useStyles = makeStyles(stylesOrCreator, _extends({
+      defaultTheme: defaultTheme,
+      Component: Component,
+      name: name || Component.displayName,
+      classNamePrefix: classNamePrefix
+    }, stylesOptions));
+    var WithStyles = /*#__PURE__*/react_default.a.forwardRef(function WithStyles(props, ref) {
+      var classesProp = props.classes,
+          innerRef = props.innerRef,
+          other = _objectWithoutProperties(props, ["classes", "innerRef"]); // The wrapper receives only user supplied props, which could be a subset of
+      // the actual props Component might receive due to merging with defaultProps.
+      // So copying it here would give us the same result in the wrapper as well.
+
+
+      var classes = useStyles(_extends({}, Component.defaultProps, props));
+      var theme;
+      var more = other;
+
+      if (typeof name === 'string' || withTheme) {
+        // name and withTheme are invariant in the outer scope
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        theme = useTheme() || defaultTheme;
+
+        if (name) {
+          more = getThemeProps({
+            theme: theme,
+            name: name,
+            props: other
+          });
+        } // Provide the theme to the wrapped component.
+        // So we don't have to use the `withTheme()` Higher-order Component.
+
+
+        if (withTheme && !more.theme) {
+          more.theme = theme;
+        }
+      }
+
+      return /*#__PURE__*/react_default.a.createElement(Component, _extends({
+        ref: innerRef || ref,
+        classes: classes
+      }, more));
+    });
+     false ? undefined : void 0;
+
+    if (false) {}
+
+    hoist_non_react_statics_cjs_default()(WithStyles, Component);
+
+    if (false) {}
+
+    return WithStyles;
+  };
+};
+
+/* harmony default export */ var esm_withStyles_withStyles = (withStyles_withStyles);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/withStyles.js
+
+
+
+
+function styles_withStyles_withStyles(stylesOrCreator, options) {
+  return esm_withStyles_withStyles(stylesOrCreator, _extends({
+    defaultTheme: styles_defaultTheme
+  }, options));
+}
+
+/* harmony default export */ var styles_withStyles = (styles_withStyles_withStyles);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/capitalize.js
+
+// It should to be noted that this function isn't equivalent to `text-transform: capitalize`.
+//
+// A strict capitalization should uppercase the first letter of each word a the sentence.
+// We only handle the first word.
+function capitalize(string) {
+  if (typeof string !== 'string') {
+    throw new Error( false ? undefined : formatMuiErrorMessage(7));
+  }
+
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Container/Container.js
+
+
+
+
+
+
+
+
+var Container_styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: _defineProperty({
+      width: '100%',
+      marginLeft: 'auto',
+      boxSizing: 'border-box',
+      marginRight: 'auto',
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2),
+      display: 'block'
+    }, theme.breakpoints.up('sm'), {
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3)
+    }),
+
+    /* Styles applied to the root element if `disableGutters={true}`. */
+    disableGutters: {
+      paddingLeft: 0,
+      paddingRight: 0
+    },
+
+    /* Styles applied to the root element if `fixed={true}`. */
+    fixed: Object.keys(theme.breakpoints.values).reduce(function (acc, breakpoint) {
+      var value = theme.breakpoints.values[breakpoint];
+
+      if (value !== 0) {
+        acc[theme.breakpoints.up(breakpoint)] = {
+          maxWidth: value
+        };
+      }
+
+      return acc;
+    }, {}),
+
+    /* Styles applied to the root element if `maxWidth="xs"`. */
+    maxWidthXs: _defineProperty({}, theme.breakpoints.up('xs'), {
+      maxWidth: Math.max(theme.breakpoints.values.xs, 444)
+    }),
+
+    /* Styles applied to the root element if `maxWidth="sm"`. */
+    maxWidthSm: _defineProperty({}, theme.breakpoints.up('sm'), {
+      maxWidth: theme.breakpoints.values.sm
+    }),
+
+    /* Styles applied to the root element if `maxWidth="md"`. */
+    maxWidthMd: _defineProperty({}, theme.breakpoints.up('md'), {
+      maxWidth: theme.breakpoints.values.md
+    }),
+
+    /* Styles applied to the root element if `maxWidth="lg"`. */
+    maxWidthLg: _defineProperty({}, theme.breakpoints.up('lg'), {
+      maxWidth: theme.breakpoints.values.lg
+    }),
+
+    /* Styles applied to the root element if `maxWidth="xl"`. */
+    maxWidthXl: _defineProperty({}, theme.breakpoints.up('xl'), {
+      maxWidth: theme.breakpoints.values.xl
+    })
+  };
+};
+var Container_Container = /*#__PURE__*/react["forwardRef"](function Container(props, ref) {
+  var classes = props.classes,
+      className = props.className,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? 'div' : _props$component,
+      _props$disableGutters = props.disableGutters,
+      disableGutters = _props$disableGutters === void 0 ? false : _props$disableGutters,
+      _props$fixed = props.fixed,
+      fixed = _props$fixed === void 0 ? false : _props$fixed,
+      _props$maxWidth = props.maxWidth,
+      maxWidth = _props$maxWidth === void 0 ? 'lg' : _props$maxWidth,
+      other = _objectWithoutProperties(props, ["classes", "className", "component", "disableGutters", "fixed", "maxWidth"]);
+
+  return /*#__PURE__*/react["createElement"](Component, _extends({
+    className: clsx_m(classes.root, className, fixed && classes.fixed, disableGutters && classes.disableGutters, maxWidth !== false && classes["maxWidth".concat(capitalize(String(maxWidth)))]),
+    ref: ref
+  }, other));
+});
+ false ? undefined : void 0;
+/* harmony default export */ var esm_Container_Container = (styles_withStyles(Container_styles, {
+  name: 'MuiContainer'
+})(Container_Container));
 // CONCATENATED MODULE: ./node_modules/react-router-dom/esm/react-router-dom.js
 
 
@@ -14440,568 +15002,6 @@ if (false) { var ariaCurrentType; }
 
 //# sourceMappingURL=react-router-dom.js.map
 
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/css.js
-
-
-
-
-
-function omit(input, fields) {
-  var output = {};
-  Object.keys(input).forEach(function (prop) {
-    if (fields.indexOf(prop) === -1) {
-      output[prop] = input[prop];
-    }
-  });
-  return output;
-}
-
-function css_css(styleFunction) {
-  var newStyleFunction = function newStyleFunction(props) {
-    var output = styleFunction(props);
-
-    if (props.css) {
-      return _extends({}, esm_merge(output, styleFunction(_extends({
-        theme: props.theme
-      }, props.css))), omit(props.css, [styleFunction.filterProps]));
-    }
-
-    return output;
-  };
-
-  newStyleFunction.propTypes =  false ? undefined : {};
-  newStyleFunction.filterProps = ['css'].concat(_toConsumableArray(styleFunction.filterProps));
-  return newStyleFunction;
-}
-
-/* harmony default export */ var esm_css = (css_css);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/compose.js
-
-
-
-function compose() {
-  for (var _len = arguments.length, styles = new Array(_len), _key = 0; _key < _len; _key++) {
-    styles[_key] = arguments[_key];
-  }
-
-  var fn = function fn(props) {
-    return styles.reduce(function (acc, style) {
-      var output = style(props);
-
-      if (output) {
-        return esm_merge(acc, output);
-      }
-
-      return acc;
-    }, {});
-  }; // Alternative approach that doesn't yield any performance gain.
-  // const handlers = styles.reduce((acc, style) => {
-  //   style.filterProps.forEach(prop => {
-  //     acc[prop] = style;
-  //   });
-  //   return acc;
-  // }, {});
-  // const fn = props => {
-  //   return Object.keys(props).reduce((acc, prop) => {
-  //     if (handlers[prop]) {
-  //       return merge(acc, handlers[prop](props));
-  //     }
-  //     return acc;
-  //   }, {});
-  // };
-
-
-  fn.propTypes =  false ? undefined : {};
-  fn.filterProps = styles.reduce(function (acc, style) {
-    return acc.concat(style.filterProps);
-  }, []);
-  return fn;
-}
-
-/* harmony default export */ var esm_compose = (compose);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/style.js
-
-
-
-
-function getPath(obj, path) {
-  if (!path || typeof path !== 'string') {
-    return null;
-  }
-
-  return path.split('.').reduce(function (acc, item) {
-    return acc && acc[item] ? acc[item] : null;
-  }, obj);
-}
-
-function style_style(options) {
-  var prop = options.prop,
-      _options$cssProperty = options.cssProperty,
-      cssProperty = _options$cssProperty === void 0 ? options.prop : _options$cssProperty,
-      themeKey = options.themeKey,
-      transform = options.transform;
-
-  var fn = function fn(props) {
-    if (props[prop] == null) {
-      return null;
-    }
-
-    var propValue = props[prop];
-    var theme = props.theme;
-    var themeMapping = getPath(theme, themeKey) || {};
-
-    var styleFromPropValue = function styleFromPropValue(propValueFinal) {
-      var value;
-
-      if (typeof themeMapping === 'function') {
-        value = themeMapping(propValueFinal);
-      } else if (Array.isArray(themeMapping)) {
-        value = themeMapping[propValueFinal] || propValueFinal;
-      } else {
-        value = getPath(themeMapping, propValueFinal) || propValueFinal;
-
-        if (transform) {
-          value = transform(value);
-        }
-      }
-
-      if (cssProperty === false) {
-        return value;
-      }
-
-      return _defineProperty({}, cssProperty, value);
-    };
-
-    return handleBreakpoints(props, propValue, styleFromPropValue);
-  };
-
-  fn.propTypes =  false ? undefined : {};
-  fn.filterProps = [prop];
-  return fn;
-}
-
-/* harmony default export */ var esm_style = (style_style);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/borders.js
-
-
-
-function getBorder(value) {
-  if (typeof value !== 'number') {
-    return value;
-  }
-
-  return "".concat(value, "px solid");
-}
-
-var border = esm_style({
-  prop: 'border',
-  themeKey: 'borders',
-  transform: getBorder
-});
-var borderTop = esm_style({
-  prop: 'borderTop',
-  themeKey: 'borders',
-  transform: getBorder
-});
-var borderRight = esm_style({
-  prop: 'borderRight',
-  themeKey: 'borders',
-  transform: getBorder
-});
-var borderBottom = esm_style({
-  prop: 'borderBottom',
-  themeKey: 'borders',
-  transform: getBorder
-});
-var borderLeft = esm_style({
-  prop: 'borderLeft',
-  themeKey: 'borders',
-  transform: getBorder
-});
-var borderColor = esm_style({
-  prop: 'borderColor',
-  themeKey: 'palette'
-});
-var borderRadius = esm_style({
-  prop: 'borderRadius',
-  themeKey: 'shape'
-});
-var borders = esm_compose(border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius);
-/* harmony default export */ var esm_borders = (borders);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/display.js
-
-
-var displayPrint = esm_style({
-  prop: 'displayPrint',
-  cssProperty: false,
-  transform: function transform(value) {
-    return {
-      '@media print': {
-        display: value
-      }
-    };
-  }
-});
-var displayRaw = esm_style({
-  prop: 'display'
-});
-var overflow = esm_style({
-  prop: 'overflow'
-});
-var textOverflow = esm_style({
-  prop: 'textOverflow'
-});
-var visibility = esm_style({
-  prop: 'visibility'
-});
-var whiteSpace = esm_style({
-  prop: 'whiteSpace'
-});
-/* harmony default export */ var esm_display = (esm_compose(displayPrint, displayRaw, overflow, textOverflow, visibility, whiteSpace));
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/flexbox.js
-
-
-var flexBasis = esm_style({
-  prop: 'flexBasis'
-});
-var flexDirection = esm_style({
-  prop: 'flexDirection'
-});
-var flexWrap = esm_style({
-  prop: 'flexWrap'
-});
-var justifyContent = esm_style({
-  prop: 'justifyContent'
-});
-var flexbox_alignItems = esm_style({
-  prop: 'alignItems'
-});
-var flexbox_alignContent = esm_style({
-  prop: 'alignContent'
-});
-var order = esm_style({
-  prop: 'order'
-});
-var flex = esm_style({
-  prop: 'flex'
-});
-var flexGrow = esm_style({
-  prop: 'flexGrow'
-});
-var flexShrink = esm_style({
-  prop: 'flexShrink'
-});
-var alignSelf = esm_style({
-  prop: 'alignSelf'
-});
-var justifyItems = esm_style({
-  prop: 'justifyItems'
-});
-var justifySelf = esm_style({
-  prop: 'justifySelf'
-});
-var flexbox = esm_compose(flexBasis, flexDirection, flexWrap, justifyContent, flexbox_alignItems, flexbox_alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf);
-/* harmony default export */ var esm_flexbox = (flexbox);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/grid.js
-
-
-var gridGap = esm_style({
-  prop: 'gridGap'
-});
-var gridColumnGap = esm_style({
-  prop: 'gridColumnGap'
-});
-var gridRowGap = esm_style({
-  prop: 'gridRowGap'
-});
-var gridColumn = esm_style({
-  prop: 'gridColumn'
-});
-var gridRow = esm_style({
-  prop: 'gridRow'
-});
-var gridAutoFlow = esm_style({
-  prop: 'gridAutoFlow'
-});
-var gridAutoColumns = esm_style({
-  prop: 'gridAutoColumns'
-});
-var gridAutoRows = esm_style({
-  prop: 'gridAutoRows'
-});
-var gridTemplateColumns = esm_style({
-  prop: 'gridTemplateColumns'
-});
-var gridTemplateRows = esm_style({
-  prop: 'gridTemplateRows'
-});
-var gridTemplateAreas = esm_style({
-  prop: 'gridTemplateAreas'
-});
-var gridArea = esm_style({
-  prop: 'gridArea'
-});
-var grid = esm_compose(gridGap, gridColumnGap, gridRowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
-/* harmony default export */ var esm_grid = (grid);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/positions.js
-
-
-var position = esm_style({
-  prop: 'position'
-});
-var positions_zIndex = esm_style({
-  prop: 'zIndex',
-  themeKey: 'zIndex'
-});
-var positions_top = esm_style({
-  prop: 'top'
-});
-var positions_right = esm_style({
-  prop: 'right'
-});
-var positions_bottom = esm_style({
-  prop: 'bottom'
-});
-var positions_left = esm_style({
-  prop: 'left'
-});
-/* harmony default export */ var positions = (esm_compose(position, positions_zIndex, positions_top, positions_right, positions_bottom, positions_left));
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/palette.js
-
-
-var palette_color = esm_style({
-  prop: 'color',
-  themeKey: 'palette'
-});
-var bgcolor = esm_style({
-  prop: 'bgcolor',
-  cssProperty: 'backgroundColor',
-  themeKey: 'palette'
-});
-var palette_palette = esm_compose(palette_color, bgcolor);
-/* harmony default export */ var esm_palette = (palette_palette);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/shadows.js
-
-var boxShadow = esm_style({
-  prop: 'boxShadow',
-  themeKey: 'shadows'
-});
-/* harmony default export */ var esm_shadows = (boxShadow);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/sizing.js
-
-
-
-function sizing_transform(value) {
-  return value <= 1 ? "".concat(value * 100, "%") : value;
-}
-
-var sizing_width = esm_style({
-  prop: 'width',
-  transform: sizing_transform
-});
-var sizing_maxWidth = esm_style({
-  prop: 'maxWidth',
-  transform: sizing_transform
-});
-var minWidth = esm_style({
-  prop: 'minWidth',
-  transform: sizing_transform
-});
-var height = esm_style({
-  prop: 'height',
-  transform: sizing_transform
-});
-var maxHeight = esm_style({
-  prop: 'maxHeight',
-  transform: sizing_transform
-});
-var minHeight = esm_style({
-  prop: 'minHeight',
-  transform: sizing_transform
-});
-var sizeWidth = esm_style({
-  prop: 'size',
-  cssProperty: 'width',
-  transform: sizing_transform
-});
-var sizeHeight = esm_style({
-  prop: 'size',
-  cssProperty: 'height',
-  transform: sizing_transform
-});
-var boxSizing = esm_style({
-  prop: 'boxSizing'
-});
-var sizing = esm_compose(sizing_width, sizing_maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
-/* harmony default export */ var esm_sizing = (sizing);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/typography.js
-
-
-var typography_fontFamily = esm_style({
-  prop: 'fontFamily',
-  themeKey: 'typography'
-});
-var typography_fontSize = esm_style({
-  prop: 'fontSize',
-  themeKey: 'typography'
-});
-var fontStyle = esm_style({
-  prop: 'fontStyle',
-  themeKey: 'typography'
-});
-var typography_fontWeight = esm_style({
-  prop: 'fontWeight',
-  themeKey: 'typography'
-});
-var typography_letterSpacing = esm_style({
-  prop: 'letterSpacing'
-});
-var typography_lineHeight = esm_style({
-  prop: 'lineHeight'
-});
-var textAlign = esm_style({
-  prop: 'textAlign'
-});
-var typography_typography = esm_compose(typography_fontFamily, typography_fontSize, fontStyle, typography_fontWeight, typography_letterSpacing, typography_lineHeight, textAlign);
-/* harmony default export */ var esm_typography = (typography_typography);
-// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/styled/styled.js
-
-
-
-
-
-
-
-
-
-function styled_omit(input, fields) {
-  var output = {};
-  Object.keys(input).forEach(function (prop) {
-    if (fields.indexOf(prop) === -1) {
-      output[prop] = input[prop];
-    }
-  });
-  return output;
-} // styled-components's API removes the mapping between components and styles.
-// Using components as a low-level styling construct can be simpler.
-
-
-function styled_styled(Component) {
-  var componentCreator = function componentCreator(style) {
-    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-    var name = options.name,
-        stylesOptions = _objectWithoutProperties(options, ["name"]);
-
-    if (false) {}
-
-    var classNamePrefix = name;
-
-    if (false) { var displayName; }
-
-    var stylesOrCreator = typeof style === 'function' ? function (theme) {
-      return {
-        root: function root(props) {
-          return style(_extends({
-            theme: theme
-          }, props));
-        }
-      };
-    } : {
-      root: style
-    };
-    var useStyles = makeStyles(stylesOrCreator, _extends({
-      Component: Component,
-      name: name || Component.displayName,
-      classNamePrefix: classNamePrefix
-    }, stylesOptions));
-    var filterProps;
-    var propTypes = {};
-
-    if (style.filterProps) {
-      filterProps = style.filterProps;
-      delete style.filterProps;
-    }
-    /* eslint-disable react/forbid-foreign-prop-types */
-
-
-    if (style.propTypes) {
-      propTypes = style.propTypes;
-      delete style.propTypes;
-    }
-    /* eslint-enable react/forbid-foreign-prop-types */
-
-
-    var StyledComponent = /*#__PURE__*/react_default.a.forwardRef(function StyledComponent(props, ref) {
-      var children = props.children,
-          classNameProp = props.className,
-          clone = props.clone,
-          ComponentProp = props.component,
-          other = _objectWithoutProperties(props, ["children", "className", "clone", "component"]);
-
-      var classes = useStyles(props);
-      var className = clsx_m(classes.root, classNameProp);
-      var spread = other;
-
-      if (filterProps) {
-        spread = styled_omit(spread, filterProps);
-      }
-
-      if (clone) {
-        return /*#__PURE__*/react_default.a.cloneElement(children, _extends({
-          className: clsx_m(children.props.className, className)
-        }, spread));
-      }
-
-      if (typeof children === 'function') {
-        return children(_extends({
-          className: className
-        }, spread));
-      }
-
-      var FinalComponent = ComponentProp || Component;
-      return /*#__PURE__*/react_default.a.createElement(FinalComponent, _extends({
-        ref: ref,
-        className: className
-      }, spread), children);
-    });
-     false ? undefined : void 0;
-
-    if (false) {}
-
-    hoist_non_react_statics_cjs_default()(StyledComponent, Component);
-    return StyledComponent;
-  };
-
-  return componentCreator;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/styled.js
-
-
-
-
-var styles_styled_styled = function styled(Component) {
-  var componentCreator = styled_styled(Component);
-  return function (style, options) {
-    return componentCreator(style, _extends({
-      defaultTheme: styles_defaultTheme
-    }, options));
-  };
-};
-
-/* harmony default export */ var styles_styled = (styles_styled_styled);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Box/Box.js
-
-
-var Box_styleFunction = esm_css(esm_compose(esm_borders, esm_display, esm_flexbox, esm_grid, positions, esm_palette, esm_shadows, esm_sizing, esm_spacing, esm_typography));
-/**
- * @ignore - do not document.
- */
-
-var Box = styles_styled('div')(Box_styleFunction, {
-  name: 'MuiBox'
-});
-/* harmony default export */ var Box_Box = (Box);
 // CONCATENATED MODULE: ./src/actions/deleteRoutine.js
 var deleteRoutine = function deleteRoutine(routineData) {
   var WH_URL = "https://be-workout-hero2.herokuapp.com";
@@ -17059,7 +17059,7 @@ var FormHelperText_FormHelperText = /*#__PURE__*/react["forwardRef"](function Fo
   name: 'MuiFormHelperText'
 })(FormHelperText_FormHelperText));
 // EXTERNAL MODULE: ./node_modules/react-is/index.js
-var node_modules_react_is_0 = __webpack_require__(19);
+var node_modules_react_is_0 = __webpack_require__(20);
 
 // CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/ownerDocument.js
 function ownerDocument(node) {
@@ -22956,13 +22956,10 @@ var NewRoutineWorkoutForm_NewRoutineWorkoutForm = /*#__PURE__*/function (_Compon
 
 var Routine_Routine = function Routine(props) {
   var handleDeleteWorkout = function handleDeleteWorkout(e) {
-    // console.log("PROPS", props);
     if (props.routines && props.workouts) {
-      var targetId = e.target.id; //   console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
-
+      var targetId = e.target.id;
       var routineString = /\d{1,5}/.exec(targetId);
-      var workoutString = /\d{1,5}$/.exec(targetId); // let workoutId = workoutString[0].toString()
-
+      var workoutString = /\d{1,5}$/.exec(targetId);
       var workoutIdString = workoutString[0]; //.toString()
 
       var workoutId = parseInt(workoutIdString); //.toString()
@@ -22975,19 +22972,20 @@ var Routine_Routine = function Routine(props) {
         "id": clickedRoutine.id,
         "workout_id_to_delete": workoutId // "workout_id_to_delete": clickedWorkout.id
 
-      }; // debugger
-
-      props.deleteRoutineWorkout(outgoingPayload); //   console.log('🚀 ~ file: RoutinesList.js ~ line 59 ~ handleDeleteWorkout ~ outgoingPayload', outgoingPayload);
+      };
+      props.deleteRoutineWorkout(outgoingPayload);
     }
   };
 
-  return /*#__PURE__*/react_default.a.createElement(esm_Container_Container, null, /*#__PURE__*/react_default.a.createElement("section", {
+  return /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
+    maxWidth: "md"
+  }, /*#__PURE__*/react_default.a.createElement("section", {
     className: "routine-detail-page"
   }, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(Link, {
     to: '/routines'
   }, /*#__PURE__*/react_default.a.createElement("button", {
     className: "floating-nav-btns"
-  }, " Return to Routines "))), props.routines ? /*#__PURE__*/react_default.a.createElement("section", null, props.routines.map(function (routine) {
+  }, " Return to Routines"))), props.routines ? /*#__PURE__*/react_default.a.createElement("section", null, props.routines.map(function (routine) {
     return routine.id == props.match.params.id ? /*#__PURE__*/react_default.a.createElement("section", {
       key: routine.id
     }, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h1", null, routine.routine_name, " "), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("h1", null, " Update Routine "), props.routines ? /*#__PURE__*/react_default.a.createElement(forms_UpdateRoutineForm, {
@@ -23019,23 +23017,14 @@ var Routine_Routine = function Routine(props) {
         to: "".concat(window.location.pathname, "/workouts/").concat(workout.id)
       }, /*#__PURE__*/react_default.a.createElement("button", {
         className: "edit-btns"
-      }, " edit ")), /*#__PURE__*/react_default.a.createElement("button", {
+      }, " edit")), /*#__PURE__*/react_default.a.createElement("button", {
         className: "delete-btns routine-detail-page-btn",
         onClick: handleDeleteWorkout,
         id: "routine-".concat(routine.id, "-btn-delete-workout-").concat(workout.id)
-      }, " delete "))));
+      }, " delete"))));
     }) : /*#__PURE__*/react_default.a.createElement("p", null, " No Workouts Created Yet "))) : null;
   })) : 'no routine here bub'));
-}; // const mapStateToProps = (state, ownProps) => {
-//     const { routines1 } = state
-//     const { routines } = ownProps
-//     return {
-//         routinesArr: routines
-//     }
-// }
-// export default connect(mapStateToProps)(Routine);
-// export default Routine;
-
+};
 
 /* harmony default export */ var components_Routine = (connect_connect(null, {
   deleteRoutineWorkout: actions_deleteRoutineWorkout
@@ -23071,15 +23060,8 @@ function RoutinesContainer_getPrototypeOf(o) { RoutinesContainer_getPrototypeOf 
 
 
 
- // import Workout from '../components/Workout'
-// import UpdateRoutinePage from '../components/UpdateRoutinePage'
-// import UpdateRoutineForm from '../forms/UpdateRoutineForm'
-// import HomePage from '../components/HomePage'
-// import Home from '../components/Home'
-// import {fetchRoutines} from '../actions/fetchRoutines'
-// import NewRoutineForm from '../components/NewRoutineForm'
-// import RoutinesList from '../components/RoutinesList'
-// import NewRoutinesContainer from '../containers/NewRoutinesContainer'
+
+
 
 var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
   RoutinesContainer_inherits(RoutinesContainer, _Component);
@@ -23104,8 +23086,6 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
   RoutinesContainer_createClass(RoutinesContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      // console.log('THIS.PROPS 1', this.props)
-      // this.fetchRoutines()
       this.props.fetchRoutines();
       this.props.fetchWorkouts();
     }
@@ -23114,7 +23094,7 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, console.log('🚀 ~ file: RoutinesContainer.js ~ line 46 ~ RoutinesContainer ~ componentDidMount ~ this.props', this.props), console.log('🚀 ~ file: RoutinesContainer.js ~ line 46 ~ RoutinesContainer ~ componentDidMount ~ this.state', this.state), /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(react_router_Route, {
+      return /*#__PURE__*/react_default.a.createElement(Box_Box, null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         exact: true,
         path: "/",
         render: function render(routerProps) {
@@ -23141,7 +23121,7 @@ var RoutinesContainer_RoutinesContainer = /*#__PURE__*/function (_Component) {
             workouts: _this2.props.workouts
           }));
         }
-      }))); // console.log('RoutinesContainer -> render -> this.props.routines', this.props.routines);
+      })));
     }
   }]);
 
@@ -23160,477 +23140,6 @@ var RoutinesContainer_mapStateToProps = function mapStateToProps(state) {
   fetchRoutines: fetchRoutines,
   fetchWorkouts: fetchWorkouts
 })(RoutinesContainer_RoutinesContainer));
-// CONCATENATED MODULE: ./src/actions/updateWorkout.js
-var updateWorkout = function updateWorkout(data) {
-  console.log('updateWorkout -> data', data);
-  var WH_URL = "https://be-workout-hero2.herokuapp.com";
-  return function (dispatch) {
-    // fetch(`http://localhost:3000/api/v1/workouts/${data.id}`, {
-    // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/` + data.id, {
-    fetch("".concat(WH_URL, "/api/v1/workouts/") + data.id, {
-      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/${data.id}`, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      method: 'PATCH',
-      body: JSON.stringify(data)
-    }).then(function (resp) {
-      return resp.json();
-    }) // .then(workout => console.log('🚀 ~ file: updateWorkout.js ~ line 22 ~ return ~ workout', workout))
-    .then(function (workout) {
-      return dispatch({
-        type: 'UPDATE_WORKOUT',
-        payload: workout
-      });
-    }); // debugger
-  };
-}; // create index
-// read index
-// update index/id
-// delete index/id
-// CONCATENATED MODULE: ./src/forms/UpdateWorkoutForm.js
-function UpdateWorkoutForm_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { UpdateWorkoutForm_typeof = function _typeof(obj) { return typeof obj; }; } else { UpdateWorkoutForm_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return UpdateWorkoutForm_typeof(obj); }
-
-function UpdateWorkoutForm_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function UpdateWorkoutForm_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function UpdateWorkoutForm_createClass(Constructor, protoProps, staticProps) { if (protoProps) UpdateWorkoutForm_defineProperties(Constructor.prototype, protoProps); if (staticProps) UpdateWorkoutForm_defineProperties(Constructor, staticProps); return Constructor; }
-
-function UpdateWorkoutForm_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) UpdateWorkoutForm_setPrototypeOf(subClass, superClass); }
-
-function UpdateWorkoutForm_setPrototypeOf(o, p) { UpdateWorkoutForm_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return UpdateWorkoutForm_setPrototypeOf(o, p); }
-
-function UpdateWorkoutForm_createSuper(Derived) { var hasNativeReflectConstruct = UpdateWorkoutForm_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = UpdateWorkoutForm_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = UpdateWorkoutForm_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return UpdateWorkoutForm_possibleConstructorReturn(this, result); }; }
-
-function UpdateWorkoutForm_possibleConstructorReturn(self, call) { if (call && (UpdateWorkoutForm_typeof(call) === "object" || typeof call === "function")) { return call; } return UpdateWorkoutForm_assertThisInitialized(self); }
-
-function UpdateWorkoutForm_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function UpdateWorkoutForm_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function UpdateWorkoutForm_getPrototypeOf(o) { UpdateWorkoutForm_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return UpdateWorkoutForm_getPrototypeOf(o); }
-
-function UpdateWorkoutForm_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
- //import {Route, Switch, useLocation, withRouter} from 'react-router-dom'
-// import { createBrowserHistory } from "history";
-
- // import {workoutsReducer} from '../reducers/workoutsReducer'
-
- // import { makeStyles } from '@material-ui/core/styles';
-
-
-
-
-
-var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
-  UpdateWorkoutForm_inherits(UpdateWorkoutForm, _Component);
-
-  var _super = UpdateWorkoutForm_createSuper(UpdateWorkoutForm);
-
-  function UpdateWorkoutForm(props) {
-    var _this;
-
-    UpdateWorkoutForm_classCallCheck(this, UpdateWorkoutForm);
-
-    _this = _super.call(this, props);
-
-    UpdateWorkoutForm_defineProperty(UpdateWorkoutForm_assertThisInitialized(_this), "handleChange", function (e) {
-      console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 77 ~ UpdateWorkoutForm ~ e.target.value', e.target.value);
-
-      _this.setState(UpdateWorkoutForm_defineProperty({}, e.target.name, e.target.value));
-
-      console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 77 ~ UpdateWorkoutForm ~ e.target.name', e.target.name);
-    });
-
-    UpdateWorkoutForm_defineProperty(UpdateWorkoutForm_assertThisInitialized(_this), "handleSubmit", function (e) {
-      e.preventDefault();
-
-      _this.props.updateWorkout(_this.state);
-    });
-
-    _this.currentPath = window.location.pathname;
-    _this.id = /\d{1,5}$/.exec(_this.currentPath)[0];
-    _this.workout = _this.props.workouts.find(function (workout) {
-      return workout.id == _this.id;
-    });
-    _this.state = {
-      id: _this.id,
-      workout_name: _this.workout.workout_name,
-      workout_type: _this.workout.workout_type,
-      distance: _this.workout.distance,
-      duration: _this.workout.duration,
-      routines: _this.workout.routines
-    };
-    return _this;
-  }
-
-  UpdateWorkoutForm_createClass(UpdateWorkoutForm, [{
-    key: "render",
-    value: function render() {
-      var workoutCategories = [{
-        value: 'Cardio',
-        label: 'Cardio'
-      }, {
-        value: 'Weight-Lifting',
-        label: 'Weight-Lifting'
-      }, {
-        value: 'Body-Weight',
-        label: 'Body-Weight'
-      }, {
-        value: 'Cardio-Lifting',
-        label: 'Cardio-Lifting'
-      }];
-      var classes = this.props.classes;
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, this.props.detail ? console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', this.props.detail) : console.log('🚀 ~ file: UpdateWorkoutForm.js ~ line 142 ~ UpdateWorkoutForm ~ render ~ this.props.workout', "NOPE!"), this.props.detail ? /*#__PURE__*/react_default.a.createElement("section", null, /*#__PURE__*/react_default.a.createElement("form", {
-        onSubmit: this.handleSubmit,
-        id: "update-workout-form"
-      }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
-        label: "Name",
-        id: "margin-none",
-        name: "workout_name",
-        value: this.state.workout_name // defaultValue="Default Value"
-        ,
-        onChange: this.handleChange // className={classes.textField}
-        // helperText="Some important text"
-
-      }), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
-        id: "standard-select-currency",
-        select: true,
-        label: "Type",
-        name: "workout_type",
-        value: this.state.workout_type // placeholder={this.props.detail.workout_type}
-        // placeholder={this.props.detail.workout_type}
-        ,
-        onChange: this.handleChange
-      }, workoutCategories.map(function (option) {
-        return /*#__PURE__*/react_default.a.createElement(esm_MenuItem_MenuItem, {
-          key: option.value,
-          value: option.value
-        }, option.label);
-      })), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
-        id: "outlined-number",
-        label: "Miles",
-        type: "number",
-        InputLabelProps: {
-          shrink: true
-        },
-        name: "distance" // placeholder={this.props.detail.distance} 
-        ,
-        value: this.state.distance,
-        onChange: this.handleChange
-      }), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
-        id: "outlined-number",
-        label: "Minutes",
-        type: "number",
-        InputLabelProps: {
-          shrink: true
-        },
-        name: "duration" // placeholder={this.props.detail.duration} 
-        ,
-        value: this.state.duration,
-        onChange: this.handleChange
-      }), /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
-        className: classes.root,
-        type: "submit"
-      }, "Update Workout "))) : /*#__PURE__*/react_default.a.createElement("p", null, "NOTHING TO SEE HERE"));
-    }
-  }]);
-
-  return UpdateWorkoutForm;
-}(react["Component"]);
-
-function UpdateWorkoutForm_mapStateToProps(state, ownProps) {
-  var workoutId;
-  window.location.href.includes('https://fe-workout-hero.herokuapp.com/workouts/') ? workoutId = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/workouts/", "")) : workoutId = parseInt(window.location.href.replace("http://localhost:3003/workouts/", ""));
-  var currentWorkout = state.workoutsReducer.workouts.filter(function (workout) {
-    return workout.id == workoutId;
-  });
-  return {
-    workouts: state.workoutsReducer.workouts,
-    //    workout: [ownProps.workouts.filter(workout => workout.id == workoutId)]
-    workout: currentWorkout[0]
-  };
-} // export default connect(mapStateToProps, {updateWorkout})(UpdateWorkoutForm);
-
-
-/* harmony default export */ var forms_UpdateWorkoutForm = (Object(redux["compose"])(connect_connect(UpdateWorkoutForm_mapStateToProps, {
-  updateWorkout: updateWorkout
-}), styles_withStyles(forms_StyledSubmitBtns))(UpdateWorkoutForm_UpdateWorkoutForm));
-// CONCATENATED MODULE: ./src/components/Workout.js
- // import {Redirect} from 'react-router-dom'
-
-
- // import { connect } from 'react-redux'
-
-
-
- // import NewWorkoutWorkoutForm from '../forms/NewWorkoutWorkoutForm'
-
-var Workout_Workout = function Workout(props) {
-  var currentPath = window.location.pathname;
-  var routineId = /\d{1,5}/.exec(currentPath)[0];
-  var workoutId = /\d{1,5}$/.exec(currentPath)[0];
-  var workout = props.workouts.find(function (workout) {
-    return workout.id == workoutId;
-  });
-  var routine = props.routines.find(function (routine) {
-    return routine.id == routineId;
-  });
-
-  var handleDeleteWorkout = function handleDeleteWorkout(e) {
-    if (props.routines && props.workouts) {
-      var targetId = e.target.id;
-      var routineString = /\d{1,5}/.exec(targetId);
-      var workoutString = /\d{1,5}$/.exec(targetId);
-      var workoutIdString = workoutString[0]; //.toString()
-
-      var _workoutId = parseInt(workoutIdString); //.toString()
-
-
-      var _routineId = routineString[0].toString();
-
-      var clickedRoutine = props.routines.find(function (routine) {
-        return routine.id == _routineId;
-      });
-      var outgoingPayload = {
-        "id": clickedRoutine.id,
-        "workout_id_to_delete": _workoutId
-      };
-      props.deleteRoutineWorkout(outgoingPayload);
-    }
-  };
-
-  return /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
-    maxWidth: "lg"
-  }, /*#__PURE__*/react_default.a.createElement("section", {
-    id: "page-workout-detail"
-  }, /*#__PURE__*/react_default.a.createElement("section", {
-    className: "workout-page-floating-links"
-  }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: '/routines'
-  }, " ", /*#__PURE__*/react_default.a.createElement("button", {
-    className: "floating-nav-btns"
-  }, " Routines "), " "), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement(Link, {
-    to: '/routines/' + routineId
-  }, " ", /*#__PURE__*/react_default.a.createElement("button", {
-    className: "floating-nav-btns"
-  }, " ", routine.routine_name, " Routine Page "), " ")), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement(forms_UpdateWorkoutForm, {
-    detail: workout
-  }), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("div", {
-    id: "workout-card"
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    key: workout.id
-  }, /*#__PURE__*/react_default.a.createElement("section", {
-    id: "workout-info"
-  }, /*#__PURE__*/react_default.a.createElement("section", {
-    id: "workout-detail-workout-name"
-  }, workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null)), "id: ", workout.id, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("br", null))), /*#__PURE__*/react_default.a.createElement("section", {
-    id: "wrapper-btn-delete-workout"
-  }, /*#__PURE__*/react_default.a.createElement("button", {
-    onClick: handleDeleteWorkout,
-    id: "routine-".concat(routine.id, "-btn-delete-workout-").concat(workout.id),
-    className: "delete-btns delete-workout"
-  }, " delete workout ")))));
-};
-
-/* harmony default export */ var components_Workout = (connect_connect(null, {
-  deleteRoutineWorkout: actions_deleteRoutineWorkout
-})(Workout_Workout));
-// CONCATENATED MODULE: ./src/containers/WorkoutsContainer.js
-function WorkoutsContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { WorkoutsContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { WorkoutsContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return WorkoutsContainer_typeof(obj); }
-
-function WorkoutsContainer_extends() { WorkoutsContainer_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return WorkoutsContainer_extends.apply(this, arguments); }
-
-function WorkoutsContainer_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function WorkoutsContainer_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function WorkoutsContainer_createClass(Constructor, protoProps, staticProps) { if (protoProps) WorkoutsContainer_defineProperties(Constructor.prototype, protoProps); if (staticProps) WorkoutsContainer_defineProperties(Constructor, staticProps); return Constructor; }
-
-function WorkoutsContainer_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) WorkoutsContainer_setPrototypeOf(subClass, superClass); }
-
-function WorkoutsContainer_setPrototypeOf(o, p) { WorkoutsContainer_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return WorkoutsContainer_setPrototypeOf(o, p); }
-
-function WorkoutsContainer_createSuper(Derived) { var hasNativeReflectConstruct = WorkoutsContainer_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = WorkoutsContainer_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = WorkoutsContainer_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return WorkoutsContainer_possibleConstructorReturn(this, result); }; }
-
-function WorkoutsContainer_possibleConstructorReturn(self, call) { if (call && (WorkoutsContainer_typeof(call) === "object" || typeof call === "function")) { return call; } return WorkoutsContainer_assertThisInitialized(self); }
-
-function WorkoutsContainer_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function WorkoutsContainer_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function WorkoutsContainer_getPrototypeOf(o) { WorkoutsContainer_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return WorkoutsContainer_getPrototypeOf(o); }
-
-
-
-
-
- // import WorkoutsPage from './WorkoutsPage';
-
-
- // import Workout from '../components/Workout'
-// import UpdateWorkoutPage from '../components/UpdateWorkoutPage'
-// import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
-// import HomePage from '../components/HomePage'
-// import Home from '../components/Home'
-// import {fetchWorkouts} from '../actions/fetchWorkouts'
-// import NewWorkoutForm from '../components/NewWorkoutForm'
-// import WorkoutsList from '../components/WorkoutsList'
-// import NewWorkoutsContainer from '../containers/NewWorkoutsContainer'
-
-var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
-  WorkoutsContainer_inherits(WorkoutsContainer, _Component);
-
-  var _super = WorkoutsContainer_createSuper(WorkoutsContainer);
-
-  function WorkoutsContainer(props) {
-    var _this;
-
-    WorkoutsContainer_classCallCheck(this, WorkoutsContainer);
-
-    _this = _super.call(this, props);
-    _this.fetchWorkouts = fetchWorkouts;
-    _this.fetchRoutines = fetchRoutines;
-    _this.currentUrl = window.location.pathname;
-    _this.currentUrlString = _this.currentUrl.replace("/routines/", '');
-    _this.routineId = _this.currentUrlString[0]; // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', this.routineString);
-    // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', this.routineString[0]);
-    // this.routines = this.props.routines
-
-    _this.state = {
-      workouts: [],
-      routines: []
-    }; // this.routine = this.props.routines.find(routine => routine.id == this.routineId)
-    // parseInt(this.currentUrl.replace('/workouts/',''))}
-
-    return _this;
-  }
-
-  WorkoutsContainer_createClass(WorkoutsContainer, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      // console.log('THIS.PROPS 1', this.props)
-      // this.fetchWorkouts()
-      this.props.fetchWorkouts();
-      this.props.fetchRoutines(); // this.routine = this.props.routines.find(routine => routine.id == this.routineId)
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, this.props.workouts ? /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        path: "/routines/:id/workouts/:id",
-        render: function render(routerProps) {
-          return /*#__PURE__*/react_default.a.createElement(components_Workout, WorkoutsContainer_extends({}, routerProps, {
-            workouts: _this2.props.workouts,
-            routines: _this2.props.routines,
-            currentWorkout: _this2.props.workouts.find(function (workout) {
-              return workout.id == window.location.pathname.replace('/routines/' + _this2.routineId + '/workouts/', '');
-            })
-          }));
-        }
-      }) : null)); // console.log('WorkoutsContainer -> render -> this.props.workouts', this.props.workouts);
-    }
-  }]);
-
-  return WorkoutsContainer;
-}(react["Component"]); //! redux store
-
-
-var WorkoutsContainer_mapStateToProps = function mapStateToProps(state, ownProps) {
-  // let scrapedUrl = window.location.pathname.replace(`/routines/`,'')
-  // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 96 ~ rooString', scrapedUrl);
-  // let routineId = scrapedUrl[0]
-  // var lastChar = scrapedUrl[scrapedUrl.length -1]
-  return {
-    workouts: state.workoutsReducer.workouts,
-    routines: state.routinesReducer.routines // ,
-    // routine: ownProps.routines.find(routine => routine.id == routineId)
-    // recipes: state.recipesReducer.recipes
-
-  };
-};
-
-/* harmony default export */ var containers_WorkoutsContainer = (connect_connect(WorkoutsContainer_mapStateToProps, {
-  fetchWorkouts: fetchWorkouts,
-  fetchRoutines: fetchRoutines
-})(WorkoutsContainer_WorkoutsContainer));
-// CONCATENATED MODULE: ./src/containers/MainContainer.js
-function MainContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { MainContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { MainContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return MainContainer_typeof(obj); }
-
-function MainContainer_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function MainContainer_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function MainContainer_createClass(Constructor, protoProps, staticProps) { if (protoProps) MainContainer_defineProperties(Constructor.prototype, protoProps); if (staticProps) MainContainer_defineProperties(Constructor, staticProps); return Constructor; }
-
-function MainContainer_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) MainContainer_setPrototypeOf(subClass, superClass); }
-
-function MainContainer_setPrototypeOf(o, p) { MainContainer_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return MainContainer_setPrototypeOf(o, p); }
-
-function MainContainer_createSuper(Derived) { var hasNativeReflectConstruct = MainContainer_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = MainContainer_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = MainContainer_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return MainContainer_possibleConstructorReturn(this, result); }; }
-
-function MainContainer_possibleConstructorReturn(self, call) { if (call && (MainContainer_typeof(call) === "object" || typeof call === "function")) { return call; } return MainContainer_assertThisInitialized(self); }
-
-function MainContainer_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function MainContainer_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function MainContainer_getPrototypeOf(o) { MainContainer_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return MainContainer_getPrototypeOf(o); }
-
-
-
-
-
-
-
-var MainContainer_MainContainer = /*#__PURE__*/function (_Component) {
-  MainContainer_inherits(MainContainer, _Component);
-
-  var _super = MainContainer_createSuper(MainContainer);
-
-  function MainContainer(props) {
-    var _this;
-
-    MainContainer_classCallCheck(this, MainContainer);
-
-    _this = _super.call(this, props); // this.fetchRoutines = fetchRoutines
-
-    console.log('🚀 ~ file: MainContainer.js ~ line 24 ~ MainContainer ~ CONSTRUCTOR ~ props', _this.props); // this.state = {routines: []}
-
-    return _this;
-  } // componentDidMount(){
-  //     // this.props.fetchRoutines()
-  //     // console.log('THIS.PROPS 1', this.props)
-  //     // console.log('THIS.STATE', this.state)
-  //     // this.fetchRoutines()
-  // }
-
-
-  MainContainer_createClass(MainContainer, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
-        maxWidth: "md"
-      }, /*#__PURE__*/react_default.a.createElement(containers_RoutinesContainer, {
-        routines: this.props.routines
-      }), /*#__PURE__*/react_default.a.createElement(containers_WorkoutsContainer, {
-        routines: this.props.workouts
-      })); // console.log('MainContainer -> render -> this.props.routines', this.props.routines);
-    }
-  }]);
-
-  return MainContainer;
-}(react["Component"]);
-
-/* harmony default export */ var containers_MainContainer = (MainContainer_MainContainer); // export default connect(null)(MainContainer);
-// export default connect(mapStateToProps, {fetchRoutines})(MainContainer);
 // CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Grid/Grid.js
 
 
@@ -23900,6 +23409,457 @@ var StyledGrid = styles_withStyles(Grid_styles, {
 if (false) { var requireProp; }
 
 /* harmony default export */ var esm_Grid_Grid = (StyledGrid);
+// CONCATENATED MODULE: ./src/actions/updateWorkout.js
+var updateWorkout = function updateWorkout(data) {
+  console.log('updateWorkout -> data', data);
+  var WH_URL = "https://be-workout-hero2.herokuapp.com";
+  return function (dispatch) {
+    // fetch(`http://localhost:3000/api/v1/workouts/${data.id}`, {
+    // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/` + data.id, {
+    fetch("".concat(WH_URL, "/api/v1/workouts/") + data.id, {
+      // fetch(`https://be-workout-hero2.herokuapp.com/api/v1/workouts/${data.id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      method: 'PATCH',
+      body: JSON.stringify(data)
+    }).then(function (resp) {
+      return resp.json();
+    }) // .then(workout => console.log('🚀 ~ file: updateWorkout.js ~ line 22 ~ return ~ workout', workout))
+    .then(function (workout) {
+      return dispatch({
+        type: 'UPDATE_WORKOUT',
+        payload: workout
+      });
+    }); // debugger
+  };
+}; // create index
+// read index
+// update index/id
+// delete index/id
+// CONCATENATED MODULE: ./src/forms/UpdateWorkoutForm.js
+function UpdateWorkoutForm_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { UpdateWorkoutForm_typeof = function _typeof(obj) { return typeof obj; }; } else { UpdateWorkoutForm_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return UpdateWorkoutForm_typeof(obj); }
+
+function UpdateWorkoutForm_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function UpdateWorkoutForm_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function UpdateWorkoutForm_createClass(Constructor, protoProps, staticProps) { if (protoProps) UpdateWorkoutForm_defineProperties(Constructor.prototype, protoProps); if (staticProps) UpdateWorkoutForm_defineProperties(Constructor, staticProps); return Constructor; }
+
+function UpdateWorkoutForm_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) UpdateWorkoutForm_setPrototypeOf(subClass, superClass); }
+
+function UpdateWorkoutForm_setPrototypeOf(o, p) { UpdateWorkoutForm_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return UpdateWorkoutForm_setPrototypeOf(o, p); }
+
+function UpdateWorkoutForm_createSuper(Derived) { var hasNativeReflectConstruct = UpdateWorkoutForm_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = UpdateWorkoutForm_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = UpdateWorkoutForm_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return UpdateWorkoutForm_possibleConstructorReturn(this, result); }; }
+
+function UpdateWorkoutForm_possibleConstructorReturn(self, call) { if (call && (UpdateWorkoutForm_typeof(call) === "object" || typeof call === "function")) { return call; } return UpdateWorkoutForm_assertThisInitialized(self); }
+
+function UpdateWorkoutForm_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function UpdateWorkoutForm_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function UpdateWorkoutForm_getPrototypeOf(o) { UpdateWorkoutForm_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return UpdateWorkoutForm_getPrototypeOf(o); }
+
+function UpdateWorkoutForm_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+ // import {Route, Switch} from 'react-router-dom'
+
+
+
+
+
+
+
+var UpdateWorkoutForm_UpdateWorkoutForm = /*#__PURE__*/function (_Component) {
+  UpdateWorkoutForm_inherits(UpdateWorkoutForm, _Component);
+
+  var _super = UpdateWorkoutForm_createSuper(UpdateWorkoutForm);
+
+  function UpdateWorkoutForm(props) {
+    var _this;
+
+    UpdateWorkoutForm_classCallCheck(this, UpdateWorkoutForm);
+
+    _this = _super.call(this, props);
+
+    UpdateWorkoutForm_defineProperty(UpdateWorkoutForm_assertThisInitialized(_this), "handleChange", function (e) {
+      _this.setState(UpdateWorkoutForm_defineProperty({}, e.target.name, e.target.value));
+    });
+
+    UpdateWorkoutForm_defineProperty(UpdateWorkoutForm_assertThisInitialized(_this), "handleSubmit", function (e) {
+      e.preventDefault();
+
+      _this.props.updateWorkout(_this.state);
+    });
+
+    _this.currentPath = window.location.pathname;
+    _this.id = /\d{1,5}$/.exec(_this.currentPath)[0];
+    _this.workout = _this.props.workouts.find(function (workout) {
+      return workout.id == _this.id;
+    });
+    _this.state = {
+      id: _this.id,
+      workout_name: _this.workout.workout_name,
+      workout_type: _this.workout.workout_type,
+      distance: _this.workout.distance,
+      duration: _this.workout.duration,
+      routines: _this.workout.routines
+    };
+    return _this;
+  }
+
+  UpdateWorkoutForm_createClass(UpdateWorkoutForm, [{
+    key: "render",
+    value: function render() {
+      var workoutCategories = [{
+        value: 'Cardio',
+        label: 'Cardio'
+      }, {
+        value: 'Weight-Lifting',
+        label: 'Weight-Lifting'
+      }, {
+        value: 'Body-Weight',
+        label: 'Body-Weight'
+      }, {
+        value: 'Cardio-Lifting',
+        label: 'Cardio-Lifting'
+      }];
+      var classes = this.props.classes;
+      return /*#__PURE__*/react_default.a.createElement(esm_Grid_Grid, null, this.props.detail ? /*#__PURE__*/react_default.a.createElement(Box_Box, null, /*#__PURE__*/react_default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
+        id: "update-workout-form"
+      }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
+        label: "Name",
+        id: "margin-none",
+        name: "workout_name",
+        value: this.state.workout_name // defaultValue="Default Value"
+        ,
+        onChange: this.handleChange // className={classes.textField}
+        // helperText="Some important text"
+
+      }), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
+        id: "standard-select-currency",
+        select: true,
+        label: "Type",
+        name: "workout_type",
+        value: this.state.workout_type // placeholder={this.props.detail.workout_type}
+        // placeholder={this.props.detail.workout_type}
+        ,
+        onChange: this.handleChange
+      }, workoutCategories.map(function (option) {
+        return /*#__PURE__*/react_default.a.createElement(esm_MenuItem_MenuItem, {
+          key: option.value,
+          value: option.value
+        }, option.label);
+      })), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
+        id: "outlined-number",
+        label: "Miles",
+        type: "number",
+        InputLabelProps: {
+          shrink: true
+        },
+        name: "distance" // placeholder={this.props.detail.distance}
+        ,
+        value: this.state.distance,
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
+        id: "outlined-number",
+        label: "Minutes",
+        type: "number",
+        InputLabelProps: {
+          shrink: true
+        },
+        name: "duration" // placeholder={this.props.detail.duration}
+        ,
+        value: this.state.duration,
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
+        className: classes.root,
+        type: "submit"
+      }, "Update Workout"))) : /*#__PURE__*/react_default.a.createElement("p", null, "NOTHING TO SEE HERE"));
+    }
+  }]);
+
+  return UpdateWorkoutForm;
+}(react["Component"]);
+
+function UpdateWorkoutForm_mapStateToProps(state, ownProps) {
+  var workoutId;
+  window.location.href.includes('https://fe-workout-hero.herokuapp.com/workouts/') ? workoutId = parseInt(window.location.href.replace("https://fe-workout-hero.herokuapp.com/workouts/", "")) : workoutId = parseInt(window.location.href.replace("http://localhost:3003/workouts/", ""));
+  var currentWorkout = state.workoutsReducer.workouts.filter(function (workout) {
+    return workout.id == workoutId;
+  }); // convert the above to a .find method so that you can remove the '[0]' from 'workout: currentWorkout[0]'. Filter returns an array while find returns the object.
+
+  return {
+    workouts: state.workoutsReducer.workouts,
+    workout: currentWorkout[0]
+  };
+}
+
+/* harmony default export */ var forms_UpdateWorkoutForm = (Object(redux["compose"])(connect_connect(UpdateWorkoutForm_mapStateToProps, {
+  updateWorkout: updateWorkout
+}), styles_withStyles(forms_StyledSubmitBtns))(UpdateWorkoutForm_UpdateWorkoutForm));
+// CONCATENATED MODULE: ./src/components/Workout.js
+ // import {Redirect} from 'react-router-dom'
+
+
+ // import { connect } from 'react-redux'
+
+
+
+
+ // import NewWorkoutWorkoutForm from '../forms/NewWorkoutWorkoutForm'
+
+var Workout_Workout = function Workout(props) {
+  var currentPath = window.location.pathname;
+  var routineId = /\d{1,5}/.exec(currentPath)[0];
+  var workoutId = /\d{1,5}$/.exec(currentPath)[0];
+  var workout = props.workouts.find(function (workout) {
+    return workout.id == workoutId;
+  });
+  var routine = props.routines.find(function (routine) {
+    return routine.id == routineId;
+  });
+
+  var handleDeleteWorkout = function handleDeleteWorkout(e) {
+    if (props.routines && props.workouts) {
+      var targetId = e.target.id;
+      var routineString = /\d{1,5}/.exec(targetId);
+      var workoutString = /\d{1,5}$/.exec(targetId);
+      var workoutIdString = workoutString[0]; //.toString()
+
+      var _workoutId = parseInt(workoutIdString); //.toString()
+
+
+      var _routineId = routineString[0].toString();
+
+      var clickedRoutine = props.routines.find(function (routine) {
+        return routine.id == _routineId;
+      });
+      var outgoingPayload = {
+        "id": clickedRoutine.id,
+        "workout_id_to_delete": _workoutId
+      };
+      props.deleteRoutineWorkout(outgoingPayload);
+    }
+  };
+
+  return /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
+    maxWidth: "md"
+  }, /*#__PURE__*/react_default.a.createElement(Box_Box, {
+    id: "page-workout-detail"
+  }, /*#__PURE__*/react_default.a.createElement("section", {
+    className: "workout-page-floating-links"
+  }, /*#__PURE__*/react_default.a.createElement(Link, {
+    to: '/routines'
+  }, " ", /*#__PURE__*/react_default.a.createElement("button", {
+    className: "floating-nav-btns"
+  }, " Routines "), " "), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement(Link, {
+    to: '/routines/' + routineId
+  }, " ", /*#__PURE__*/react_default.a.createElement("button", {
+    className: "floating-nav-btns"
+  }, " ", routine.routine_name, " Routine Page "), " ")), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement(Box_Box, null, /*#__PURE__*/react_default.a.createElement(forms_UpdateWorkoutForm, {
+    detail: workout
+  })), /*#__PURE__*/react_default.a.createElement("br", null), /*#__PURE__*/react_default.a.createElement("div", {
+    id: "workout-card"
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    key: workout.id
+  }, /*#__PURE__*/react_default.a.createElement("section", {
+    id: "workout-info"
+  }, /*#__PURE__*/react_default.a.createElement("section", {
+    id: "workout-detail-workout-name"
+  }, workout.workout_name, /*#__PURE__*/react_default.a.createElement("br", null)), "id: ", workout.id, /*#__PURE__*/react_default.a.createElement("br", null), "category: ", workout.workout_type, /*#__PURE__*/react_default.a.createElement("br", null), "distance: ", workout.distance, /*#__PURE__*/react_default.a.createElement("br", null), "duration: ", workout.duration, /*#__PURE__*/react_default.a.createElement("br", null))), /*#__PURE__*/react_default.a.createElement("section", {
+    id: "wrapper-btn-delete-workout"
+  }, /*#__PURE__*/react_default.a.createElement("button", {
+    onClick: handleDeleteWorkout,
+    id: "routine-".concat(routine.id, "-btn-delete-workout-").concat(workout.id),
+    className: "delete-btns delete-workout"
+  }, " delete workout ")))));
+};
+
+/* harmony default export */ var components_Workout = (connect_connect(null, {
+  deleteRoutineWorkout: actions_deleteRoutineWorkout
+})(Workout_Workout));
+// CONCATENATED MODULE: ./src/containers/WorkoutsContainer.js
+function WorkoutsContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { WorkoutsContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { WorkoutsContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return WorkoutsContainer_typeof(obj); }
+
+function WorkoutsContainer_extends() { WorkoutsContainer_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return WorkoutsContainer_extends.apply(this, arguments); }
+
+function WorkoutsContainer_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function WorkoutsContainer_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function WorkoutsContainer_createClass(Constructor, protoProps, staticProps) { if (protoProps) WorkoutsContainer_defineProperties(Constructor.prototype, protoProps); if (staticProps) WorkoutsContainer_defineProperties(Constructor, staticProps); return Constructor; }
+
+function WorkoutsContainer_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) WorkoutsContainer_setPrototypeOf(subClass, superClass); }
+
+function WorkoutsContainer_setPrototypeOf(o, p) { WorkoutsContainer_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return WorkoutsContainer_setPrototypeOf(o, p); }
+
+function WorkoutsContainer_createSuper(Derived) { var hasNativeReflectConstruct = WorkoutsContainer_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = WorkoutsContainer_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = WorkoutsContainer_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return WorkoutsContainer_possibleConstructorReturn(this, result); }; }
+
+function WorkoutsContainer_possibleConstructorReturn(self, call) { if (call && (WorkoutsContainer_typeof(call) === "object" || typeof call === "function")) { return call; } return WorkoutsContainer_assertThisInitialized(self); }
+
+function WorkoutsContainer_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function WorkoutsContainer_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function WorkoutsContainer_getPrototypeOf(o) { WorkoutsContainer_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return WorkoutsContainer_getPrototypeOf(o); }
+
+
+
+
+
+ // import WorkoutsPage from './WorkoutsPage';
+
+
+ // import Workout from '../components/Workout'
+// import UpdateWorkoutPage from '../components/UpdateWorkoutPage'
+// import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
+// import HomePage from '../components/HomePage'
+// import Home from '../components/Home'
+// import {fetchWorkouts} from '../actions/fetchWorkouts'
+// import NewWorkoutForm from '../components/NewWorkoutForm'
+// import WorkoutsList from '../components/WorkoutsList'
+// import NewWorkoutsContainer from '../containers/NewWorkoutsContainer'
+
+var WorkoutsContainer_WorkoutsContainer = /*#__PURE__*/function (_Component) {
+  WorkoutsContainer_inherits(WorkoutsContainer, _Component);
+
+  var _super = WorkoutsContainer_createSuper(WorkoutsContainer);
+
+  function WorkoutsContainer(props) {
+    var _this;
+
+    WorkoutsContainer_classCallCheck(this, WorkoutsContainer);
+
+    _this = _super.call(this, props);
+    _this.fetchWorkouts = fetchWorkouts;
+    _this.fetchRoutines = fetchRoutines;
+    _this.currentUrl = window.location.pathname;
+    _this.currentUrlString = _this.currentUrl.replace("/routines/", '');
+    _this.routineId = _this.currentUrlString[0]; // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', this.routineString);
+    // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 29 ~ WorkoutsContainer ~ constructor ~ this.routineString', this.routineString[0]);
+    // this.routines = this.props.routines
+
+    _this.state = {
+      workouts: [],
+      routines: []
+    }; // this.routine = this.props.routines.find(routine => routine.id == this.routineId)
+    // parseInt(this.currentUrl.replace('/workouts/',''))}
+
+    return _this;
+  }
+
+  WorkoutsContainer_createClass(WorkoutsContainer, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      // console.log('THIS.PROPS 1', this.props)
+      // this.fetchWorkouts()
+      this.props.fetchWorkouts();
+      this.props.fetchRoutines(); // this.routine = this.props.routines.find(routine => routine.id == this.routineId)
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, this.props.workouts ? /*#__PURE__*/react_default.a.createElement(react_router_Route, {
+        path: "/routines/:id/workouts/:id",
+        render: function render(routerProps) {
+          return /*#__PURE__*/react_default.a.createElement(components_Workout, WorkoutsContainer_extends({}, routerProps, {
+            workouts: _this2.props.workouts,
+            routines: _this2.props.routines,
+            currentWorkout: _this2.props.workouts.find(function (workout) {
+              return workout.id == window.location.pathname.replace('/routines/' + _this2.routineId + '/workouts/', '');
+            })
+          }));
+        }
+      }) : null)); // console.log('WorkoutsContainer -> render -> this.props.workouts', this.props.workouts);
+    }
+  }]);
+
+  return WorkoutsContainer;
+}(react["Component"]); //! redux store
+
+
+var WorkoutsContainer_mapStateToProps = function mapStateToProps(state, ownProps) {
+  // let scrapedUrl = window.location.pathname.replace(`/routines/`,'')
+  // console.log('🚀 ~ file: WorkoutsContainer.js ~ line 96 ~ rooString', scrapedUrl);
+  // let routineId = scrapedUrl[0]
+  // var lastChar = scrapedUrl[scrapedUrl.length -1]
+  return {
+    workouts: state.workoutsReducer.workouts,
+    routines: state.routinesReducer.routines // ,
+    // routine: ownProps.routines.find(routine => routine.id == routineId)
+    // recipes: state.recipesReducer.recipes
+
+  };
+};
+
+/* harmony default export */ var containers_WorkoutsContainer = (connect_connect(WorkoutsContainer_mapStateToProps, {
+  fetchWorkouts: fetchWorkouts,
+  fetchRoutines: fetchRoutines
+})(WorkoutsContainer_WorkoutsContainer));
+// CONCATENATED MODULE: ./src/containers/MainContainer.js
+function MainContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { MainContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { MainContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return MainContainer_typeof(obj); }
+
+function MainContainer_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function MainContainer_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function MainContainer_createClass(Constructor, protoProps, staticProps) { if (protoProps) MainContainer_defineProperties(Constructor.prototype, protoProps); if (staticProps) MainContainer_defineProperties(Constructor, staticProps); return Constructor; }
+
+function MainContainer_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) MainContainer_setPrototypeOf(subClass, superClass); }
+
+function MainContainer_setPrototypeOf(o, p) { MainContainer_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return MainContainer_setPrototypeOf(o, p); }
+
+function MainContainer_createSuper(Derived) { var hasNativeReflectConstruct = MainContainer_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = MainContainer_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = MainContainer_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return MainContainer_possibleConstructorReturn(this, result); }; }
+
+function MainContainer_possibleConstructorReturn(self, call) { if (call && (MainContainer_typeof(call) === "object" || typeof call === "function")) { return call; } return MainContainer_assertThisInitialized(self); }
+
+function MainContainer_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function MainContainer_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function MainContainer_getPrototypeOf(o) { MainContainer_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return MainContainer_getPrototypeOf(o); }
+
+ // import {Route, Switch} from 'react-router-dom'
+
+
+
+
+
+var MainContainer_MainContainer = /*#__PURE__*/function (_Component) {
+  MainContainer_inherits(MainContainer, _Component);
+
+  var _super = MainContainer_createSuper(MainContainer);
+
+  function MainContainer() {
+    MainContainer_classCallCheck(this, MainContainer);
+
+    return _super.apply(this, arguments);
+  }
+
+  MainContainer_createClass(MainContainer, [{
+    key: "render",
+    value: // constructor(props) {
+    //     super(props);
+    // }
+    function render() {
+      return /*#__PURE__*/react_default.a.createElement(Box_Box, null, /*#__PURE__*/react_default.a.createElement(containers_RoutinesContainer, {
+        routines: this.props.routines
+      }), /*#__PURE__*/react_default.a.createElement(containers_WorkoutsContainer, {
+        routines: this.props.workouts
+      }));
+    }
+  }]);
+
+  return MainContainer;
+}(react["Component"]);
+
+/* harmony default export */ var containers_MainContainer = (MainContainer_MainContainer);
 // CONCATENATED MODULE: ./src/App.js
 
 
@@ -23917,7 +23877,7 @@ function App_App() {
       alignItems: "center" // border= '30px dashed rgb(248, 4, 65)'
       // backgroundColor='yellow'
 
-    }, /*#__PURE__*/react_default.a.createElement("div", {
+    }, /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
       className: "app-container"
     }, /*#__PURE__*/react_default.a.createElement(containers_MainContainer, {
       id: "main-container"
@@ -23994,11 +23954,11 @@ var monitorReducerEnhancer = function monitorReducerEnhancer(createStore) {
 var logger = function logger(store) {
   return function (next) {
     return function (action) {
-      console.group(action.type);
-      console.info('dispatching', action);
-      var result = next(action);
-      console.log('next state', store.getState());
-      console.groupEnd();
+      // console.group(action.type)
+      // console.info('dispatching', action)
+      var result = next(action); // console.log('next state', store.getState())
+      // console.groupEnd()
+
       return result;
     };
   };
