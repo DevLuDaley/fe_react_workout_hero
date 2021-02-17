@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import './App.css';
 import MainContainer from './containers/MainContainer'
-import { Grid } from '@material-ui/core';
+import { Grid, Container } from '@material-ui/core';
 
 
 
@@ -17,12 +17,12 @@ function App() {
         // border= '30px dashed rgb(248, 4, 65)'
         // backgroundColor='yellow'
       >
-          <div className="app-container">
+          <Container className="app-container">
             {/* APP CONTAINER */}
 
             <MainContainer id="main-container"/>
                 {/* MAIN CONTAINER */}
-          </div>
+          </Container>
       </Grid>
  
   );
