@@ -3,6 +3,10 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Switch, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+
+import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
+
 // import { connect } from 'react-redux'
 import UpdateRoutineForm from '../forms/UpdateRoutineForm'
 import NewRoutineWorkoutForm from '../forms/NewRoutineWorkoutForm'
@@ -36,46 +40,41 @@ const Routine = (props) => {
     }
 
     return(
-    <Fragment>
-    <section className="routine-detail-page">
-
-                        <Switch>
-                       <Link to={'/routines'}> <button className='floating-nav-btns'> Return to Routines </button> </Link>
-                        </Switch>
+    <Container>
+        <section className="routine-detail-page">
+            <Switch>
+                <Link to={'/routines'}> 
+                    <button className='floating-nav-btns'> Return to Routines </button> 
+                </Link>
+            </Switch>
         {
             props.routines ?
             <section>
-            {/* Routine Info: */}
-            {
+                {/* Routine Info: */}
+                {
                 props.routines.map(routine =>
                     routine.id == props.match.params.id ?
-            <section key={routine.id}>
-                <br></br>
-                    <h1>{routine.routine_name} </h1>
-                <br></br>
-                {/* id: {routine.id} */}
 
-                {/* <p>{filtered.name}</p> */}
-            <h1> Update Routine </h1>
+                <section key={routine.id}>
+                    <br></br>
+                        <h1>{routine.routine_name} </h1>
+                    <br></br>
+                    <h1> Update Routine </h1>
         {
             props.routines ?
-
-        <UpdateRoutineForm routines={props.routines}
-                routineToUpdate={props.routines.find(routine =>
-             routine.id == props.match.params.id)}
-        />
-        : null
+            <UpdateRoutineForm routines={props.routines}
+                routineToUpdate={props.routines.find(
+                    routine => routine.id == props.match.params.id)}
+            />
+            : null
         }
-                <br></br>
-                <br></br>
+
                 <h1> Add a new Workout</h1>
                     {<NewRoutineWorkoutForm
                         routines={props.routines}
                         currentRoutine={props.routines.find(
                             routine => routine.id == props.match.params.id)}
                     />}
-                <br></br>
-                <br></br>
 
                     <h3 key={routine.id}>Workouts List: </h3>
                     <section id="routine-workout-cards">
@@ -88,18 +87,18 @@ const Routine = (props) => {
                                 {/* id: {workout.id}
                                 <br></br> */}
 
-<section id="workout-info">
+                        <section id="workout-info">
                            <section id="routine-detail-workout-name">
 
                                         <p>{workout.workout_name}</p>
                            </section>
                                     <br></br>
-                                    <p>category: {workout.workout_type}</p>
+                                    <p>Category: {workout.workout_type}</p>
                                     <br></br>
-                                    <p>distance: {workout.distance} </p>
+                                    <p>Distance: {workout.distance} </p>
                                     {/* ? workout.distance + " miles" : "please enter distance"}  */}
                                     <br></br>
-                                    <p>duration: {workout.duration}</p>
+                                    <p>Duration: {workout.duration}</p>
                                      {/* ? workout.duration + " minutes" : "please enter duration"} */}
                                     <br></br>
                                     <br></br>
@@ -128,7 +127,7 @@ const Routine = (props) => {
 
     </section>
 
-        </Fragment>
+        </Container>
     )
 }
     // const mapStateToProps = (state, ownProps) => {
