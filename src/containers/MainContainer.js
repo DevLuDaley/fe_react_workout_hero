@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 // import {Route, Switch} from 'react-router-dom'
 
-import { Container, Box } from '@material-ui/core';
+import {  Box } from '@material-ui/core';
 
 
 import RoutinesContainer from './RoutinesContainer'
