@@ -1,15 +1,16 @@
-import React, { Component, Fragment } from 'react'
+/* eslint-disable eqeqeq */
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {Route, Switch} from 'react-router-dom'
-//import {Route, Switch, useLocation, withRouter} from 'react-router-dom'
-// import { createBrowserHistory } from "history";
-import {updateRoutine} from '../actions/updateRoutine'
-import {routinesReducer} from '../reducers/routinesReducer'
-import { TextField, MenuItem, Button, Container, FormControl } from '@material-ui/core';
+
+import { TextField, Button, Container } from '@material-ui/core';
+// import {  MenuItem, FormControl } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import { compose } from 'redux';
+
 import StyledSubmitBtns from './StyledSubmitBtns'
 // import styleSubmitBtns from './NewRoutineForm'
+import {updateRoutine} from '../actions/updateRoutine'
+// import {routinesReducer} from '../reducers/routinesReducer'
 
 class UpdateRoutineForm extends Component {
     constructor(props) {
