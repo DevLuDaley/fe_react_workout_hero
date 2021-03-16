@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import './App.css';
 import MainContainer from './containers/MainContainer'
 import { Grid, Container } from '@material-ui/core';
