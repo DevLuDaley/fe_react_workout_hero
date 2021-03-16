@@ -1,7 +1,8 @@
-import React, { Component, Fragment } from 'react'
+/* eslint-disable eqeqeq */
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 // import {Route, Switch} from 'react-router-dom'
-import { TextField, MenuItem, Button, Grid, Box, Container } from '@material-ui/core';
+import { TextField, MenuItem, Button, Grid, Box } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import { compose } from 'redux';
 
