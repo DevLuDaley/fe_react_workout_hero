@@ -123,6 +123,9 @@ class NewRoutineWorkoutForm extends Component {
                 label="Name"
                 id="margin-none"
                 name="workout_name" 
+                InputLabelProps={{
+                                    shrink: true,
+                                }}
                 value={this.state.workout_name} 
                 onChange={this.handleChange}/>
 
@@ -135,6 +138,9 @@ class NewRoutineWorkoutForm extends Component {
                 select label="Type"
                 id="standard-select-currency"
                 name="workout_type"
+                InputLabelProps={{
+                                    shrink: true,
+                                }}
                 value={this.state.workout_type}
                 onChange={this.handleChange}
             >

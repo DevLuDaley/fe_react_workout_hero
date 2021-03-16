@@ -71,9 +71,12 @@ class UpdateRoutineForm extends Component {
 
                            <label> </label>
                             <TextField
-                                label="Name"
                                 id="margin-none"
+                                label="Name"
                                 name="routine_name" 
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
                                 value={this.state.routine_name} 
                                 // defaultValue="Default Value"
                                 onChange={this.handleChange}
