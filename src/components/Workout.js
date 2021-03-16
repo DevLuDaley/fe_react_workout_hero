@@ -1,9 +1,9 @@
-import React, { Fragment, useState, useEffect } from 'react';
+/* eslint-disable eqeqeq */
+import React from 'react';
 // import {Redirect} from 'react-router-dom'
-import { Switch, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 // import { connect } from 'react-redux'
-
 import { Box } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 

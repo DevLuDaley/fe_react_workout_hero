@@ -1,10 +1,10 @@
-import React, { Fragment, useState, useEffect } from 'react';
+/* eslint-disable eqeqeq */
+import React from 'react';
 // import {Redirect} from 'react-router-dom'
 import { Switch, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
 
 // import { connect } from 'react-redux'
 import UpdateRoutineForm from '../forms/UpdateRoutineForm'
