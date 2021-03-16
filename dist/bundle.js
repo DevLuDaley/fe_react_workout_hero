@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "b1da90d02ab969c76296";
+/******/ 	var hotCurrentHash = "a4c4e96f1976dcba8455";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -968,7 +968,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(68)(__webpack_require__.s = 68);
+/******/ 	return hotCreateRequire(67)(__webpack_require__.s = 67);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -979,7 +979,7 @@
 
 
 if (true) {
-  module.exports = __webpack_require__(46);
+  module.exports = __webpack_require__(45);
 } else {}
 
 
@@ -997,7 +997,7 @@ if (true) {
 if (false) { var throwOnDirectAccess, ReactIs; } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(52)();
+  module.exports = __webpack_require__(51)();
 }
 
 
@@ -1032,7 +1032,7 @@ if (true) {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(47);
+  module.exports = __webpack_require__(46);
 } else {}
 
 
@@ -1748,7 +1748,7 @@ function warning(condition, message) {
 "use strict";
 
 
-var reactIs = __webpack_require__(54);
+var reactIs = __webpack_require__(53);
 
 /**
  * Copyright 2015, Yahoo! Inc.
@@ -2059,7 +2059,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_styles_static_free_weights_gym_equipment_jpg__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "* {\n    /* margin: auto; */\n    /* box-sizing: border-box; */\n    \n}\n\nbody {\n    /* border: 10px dashed rgb(248, 4, 65); */\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat,\n      repeat;\n    /* background-size: 3500px 2500px; */\n    background-size: cover;\n    background-color: #25657c;\n  /* background-color: #44798c97; */\n    background-blend-mode: lighten;\n  /* background-blend-mode:color; */\n  /* padding: 10px; */\n  /* margin: 50px; */\n    background-attachment: fixed;\n    background-position: center;\n    /* display: grid; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n}\n\n.app-container {\n    /* border: 10px dashed rgb(32, 4, 248); */\n    /* position: absolute; */\n  /* top: 50%; */\n  /* left: 15%; */\n    width: auto;\n    height: auto;\n  /* margin: -100px 0 0 -100px; */\n  /* background-image: url('./styles/static/free-weights-gym-equipment.jpg'); */\n    /* display: grid; */\n    /* display: inline-grid; */\n      /* grid-template-columns: 120px 120px 250px ; */\n      /* grid-template-rows: auto auto auto auto ; */\n    opacity: 95%;\n    /* grid-gap: 5px 5px; */\n    \n    /* height: auto; */\n    /* width: 1500px; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n    /* grid-template-rows: auto; */\n    background: rgba(114, 186, 94, 0.05);\n    /* background: rgba(161, 10, 55, 0.507); */\n    /* background-attachment: fixed;\n    background-position: center; */\n}\n\n#main-container {\n    /* padding: 250px;\n    margin: 500px;\n    height: auto;\n    width: auto; */\n    /* background: rgb(44, 22, 66); */\n      /* background-color: rgba(255, 192, 203, 0.11); */\n\n    /* opacity: 95%; */\n    /* grid-gap: 50px; */\n    /* border: 10px dashed rgba(8, 230, 93, 0.996); */\n}\n\n.btns-all {\n\n}\n\n#btn-toggle-forms {\n    /* height: 15px;\n    width: 100px; */\n}\n\n#comp-routines-page {\n  /* border: 10px dashed rgba(21, 207, 99, 0.544); */\n  margin-top: 75px;\n}\n\n#page-workout-detail {\n/* margin-top: 75px; */\n/* border: 10px dashed rgba(215, 230, 8, 0.996); */\nmargin: 75px;\n}\n\n#routine-workout-cards {\n  /* display: grid; */\n  /* display: grid; */\n  /* grid-template-columns: 500px 500px; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n  /* border: 10px dashed rgba(230, 115, 8, 0.996); */\n}\n\n#workout-detail-workout-name{\n    font-size: 22px;\n  background-color: #8728e551;\n}\n\n\n#workout-card {\n  /* display: grid; */\n   /* border: 10px dashed rgb(23, 173, 106); */\n  /* display: grid; */\n  /* grid-template-columns: 500px ; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n}\n\n#workoutlist-workout-info {\n      background-color: rgba(255, 192, 203, 0.11);\n      /* display: grid; */\n      /* border: 10px dashed rgb(232, 145, 30); */\n      padding: 2%;\n       /* justify-content: space-evenly; */\n       /* justify-content: space-around; */\n       /* justify-content: center; */\n         /* align-content: center; */\n         /* text-align: center; */\n         /* grid-template-columns: auto auto auto auto;  */\n         /* grid-template-columns: 300px ;  */\n\n           /* grid-template-areas:  */\n    /* 'data data data data btn-edit btn-delete'; */\n  /* grid-column-gap: 10px; - if you want gap between the columns */\n\n}\n\n#routine-detail-workout-name {\n  font-size: 22px;\n  background-color: #8728e551;\n}\n\n#workout-info {\n  background-color: #bda5d5be;\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  text-align: center;\n  /* background-color: rgba(226, 226, 132, 0.75); */\n  /* display: grid; */\n  padding: 1%;\n  /* grid-template-columns: auto auto auto auto auto auto auto auto; */\n   /* justify-content: space-evenly; */\n}\n\n.routine-detail-page-btn{\n  /* background:violet; */\n  /* max-width: 80px; */\n  /* max-height: 80px; */\n    /* grid-row: 3 / 3; */\n  /* width: auto; */\n           /* grid-column: 1 / 3;\n            */\n              /* grid-column: 1 / span 1; */\n\n}\n\n#wrapper-btns-routine-workout {\n        /* border: 10px dashed rgba(11, 224, 68, 0.822); */\n        background-color: #8728e551;\n        /* opacity: 80%; */\n        display: grid;\n        /* padding: 5%; */\n        grid-template-columns: 120px 120px;\n   justify-content: space-evenly;\n}\n\n#wrapper-btn-delete-workout {\n        /* border: 10px dashed rgba(224, 206, 11, 0.822); */\n        /* background-color: #8728e551; */\n          background-color: #8728e551;\n        /* opacity: 80%; */\n        display: grid;\n        padding: 2%;\n        grid-template-columns:auto;\n        justify-content: space-evenly;\n}\n\n#routines-list {\n  background-color: rgba(255, 192, 203, 0.11);\n  display: grid;\n  /* grid-template-columns: auto; */\n  /* grid-template-columns: auto auto; */\n  grid-template-columns: 650px;\n  /* grid-template-rows: 250px; */\n  /* grid-template-rows: auto; */\n  padding: 30px;\n          justify-content: space-evenly;\n\n}\n\n.workout-names {\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n    padding: 50px;\n    margin: 50px;\n    height: auto;\n    width: auto;\n    padding-top: 50px;\n    padding-bottom: 50px;\n    /* background-color: rgba(114, 68, 156, 0.593); */\n    /* background-color: rgba(100, 84, 115, 0.593); */\n  /* /* display: grid;\n    grid-template-columns: auto auto; */\n}\n\n\n\n.all-routine-edit-btns {\n    /* font-size: 13px; */\n}\n\n.routine-names {\n    /* color: rgba(222, 73, 85, 0.49); */\n    color: rgb(55, 167, 204);\n    font-size: 20px;\n    text-align: left;\n    display: grid;\n    grid-template-columns: auto auto 50px;\n    grid-template-rows: auto auto 10px;\n    justify-content: space-evenly;\n\n}\n\n.routine-name-wrapper {\n    /* background-color: rgb(10, 25, 43); */\n    background-color: rgba(43, 10, 30, 0.713);\n    display: grid;\n    padding: 1px;\n    margin: 3px;\n    grid-column-gap: 1em;\n    grid-template-columns: auto auto ;\n    justify-content: space-evenly;\n    opacity: 70%;\n}\n\n.routine-workout-block {\n    /* grid-template-columns: 25% 10px 10px auto;\n    grid-template-rows: 25% auto; */\n}\n\n.routine-workout-list {\n    display: grid;\n    /* display: none; */\n    grid-template-columns: auto  ;\n    /* grid-template-rows: auto auto auto auto auto; */\n    padding: 2;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n    \n}\n\n\n#routines-container {\n    /* background: rgb(45, 59, 87) */\n}\n\n\ninput {\n       background: #b9aaaa61;\n}\n\n::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n  color: black;\n  opacity: 1; /* Firefox */\n}\n\n:-ms-input-placeholder { /* Internet Explorer 10-11 */\n  color: black;\n}\n\n::-ms-input-placeholder { /* Microsoft Edge */\n  color: black;\n}\n\n.hidden {\n    display: none;\n}\n\n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87;\n}\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n#new-routine-form>label {\n    /* color: rgb(139, 139, 89); */\n    /* color: darkmagenta; */\n    color: rgba(139, 0, 139, 0.685);\n    /* color: rgba(238, 69, 196, 0.452);; */\n}\n\n#new-routine-form {\n  /* margin:auto; */\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 180px auto 240px;\n}\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}\n\n.edit-btns { \n  /* background-color: #008bbaa7; Green */\n  /* background-color: #05728ac4; Green */\n  background-color: #1495b2cb; /* Green */\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.edit-btns:hover {\n    background-color: #0abee7db; /* Green */\n  /* background-color: #05728ac4; Green */\n  /* background-color: #36c4b6c4; Green */\n  /* background-color: #96a3965a; Green */\n  color: white;\n}\n\n\n.delete-btns { \n  background-color: #be615ab8;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* opacity: .75; */\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.delete-btns:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.submit-btns { \n  /* background-color: #77d78fbc; */\n  background-color: rgba(139, 0, 139, 0.507);\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.submit-btns:hover {\n  background-color: rgba(204, 7, 204, 0.616);\n\n  /* background-color: #41f26dcb; */\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n\n.floating-nav-btns { \n  /* background-color: #d7ca779c; */\n  /* background-color: #f4e1d2; */\n  /* background-color: #618685; */\n  background-color: #a27ec6e4;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n\n\n.floating-nav-btns:hover {\n  /* background-color: #f7e255a9; */\n  /* background-color: #43bcb8da; */\n  background-color: #b076eb;\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n.routine-workout-name-block{\n  background-color: #bda5d5be;\n    /* grid:  ; */\n      float: center;\n  /* width: 50%; */\n  /* height: 25%; */\n  padding: 10px;\n  margin: 5px;\n  text-align: center;\n  display: grid;\n    grid-template-columns: 80px 200px 80px;\n}\n\n.delete-workout{\n    /* position: relative; */\n    float: center;\n  /* right: 190px; */\n    /* center: 0px; */\n    /* width: 300px; */\n  /* border: 3px solid #73AD21; */\n  /* padding: 10px; */\n}\n\n.workout-page-floating-links{\n    display: grid;\n    grid-template-columns: 40px 240px auto;\n\n    /* grid-column-gap: 50px; */\n      /* grid-gap: 50px 100px; */\n\n    /* padding: 10px; */\n    /* margin: 200px; */\n\n    /* width: 25%;\n  float: left; */\n}\n\n.routine-detail-page{\n    display: grid;\n    /* grid-template-columns: 80px 240px auto 40px; */\n    padding: 50px;\n    /* margin: 50px; */\n    position: relative;\n  }\n\n    #update-routine-form{\n    /* position: relative; */\n    /* display: grid; */\n    /* grid-template-columns: 10px 220px 220px; */\n}\n\n#new-routine-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n#update-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n", "",{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"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","sourcesContent":["* {\n    /* margin: auto; */\n    /* box-sizing: border-box; */\n    \n}\n\nbody {\n    /* border: 10px dashed rgb(248, 4, 65); */\n    background-image: url('./styles/static/free-weights-gym-equipment.jpg');\n    background-repeat: no-repeat,\n      repeat;\n    /* background-size: 3500px 2500px; */\n    background-size: cover;\n    background-color: #25657c;\n  /* background-color: #44798c97; */\n    background-blend-mode: lighten;\n  /* background-blend-mode:color; */\n  /* padding: 10px; */\n  /* margin: 50px; */\n    background-attachment: fixed;\n    background-position: center;\n    /* display: grid; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n}\n\n.app-container {\n    /* border: 10px dashed rgb(32, 4, 248); */\n    /* position: absolute; */\n  /* top: 50%; */\n  /* left: 15%; */\n    width: auto;\n    height: auto;\n  /* margin: -100px 0 0 -100px; */\n  /* background-image: url('./styles/static/free-weights-gym-equipment.jpg'); */\n    /* display: grid; */\n    /* display: inline-grid; */\n      /* grid-template-columns: 120px 120px 250px ; */\n      /* grid-template-rows: auto auto auto auto ; */\n    opacity: 95%;\n    /* grid-gap: 5px 5px; */\n    \n    /* height: auto; */\n    /* width: 1500px; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n    /* grid-template-rows: auto; */\n    background: rgba(114, 186, 94, 0.05);\n    /* background: rgba(161, 10, 55, 0.507); */\n    /* background-attachment: fixed;\n    background-position: center; */\n}\n\n#main-container {\n    /* padding: 250px;\n    margin: 500px;\n    height: auto;\n    width: auto; */\n    /* background: rgb(44, 22, 66); */\n      /* background-color: rgba(255, 192, 203, 0.11); */\n\n    /* opacity: 95%; */\n    /* grid-gap: 50px; */\n    /* border: 10px dashed rgba(8, 230, 93, 0.996); */\n}\n\n.btns-all {\n\n}\n\n#btn-toggle-forms {\n    /* height: 15px;\n    width: 100px; */\n}\n\n#comp-routines-page {\n  /* border: 10px dashed rgba(21, 207, 99, 0.544); */\n  margin-top: 75px;\n}\n\n#page-workout-detail {\n/* margin-top: 75px; */\n/* border: 10px dashed rgba(215, 230, 8, 0.996); */\nmargin: 75px;\n}\n\n#routine-workout-cards {\n  /* display: grid; */\n  /* display: grid; */\n  /* grid-template-columns: 500px 500px; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n  /* border: 10px dashed rgba(230, 115, 8, 0.996); */\n}\n\n#workout-detail-workout-name{\n    font-size: 22px;\n  background-color: #8728e551;\n}\n\n\n#workout-card {\n  /* display: grid; */\n   /* border: 10px dashed rgb(23, 173, 106); */\n  /* display: grid; */\n  /* grid-template-columns: 500px ; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n}\n\n#workoutlist-workout-info {\n      background-color: rgba(255, 192, 203, 0.11);\n      /* display: grid; */\n      /* border: 10px dashed rgb(232, 145, 30); */\n      padding: 2%;\n       /* justify-content: space-evenly; */\n       /* justify-content: space-around; */\n       /* justify-content: center; */\n         /* align-content: center; */\n         /* text-align: center; */\n         /* grid-template-columns: auto auto auto auto;  */\n         /* grid-template-columns: 300px ;  */\n\n           /* grid-template-areas:  */\n    /* 'data data data data btn-edit btn-delete'; */\n  /* grid-column-gap: 10px; - if you want gap between the columns */\n\n}\n\n#routine-detail-workout-name {\n  font-size: 22px;\n  background-color: #8728e551;\n}\n\n#workout-info {\n  background-color: #bda5d5be;\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  text-align: center;\n  /* background-color: rgba(226, 226, 132, 0.75); */\n  /* display: grid; */\n  padding: 1%;\n  /* grid-template-columns: auto auto auto auto auto auto auto auto; */\n   /* justify-content: space-evenly; */\n}\n\n.routine-detail-page-btn{\n  /* background:violet; */\n  /* max-width: 80px; */\n  /* max-height: 80px; */\n    /* grid-row: 3 / 3; */\n  /* width: auto; */\n           /* grid-column: 1 / 3;\n            */\n              /* grid-column: 1 / span 1; */\n\n}\n\n#wrapper-btns-routine-workout {\n        /* border: 10px dashed rgba(11, 224, 68, 0.822); */\n        background-color: #8728e551;\n        /* opacity: 80%; */\n        display: grid;\n        /* padding: 5%; */\n        grid-template-columns: 120px 120px;\n   justify-content: space-evenly;\n}\n\n#wrapper-btn-delete-workout {\n        /* border: 10px dashed rgba(224, 206, 11, 0.822); */\n        /* background-color: #8728e551; */\n          background-color: #8728e551;\n        /* opacity: 80%; */\n        display: grid;\n        padding: 2%;\n        grid-template-columns:auto;\n        justify-content: space-evenly;\n}\n\n#routines-list {\n  background-color: rgba(255, 192, 203, 0.11);\n  display: grid;\n  /* grid-template-columns: auto; */\n  /* grid-template-columns: auto auto; */\n  grid-template-columns: 650px;\n  /* grid-template-rows: 250px; */\n  /* grid-template-rows: auto; */\n  padding: 30px;\n          justify-content: space-evenly;\n\n}\n\n.workout-names {\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n    padding: 50px;\n    margin: 50px;\n    height: auto;\n    width: auto;\n    padding-top: 50px;\n    padding-bottom: 50px;\n    /* background-color: rgba(114, 68, 156, 0.593); */\n    /* background-color: rgba(100, 84, 115, 0.593); */\n  /* /* display: grid;\n    grid-template-columns: auto auto; */\n}\n\n\n\n.all-routine-edit-btns {\n    /* font-size: 13px; */\n}\n\n.routine-names {\n    /* color: rgba(222, 73, 85, 0.49); */\n    color: rgb(55, 167, 204);\n    font-size: 20px;\n    text-align: left;\n    display: grid;\n    grid-template-columns: auto auto 50px;\n    grid-template-rows: auto auto 10px;\n    justify-content: space-evenly;\n\n}\n\n.routine-name-wrapper {\n    /* background-color: rgb(10, 25, 43); */\n    background-color: rgba(43, 10, 30, 0.713);\n    display: grid;\n    padding: 1px;\n    margin: 3px;\n    grid-column-gap: 1em;\n    grid-template-columns: auto auto ;\n    justify-content: space-evenly;\n    opacity: 70%;\n}\n\n.routine-workout-block {\n    /* grid-template-columns: 25% 10px 10px auto;\n    grid-template-rows: 25% auto; */\n}\n\n.routine-workout-list {\n    display: grid;\n    /* display: none; */\n    grid-template-columns: auto  ;\n    /* grid-template-rows: auto auto auto auto auto; */\n    padding: 2;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n    \n}\n\n\n#routines-container {\n    /* background: rgb(45, 59, 87) */\n}\n\n\ninput {\n       background: #b9aaaa61;\n}\n\n::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n  color: black;\n  opacity: 1; /* Firefox */\n}\n\n:-ms-input-placeholder { /* Internet Explorer 10-11 */\n  color: black;\n}\n\n::-ms-input-placeholder { /* Microsoft Edge */\n  color: black;\n}\n\n.hidden {\n    display: none;\n}\n\n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87;\n}\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n#new-routine-form>label {\n    /* color: rgb(139, 139, 89); */\n    /* color: darkmagenta; */\n    color: rgba(139, 0, 139, 0.685);\n    /* color: rgba(238, 69, 196, 0.452);; */\n}\n\n#new-routine-form {\n  /* margin:auto; */\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 180px auto 240px;\n}\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}\n\n.edit-btns { \n  /* background-color: #008bbaa7; Green */\n  /* background-color: #05728ac4; Green */\n  background-color: #1495b2cb; /* Green */\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.edit-btns:hover {\n    background-color: #0abee7db; /* Green */\n  /* background-color: #05728ac4; Green */\n  /* background-color: #36c4b6c4; Green */\n  /* background-color: #96a3965a; Green */\n  color: white;\n}\n\n\n.delete-btns { \n  background-color: #be615ab8;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* opacity: .75; */\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.delete-btns:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.submit-btns { \n  /* background-color: #77d78fbc; */\n  background-color: rgba(139, 0, 139, 0.507);\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.submit-btns:hover {\n  background-color: rgba(204, 7, 204, 0.616);\n\n  /* background-color: #41f26dcb; */\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n\n.floating-nav-btns { \n  /* background-color: #d7ca779c; */\n  /* background-color: #f4e1d2; */\n  /* background-color: #618685; */\n  background-color: #a27ec6e4;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n\n\n.floating-nav-btns:hover {\n  /* background-color: #f7e255a9; */\n  /* background-color: #43bcb8da; */\n  background-color: #b076eb;\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n.routine-workout-name-block{\n  background-color: #bda5d5be;\n    /* grid:  ; */\n      float: center;\n  /* width: 50%; */\n  /* height: 25%; */\n  padding: 10px;\n  margin: 5px;\n  text-align: center;\n  display: grid;\n    grid-template-columns: 80px 200px 80px;\n}\n\n.delete-workout{\n    /* position: relative; */\n    float: center;\n  /* right: 190px; */\n    /* center: 0px; */\n    /* width: 300px; */\n  /* border: 3px solid #73AD21; */\n  /* padding: 10px; */\n}\n\n.workout-page-floating-links{\n    display: grid;\n    grid-template-columns: 40px 240px auto;\n\n    /* grid-column-gap: 50px; */\n      /* grid-gap: 50px 100px; */\n\n    /* padding: 10px; */\n    /* margin: 200px; */\n\n    /* width: 25%;\n  float: left; */\n}\n\n.routine-detail-page{\n    display: grid;\n    /* grid-template-columns: 80px 240px auto 40px; */\n    padding: 50px;\n    /* margin: 50px; */\n    position: relative;\n  }\n\n    #update-routine-form{\n    /* position: relative; */\n    /* display: grid; */\n    /* grid-template-columns: 10px 220px 220px; */\n}\n\n#new-routine-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n#update-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "/* * { */\n    /* margin: auto; */\n    /* box-sizing: border-box; */\n    \n/* } */\n\nbody {\n    /* border: 10px dashed rgb(248, 4, 65); */\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat,\n      repeat;\n    /* background-size: 3500px 2500px; */\n    background-size: cover;\n    background-color: #25657c;\n  /* background-color: #44798c97; */\n    background-blend-mode: lighten;\n  /* background-blend-mode:color; */\n  /* padding: 10px; */\n  /* margin: 50px; */\n    background-attachment: fixed;\n    background-position: center;\n    /* display: grid; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n}\n\n.app-container {\n    /* border: 10px dashed rgb(32, 4, 248); */\n    /* position: absolute; */\n  /* top: 50%; */\n  /* left: 15%; */\n    width: auto;\n    height: auto;\n  /* margin: -100px 0 0 -100px; */\n  /* background-image: url('./styles/static/free-weights-gym-equipment.jpg'); */\n    /* display: grid; */\n    /* display: inline-grid; */\n      /* grid-template-columns: 120px 120px 250px ; */\n      /* grid-template-rows: auto auto auto auto ; */\n    opacity: 95%;\n    /* grid-gap: 5px 5px; */\n    \n    /* height: auto; */\n    /* width: 1500px; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n    /* grid-template-rows: auto; */\n    background: rgba(114, 186, 94, 0.05);\n    /* background: rgba(161, 10, 55, 0.507); */\n    /* background-attachment: fixed;\n    background-position: center; */\n}\n\n/* #main-container { */\n    /* padding: 250px;\n    margin: 500px;\n    height: auto;\n    width: auto; */\n    /* background: rgb(44, 22, 66); */\n      /* background-color: rgba(255, 192, 203, 0.11); */\n\n    /* opacity: 95%; */\n    /* grid-gap: 50px; */\n    /* border: 10px dashed rgba(8, 230, 93, 0.996); */\n/* } */\n\n/* .btns-all { */\n\n/* } */\n\n/* #btn-toggle-forms { */\n    /* height: 15px;\n    width: 100px; */\n/* } */\n\n#comp-routines-page {\n  /* border: 10px dashed rgba(21, 207, 99, 0.544); */\n  margin-top: 75px;\n}\n\n#page-workout-detail {\n/* margin-top: 75px; */\n/* border: 10px dashed rgba(215, 230, 8, 0.996); */\nmargin: 75px;\n}\n\n/* #routine-workout-cards { */\n  /* display: grid; */\n  /* display: grid; */\n  /* grid-template-columns: 500px 500px; */\n  /* grid-template-rows: 500px 500px; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n  /* border: 10px dashed rgba(230, 115, 8, 0.996); */\n/* } */\n\n#workout-detail-workout-name{\n  font-size: 22px;\n  background-color: #8728e551;\n}\n\n\n/* #workout-card { */\n  /* display: grid; */\n   /* border: 10px dashed rgb(23, 173, 106); */\n  /* display: grid; */\n  /* grid-template-columns: 500px ; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n/* } */\n\n\n#routine-detail-workout-name {\n  font-size: 22px;\n  background-color: #b881f051;\n}\n\n#workoutlist-workout-info {\n      /* background-color: rgba(255, 192, 203, 0.11); */\n      /* display: grid; */\n      /* border: 10px dashed rgb(232, 145, 30); */\n      /* padding: 2%; */\n       /* justify-content: space-evenly; */\n       /* justify-content: space-around; */\n       /* justify-content: center; */\n         /* align-content: center; */\n         /* text-align: center; */\n         /* grid-template-columns: auto auto auto auto;  */\n         /* grid-template-columns: 300px ;  */\n\n           /* grid-template-areas:  */\n    /* 'data data data data btn-edit btn-delete'; */\n  /* grid-column-gap: 10px; - if you want gap between the columns */\n\n}\n\n#workout-info {\n  /* background-color: #d5b9f029; */\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  text-align: center;\n  /* background-color: rgba(226, 226, 132, 0.75); */\n  display: grid;\n  padding: 1%;\n  /* grid-template-columns: auto auto auto auto auto auto auto auto; */\n  /* justify-content: space-evenly;2 */\n}\n\n/* .routine-detail-page-btn{ */\n  /* background:violet; */\n  /* max-width: 80px; */\n  /* max-height: 80px; */\n    /* grid-row: 3 / 3; */\n  /* width: auto; */\n           /* grid-column: 1 / 3;\n            */\n              /* grid-column: 1 / span 1; */\n\n/* } */\n\n#wrapper-btns-routine-workout {\n  /* border: 10px dashed rgba(11, 224, 68, 0.822); */\n  background-color: #8728e551;\n  /* opacity: 80%; */\n  display: grid;\n  /* padding: 5%; */\n  grid-template-columns: 120px 120px;\n  justify-content: space-evenly;\n}\n\n#wrapper-btn-delete-workout {\n        /* border: 10px dashed rgba(224, 206, 11, 0.822); */\n        /* background-color: #8728e551; */\n          background-color: #8728e551;\n        /* opacity: 80%; */\n        display: grid;\n        padding: 2%;\n        grid-template-columns:auto;\n        justify-content: space-evenly;\n}\n\n#routines-list {\n  background-color: rgba(255, 192, 203, 0.11);\n  display: grid;\n  /* grid-template-columns: auto; */\n  /* grid-template-columns: auto auto; */\n  grid-template-columns: 650px;\n  /* grid-template-rows: 250px; */\n  /* grid-template-rows: auto; */\n  padding: 30px;\n          justify-content: space-evenly;\n\n}\n\n.workout-names {\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n    padding: 50px;\n    margin: 50px;\n    height: auto;\n    width: auto;\n    padding-top: 50px;\n    padding-bottom: 50px;\n    /* background-color: rgba(114, 68, 156, 0.593); */\n    /* background-color: rgba(100, 84, 115, 0.593); */\n  /* /* display: grid;\n    grid-template-columns: auto auto; */\n}\n\n\n\n/* .all-routine-edit-btns { */\n    /* font-size: 13px; */\n/* } */\n\n.routine-names {\n    /* color: rgba(222, 73, 85, 0.49); */\n    color: rgb(55, 167, 204);\n    font-size: 20px;\n    text-align: left;\n    display: grid;\n    grid-template-columns: auto auto 50px;\n    grid-template-rows: auto auto 10px;\n    justify-content: space-evenly;\n\n}\n\n.routine-name-wrapper {\n    /* background-color: rgb(10, 25, 43); */\n    background-color: rgba(43, 10, 30, 0.713);\n    display: grid;\n    padding: 1px;\n    margin: 3px;\n    grid-column-gap: 1em;\n    grid-template-columns: auto auto ;\n    justify-content: space-evenly;\n    opacity: 70%;\n}\n\n/* .routine-workout-block { */\n    /* grid-template-columns: 25% 10px 10px auto;\n    grid-template-rows: 25% auto; */\n/* } */\n\n.routine-workout-list {\n    display: grid;\n    /* display: none; */\n    grid-template-columns: auto  ;\n    /* grid-template-rows: auto auto auto auto auto; */\n    padding: 2;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n    \n}\n\n\n/* #routines-container { */\n    /* background: rgb(45, 59, 87) */\n/* } */\n\n\ninput {\n       background: #b9aaaa61;\n}\n\n::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n  color: black;\n  opacity: 1; /* Firefox */\n}\n\n:-ms-input-placeholder { /* Internet Explorer 10-11 */\n  color: black;\n}\n\n::-ms-input-placeholder { /* Microsoft Edge */\n  color: black;\n}\n\n.hidden {\n    display: none;\n}\n/* \n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87; */\n/* } */\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n#new-routine-form>label {\n    /* color: rgb(139, 139, 89); */\n    /* color: darkmagenta; */\n    color: rgba(139, 0, 139, 0.685);\n    /* color: rgba(238, 69, 196, 0.452);; */\n}\n\n#new-routine-form {\n  /* margin:auto; */\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 180px auto 240px;\n}\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}\n\n.edit-btns { \n  /* background-color: #008bbaa7; Green */\n  /* background-color: #05728ac4; Green */\n  background-color: #1495b2cb; /* Green */\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.edit-btns:hover {\n    background-color: #0abee7db; /* Green */\n  /* background-color: #05728ac4; Green */\n  /* background-color: #36c4b6c4; Green */\n  /* background-color: #96a3965a; Green */\n  color: white;\n}\n\n\n.delete-btns { \n  background-color: #be615ab8;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* opacity: .75; */\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.delete-btns:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.submit-btns { \n  /* background-color: #77d78fbc; */\n  background-color: rgba(139, 0, 139, 0.507);\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.submit-btns:hover {\n  background-color: rgba(204, 7, 204, 0.616);\n\n  /* background-color: #41f26dcb; */\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n\n.floating-nav-btns { \n  /* background-color: #d7ca779c; */\n  /* background-color: #f4e1d2; */\n  /* background-color: #618685; */\n  background-color: #a27ec6e4;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n\n\n.floating-nav-btns:hover {\n  /* background-color: #f7e255a9; */\n  /* background-color: #43bcb8da; */\n  background-color: #b076eb;\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n.routine-workout-name-block{\n  background-color: #bda5d5be;\n    /* grid:  ; */\n      float: center;\n  /* width: 50%; */\n  /* height: 25%; */\n  padding: 10px;\n  margin: 5px;\n  text-align: center;\n  display: grid;\n    grid-template-columns: 80px 200px 80px;\n}\n\n.delete-workout{\n    /* position: relative; */\n    float: center;\n  /* right: 190px; */\n    /* center: 0px; */\n    /* width: 300px; */\n  /* border: 3px solid #73AD21; */\n  /* padding: 10px; */\n}\n\n.workout-page-floating-links{\n    display: grid;\n    grid-template-columns: 40px 240px auto;\n\n    /* grid-column-gap: 50px; */\n      /* grid-gap: 50px 100px; */\n\n    /* padding: 10px; */\n    /* margin: 200px; */\n\n    /* width: 25%;\n  float: left; */\n}\n\n.routine-detail-page{\n    display: grid;\n    /* grid-template-columns: 80px 240px auto 40px; */\n    padding: 50px;\n    /* margin: 50px; */\n    position: relative;\n  }\n\n    /* #update-routine-form{ */\n    /* position: relative; */\n    /* display: grid; */\n    /* grid-template-columns: 10px 220px 220px; */\n/* } */\n\n#new-routine-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n#update-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n\n/* Style the header with a grey background and some padding */\n.header {\n  overflow: hidden;\n  /* background-color: #f1f1f127; */\n  padding: 20px 10px;\n}\n\n/* Style the header links */\n.header a {\n  float: left;\n  color: black;\n  /* color: rgb(55, 167, 204); */\n  /* color: rgb(87, 14, 84);\n  */\n  /* color: rgba(43, 10, 30, 0.713); */\n  text-align: center;\n  padding: 12px;\n  text-decoration: none;\n  font-size: 18px;\n  line-height: 25px;\n  border-radius: 4px;\n  /* margin: 1px; */\n}\n\n/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */\n.header a.logo {\n  font-size: 25px;\n  font-weight: bold;\n}\n\n/* Change the background color on mouse-over */\n.header a:hover {\n  /* background-color: #ddd;\n  color: black; */\n}\n\n/* Style the active/current link*/\n.header a.active {\n  background-color: dodgerblue;\n  color: white;\n}\n\n/* Float the link section to the right */\n.header-right {\n  float: right;\n}\n\n/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */\n@media screen and (max-width: 500px) {\n  .header a {\n    float: none;\n    display: block;\n    text-align: left;\n  }\n  .header-right {\n    float: none;\n  }\n}\n", "",{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"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","sourcesContent":["/* * { */\n    /* margin: auto; */\n    /* box-sizing: border-box; */\n    \n/* } */\n\nbody {\n    /* border: 10px dashed rgb(248, 4, 65); */\n    background-image: url('./styles/static/free-weights-gym-equipment.jpg');\n    background-repeat: no-repeat,\n      repeat;\n    /* background-size: 3500px 2500px; */\n    background-size: cover;\n    background-color: #25657c;\n  /* background-color: #44798c97; */\n    background-blend-mode: lighten;\n  /* background-blend-mode:color; */\n  /* padding: 10px; */\n  /* margin: 50px; */\n    background-attachment: fixed;\n    background-position: center;\n    /* display: grid; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n}\n\n.app-container {\n    /* border: 10px dashed rgb(32, 4, 248); */\n    /* position: absolute; */\n  /* top: 50%; */\n  /* left: 15%; */\n    width: auto;\n    height: auto;\n  /* margin: -100px 0 0 -100px; */\n  /* background-image: url('./styles/static/free-weights-gym-equipment.jpg'); */\n    /* display: grid; */\n    /* display: inline-grid; */\n      /* grid-template-columns: 120px 120px 250px ; */\n      /* grid-template-rows: auto auto auto auto ; */\n    opacity: 95%;\n    /* grid-gap: 5px 5px; */\n    \n    /* height: auto; */\n    /* width: 1500px; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n    /* grid-template-rows: auto; */\n    background: rgba(114, 186, 94, 0.05);\n    /* background: rgba(161, 10, 55, 0.507); */\n    /* background-attachment: fixed;\n    background-position: center; */\n}\n\n/* #main-container { */\n    /* padding: 250px;\n    margin: 500px;\n    height: auto;\n    width: auto; */\n    /* background: rgb(44, 22, 66); */\n      /* background-color: rgba(255, 192, 203, 0.11); */\n\n    /* opacity: 95%; */\n    /* grid-gap: 50px; */\n    /* border: 10px dashed rgba(8, 230, 93, 0.996); */\n/* } */\n\n/* .btns-all { */\n\n/* } */\n\n/* #btn-toggle-forms { */\n    /* height: 15px;\n    width: 100px; */\n/* } */\n\n#comp-routines-page {\n  /* border: 10px dashed rgba(21, 207, 99, 0.544); */\n  margin-top: 75px;\n}\n\n#page-workout-detail {\n/* margin-top: 75px; */\n/* border: 10px dashed rgba(215, 230, 8, 0.996); */\nmargin: 75px;\n}\n\n/* #routine-workout-cards { */\n  /* display: grid; */\n  /* display: grid; */\n  /* grid-template-columns: 500px 500px; */\n  /* grid-template-rows: 500px 500px; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n  /* border: 10px dashed rgba(230, 115, 8, 0.996); */\n/* } */\n\n#workout-detail-workout-name{\n  font-size: 22px;\n  background-color: #8728e551;\n}\n\n\n/* #workout-card { */\n  /* display: grid; */\n   /* border: 10px dashed rgb(23, 173, 106); */\n  /* display: grid; */\n  /* grid-template-columns: 500px ; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n/* } */\n\n\n#routine-detail-workout-name {\n  font-size: 22px;\n  background-color: #b881f051;\n}\n\n#workoutlist-workout-info {\n      /* background-color: rgba(255, 192, 203, 0.11); */\n      /* display: grid; */\n      /* border: 10px dashed rgb(232, 145, 30); */\n      /* padding: 2%; */\n       /* justify-content: space-evenly; */\n       /* justify-content: space-around; */\n       /* justify-content: center; */\n         /* align-content: center; */\n         /* text-align: center; */\n         /* grid-template-columns: auto auto auto auto;  */\n         /* grid-template-columns: 300px ;  */\n\n           /* grid-template-areas:  */\n    /* 'data data data data btn-edit btn-delete'; */\n  /* grid-column-gap: 10px; - if you want gap between the columns */\n\n}\n\n#workout-info {\n  /* background-color: #d5b9f029; */\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  text-align: center;\n  /* background-color: rgba(226, 226, 132, 0.75); */\n  display: grid;\n  padding: 1%;\n  /* grid-template-columns: auto auto auto auto auto auto auto auto; */\n  /* justify-content: space-evenly;2 */\n}\n\n/* .routine-detail-page-btn{ */\n  /* background:violet; */\n  /* max-width: 80px; */\n  /* max-height: 80px; */\n    /* grid-row: 3 / 3; */\n  /* width: auto; */\n           /* grid-column: 1 / 3;\n            */\n              /* grid-column: 1 / span 1; */\n\n/* } */\n\n#wrapper-btns-routine-workout {\n  /* border: 10px dashed rgba(11, 224, 68, 0.822); */\n  background-color: #8728e551;\n  /* opacity: 80%; */\n  display: grid;\n  /* padding: 5%; */\n  grid-template-columns: 120px 120px;\n  justify-content: space-evenly;\n}\n\n#wrapper-btn-delete-workout {\n        /* border: 10px dashed rgba(224, 206, 11, 0.822); */\n        /* background-color: #8728e551; */\n          background-color: #8728e551;\n        /* opacity: 80%; */\n        display: grid;\n        padding: 2%;\n        grid-template-columns:auto;\n        justify-content: space-evenly;\n}\n\n#routines-list {\n  background-color: rgba(255, 192, 203, 0.11);\n  display: grid;\n  /* grid-template-columns: auto; */\n  /* grid-template-columns: auto auto; */\n  grid-template-columns: 650px;\n  /* grid-template-rows: 250px; */\n  /* grid-template-rows: auto; */\n  padding: 30px;\n          justify-content: space-evenly;\n\n}\n\n.workout-names {\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n    padding: 50px;\n    margin: 50px;\n    height: auto;\n    width: auto;\n    padding-top: 50px;\n    padding-bottom: 50px;\n    /* background-color: rgba(114, 68, 156, 0.593); */\n    /* background-color: rgba(100, 84, 115, 0.593); */\n  /* /* display: grid;\n    grid-template-columns: auto auto; */\n}\n\n\n\n/* .all-routine-edit-btns { */\n    /* font-size: 13px; */\n/* } */\n\n.routine-names {\n    /* color: rgba(222, 73, 85, 0.49); */\n    color: rgb(55, 167, 204);\n    font-size: 20px;\n    text-align: left;\n    display: grid;\n    grid-template-columns: auto auto 50px;\n    grid-template-rows: auto auto 10px;\n    justify-content: space-evenly;\n\n}\n\n.routine-name-wrapper {\n    /* background-color: rgb(10, 25, 43); */\n    background-color: rgba(43, 10, 30, 0.713);\n    display: grid;\n    padding: 1px;\n    margin: 3px;\n    grid-column-gap: 1em;\n    grid-template-columns: auto auto ;\n    justify-content: space-evenly;\n    opacity: 70%;\n}\n\n/* .routine-workout-block { */\n    /* grid-template-columns: 25% 10px 10px auto;\n    grid-template-rows: 25% auto; */\n/* } */\n\n.routine-workout-list {\n    display: grid;\n    /* display: none; */\n    grid-template-columns: auto  ;\n    /* grid-template-rows: auto auto auto auto auto; */\n    padding: 2;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n    \n}\n\n\n/* #routines-container { */\n    /* background: rgb(45, 59, 87) */\n/* } */\n\n\ninput {\n       background: #b9aaaa61;\n}\n\n::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n  color: black;\n  opacity: 1; /* Firefox */\n}\n\n:-ms-input-placeholder { /* Internet Explorer 10-11 */\n  color: black;\n}\n\n::-ms-input-placeholder { /* Microsoft Edge */\n  color: black;\n}\n\n.hidden {\n    display: none;\n}\n/* \n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87; */\n/* } */\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n#new-routine-form>label {\n    /* color: rgb(139, 139, 89); */\n    /* color: darkmagenta; */\n    color: rgba(139, 0, 139, 0.685);\n    /* color: rgba(238, 69, 196, 0.452);; */\n}\n\n#new-routine-form {\n  /* margin:auto; */\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 180px auto 240px;\n}\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}\n\n.edit-btns { \n  /* background-color: #008bbaa7; Green */\n  /* background-color: #05728ac4; Green */\n  background-color: #1495b2cb; /* Green */\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.edit-btns:hover {\n    background-color: #0abee7db; /* Green */\n  /* background-color: #05728ac4; Green */\n  /* background-color: #36c4b6c4; Green */\n  /* background-color: #96a3965a; Green */\n  color: white;\n}\n\n\n.delete-btns { \n  background-color: #be615ab8;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* opacity: .75; */\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.delete-btns:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.submit-btns { \n  /* background-color: #77d78fbc; */\n  background-color: rgba(139, 0, 139, 0.507);\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.submit-btns:hover {\n  background-color: rgba(204, 7, 204, 0.616);\n\n  /* background-color: #41f26dcb; */\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n\n.floating-nav-btns { \n  /* background-color: #d7ca779c; */\n  /* background-color: #f4e1d2; */\n  /* background-color: #618685; */\n  background-color: #a27ec6e4;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n\n\n.floating-nav-btns:hover {\n  /* background-color: #f7e255a9; */\n  /* background-color: #43bcb8da; */\n  background-color: #b076eb;\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n.routine-workout-name-block{\n  background-color: #bda5d5be;\n    /* grid:  ; */\n      float: center;\n  /* width: 50%; */\n  /* height: 25%; */\n  padding: 10px;\n  margin: 5px;\n  text-align: center;\n  display: grid;\n    grid-template-columns: 80px 200px 80px;\n}\n\n.delete-workout{\n    /* position: relative; */\n    float: center;\n  /* right: 190px; */\n    /* center: 0px; */\n    /* width: 300px; */\n  /* border: 3px solid #73AD21; */\n  /* padding: 10px; */\n}\n\n.workout-page-floating-links{\n    display: grid;\n    grid-template-columns: 40px 240px auto;\n\n    /* grid-column-gap: 50px; */\n      /* grid-gap: 50px 100px; */\n\n    /* padding: 10px; */\n    /* margin: 200px; */\n\n    /* width: 25%;\n  float: left; */\n}\n\n.routine-detail-page{\n    display: grid;\n    /* grid-template-columns: 80px 240px auto 40px; */\n    padding: 50px;\n    /* margin: 50px; */\n    position: relative;\n  }\n\n    /* #update-routine-form{ */\n    /* position: relative; */\n    /* display: grid; */\n    /* grid-template-columns: 10px 220px 220px; */\n/* } */\n\n#new-routine-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n#update-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n\n/* Style the header with a grey background and some padding */\n.header {\n  overflow: hidden;\n  /* background-color: #f1f1f127; */\n  padding: 20px 10px;\n}\n\n/* Style the header links */\n.header a {\n  float: left;\n  color: black;\n  /* color: rgb(55, 167, 204); */\n  /* color: rgb(87, 14, 84);\n  */\n  /* color: rgba(43, 10, 30, 0.713); */\n  text-align: center;\n  padding: 12px;\n  text-decoration: none;\n  font-size: 18px;\n  line-height: 25px;\n  border-radius: 4px;\n  /* margin: 1px; */\n}\n\n/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */\n.header a.logo {\n  font-size: 25px;\n  font-weight: bold;\n}\n\n/* Change the background color on mouse-over */\n.header a:hover {\n  /* background-color: #ddd;\n  color: black; */\n}\n\n/* Style the active/current link*/\n.header a.active {\n  background-color: dodgerblue;\n  color: white;\n}\n\n/* Float the link section to the right */\n.header-right {\n  float: right;\n}\n\n/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */\n@media screen and (max-width: 500px) {\n  .header a {\n    float: none;\n    display: block;\n    text-align: left;\n  }\n  .header-right {\n    float: none;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2098,7 +2098,7 @@ module.exports = g;
 
 
 if (true) {
-  module.exports = __webpack_require__(61);
+  module.exports = __webpack_require__(60);
 } else {}
 
 
@@ -2126,7 +2126,7 @@ if (typeof self !== 'undefined') {
 var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(19), __webpack_require__(57)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(19), __webpack_require__(56)(module)))
 
 /***/ }),
 /* 22 */
@@ -2319,7 +2319,7 @@ var index = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext || create
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(58)
+var isarray = __webpack_require__(57)
 
 /**
  * Expose `pathToRegexp`.
@@ -3176,7 +3176,7 @@ module.exports = function (url, options) {
 
 
 if (true) {
-  module.exports = __webpack_require__(56);
+  module.exports = __webpack_require__(55);
 } else {}
 
 
@@ -3286,8 +3286,7 @@ exports.devToolsEnhancer = (
 /* 42 */,
 /* 43 */,
 /* 44 */,
-/* 45 */,
-/* 46 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3317,7 +3316,7 @@ exports.useLayoutEffect=function(a,b){return S().useLayoutEffect(a,b)};exports.u
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3332,7 +3331,7 @@ exports.useLayoutEffect=function(a,b){return S().useLayoutEffect(a,b)};exports.u
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),m=__webpack_require__(26),r=__webpack_require__(48);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
+var aa=__webpack_require__(0),m=__webpack_require__(26),r=__webpack_require__(47);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
 function ea(a,b){ca[a]=b;for(a=0;a<b.length;a++)ba.add(b[a])}
 var fa=!("undefined"===typeof window||"undefined"===typeof window.document||"undefined"===typeof window.document.createElement),ha=/^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,ia=Object.prototype.hasOwnProperty,
 ja={},ka={};function la(a){if(ia.call(ka,a))return!0;if(ia.call(ja,a))return!1;if(ha.test(a))return ka[a]=!0;ja[a]=!0;return!1}function ma(a,b,c,d){if(null!==c&&0===c.type)return!1;switch(typeof b){case "function":case "symbol":return!0;case "boolean":if(d)return!1;if(null!==c)return!c.acceptsBooleans;a=a.toLowerCase().slice(0,5);return"data-"!==a&&"aria-"!==a;default:return!1}}
@@ -3621,19 +3620,19 @@ exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!rk(c))throw Er
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(49);
+  module.exports = __webpack_require__(48);
 } else {}
 
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3660,7 +3659,7 @@ exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;
 
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
@@ -3747,7 +3746,7 @@ if (true) {
 module.exports = content.locals || {};
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(27);
@@ -3834,7 +3833,7 @@ if (true) {
 module.exports = content.locals || {};
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3847,7 +3846,7 @@ module.exports = content.locals || {};
 
 
 
-var ReactPropTypesSecret = __webpack_require__(53);
+var ReactPropTypesSecret = __webpack_require__(52);
 
 function emptyFunction() {}
 function emptyFunctionWithReset() {}
@@ -3905,7 +3904,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3924,15 +3923,37 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(55);
+  module.exports = __webpack_require__(54);
 } else {}
+
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.13.1
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?
+Symbol.for("react.suspense_list"):60120,r=b?Symbol.for("react.memo"):60115,t=b?Symbol.for("react.lazy"):60116,v=b?Symbol.for("react.block"):60121,w=b?Symbol.for("react.fundamental"):60117,x=b?Symbol.for("react.responder"):60118,y=b?Symbol.for("react.scope"):60119;
+function z(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case t:case r:case h:return a;default:return u}}case d:return u}}}function A(a){return z(a)===m}exports.AsyncMode=l;exports.ConcurrentMode=m;exports.ContextConsumer=k;exports.ContextProvider=h;exports.Element=c;exports.ForwardRef=n;exports.Fragment=e;exports.Lazy=t;exports.Memo=r;exports.Portal=d;
+exports.Profiler=g;exports.StrictMode=f;exports.Suspense=p;exports.isAsyncMode=function(a){return A(a)||z(a)===l};exports.isConcurrentMode=A;exports.isContextConsumer=function(a){return z(a)===k};exports.isContextProvider=function(a){return z(a)===h};exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===c};exports.isForwardRef=function(a){return z(a)===n};exports.isFragment=function(a){return z(a)===e};exports.isLazy=function(a){return z(a)===t};
+exports.isMemo=function(a){return z(a)===r};exports.isPortal=function(a){return z(a)===d};exports.isProfiler=function(a){return z(a)===g};exports.isStrictMode=function(a){return z(a)===f};exports.isSuspense=function(a){return z(a)===p};
+exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||a===q||"object"===typeof a&&null!==a&&(a.$$typeof===t||a.$$typeof===r||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n||a.$$typeof===w||a.$$typeof===x||a.$$typeof===y||a.$$typeof===v)};exports.typeOf=z;
 
 
 /***/ }),
@@ -3959,28 +3980,6 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 /***/ }),
 /* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/** @license React v16.13.1
- * react-is.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?
-Symbol.for("react.suspense_list"):60120,r=b?Symbol.for("react.memo"):60115,t=b?Symbol.for("react.lazy"):60116,v=b?Symbol.for("react.block"):60121,w=b?Symbol.for("react.fundamental"):60117,x=b?Symbol.for("react.responder"):60118,y=b?Symbol.for("react.scope"):60119;
-function z(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case t:case r:case h:return a;default:return u}}case d:return u}}}function A(a){return z(a)===m}exports.AsyncMode=l;exports.ConcurrentMode=m;exports.ContextConsumer=k;exports.ContextProvider=h;exports.Element=c;exports.ForwardRef=n;exports.Fragment=e;exports.Lazy=t;exports.Memo=r;exports.Portal=d;
-exports.Profiler=g;exports.StrictMode=f;exports.Suspense=p;exports.isAsyncMode=function(a){return A(a)||z(a)===l};exports.isConcurrentMode=A;exports.isContextConsumer=function(a){return z(a)===k};exports.isContextProvider=function(a){return z(a)===h};exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===c};exports.isForwardRef=function(a){return z(a)===n};exports.isFragment=function(a){return z(a)===e};exports.isLazy=function(a){return z(a)===t};
-exports.isMemo=function(a){return z(a)===r};exports.isPortal=function(a){return z(a)===d};exports.isProfiler=function(a){return z(a)===g};exports.isStrictMode=function(a){return z(a)===f};exports.isSuspense=function(a){return z(a)===p};
-exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||a===q||"object"===typeof a&&null!==a&&(a.$$typeof===t||a.$$typeof===r||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n||a.$$typeof===w||a.$$typeof===x||a.$$typeof===y||a.$$typeof===v)};exports.typeOf=z;
-
-
-/***/ }),
-/* 57 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -4010,7 +4009,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -4019,19 +4018,19 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(60);
+  module.exports = __webpack_require__(59);
 } else {}
 
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4053,7 +4052,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4074,15 +4073,15 @@ exports.typeOf=y;
 
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _ = __webpack_require__(63).runInContext();
-module.exports = __webpack_require__(65)(_, _);
+var _ = __webpack_require__(62).runInContext();
+module.exports = __webpack_require__(64)(_, _);
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -4225,10 +4224,10 @@ u&&(q.prototype[t]=function(){var t=this.__wrapped__,o=e?[1]:arguments,f=t insta
 var t=hl[n],r=/^(?:push|sort|unshift)$/.test(n)?"tap":"thru",e=/^(?:pop|shift)$/.test(n);q.prototype[n]=function(){var n=arguments;if(e&&!this.__chain__){var u=this.value();return t.apply(yh(u)?u:[],n)}return this[r](function(r){return t.apply(yh(r)?r:[],n)})}}),ee(Bt.prototype,function(n,t){var r=q[t];if(r){var e=r.name+"";yl.call(is,e)||(is[e]=[]),is[e].push({name:t,func:r})}}),is[Ju(Y,hn).name]=[{name:"wrapper",func:Y}],Bt.prototype.clone=Gt,Bt.prototype.reverse=Ht,Bt.prototype.value=Jt,q.prototype.at=Js,
 q.prototype.chain=Xo,q.prototype.commit=nf,q.prototype.next=tf,q.prototype.plant=ef,q.prototype.reverse=uf,q.prototype.toJSON=q.prototype.valueOf=q.prototype.value=of,q.prototype.first=q.prototype.head,Ll&&(q.prototype[Ll]=rf),q},ge=ve(); true?(Xr._=ge,!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(){return ge}).call(exports, __webpack_require__, exports, module),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))):undefined}).call(this);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(19), __webpack_require__(64)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(19), __webpack_require__(63)(module)))
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -4256,11 +4255,11 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var mapping = __webpack_require__(66),
-    fallbackHolder = __webpack_require__(67);
+var mapping = __webpack_require__(65),
+    fallbackHolder = __webpack_require__(66);
 
 /** Built-in value reference. */
 var push = Array.prototype.push;
@@ -4831,7 +4830,7 @@ module.exports = baseConvert;
 
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports) {
 
 /** Used to map aliases to their real names. */
@@ -5195,7 +5194,7 @@ exports.skipRearg = {
 
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports) {
 
 /**
@@ -5207,7 +5206,7 @@ module.exports = {};
 
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5223,10 +5222,10 @@ var react_dom = __webpack_require__(3);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
 // EXTERNAL MODULE: ./src/index.css
-var src = __webpack_require__(50);
+var src = __webpack_require__(49);
 
 // EXTERNAL MODULE: ./src/App.css
-var App = __webpack_require__(51);
+var App = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
 var arrayLikeToArray = __webpack_require__(11);
@@ -13794,7 +13793,7 @@ var path_to_regexp = __webpack_require__(23);
 var path_to_regexp_default = /*#__PURE__*/__webpack_require__.n(path_to_regexp);
 
 // EXTERNAL MODULE: ./node_modules/react-router/node_modules/react-is/index.js
-var node_modules_react_is = __webpack_require__(59);
+var node_modules_react_is = __webpack_require__(58);
 
 // CONCATENATED MODULE: ./node_modules/react-router/esm/react-router.js
 
@@ -21974,7 +21973,8 @@ var StyledSubmitBtns = function StyledSubmitBtns() {
       display: 'inline-block',
       //   fontSize: '12px',
       //   padding: '10px 24px',
-      borderRadius: '12px' //   transitionDuration: '0.4s',
+      borderRadius: '12px',
+      lineHeight: '2.6' //   transitionDuration: '0.4s',
       //   transition: 'background 0.4s ease-in-out',
       // background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
       // borderRadius: 3,
@@ -22183,142 +22183,6 @@ var updateRoutine = function updateRoutine(data) {
 // read index
 // update index/id
 // delete index/id
-// EXTERNAL MODULE: ./node_modules/lodash/fp.js
-var fp = __webpack_require__(62);
-
-// CONCATENATED MODULE: ./src/reducers/routinesReducer.js
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { routinesReducer_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function routinesReducer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
- // const intialState = {routines: [], routine: {}}
-
-var intialState = [{
-  "routines": [],
-  "workouts": []
-}];
-function routinesReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : intialState;
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
-  // console.log('🚀 ~ file: routinesReducer.js ~ line 4 ~ routinesReducer ~ action', action);
-  // debugger;
-  switch (action.type) {
-    case 'FETCH_ROUTINES':
-      // debugger;
-      return {
-        routines: action.payload
-      };
-
-    case 'ADD_ROUTINE':
-      var newRoutine = action.payload;
-      return _objectSpread(_objectSpread({}, state.routines), {}, {
-        routines: state.routines.concat(newRoutine)
-      });
-
-    case 'UPDATE_ROUTINE':
-      var payloadId = action.payload.id;
-      var updatedRoutine = action.payload;
-      var selectedRoutine = state.routines.filter(function (routine) {
-        return routine.id == payloadId;
-      });
-      console.log('🚀 ~~line 17 ~ ~ UPDATED-ROUTINE', updatedRoutine);
-      console.log('🚀 ~~ line 16 ~ ~ PAYLOAD-ID', payloadId);
-      console.log('🚀 ~~ line 20 ~ ~  state.routines.FILTER', state.routines.filter(function (routine) {
-        return routine.id == payloadId;
-      }));
-      console.log('🚀 ~ file: routinesReducer.js ~ line 19 ~ routinesReducer ~ selectedRoutine', selectedRoutine);
-      console.log('STATE', state);
-      return {
-        routines: state.routines.map(function (routine) {
-          return routine.id == payloadId ? action.payload : routine;
-        }) // routines: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
-        // routines: updatedRoutine
-        // routines: state.routines,
-        // routine: 
-        // updatedRoutine
-        // ,
-        // routine: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
-        // routines: state.routines,
-        // routine: updatedRoutine
-        // routine: state.routines.filter(routine => 
-        //     routine.id == payloadId ? 
-        //     routine = updatedRoutine : null
-        // ? routine = updatedRoutine : null 
-        // )
-
-      };
-    // return Object.assign({}, state, {routines: currentRoutines, routine: currentRoutine})
-
-    case 'DELETE_ROUTINE':
-      var filteredRoutines = state.routines.filter(function (routine) {
-        return routine.id !== action.payload.routineId;
-      });
-      return _objectSpread(_objectSpread({}, state), {}, {
-        routines: filteredRoutines
-      });
-
-    case 'ADD_ROUTINE_WORKOUT':
-      var newWorkout = action.payload.workout;
-      var creatorRoutineId = action.payload.routineId;
-      var creatorRoutine = state.routines.find(function (routine) {
-        return routine.id == creatorRoutineId;
-      });
-      var creatorRoutineWorkoutsList = creatorRoutine.workouts;
-      var newCreatorRoutineWorkoutsList = creatorRoutineWorkoutsList.concat(newWorkout);
-      return _objectSpread(_objectSpread({}, state), {}, {
-        routines: state.routines.map(function (r) {
-          return r;
-        }),
-        routine: creatorRoutine.workouts = newCreatorRoutineWorkoutsList
-      });
-
-    case 'DELETE_ROUTINE_WORKOUT':
-      var routineId = action.payload.routineId;
-      var workoutId = action.payload.workoutId;
-      var routine = state.routines.find(function (r) {
-        return r.id == routineId;
-      });
-      var workout = routine.workouts.find(function (w) {
-        return w.id == workoutId;
-      });
-      var workoutsList = routine.workouts;
-      var filteredWorkoutsList = workoutsList.filter(function (w) {
-        return w.id !== workoutId;
-      });
-      return _objectSpread(_objectSpread({}, state), {}, {
-        routines: state.routines.map(function (r) {
-          return r;
-        }),
-        routine: routine.workouts = filteredWorkoutsList
-      });
-    // return {...state, routines: state.routines, workouts: filteresWorkoutsList} //, workout: workout}
-
-    case 'UPDATE_WORKOUT':
-      var updateWorkoutPayload = action.payload;
-      var updateWorkoutPayloadId = action.payload.id;
-      var updateRoutinePayloadId = updateWorkoutPayload.routines[0].id;
-      var updateableRoutine = state.routines.find(function (routine) {
-        return routine.id == updateRoutinePayloadId;
-      });
-      var updateableRoutineWorkoutsList = updateableRoutine.workouts;
-      var filteredUpdateWorkoutsList = updateableRoutineWorkoutsList.map(function (w) {
-        return w.id == updateWorkoutPayloadId ? updateWorkoutPayload : w;
-      });
-      return _objectSpread(_objectSpread({}, state), {}, {
-        routines: state.routines.map(function (r) {
-          return r;
-        }),
-        routine: updateableRoutine.workouts = filteredUpdateWorkoutsList
-      });
-
-    default:
-      // return {...state}
-      return state;
-  }
-}
 // CONCATENATED MODULE: ./src/forms/UpdateRoutineForm.js
 function UpdateRoutineForm_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { UpdateRoutineForm_typeof = function _typeof(obj) { return typeof obj; }; } else { UpdateRoutineForm_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return UpdateRoutineForm_typeof(obj); }
 
@@ -22344,17 +22208,16 @@ function UpdateRoutineForm_getPrototypeOf(o) { UpdateRoutineForm_getPrototypeOf 
 
 function UpdateRoutineForm_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+/* eslint-disable eqeqeq */
 
 
- //import {Route, Switch, useLocation, withRouter} from 'react-router-dom'
-// import { createBrowserHistory } from "history";
-
-
-
+ // import {  MenuItem, FormControl } from '@material-ui/core';
 
 
 
  // import styleSubmitBtns from './NewRoutineForm'
+
+ // import {routinesReducer} from '../reducers/routinesReducer'
 
 var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
   UpdateRoutineForm_inherits(UpdateRoutineForm, _Component);
@@ -22412,9 +22275,12 @@ var UpdateRoutineForm_UpdateRoutineForm = /*#__PURE__*/function (_Component) {
         onSubmit: this.handleSubmit,
         id: "update-routine-form"
       }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
-        label: "Name",
         id: "margin-none",
+        label: "Name",
         name: "routine_name",
+        InputLabelProps: {
+          shrink: true
+        },
         value: this.state.routine_name // defaultValue="Default Value"
         ,
         onChange: this.handleChange // className={classes.textField}
@@ -22889,6 +22755,9 @@ var NewRoutineWorkoutForm_NewRoutineWorkoutForm = /*#__PURE__*/function (_Compon
         label: "Name",
         id: "margin-none",
         name: "workout_name",
+        InputLabelProps: {
+          shrink: true
+        },
         value: this.state.workout_name,
         onChange: this.handleChange
       }), /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField // input type="text" 
@@ -22897,6 +22766,9 @@ var NewRoutineWorkoutForm_NewRoutineWorkoutForm = /*#__PURE__*/function (_Compon
         label: "Type",
         id: "standard-select-currency",
         name: "workout_type",
+        InputLabelProps: {
+          shrink: true
+        },
         value: this.state.workout_type,
         onChange: this.handleChange
       }, workoutCategories.map(function (option) {
@@ -22943,8 +22815,8 @@ var NewRoutineWorkoutForm_NewRoutineWorkoutForm = /*#__PURE__*/function (_Compon
   addRoutineWorkout: addRoutineWorkout
 }), styles_withStyles(forms_StyledSubmitBtns))(NewRoutineWorkoutForm_NewRoutineWorkoutForm));
 // CONCATENATED MODULE: ./src/components/Routine.js
+/* eslint-disable eqeqeq */
  // import {Redirect} from 'react-router-dom'
-
 
 
 
@@ -23463,6 +23335,7 @@ function UpdateWorkoutForm_getPrototypeOf(o) { UpdateWorkoutForm_getPrototypeOf 
 
 function UpdateWorkoutForm_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+/* eslint-disable eqeqeq */
 
  // import {Route, Switch} from 'react-router-dom'
 
@@ -23602,6 +23475,7 @@ function UpdateWorkoutForm_mapStateToProps(state, ownProps) {
   updateWorkout: updateWorkout
 }), styles_withStyles(forms_StyledSubmitBtns))(UpdateWorkoutForm_UpdateWorkoutForm));
 // CONCATENATED MODULE: ./src/components/Workout.js
+/* eslint-disable eqeqeq */
  // import {Redirect} from 'react-router-dom'
 
 
@@ -23802,6 +23676,21 @@ var WorkoutsContainer_mapStateToProps = function mapStateToProps(state, ownProps
   fetchWorkouts: fetchWorkouts,
   fetchRoutines: fetchRoutines
 })(WorkoutsContainer_WorkoutsContainer));
+// CONCATENATED MODULE: ./src/components/Header.js
+
+
+var Header_Header = function Header() {
+  return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement("div", {
+    class: "header"
+  }, /*#__PURE__*/react_default.a.createElement("a", {
+    href: "/",
+    class: "logo"
+  }, "Work Hero App"), /*#__PURE__*/react_default.a.createElement("div", {
+    class: "header-right"
+  })));
+};
+
+/* harmony default export */ var components_Header = (Header_Header);
 // CONCATENATED MODULE: ./src/containers/MainContainer.js
 function MainContainer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { MainContainer_typeof = function _typeof(obj) { return typeof obj; }; } else { MainContainer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return MainContainer_typeof(obj); }
 
@@ -23831,6 +23720,7 @@ function MainContainer_getPrototypeOf(o) { MainContainer_getPrototypeOf = Object
 
 
 
+
 var MainContainer_MainContainer = /*#__PURE__*/function (_Component) {
   MainContainer_inherits(MainContainer, _Component);
 
@@ -23848,7 +23738,7 @@ var MainContainer_MainContainer = /*#__PURE__*/function (_Component) {
     //     super(props);
     // }
     function render() {
-      return /*#__PURE__*/react_default.a.createElement(Box_Box, null, /*#__PURE__*/react_default.a.createElement(containers_RoutinesContainer, {
+      return /*#__PURE__*/react_default.a.createElement(Box_Box, null, /*#__PURE__*/react_default.a.createElement(components_Header, null), /*#__PURE__*/react_default.a.createElement(containers_RoutinesContainer, {
         routines: this.props.routines
       }), /*#__PURE__*/react_default.a.createElement(containers_WorkoutsContainer, {
         routines: this.props.workouts
@@ -23965,6 +23855,142 @@ var logger = function logger(store) {
 };
 
 /* harmony default export */ var middleware_logger = (logger);
+// EXTERNAL MODULE: ./node_modules/lodash/fp.js
+var fp = __webpack_require__(61);
+
+// CONCATENATED MODULE: ./src/reducers/routinesReducer.js
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { routinesReducer_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function routinesReducer_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+ // const intialState = {routines: [], routine: {}}
+
+var intialState = [{
+  "routines": [],
+  "workouts": []
+}];
+function routinesReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : intialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  // console.log('🚀 ~ file: routinesReducer.js ~ line 4 ~ routinesReducer ~ action', action);
+  // debugger;
+  switch (action.type) {
+    case 'FETCH_ROUTINES':
+      // debugger;
+      return {
+        routines: action.payload
+      };
+
+    case 'ADD_ROUTINE':
+      var newRoutine = action.payload;
+      return _objectSpread(_objectSpread({}, state.routines), {}, {
+        routines: state.routines.concat(newRoutine)
+      });
+
+    case 'UPDATE_ROUTINE':
+      var payloadId = action.payload.id;
+      var updatedRoutine = action.payload;
+      var selectedRoutine = state.routines.filter(function (routine) {
+        return routine.id == payloadId;
+      });
+      console.log('🚀 ~~line 17 ~ ~ UPDATED-ROUTINE', updatedRoutine);
+      console.log('🚀 ~~ line 16 ~ ~ PAYLOAD-ID', payloadId);
+      console.log('🚀 ~~ line 20 ~ ~  state.routines.FILTER', state.routines.filter(function (routine) {
+        return routine.id == payloadId;
+      }));
+      console.log('🚀 ~ file: routinesReducer.js ~ line 19 ~ routinesReducer ~ selectedRoutine', selectedRoutine);
+      console.log('STATE', state);
+      return {
+        routines: state.routines.map(function (routine) {
+          return routine.id == payloadId ? action.payload : routine;
+        }) // routines: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
+        // routines: updatedRoutine
+        // routines: state.routines,
+        // routine: 
+        // updatedRoutine
+        // ,
+        // routine: state.routines.map(routine => routine.id == payloadId ? action.payload : routine)
+        // routines: state.routines,
+        // routine: updatedRoutine
+        // routine: state.routines.filter(routine => 
+        //     routine.id == payloadId ? 
+        //     routine = updatedRoutine : null
+        // ? routine = updatedRoutine : null 
+        // )
+
+      };
+    // return Object.assign({}, state, {routines: currentRoutines, routine: currentRoutine})
+
+    case 'DELETE_ROUTINE':
+      var filteredRoutines = state.routines.filter(function (routine) {
+        return routine.id !== action.payload.routineId;
+      });
+      return _objectSpread(_objectSpread({}, state), {}, {
+        routines: filteredRoutines
+      });
+
+    case 'ADD_ROUTINE_WORKOUT':
+      var newWorkout = action.payload.workout;
+      var creatorRoutineId = action.payload.routineId;
+      var creatorRoutine = state.routines.find(function (routine) {
+        return routine.id == creatorRoutineId;
+      });
+      var creatorRoutineWorkoutsList = creatorRoutine.workouts;
+      var newCreatorRoutineWorkoutsList = creatorRoutineWorkoutsList.concat(newWorkout);
+      return _objectSpread(_objectSpread({}, state), {}, {
+        routines: state.routines.map(function (r) {
+          return r;
+        }),
+        routine: creatorRoutine.workouts = newCreatorRoutineWorkoutsList
+      });
+
+    case 'DELETE_ROUTINE_WORKOUT':
+      var routineId = action.payload.routineId;
+      var workoutId = action.payload.workoutId;
+      var routine = state.routines.find(function (r) {
+        return r.id == routineId;
+      });
+      var workout = routine.workouts.find(function (w) {
+        return w.id == workoutId;
+      });
+      var workoutsList = routine.workouts;
+      var filteredWorkoutsList = workoutsList.filter(function (w) {
+        return w.id !== workoutId;
+      });
+      return _objectSpread(_objectSpread({}, state), {}, {
+        routines: state.routines.map(function (r) {
+          return r;
+        }),
+        routine: routine.workouts = filteredWorkoutsList
+      });
+    // return {...state, routines: state.routines, workouts: filteresWorkoutsList} //, workout: workout}
+
+    case 'UPDATE_WORKOUT':
+      var updateWorkoutPayload = action.payload;
+      var updateWorkoutPayloadId = action.payload.id;
+      var updateRoutinePayloadId = updateWorkoutPayload.routines[0].id;
+      var updateableRoutine = state.routines.find(function (routine) {
+        return routine.id == updateRoutinePayloadId;
+      });
+      var updateableRoutineWorkoutsList = updateableRoutine.workouts;
+      var filteredUpdateWorkoutsList = updateableRoutineWorkoutsList.map(function (w) {
+        return w.id == updateWorkoutPayloadId ? updateWorkoutPayload : w;
+      });
+      return _objectSpread(_objectSpread({}, state), {}, {
+        routines: state.routines.map(function (r) {
+          return r;
+        }),
+        routine: updateableRoutine.workouts = filteredUpdateWorkoutsList
+      });
+
+    default:
+      // return {...state}
+      return state;
+  }
+}
 // CONCATENATED MODULE: ./src/reducers/workoutsReducer.js
 function workoutsReducer_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
