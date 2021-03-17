@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "48398a31aac19f954f0a";
+/******/ 	var hotCurrentHash = "b7357b132a8a29b236ce";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -22906,7 +22906,7 @@ var RoutinesPage_RoutinesPage = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
         maxWidth: "lg",
         id: "comp-routines-page"
-      }, /*#__PURE__*/react_default.a.createElement(forms_ModalNewRoutineForm, null), this.props.routines && this.props.workouts ? /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
+      }, this.props.routines && this.props.workouts ? /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
         maxWidth: "lg",
         id: "routines-list"
       }, /*#__PURE__*/react_default.a.createElement(components_RoutinesList, {
@@ -24445,15 +24445,16 @@ var WorkoutsContainer_mapStateToProps = function mapStateToProps(state, ownProps
 // CONCATENATED MODULE: ./src/components/Header.js
 
 
+
 var Header_Header = function Header() {
   return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement("div", {
-    class: "header"
+    className: "header"
   }, /*#__PURE__*/react_default.a.createElement("a", {
     href: "/",
-    class: "logo"
-  }, "Work Hero App"), /*#__PURE__*/react_default.a.createElement("div", {
-    class: "header-right"
-  })));
+    className: "logo"
+  }, "Workout Hero App"), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "header-right"
+  }, /*#__PURE__*/react_default.a.createElement(forms_ModalNewRoutineForm, null))));
 };
 
 /* harmony default export */ var components_Header = (Header_Header);
