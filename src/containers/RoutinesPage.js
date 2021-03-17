@@ -22,7 +22,7 @@ class RoutinesPage extends Component {
             <>
                 {/* <OldRoutineForm routines={this.props.routines}/> */}
         <Container maxWidth="lg" id="comp-routines-page">
-            <ModalNewRoutineForm/>
+            {/* <ModalNewRoutineForm/> */}
         {/* <Popup
             trigger={
                 <button> Trigger</button>
