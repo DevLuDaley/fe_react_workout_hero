@@ -504,7 +504,7 @@ input {
 }
 
 
-/* Style the header with a grey background and some padding */
+/*! Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
   /* background-color: #f1f1f127; */
@@ -561,4 +561,57 @@ input {
   .header-right {
     float: none;
   }
+}
+
+/* ! modal */
+.popup-content {
+  /* background-color: rgba(107, 7, 7, 0.11); */
+}
+
+#popup-1 {
+  background-color: rgba(7, 25, 37, 0.76);
+  /* background-color: rgba(145, 87, 87, 0.76); */
+  padding: 25px
+}
+.modal {
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.11);
+   /* display: grid; */
+    /* grid-template-columns: 70px 70px; */
+    width: 100%;
+}
+.modal-button {
+  color: red;
+}
+
+/* .modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+} */
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+/* .modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+} */
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+  float: center;
 }
