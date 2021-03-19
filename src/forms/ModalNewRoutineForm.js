@@ -15,10 +15,11 @@ const ModalNewRoutineForm = (props) => (
 
   <Popup className="modal-container"
     trigger={
-        <Button 
+        <Button
             // className={classes.root}
+            className='floating-nav-btns'
             > 
-            Create a New Routine 
+            Add Routine 
         </Button>
         }
     modal
