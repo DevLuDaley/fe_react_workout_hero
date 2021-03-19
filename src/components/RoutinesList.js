@@ -50,21 +50,24 @@ const RoutinesList = (props) =>  {
 
                     <li key={"li-key-" + routine.id}>
                       <div key={"div-key-" + routine.id} className='routine-name-wrapper'>
-                            <Link key={"routine-url-key-" + routine.id} to={`/routines/${routine.id}`}>
-                        <h1 key={"h1-" + routine.id} className='routine-names'>
+                            <Link key={"routine-url-key-" + routine.id} to={`/routines/${routine.id}` } className='routine-names'>
+                        <h1 key={"h1-" + routine.id} id='routine-names'>
                               {routine.routine_name}
-
+</h1>
+</Link>
+<Link key={routine.id} to={`/routines/${routine.id}`}>
+<h1>
                                   {routine.workouts && routine.workouts.length != 0 ?
-                            <button key={"delete-btn-" + routine.id} className='btns-all'>
+                            <button key={"delete-btn-" + routine.id} id='routine-workout-count'>
                                   {routine.workouts.length }
                            </button>
                       : null}
 
                           </h1>
                         </Link>
-                                <button key={"delete-routine-btn-key-" + routine.id} onClick={handleDeleteRoutine} id={`btn-delete-routine-${routine.id}`} className='btn-delete-routine delete-btns'>
+                                <button key={"delete-routine-btn-key-" + routine.id} onClick={handleDeleteRoutine} id={`btn-delete-routine-${routine.id}`} id="btn-delete-routineslist-routine">
                             {/* <button onClick={deleteRoutine} id={routine.id} className='btn-delete-routine'> */}
-                                Delete Routine
+                                Delete
                             </button>
                       </div>
                       {
