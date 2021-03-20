@@ -8,8 +8,8 @@ const Navbar = () => {
     return (
         <>
         <div className="navbar">
-          <a href="/" className="logo"></a>
-          <div className="header-right">
+          <a href="/" className=""></a>
+          <div className="">
             {/* <a class="active" href="#home">Home</a>
             <a href="#contact">Contact</a>
             <a href="#about">About</a> */}
@@ -23,14 +23,15 @@ const Navbar = () => {
                 </Link>
             </Switch> */}
 
- <Switch>
-                <Link 
-                    to={'/routines'}>
-                    <button 
-                      className='floating-nav-btns'> Routines 
-                    </button>
-                </Link>
-            </Switch>
+        <Switch>
+            <Link 
+                to={'/routines'}>
+                <button
+                    className='floating-nav-btns'>
+                    View Routines 
+                </button>
+            </Link>
+        </Switch>
           <ModalNewRoutineForm/>
           </div>
         </div>

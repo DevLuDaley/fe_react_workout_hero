@@ -8,6 +8,7 @@ import {fetchRoutines} from '../actions/fetchRoutines'
 import {fetchWorkouts} from '../actions/fetchWorkouts'
 import RoutinesPage from './RoutinesPage';
 import Routine from '../components/Routine'
+// import Navbar from '../components/Navbar'
 
 class RoutinesContainer extends Component {
     constructor(props) {
@@ -26,6 +27,7 @@ class RoutinesContainer extends Component {
     render() {
         return (
             <Box>
+            {/* <Navbar/> */}
                 <Switch>
                     <Route
                         exact path='/'
