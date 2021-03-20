@@ -7,20 +7,37 @@ import { compose } from 'redux';
 
 import StyledSubmitBtns from './StyledSubmitBtns'
 
-
 import NewRoutineForm from './NewRoutineForm'
- 
-const ModalNewRoutineForm = (props) => (
-    // const {classes} = props
 
-  <Popup className="modal-container"
+var classes
+
+const ModalNewRoutineForm = (props) => (
+    // classes = props
+
+  <Popup className="modal-container "
     trigger={
-        <Button
+        <button style={{
+          color:"red",
+          backgroundColor: "#a27ec6e4",
+          border: "none",
+          color: "white",
+          padding: "15px 32px",
+          textAlign: "center",
+          textDecoration: "none",
+          display: "inline-block",
+          fontSize: "14px",
+          padding: "10px 24px",
+          borderRadius: "12px",
+          textTransform: "capitalize", 
+          fontWeight: "bold",
+          transitionDuration: "0.4s",
+          transition: "background 0.4s ease-in-out"
+          }}
             // className={classes.root}
-            className='floating-nav-btns'
+            // className='floating-nav-btns'
             > 
             Add Routine 
-        </Button>
+        </button>
         }
     modal
     nested
