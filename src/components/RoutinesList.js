@@ -58,7 +58,7 @@ const RoutinesList = (props) =>  {
 <Link key={routine.id} to={`/routines/${routine.id}`}>
 <h1>
                                   {routine.workouts && routine.workouts.length != 0 ?
-                            <button key={"delete-btn-" + routine.id} id='routine-workout-count'>
+                            <button key={"delete-btn-" + routine.id} id='btn-routine-workout-count'>
                                   {routine.workouts.length }
                            </button>
                       : null}

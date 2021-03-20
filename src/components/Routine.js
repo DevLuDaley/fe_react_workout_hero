@@ -39,14 +39,14 @@ const Routine = (props) => {
     <Container maxWidth="md">
 
         <section className="routine-detail-page">
-            <Switch>
+            {/* <Switch>
                 <Link 
                     to={'/routines'}>
                     <button 
                         className='floating-nav-btns'> Return to Routines 
                     </button>
                 </Link>
-            </Switch>
+            </Switch> */}
             {
                 props.routines ?
                     <section>
