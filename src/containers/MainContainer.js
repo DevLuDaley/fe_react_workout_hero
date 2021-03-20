@@ -6,7 +6,7 @@ import {  Box } from '@material-ui/core';
 
 import RoutinesContainer from './RoutinesContainer'
 import WorkoutsContainer from './WorkoutsContainer'
-import Header from '../components/Header'
+// import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 
 
@@ -18,7 +18,7 @@ class MainContainer extends Component {
         return (
             <Box>
 
-                <Header/>
+                {/* <Header/> */}
                 <Navbar/>
                 <RoutinesContainer routines={this.props.routines}/>
                 {/* ROUTINES CONTAINER */}
