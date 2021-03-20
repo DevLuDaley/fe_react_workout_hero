@@ -43,7 +43,7 @@ body {
     /* width: 1500px; */
     /* grid-template-columns: 1fr 1fr 1fr; */
     /* grid-template-rows: auto; */
-    background: rgba(114, 186, 94, 0.05);
+    /* background: rgba(114, 186, 94, 0.05); */
     /* background: rgba(161, 10, 55, 0.507); */
     /* background-attachment: fixed;
     background-position: center; */
@@ -71,37 +71,7 @@ body {
     width: 100px; */
 /* } */
 
-#routine-workout-count {
-font-size: 18px;
-background-color: #be615ab8;
-border: none;
-color: white;
-  /* padding: 15px 32px; */
-text-align: center;
-text-decoration: none;
-display: inline-block;
-/* font-size: 12px; */
-padding: 10px 24px;
-border-radius: 8px;
-/* transition-duration: 0.4s; */
-  transition: background 0.4s ease-in-out;
-  /*! center the btn inside of the div  */
-  /* transition: background 0.4s ease-in-out; */
-  height: 40px; 
-  position: relative; 
-  margin: -20px -50px; 
-  width: 100px; 
-  top: 50%; 
-  left: 50%;
-}
 
-#routine-workout-count:hover {
-  /* background-color: #ff291aa9; */
-  /* background-color: #d11e12b3;*/
-  background-color: #f2483cc4;
-  color: white;
-  opacity: 1
-}
 
 #component-routines-page {
   /* border: 10px dashed rgba(21, 207, 99, 0.544); */
@@ -233,7 +203,7 @@ margin: 75px;
   /* grid-template-columns: 75px 50px 100px; */
   /* grid-template-rows: 250px; */
   /* grid-template-rows: auto; */
-  padding: 30px;
+  /* padding: 30px; */
           justify-content: space-evenly;
 
 }
@@ -245,9 +215,34 @@ margin: 75px;
     /* font-size: 13px; */
 /* } */
 
+
+
+.routine-name-wrapper {
+  /* border : 10px dashed red; */
+    /* background-color: rgb(10, 25, 43); */
+    background-color: rgba(43, 10, 30, 0.713);
+    display: grid;
+    padding: 5px 3px;
+    margin: 3px;
+    /* grid-column-gap: 2em; */
+    /* grid-column-gap: 10px; */
+    grid-template-columns: 200px auto auto ;
+    /* justify-content: space-evenly; */
+    justify-content: space-around;
+    /* justify-content: center; */
+    opacity: 75%;
+      /* float: center; */
+  /* width: 33.33%; */
+    /* width: 100%; 
+    height: 400px; 
+    border: 1px */
+}
+
 #routine-names {
     /* color: rgba(222, 73, 85, 0.49); */
     color: rgb(55, 167, 204);
+    text-decoration: none;
+    /* padding: 40px 60px; */
     /* font-size: 20px; */
     /* display: inline-block; */
     /* vertical-align: middle; */
@@ -259,24 +254,39 @@ margin: 75px;
 
 }
 
-.routine-name-wrapper {
-  /* border : 10px dashed red; */
-    /* background-color: rgb(10, 25, 43); */
-    background-color: rgba(43, 10, 30, 0.713);
-    display: grid;
-    padding: 5px 3px;
-    margin: 3px;
-    /* grid-column-gap: 2em; */
-    /* grid-column-gap: 10px; */
-    grid-template-columns: 150px 30px 150px ;
-    justify-content: space-evenly;
-    opacity: 70%;
-      /* float: center; */
-  /* width: 33.33%; */
-    /* width: 100%; 
-    height: 400px; 
-    border: 1px */
+#btn-routine-workout-count {
+font-size: 14px;
+background-color: #be615ab8;
+border: none;
+color: white;
+  /* padding: 15px 32px; */
+text-align: center;
+text-decoration: none;
+display: inline-block;
+/* font-size: 12px; */
+/* padding: 10px 24px; */
+border-radius: 8px;
+height: 40px; 
+width: 80px;
+/* transition-duration: 0.4s; */
+  transition: background 0.4s ease-in-out;
+  /*! center the btn inside of the div  */
+  /* transition: background 0.4s ease-in-out; */
+  /* position: relative;  */
+  margin: 45px -50px; 
+  /* width: 100px;  */
+  /* top: 50%;  */
+  /* left: 50%; */
 }
+
+#routine-workout-count:hover {
+  /* background-color: #ff291aa9; */
+  /* background-color: #d11e12b3;*/
+  background-color: #f2483cc4;
+  color: white;
+  opacity: 1
+}
+
 
 #btn-delete-routineslist-routine{
   /* background: red; */
@@ -291,18 +301,19 @@ text-decoration: none;
 display: inline-block;
 /* font-size: 12px; */
 /* padding: 8px 20px; */
-border-radius: 10px;
-height: 50px;
+/* padding: 10px 24px; */
+border-radius: 8px;
+height: 40px;
 width: 80px;
 /* transition-duration: 0.4s; */
 /*! center the btn inside of the div  */
   transition: background 0.4s ease-in-out;
-  height:20px; 
-  position:relative; 
-  margin: -20px -50px; 
-  width:100px; 
-  top:50%; 
-  left:50%;
+  /* height:20px;  */
+  /* position:relative;  */
+  margin: 72px -10px; 
+  /* width:100px;  */
+  /* top:50%;  */
+  /* left:50%; */
 }
 
 #btn-delete-routineslist-routine:hover {
@@ -313,11 +324,14 @@ width: 80px;
   opacity: 1
 }
 
+
 .routine-workout-list {
-    display: grid;
+    /* display: grid; */
     /* display: none; */
-    grid-template-columns: auto  ;
+    /* grid-template-columns: auto; */
+    /* grid-template-columns: 550px; */
     /* grid-template-rows: auto auto auto auto auto; */
+    /* text-align: center; */
     padding: 2;
     border: 2px solid pink;
     border-radius: 5px;
@@ -342,6 +356,7 @@ width: 80px;
   width: auto;
   padding-top: 50px;
   padding-bottom: 50px;
+  text-align: center;
     /* background-color: rgba(114, 68, 156, 0.593); */
     /* background-color: rgba(100, 84, 115, 0.593); */
   /* /* display: grid;
@@ -512,11 +527,14 @@ input {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 14px;
   padding: 10px 24px;
   border-radius: 12px;
+  text-transform: capitalize; 
+  font-weight: bold;
   transition-duration: 0.4s;
   transition: background 0.4s ease-in-out;
+   margin: 0px 20px; 
   /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */
 }
 
@@ -527,25 +545,34 @@ input {
   /* background-color: #43bcb8da; */
   background-color: #b076eb;
   /* background-color: #d11e12b3; */
-  color: white;
+  /* color: white; */
 }
 
 .routine-workout-name-block{
   background-color: #bda5d5be;
     /* grid:  ; */
-      float: center;
+      /* float: center; */
   /* width: 50%; */
   /* height: 25%; */
   padding: 10px;
   margin: 5px;
-  text-align: center;
   display: grid;
-    grid-template-columns: 80px 200px 80px;
+  grid-template-columns: 80px 200px 80px;
+  grid-template-rows: auto;
+  /* justify-items: center; */
+  /* align-items: center; */
+  justify-content: center;
+    /* display: flex;
+    justify-content: space-evenly; */
+  /* justify-content: center; */
+  /* text-align: center; */
+
+  
 }
 
 .delete-workout{
     /* position: relative; */
-    float: center;
+    /* float: center; */
   /* right: 190px; */
     /* center: 0px; */
     /* width: 300px; */
@@ -570,7 +597,7 @@ input {
 .routine-detail-page{
     display: grid;
     /* grid-template-columns: 80px 240px auto 40px; */
-    padding: 50px;
+    /* padding: 50px; */
     /* margin: 50px; */
     position: relative;
   }
@@ -598,21 +625,22 @@ input {
 .header {
   overflow: hidden;
   /* background-color: #f1f1f127; */
-  padding: 20px 10px;
+  padding: 60px 10px;
   text-align: center;
+  width: 100%;
   /* padding: 20px; */
 }
 
 /* Style the header links */
 .header a {
-  float: left;
+  /* float: left; */
   color: black;
   /* color: rgb(55, 167, 204); */
   /* color: rgb(87, 14, 84);
   */
   /* color: rgba(43, 10, 30, 0.713); */
   text-align: center;
-  padding: 12px;
+  /* padding: 12px; */
   text-decoration: none;
   font-size: 18px;
   line-height: 25px;
@@ -622,12 +650,12 @@ input {
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
-  font-size: 52px;
+  font-size: 65px;
   font-weight: bold;
   text-align: center;
-  width: 100%;
+  /* width: 100%; */
   padding: 20px 10px;
-  background-color: rgba(30, 143, 255, 0.555);
+  /* background-color: rgba(30, 143, 255, 0.555); */
 }
 
 /* Change the background color on mouse-over */
@@ -658,41 +686,50 @@ input {
     float: none;
   }
 }
+
+/*! Style the navbar links */
+
 .navbar {
   overflow: hidden;
   /* background-color: #f1f1f127; */
   padding: 20px 10px;
+  /* display: grid; */
+   /* margin: 72px -10px;  */
+  /* color: red; */
+  /* float: center; */
   /* background-color: #333; */
-  background-color: rgba(113, 104, 197, 0.425);
+  /* background-color: rgba(113, 104, 197, 0.425); */
 
 }
 
-/* Style the navbar links */
 .navbar a {
-  float: left;
-  color: black;
+  /* float: left; */
+  /* color: black; */
   /* color: rgb(55, 167, 204); */
   /* color: rgb(87, 14, 84);
   */
   /* color: rgba(43, 10, 30, 0.713); */
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
+  /* text-align: left; */
+  /* padding: 12px; */
+  /* text-decoration: none;
   font-size: 18px;
   line-height: 25px;
-  border-radius: 4px;
+  border-radius: 4px; */
   /* margin: 1px; */
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  /* display: block; */
+  /* display: grid; */
+  /* color: #f2f2f2; */
+  /* text-align: center; */
+  /* padding: 14px 16px; */
+  /* text-decoration: none; */
+  
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the navbar to increase when the font gets bigger */
 .navbar a.logo {
-  font-size: 25px;
+  /* font-size: 25px;
   font-weight: bold;
+  float: center; */
   /* float: left; */
 }
 
@@ -704,13 +741,13 @@ input {
 
 /* Style the active/current link*/
 .navbar a.active {
-  background-color: dodgerblue;
-  color: white;
+  /* background-color: dodgerblue;
+  color: white; */
 }
 
 /* Float the link section to the right */
 .navbar-right {
-  float: right;
+  /* float: right; */
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
