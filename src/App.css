@@ -692,13 +692,18 @@ input {
 .navbar {
   overflow: hidden;
   /* background-color: #f1f1f127; */
-  padding: 20px 10px;
+  padding: 10px 10px;
   /* display: grid; */
+  /* grid-template-columns: 140px 140px; */
+
+    /* grid-column-gap: 50px; */
    /* margin: 72px -10px;  */
   /* color: red; */
   /* float: center; */
   /* background-color: #333; */
   /* background-color: rgba(113, 104, 197, 0.425); */
+   text-align: center;
+   /* justify-content: space-around; */
 
 }
 
