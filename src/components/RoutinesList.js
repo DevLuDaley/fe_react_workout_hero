@@ -18,7 +18,7 @@ const RoutinesList = (props) =>  {
 
   const handleDeleteRoutine = (e) => {
     if (props.routines){
-      console.log(e.target);
+      // console.log(e.target);
       const targetId = e.target.id.replace("btn-delete-routine-", "")
       const clickedRoutine = props.routines.find(routine => routine.id == targetId)
       props.deleteRoutine(clickedRoutine)
