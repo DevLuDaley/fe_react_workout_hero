@@ -14,10 +14,13 @@ var classes
 const ModalNewRoutineForm = (props) => (
     // classes = props
 
-  <Popup className="modal-container "
+  <Popup 
+    className="modal-container"
+  // style={{color:"red"}}
     trigger={
+
         <button style={{
-          color:"red",
+          color: "red",
           backgroundColor: "#a27ec6e4",
           border: "none",
           color: "white",
@@ -74,6 +77,23 @@ const ModalNewRoutineForm = (props) => (
           </Popup> */}
           <button
             className="button"
+            style={{
+          color: "red",
+          backgroundColor: "#be615ab8",
+          border: "none",
+          color: "white",
+          // padding: "15px 32px",
+          textAlign: "center",
+          textDecoration: "none",
+          display: "inline-block",
+          fontSize: "14px",
+          padding: "10px 24px",
+          borderRadius: "12px",
+          textTransform: "capitalize", 
+          fontWeight: "bold",
+          transitionDuration: "0.4s",
+          transition: "background 0.4s ease-in-out"
+          }}
             onClick={() => {
             //   console.log('modal closed ');
               close();
