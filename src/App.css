@@ -256,7 +256,7 @@ margin: 75px;
 
 #btn-routine-workout-count {
 font-size: 14px;
-background-color: #be615ab8;
+background-color: #cc5f57cb;
 border: none;
 color: white;
   /* padding: 15px 32px; */
@@ -288,7 +288,7 @@ width: 80px;
 }
 
 
-#btn-delete-routineslist-routine{
+.btn-delete-routineslist-routine{
   /* background: red; */
 /* #routine-workout-count { */
 font-size: 14px;
@@ -316,7 +316,7 @@ width: 80px;
   /* left:50%; */
 }
 
-#btn-delete-routineslist-routine:hover {
+.btn-delete-routineslist-routine:hover {
   /* background-color: #ff291aa9; */
   /* background-color: #d11e12b3;*/
   background-color: #f2483cc4;
@@ -773,12 +773,18 @@ input {
 }
 
 #popup-1 {
-  background-color: rgba(7, 25, 37, 0.76);
+  /* background-color: rgba(7, 25, 37, 0.76); */
+  /* background-color: rgb(7, 25, 37); */
+  background-color: rgb(36, 79, 107);
+  /* background-color: rgba(36, 79, 107, 0.837) */
   /* background-color: rgba(145, 87, 87, 0.76); */
-  padding: 25px
+  /* background-color: rgba(145, 87, 87, 0.76); */
+  padding: 50px;
+  opacity: 85%;
 }
 .modal {
   font-size: 12px;
+  /* background-color: rgba(0, 0, 0, 0.11); */
   background-color: rgba(0, 0, 0, 0.11);
    /* display: grid; */
     /* grid-template-columns: 70px 70px; */
@@ -797,7 +803,7 @@ input {
 } */
 .modal > .content {
   width: 100%;
-  padding: 10px 5px;
+  padding: 10px 15px;
 }
 /* .modal > .actions {
   width: 100%;
