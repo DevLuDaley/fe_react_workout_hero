@@ -31,7 +31,7 @@ class NewRoutineForm extends Component {
         this.setState({ 
             name: ''
         })
-        console.log('🚀 ~ file: NewRoutineForm.js ~ line 23 ~ NewRoutineForm ~ this.state', this.state)
+        // console.log('🚀 ~ file: NewRoutineForm.js ~ line 23 ~ NewRoutineForm ~ this.state', this.state)
     }
 
     render() {
@@ -49,6 +49,8 @@ const {classes} = this.props
                 <label> </label>
                 <TextField
                     label="Routine Name"
+                    style={{
+                        color: "red", backgroundColor: "lightcoral"}}
                     id="margin-none"
                     value={this.state.name} 
                     name="routine_name" 
