@@ -18,6 +18,7 @@ const RoutinesList = (props) =>  {
 
   const handleDeleteRoutine = (e) => {
     if (props.routines){
+      console.log(e.target);
       const targetId = e.target.id.replace("btn-delete-routine-", "")
       const clickedRoutine = props.routines.find(routine => routine.id == targetId)
       props.deleteRoutine(clickedRoutine)
@@ -65,7 +66,7 @@ const RoutinesList = (props) =>  {
 
                           </h1>
                         </Link>
-                                <button key={"delete-routine-btn-key-" + routine.id} onClick={handleDeleteRoutine} id={`btn-delete-routine-${routine.id}`} id="btn-delete-routineslist-routine">
+                                <button key={"delete-routine-btn-key-" + routine.id} onClick={handleDeleteRoutine} id={`btn-delete-routine-${routine.id}`} className="btn-delete-routineslist-routine">
                             {/* <button onClick={deleteRoutine} id={routine.id} className='btn-delete-routine'> */}
                                 Delete
                             </button>
