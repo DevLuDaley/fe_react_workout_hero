@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { Box } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 
+import ModalUpdateWorkoutForm from '../forms/ModalUpdateWorkoutForm'
 import UpdateWorkoutForm from '../forms/UpdateWorkoutForm'
 import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
 // import NewWorkoutWorkoutForm from '../forms/NewWorkoutWorkoutForm'
@@ -47,33 +48,47 @@ const routine = props.routines.find(routine => routine.id == routineId)
 
             <section className="workout-page-floating-links">
 
-              <Link to={'/routines'}> <button className='floating-nav-btns'> Routines </button> </Link>
-                  <br/>
-                       <Link to={'/routines/' + routineId}> <button className='floating-nav-btns'> {routine.routine_name} Routine Page </button> </Link>
+              {/* <Link to={'/routines'}> <button className='floating-nav-btns'> Routines </button> </Link> */}
+                  
+                       <Link to={'/routines/' + routineId}> <button className='floating-nav-btns'>{routine.routine_name}</button> </Link>
             </section>
-          <br/>
-          <Box>
-              <UpdateWorkoutForm detail={workout}/>
-          </Box>
-          <br/>
+          
+
+          
           <div id="workout-card">
             <div  key={workout.id}>
-              <section id="workout-info">
+              <section id="workout-info-block">
                 <section id="workout-detail-workout-name">
                   {workout.workout_name}
-                <br></br>
+                
                 </section>
-                    id: {workout.id}
-                <br></br>
-                    category: {workout.workout_type}
-                <br></br>
-                    distance: {workout.distance}
-                <br></br>
-                    duration: {workout.duration}
-                <br></br>
-              </section>
-              </div>
-  <section id="wrapper-btn-delete-workout"><button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns delete-workout'> Delete Exercise </button></section>
+                    <ul id="workout-info" style={{"textDecoration":"none"}}>
+                      <li>id: {workout.id}</li>
+                  
+                      <li>category: {workout.workout_type}</li>
+                  
+                      <li>distance: {workout.distance}</li>
+                  
+                      <li>duration: {workout.duration}</li>
+                    </ul>
+                
+              {/* </section> */}
+              {/* </div> */}
+    <section            id="wrapper-btn-delete-workout">
+      <button onClick={handleDeleteWorkout} 
+      id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns delete-workout'> 
+      Delete Exercise 
+      </button>
+    </section>
+    </section>
+          <Box>
+            <ModalUpdateWorkoutForm 
+                // detail={workout} 
+                // routine={routine} 
+                // workout={workout}
+                />
+          </Box>  
+    </div>
                           </div>
                     </Box>
         </Container>
