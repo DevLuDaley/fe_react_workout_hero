@@ -14,14 +14,22 @@ import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
 
 
 
+
 const RoutinesList = (props) =>  {
 
+  
+  
   const handleDeleteRoutine = (e) => {
     if (props.routines){
       // console.log(e.target);
       const targetId = e.target.id.replace("btn-delete-routine-", "")
       const clickedRoutine = props.routines.find(routine => routine.id == targetId)
-      props.deleteRoutine(clickedRoutine)
+      var shouldDelete = confirm('To delete this routine press \'OK\'. Otherwise press \'Cancel\'');
+      // setConfirmOpen(true)  
+      if (shouldDelete) {
+  // deleteArticle();
+  props.deleteRoutine(clickedRoutine)
+}
         }
     }
 
@@ -40,7 +48,11 @@ const RoutinesList = (props) =>  {
           "id": clickedRoutine.id,
           "workout_id_to_delete": workoutId
       }
+      var shouldDelete = confirm('To delete this workout press \'OK\'. Otherwise press \'Cancel\'');
+      // setConfirmOpen(true)  
+      if (shouldDelete) {
       props.deleteRoutineWorkout(outgoingPayload)
+        }
         }
     }
   return (
@@ -82,7 +94,15 @@ const RoutinesList = (props) =>  {
                                  </Link>
                                 {workout.workout_name} 
                                 <button className="delete-btns" onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
-
+{/* <ConfirmDialog/> */}
+  {/* <ConfirmDialog
+    title="Delete Post?"
+    open={confirmOpen}
+    setOpen={setConfirmOpen}
+    onConfirm={deletePost}
+  >
+    Are you sure you want to delete this post?
+  </ConfirmDialog> */}
                                 <Box key={"nested-section-key-" + workout.id} className='routine-workout-details'>
                                 </Box>
                             </div>
