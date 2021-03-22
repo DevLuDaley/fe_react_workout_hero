@@ -56,7 +56,7 @@ class UpdateRoutineForm extends Component {
             <Container maxWidth="sm">
 
             {
-                this.props.routines && this.props.routineToUpdate ?
+                this.props.routines ?
                     <section>
                         {/* {this.routineInfo} */}
                         <form onSubmit={this.handleSubmit} id='update-routine-form'>
