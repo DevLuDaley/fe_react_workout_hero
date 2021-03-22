@@ -151,8 +151,27 @@ margin: 75px;
 
 }
 
+#workout-info-block {
+  background-color: #d5b9f029;
+  /* border: 10px rgb(204, 55, 87) dotted; */
+  font-size: 17px;
+  color:rgba(40, 15, 4, 0.737);
+  font-weight: bold;
+  text-align: center;
+  /* background-color: rgba(226, 226, 132, 0.75); */
+  display: grid;
+  grid-template-columns: 150px;
+  padding: 1%;
+  /* color: greenyellow; */
+  /* grid-template-columns: 100px; */
+  /* grid-template-columns: auto auto auto auto auto auto auto auto; */
+  justify-content: space-evenly;
+}
+
 #workout-info {
   /* background-color: #d5b9f029; */
+  /* border: 10px rgb(55, 167, 204) dotted; */
+  list-style-type: none;
   font-size: 17px;
   color:rgba(40, 15, 4, 0.737);
   font-weight: bold;
@@ -160,8 +179,11 @@ margin: 75px;
   /* background-color: rgba(226, 226, 132, 0.75); */
   display: grid;
   padding: 1%;
+  grid-template-columns: 150px;
+  /* color: greenyellow; */
+
   /* grid-template-columns: auto auto auto auto auto auto auto auto; */
-  /* justify-content: space-evenly;2 */
+  justify-content: space-evenly;
 }
 
 /* .routine-detail-page-btn{ */
@@ -594,8 +616,10 @@ input {
 
 .workout-page-floating-links{
     display: grid;
-    grid-template-columns: 40px 240px auto;
-
+    grid-template-rows: 100px;
+    /* grid-template-columns: 100px 100px; */
+    justify-content: space-evenly;
+    /* justify-content: center; */
     /* grid-column-gap: 50px; */
       /* grid-gap: 50px 100px; */
 
@@ -832,6 +856,24 @@ justify-content: space-around;
   padding: 50px;
   opacity: 85%;
 }
+
+#popup-4 {
+  /* background-color: rgba(7, 25, 37, 0.76); */
+  /* background-color: rgb(7, 25, 37); */
+  /* background-color: rgb(28, 44, 54); */
+  background-color: rgb(45, 87, 112);
+  /* background-color: rgb(36, 79, 107);
+   */
+   /* background-color: #351853ef; */
+   /* background-color: #160542e8; */
+  /* background-color: rgba(36, 79, 107, 0.837) */
+  /* background-color: rgba(145, 87, 87, 0.76); */
+  /* background-color: rgba(145, 87, 87, 0.76); */
+  padding: 50px;
+  opacity: 85%;
+}
+
+
 .modal {
   font-size: 12px;
   /* background-color: rgba(0, 0, 0, 0.11); */
