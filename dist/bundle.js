@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "ee34092bee5d48ab81e7";
+/******/ 	var hotCurrentHash = "f52093f237bd8b0c9271";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -2059,7 +2059,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_styles_static_free_weights_gym_equipment_jpg__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "/* * { */\n    /* margin: auto; */\n    /* box-sizing: border-box; */\n    \n/* } */\n\nbody {\n    /* border: 10px dashed rgb(248, 4, 65); */\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat,\n      repeat;\n    /* background-size: 3500px 2500px; */\n    background-size: cover;\n    background-color: #25657c;\n  /* background-color: #44798c97; */\n    background-blend-mode: lighten;\n  /* background-blend-mode:color; */\n  /* padding: 10px; */\n  /* margin: 50px; */\n    background-attachment: fixed;\n    background-position: center;\n    /* display: grid; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n}\n\n.app-container {\n    /* border: 10px dashed rgb(32, 4, 248); */\n    /* position: absolute; */\n  /* top: 50%; */\n  /* left: 15%; */\n    width: auto;\n    height: auto;\n  /* margin: -100px 0 0 -100px; */\n  /* background-image: url('./styles/static/free-weights-gym-equipment.jpg'); */\n    /* display: grid; */\n    /* display: inline-grid; */\n      /* grid-template-columns: 120px 120px 250px ; */\n      /* grid-template-rows: auto auto auto auto ; */\n    opacity: 95%;\n    /* grid-gap: 5px 5px; */\n    \n    /* height: auto; */\n    /* width: 1500px; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n    /* grid-template-rows: auto; */\n    /* background: rgba(114, 186, 94, 0.05); */\n    /* background: rgba(161, 10, 55, 0.507); */\n    /* background-attachment: fixed;\n    background-position: center; */\n}\n\n/* #main-container { */\n    /* padding: 250px;\n    margin: 500px;\n    height: auto;\n    width: auto; */\n    /* background: rgb(44, 22, 66); */\n      /* background-color: rgba(255, 192, 203, 0.11); */\n\n    /* opacity: 95%; */\n    /* grid-gap: 50px; */\n    /* border: 10px dashed rgba(8, 230, 93, 0.996); */\n/* } */\n\n/* .btns-all { */\n\n/* } */\n\n/* #btn-toggle-forms { */\n    /* height: 15px;\n    width: 100px; */\n/* } */\n\n\n\n#component-routines-page {\n  /* border: 10px dashed rgba(21, 207, 99, 0.544); */\n  /* margin-top: 75px; */\n  /* display: grid; */\n  /* grid-template-columns: 200px repeat(auto-fill, 100px) 300px; */\n  /* grid-template-columns: 1fr 1fr 1fr; */\n  /* grid-template-columns: 60px 60px; */\n}\n\n#container-all-routines {\n  /* border: 10px dashed rgba(21, 133, 207, 0.544); */\n  /* margin-top: 75px; */\n  /* display: grid; */\n  /* grid-template-columns: 200px repeat(auto-fill, 100px) 300px; */\n  /* grid-template-columns: 1fr 1fr 1fr; */\n  /* grid-template-columns: 60px 60px; */\n}\n\n#page-workout-detail {\n/* margin-top: 75px; */\n/* border: 10px dashed rgba(215, 230, 8, 0.996); */\nmargin: 75px;\n}\n\n/* #routine-workout-cards { */\n  /* display: grid; */\n  /* display: grid; */\n  /* grid-template-columns: 500px 500px; */\n  /* grid-template-rows: 500px 500px; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n  /* border: 10px dashed rgba(230, 115, 8, 0.996); */\n/* } */\n\n#workout-detail-workout-name{\n  font-size: 22px;\n  background-color: #8728e551;\n}\n\n\n/* #workout-card { */\n  /* display: grid; */\n   /* border: 10px dashed rgb(23, 173, 106); */\n  /* display: grid; */\n  /* grid-template-columns: 500px ; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n/* } */\n\n\n#routine-detail-workout-name {\n  font-size: 22px;\n  background-color: #b881f051;\n}\n\n#workoutlist-workout-info {\n      /* background-color: rgba(255, 192, 203, 0.11); */\n      /* display: grid; */\n      /* border: 10px dashed rgb(232, 145, 30); */\n      /* padding: 2%; */\n       /* justify-content: space-evenly; */\n       /* justify-content: space-around; */\n       /* justify-content: center; */\n         /* align-content: center; */\n         /* text-align: center; */\n         /* grid-template-columns: auto auto auto auto;  */\n         /* grid-template-columns: 300px ;  */\n\n           /* grid-template-areas:  */\n    /* 'data data data data btn-edit btn-delete'; */\n  /* grid-column-gap: 10px; - if you want gap between the columns */\n\n}\n\n#workout-info {\n  /* background-color: #d5b9f029; */\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  text-align: center;\n  /* background-color: rgba(226, 226, 132, 0.75); */\n  display: grid;\n  padding: 1%;\n  /* grid-template-columns: auto auto auto auto auto auto auto auto; */\n  /* justify-content: space-evenly;2 */\n}\n\n/* .routine-detail-page-btn{ */\n  /* background:violet; */\n  /* max-width: 80px; */\n  /* max-height: 80px; */\n    /* grid-row: 3 / 3; */\n  /* width: auto; */\n           /* grid-column: 1 / 3;\n            */\n              /* grid-column: 1 / span 1; */\n\n/* } */\n\n#wrapper-btns-routine-workout {\n  /* border: 10px dashed rgba(11, 224, 68, 0.822); */\n  background-color: #8728e551;\n  /* opacity: 80%; */\n  display: grid;\n  /* padding: 5%; */\n  grid-template-columns: 120px 120px;\n  justify-content: space-evenly;\n}\n\n#wrapper-btn-delete-workout {\n        /* border: 10px dashed rgba(224, 206, 11, 0.822); */\n        /* background-color: #8728e551; */\n          background-color: #8728e551;\n        /* opacity: 80%; */\n        display: grid;\n        padding: 2%;\n        grid-template-columns:auto;\n        justify-content: space-evenly;\n}\n\n#routines-list {\n  background-color: rgba(255, 192, 203, 0.11);\n  display: grid;\n  /* grid-template-columns: auto; */\n  /* grid-template-columns: auto auto; */\n  /* grid-template-columns: 650px; */\n  grid-template-columns: 800px;\n  /* grid-template-columns: 75px 50px 100px; */\n  /* grid-template-rows: 250px; */\n  /* grid-template-rows: auto; */\n  /* padding: 30px; */\n          justify-content: space-evenly;\n\n}\n\n\n\n\n/* .all-routine-edit-btns { */\n    /* font-size: 13px; */\n/* } */\n\n\n\n.routine-name-wrapper {\n  /* border : 10px dashed red; */\n    /* background-color: rgb(10, 25, 43); */\n    background-color: rgba(43, 10, 30, 0.713);\n    display: grid;\n    padding: 5px 3px;\n    margin: 3px;\n    /* grid-column-gap: 2em; */\n    /* grid-column-gap: 10px; */\n    grid-template-columns: 200px auto auto ;\n    /* justify-content: space-evenly; */\n    justify-content: space-around;\n    /* justify-content: center; */\n    opacity: 75%;\n      /* float: center; */\n  /* width: 33.33%; */\n    /* width: 100%; \n    height: 400px; \n    border: 1px */\n}\n\n#routine-names {\n    /* color: rgba(222, 73, 85, 0.49); */\n    color: rgb(55, 167, 204);\n    text-decoration: none;\n    /* padding: 40px 60px; */\n    /* font-size: 20px; */\n    /* display: inline-block; */\n    /* vertical-align: middle; */\n    /* text-align: center; */\n    /* display: grid;\n    grid-template-columns: auto auto 50px;\n    grid-template-rows: auto auto 10px;\n    justify-content: space-evenly; */\n\n}\n\n#btn-routine-workout-count {\nfont-size: 14px;\nbackground-color: #cc5f57cb;\nborder: none;\ncolor: white;\n  /* padding: 15px 32px; */\ntext-align: center;\ntext-decoration: none;\ndisplay: inline-block;\n/* font-size: 12px; */\n/* padding: 10px 24px; */\nborder-radius: 8px;\nheight: 40px; \nwidth: 80px;\n/* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /*! center the btn inside of the div  */\n  /* transition: background 0.4s ease-in-out; */\n  /* position: relative;  */\n  margin: 45px -50px; \n  /* width: 100px;  */\n  /* top: 50%;  */\n  /* left: 50%; */\n}\n\n#routine-workout-count:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.btn-delete-routineslist-routine{\n  /* background: red; */\n/* #routine-workout-count { */\nfont-size: 14px;\nbackground-color: #be615ab8;\nborder: none;\ncolor: white;\n/* padding: 15px 32px; */\ntext-align: center;\ntext-decoration: none;\ndisplay: inline-block;\n/* font-size: 12px; */\n/* padding: 8px 20px; */\n/* padding: 10px 24px; */\nborder-radius: 8px;\nheight: 40px;\nwidth: 80px;\n/* transition-duration: 0.4s; */\n/*! center the btn inside of the div  */\n  transition: background 0.4s ease-in-out;\n  /* height:20px;  */\n  /* position:relative;  */\n  margin: 72px -10px; \n  /* width:100px;  */\n  /* top:50%;  */\n  /* left:50%; */\n}\n\n.btn-delete-routineslist-routine:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.routine-workout-list {\n    /* display: grid; */\n    /* display: none; */\n    /* grid-template-columns: auto; */\n    /* grid-template-columns: 550px; */\n    /* grid-template-rows: auto auto auto auto auto; */\n    /* text-align: center; */\n    padding: 2;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n    \n}\n\n\n/* #routines-container { */\n    /* background: rgb(45, 59, 87) */\n/* } */\n\n\n.workout-names {\n  /* font-size: 17px; */\n  font-size: 20px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  padding: 50px;\n  margin: 50px;\n  height: auto;\n  width: auto;\n  padding-top: 50px;\n  padding-bottom: 50px;\n  text-align: center;\n    /* background-color: rgba(114, 68, 156, 0.593); */\n    /* background-color: rgba(100, 84, 115, 0.593); */\n  /* /* display: grid;\n    grid-template-columns: auto auto; */\n}\n\n\n\ninput {\n       background: #b9aaaa61;\n}\n\n::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n  color: black;\n  opacity: 1; /* Firefox */\n}\n\n:-ms-input-placeholder { /* Internet Explorer 10-11 */\n  color: black;\n}\n\n::-ms-input-placeholder { /* Microsoft Edge */\n  color: black;\n}\n\n.hidden {\n    display: none;\n}\n/* \n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87; */\n/* } */\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n\n#new-routine-form {\n  /* margin:auto; */\n    text-align: center;\n    display: grid;\n    grid-template-columns: 100px 180px auto 150px;\n    column-gap: 20px;\n    /* grid-template-columns: 150px 50px; */\n    /* justify-content: space-around; */\n    /* justify-content: space-between; */\n}\n\n#new-routine-form>label {\n    /* color: rgb(139, 139, 89); */\n    /* color: darkmagenta; */\n    color: rgba(139, 0, 139, 0.685);\n    /* color: rgba(238, 69, 196, 0.452);; */\n}\n\n\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}\n\n.edit-btns { \n  /* background-color: #008bbaa7; Green */\n  /* background-color: #05728ac4; Green */\n  background-color: #1495b2cb; /* Green */\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.edit-btns:hover {\n    background-color: #0abee7db; /* Green */\n  /* background-color: #05728ac4; Green */\n  /* background-color: #36c4b6c4; Green */\n  /* background-color: #96a3965a; Green */\n  color: white;\n}\n\n\n.delete-btns { \n  background-color: #be615ab8;\n  border: none;\n  color: white;\n  /* padding: 15px 32px; */\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  /* padding: 10px 24px; */\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* opacity: .75; */\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.delete-btns:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.submit-btns { \n  /* background-color: #77d78fbc; */\n  background-color: rgba(139, 0, 139, 0.507);\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.submit-btns:hover {\n  background-color: rgba(204, 7, 204, 0.616);\n\n  /* background-color: #41f26dcb; */\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n\n.floating-nav-btns { \n  /* background-color: #d7ca779c; */\n  /* background-color: #f4e1d2; */\n  /* background-color: #618685; */\n  background-color: #a27ec6e4;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 14px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  text-transform: capitalize; \n  font-weight: bold;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n   margin: 0px 20px; \n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n\n\n.floating-nav-btns:hover {\n  /* background-color: #f7e255a9; */\n  /* background-color: #43bcb8da; */\n  background-color: #b076eb;\n  /* background-color: #d11e12b3; */\n  /* color: white; */\n}\n\n.routine-workout-name-block{\n  background-color: #bda5d5be;\n    /* grid:  ; */\n      /* float: center; */\n  /* width: 50%; */\n  /* height: 25%; */\n  padding: 10px;\n  margin: 5px;\n  display: grid;\n  grid-template-columns: 80px 200px 80px;\n  grid-template-rows: auto;\n  /* justify-items: center; */\n  /* align-items: center; */\n  justify-content: center;\n    /* display: flex;\n    justify-content: space-evenly; */\n  /* justify-content: center; */\n  /* text-align: center; */\n\n  \n}\n\n.delete-workout{\n    /* position: relative; */\n    /* float: center; */\n  /* right: 190px; */\n    /* center: 0px; */\n    /* width: 300px; */\n  /* border: 3px solid #73AD21; */\n  /* padding: 10px; */\n}\n\n.workout-page-floating-links{\n    display: grid;\n    grid-template-columns: 40px 240px auto;\n\n    /* grid-column-gap: 50px; */\n      /* grid-gap: 50px 100px; */\n\n    /* padding: 10px; */\n    /* margin: 200px; */\n\n    /* width: 25%;\n  float: left; */\n}\n\n.routine-detail-page{\n    display: grid;\n    /* grid-template-columns: 80px 240px auto 40px; */\n    /* padding: 50px; */\n    /* margin: 50px; */\n    position: relative;\n  }\n\n    /* #update-routine-form{ */\n    /* position: relative; */\n    /* display: grid; */\n    /* grid-template-columns: 10px 220px 220px; */\n/* } */\n\n#new-routine-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n#update-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n\n/*! Style the header with a grey background and some padding */\n.header {\n  overflow: hidden;\n  /* background-color: #f1f1f127; */\n  padding: 60px 10px;\n  text-align: center;\n  width: 100%;\n  /* padding: 20px; */\n}\n\n/* Style the header links */\n.header a {\n  /* float: left; */\n  color: black;\n  /* color: rgb(55, 167, 204); */\n  /* color: rgb(87, 14, 84);\n  */\n  /* color: rgba(43, 10, 30, 0.713); */\n  text-align: center;\n  /* padding: 12px; */\n  text-decoration: none;\n  font-size: 18px;\n  line-height: 25px;\n  border-radius: 4px;\n  /* margin: 1px; */\n}\n\n/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */\n.header a.logo {\n  font-size: 65px;\n  font-weight: bold;\n  text-align: center;\n  /* width: 100%; */\n  padding: 20px 10px;\n  /* background-color: rgba(30, 143, 255, 0.555); */\n}\n\n/* Change the background color on mouse-over */\n.header a:hover {\n  /* background-color: #ddd;\n  color: black; */\n}\n\n/* Style the active/current link*/\n.header a.active {\n  background-color: dodgerblue;\n  color: white;\n}\n\n/* Float the link section to the right */\n.header-right {\n  float: right;\n}\n\n/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */\n@media screen and (max-width: 500px) {\n  .header a {\n    float: none;\n    display: block;\n    text-align: left;\n  }\n  .header-right {\n    float: none;\n  }\n}\n\n/*! Style the navbar links */\n\n.navbar {\n  overflow: hidden;\n  /* background-color: #f1f1f127; */\n  padding: 10px 10px;\n  /* display: grid; */\n  /* grid-template-columns: 140px 140px; */\n\n    /* grid-column-gap: 50px; */\n   /* margin: 72px -10px;  */\n  /* color: red; */\n  /* float: center; */\n  /* background-color: #333; */\n  /* background-color: rgba(113, 104, 197, 0.425); */\n   text-align: center;\n   /* justify-content: space-around; */\n\n}\n\n.navbar a {\n  /* float: left; */\n  /* color: black; */\n  /* color: rgb(55, 167, 204); */\n  /* color: rgb(87, 14, 84);\n  */\n  /* color: rgba(43, 10, 30, 0.713); */\n  /* text-align: left; */\n  /* padding: 12px; */\n  /* text-decoration: none;\n  font-size: 18px;\n  line-height: 25px;\n  border-radius: 4px; */\n  /* margin: 1px; */\n  /* display: block; */\n  /* display: grid; */\n  /* color: #f2f2f2; */\n  /* text-align: center; */\n  /* padding: 14px 16px; */\n  /* text-decoration: none; */\n  \n}\n\n/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the navbar to increase when the font gets bigger */\n.navbar a.logo {\n  /* font-size: 25px;\n  font-weight: bold;\n  float: center; */\n  /* float: left; */\n}\n\n/* Change the background color on mouse-over */\n.navbar a:hover {\n  /* background-color: #ddd;\n  color: black; */\n}\n\n/* Style the active/current link*/\n.navbar a.active {\n  /* background-color: dodgerblue;\n  color: white; */\n}\n\n/* Float the link section to the right */\n.navbar-right {\n  /* float: right; */\n}\n\n/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */\n@media screen and (max-width: 500px) {\n  .navbar a {\n    float: none;\n    display: block;\n    text-align: left;\n  }\n  .navbar-right {\n    float: none;\n  }\n}\n\n/* ! modal */\n.modal-container{\ndisplay: grid;\njustify-content: space-around;\n}\n.popup-content {\n  /* background-color: rgba(107, 7, 7, 0.11); */\n}\n\n#popup-1 {\n  /* background-color: rgba(7, 25, 37, 0.76); */\n  /* background-color: rgb(7, 25, 37); */\n  /* background-color: rgb(36, 79, 107);\n   */\n   background-color: #351853ef;\n  /* background-color: rgba(36, 79, 107, 0.837) */\n  /* background-color: rgba(145, 87, 87, 0.76); */\n  /* background-color: rgba(145, 87, 87, 0.76); */\n  padding: 50px;\n  opacity: 85%;\n}\n.modal {\n  font-size: 12px;\n  /* background-color: rgba(0, 0, 0, 0.11); */\n  /* background-color: rgba(0, 0, 0, 0.11); */\n   /* display: grid; */\n    /* grid-template-columns: 70px 70px; */\n    margin: 0px 50px; \n    width: 100%;\n}\n.modal-button {\n  color: red;\n}\n\n/* .modal > .header {\n  width: 100%;\n  border-bottom: 1px solid gray;\n  font-size: 18px;\n  text-align: center;\n  padding: 5px;\n} */\n.modal > .content {\n  width: 100%;\n  padding: 10px 15px;\n}\n.modal > .actions {\n  /* width: 100%; */\n  padding: 5px 5px;\n  /* margin: auto; */\n  margin: 0px 112px;\n  text-align: left;\n  /* color: green; */\n      /* border: 10px dashed rgb(32, 4, 248); */\n\n}\n.modal > .close {\n  cursor: pointer;\n  position: absolute;\n  display: block;\n  padding: 2px 5px;\n  line-height: 20px;\n  right: -10px;\n  top: -10px;\n  font-size: 24px;\n  background: #ffffff;\n  border-radius: 18px;\n  border: 1px solid #cfcece;\n  float: center;\n}", "",{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"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","sourcesContent":["/* * { */\n    /* margin: auto; */\n    /* box-sizing: border-box; */\n    \n/* } */\n\nbody {\n    /* border: 10px dashed rgb(248, 4, 65); */\n    background-image: url('./styles/static/free-weights-gym-equipment.jpg');\n    background-repeat: no-repeat,\n      repeat;\n    /* background-size: 3500px 2500px; */\n    background-size: cover;\n    background-color: #25657c;\n  /* background-color: #44798c97; */\n    background-blend-mode: lighten;\n  /* background-blend-mode:color; */\n  /* padding: 10px; */\n  /* margin: 50px; */\n    background-attachment: fixed;\n    background-position: center;\n    /* display: grid; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n}\n\n.app-container {\n    /* border: 10px dashed rgb(32, 4, 248); */\n    /* position: absolute; */\n  /* top: 50%; */\n  /* left: 15%; */\n    width: auto;\n    height: auto;\n  /* margin: -100px 0 0 -100px; */\n  /* background-image: url('./styles/static/free-weights-gym-equipment.jpg'); */\n    /* display: grid; */\n    /* display: inline-grid; */\n      /* grid-template-columns: 120px 120px 250px ; */\n      /* grid-template-rows: auto auto auto auto ; */\n    opacity: 95%;\n    /* grid-gap: 5px 5px; */\n    \n    /* height: auto; */\n    /* width: 1500px; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n    /* grid-template-rows: auto; */\n    /* background: rgba(114, 186, 94, 0.05); */\n    /* background: rgba(161, 10, 55, 0.507); */\n    /* background-attachment: fixed;\n    background-position: center; */\n}\n\n/* #main-container { */\n    /* padding: 250px;\n    margin: 500px;\n    height: auto;\n    width: auto; */\n    /* background: rgb(44, 22, 66); */\n      /* background-color: rgba(255, 192, 203, 0.11); */\n\n    /* opacity: 95%; */\n    /* grid-gap: 50px; */\n    /* border: 10px dashed rgba(8, 230, 93, 0.996); */\n/* } */\n\n/* .btns-all { */\n\n/* } */\n\n/* #btn-toggle-forms { */\n    /* height: 15px;\n    width: 100px; */\n/* } */\n\n\n\n#component-routines-page {\n  /* border: 10px dashed rgba(21, 207, 99, 0.544); */\n  /* margin-top: 75px; */\n  /* display: grid; */\n  /* grid-template-columns: 200px repeat(auto-fill, 100px) 300px; */\n  /* grid-template-columns: 1fr 1fr 1fr; */\n  /* grid-template-columns: 60px 60px; */\n}\n\n#container-all-routines {\n  /* border: 10px dashed rgba(21, 133, 207, 0.544); */\n  /* margin-top: 75px; */\n  /* display: grid; */\n  /* grid-template-columns: 200px repeat(auto-fill, 100px) 300px; */\n  /* grid-template-columns: 1fr 1fr 1fr; */\n  /* grid-template-columns: 60px 60px; */\n}\n\n#page-workout-detail {\n/* margin-top: 75px; */\n/* border: 10px dashed rgba(215, 230, 8, 0.996); */\nmargin: 75px;\n}\n\n/* #routine-workout-cards { */\n  /* display: grid; */\n  /* display: grid; */\n  /* grid-template-columns: 500px 500px; */\n  /* grid-template-rows: 500px 500px; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n  /* border: 10px dashed rgba(230, 115, 8, 0.996); */\n/* } */\n\n#workout-detail-workout-name{\n  font-size: 22px;\n  background-color: #8728e551;\n}\n\n\n/* #workout-card { */\n  /* display: grid; */\n   /* border: 10px dashed rgb(23, 173, 106); */\n  /* display: grid; */\n  /* grid-template-columns: 500px ; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n/* } */\n\n\n#routine-detail-workout-name {\n  font-size: 22px;\n  background-color: #b881f051;\n}\n\n#workoutlist-workout-info {\n      /* background-color: rgba(255, 192, 203, 0.11); */\n      /* display: grid; */\n      /* border: 10px dashed rgb(232, 145, 30); */\n      /* padding: 2%; */\n       /* justify-content: space-evenly; */\n       /* justify-content: space-around; */\n       /* justify-content: center; */\n         /* align-content: center; */\n         /* text-align: center; */\n         /* grid-template-columns: auto auto auto auto;  */\n         /* grid-template-columns: 300px ;  */\n\n           /* grid-template-areas:  */\n    /* 'data data data data btn-edit btn-delete'; */\n  /* grid-column-gap: 10px; - if you want gap between the columns */\n\n}\n\n#workout-info {\n  /* background-color: #d5b9f029; */\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  text-align: center;\n  /* background-color: rgba(226, 226, 132, 0.75); */\n  display: grid;\n  padding: 1%;\n  /* grid-template-columns: auto auto auto auto auto auto auto auto; */\n  /* justify-content: space-evenly;2 */\n}\n\n/* .routine-detail-page-btn{ */\n  /* background:violet; */\n  /* max-width: 80px; */\n  /* max-height: 80px; */\n    /* grid-row: 3 / 3; */\n  /* width: auto; */\n           /* grid-column: 1 / 3;\n            */\n              /* grid-column: 1 / span 1; */\n\n/* } */\n\n#wrapper-btns-routine-workout {\n  /* border: 10px dashed rgba(11, 224, 68, 0.822); */\n  background-color: #8728e551;\n  /* opacity: 80%; */\n  display: grid;\n  /* padding: 5%; */\n  grid-template-columns: 120px 120px;\n  justify-content: space-evenly;\n}\n\n#wrapper-btn-delete-workout {\n        /* border: 10px dashed rgba(224, 206, 11, 0.822); */\n        /* background-color: #8728e551; */\n          background-color: #8728e551;\n        /* opacity: 80%; */\n        display: grid;\n        padding: 2%;\n        grid-template-columns:auto;\n        justify-content: space-evenly;\n}\n\n#routines-list {\n  background-color: rgba(255, 192, 203, 0.11);\n  display: grid;\n  /* grid-template-columns: auto; */\n  /* grid-template-columns: auto auto; */\n  /* grid-template-columns: 650px; */\n  grid-template-columns: 800px;\n  /* grid-template-columns: 75px 50px 100px; */\n  /* grid-template-rows: 250px; */\n  /* grid-template-rows: auto; */\n  /* padding: 30px; */\n          justify-content: space-evenly;\n\n}\n\n\n\n\n/* .all-routine-edit-btns { */\n    /* font-size: 13px; */\n/* } */\n\n\n\n.routine-name-wrapper {\n  /* border : 10px dashed red; */\n    /* background-color: rgb(10, 25, 43); */\n    background-color: rgba(43, 10, 30, 0.713);\n    display: grid;\n    padding: 5px 3px;\n    margin: 3px;\n    /* grid-column-gap: 2em; */\n    /* grid-column-gap: 10px; */\n    grid-template-columns: 200px auto auto ;\n    /* justify-content: space-evenly; */\n    justify-content: space-around;\n    /* justify-content: center; */\n    opacity: 75%;\n      /* float: center; */\n  /* width: 33.33%; */\n    /* width: 100%; \n    height: 400px; \n    border: 1px */\n}\n\n#routine-names {\n    /* color: rgba(222, 73, 85, 0.49); */\n    color: rgb(55, 167, 204);\n    text-decoration: none;\n    /* padding: 40px 60px; */\n    /* font-size: 20px; */\n    /* display: inline-block; */\n    /* vertical-align: middle; */\n    /* text-align: center; */\n    /* display: grid;\n    grid-template-columns: auto auto 50px;\n    grid-template-rows: auto auto 10px;\n    justify-content: space-evenly; */\n\n}\n\n#btn-routine-workout-count {\nfont-size: 14px;\nbackground-color: #cc5f57cb;\nborder: none;\ncolor: white;\n  /* padding: 15px 32px; */\ntext-align: center;\ntext-decoration: none;\ndisplay: inline-block;\n/* font-size: 12px; */\n/* padding: 10px 24px; */\nborder-radius: 8px;\nheight: 40px; \nwidth: 80px;\n/* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /*! center the btn inside of the div  */\n  /* transition: background 0.4s ease-in-out; */\n  /* position: relative;  */\n  margin: 45px -50px; \n  /* width: 100px;  */\n  /* top: 50%;  */\n  /* left: 50%; */\n}\n\n#routine-workout-count:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.btn-delete-routineslist-routine{\n  /* background: red; */\n/* #routine-workout-count { */\nfont-size: 14px;\nbackground-color: #be615ab8;\nborder: none;\ncolor: white;\n/* padding: 15px 32px; */\ntext-align: center;\ntext-decoration: none;\ndisplay: inline-block;\n/* font-size: 12px; */\n/* padding: 8px 20px; */\n/* padding: 10px 24px; */\nborder-radius: 8px;\nheight: 40px;\nwidth: 80px;\n/* transition-duration: 0.4s; */\n/*! center the btn inside of the div  */\n  transition: background 0.4s ease-in-out;\n  /* height:20px;  */\n  /* position:relative;  */\n  margin: 72px -10px; \n  /* width:100px;  */\n  /* top:50%;  */\n  /* left:50%; */\n}\n\n.btn-delete-routineslist-routine:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.routine-workout-list {\n    /* display: grid; */\n    /* display: none; */\n    /* grid-template-columns: auto; */\n    /* grid-template-columns: 550px; */\n    /* grid-template-rows: auto auto auto auto auto; */\n    /* text-align: center; */\n    padding: 2;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n    \n}\n\n\n/* #routines-container { */\n    /* background: rgb(45, 59, 87) */\n/* } */\n\n\n.workout-names {\n  /* font-size: 17px; */\n  font-size: 20px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  padding: 50px;\n  margin: 50px;\n  height: auto;\n  width: auto;\n  padding-top: 50px;\n  padding-bottom: 50px;\n  text-align: center;\n    /* background-color: rgba(114, 68, 156, 0.593); */\n    /* background-color: rgba(100, 84, 115, 0.593); */\n  /* /* display: grid;\n    grid-template-columns: auto auto; */\n}\n\n\n\ninput {\n       background: #b9aaaa61;\n}\n\n::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n  color: black;\n  opacity: 1; /* Firefox */\n}\n\n:-ms-input-placeholder { /* Internet Explorer 10-11 */\n  color: black;\n}\n\n::-ms-input-placeholder { /* Microsoft Edge */\n  color: black;\n}\n\n.hidden {\n    display: none;\n}\n/* \n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87; */\n/* } */\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n\n#new-routine-form {\n  /* margin:auto; */\n    text-align: center;\n    display: grid;\n    grid-template-columns: 100px 180px auto 150px;\n    column-gap: 20px;\n    /* grid-template-columns: 150px 50px; */\n    /* justify-content: space-around; */\n    /* justify-content: space-between; */\n}\n\n#new-routine-form>label {\n    /* color: rgb(139, 139, 89); */\n    /* color: darkmagenta; */\n    color: rgba(139, 0, 139, 0.685);\n    /* color: rgba(238, 69, 196, 0.452);; */\n}\n\n\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}\n\n.edit-btns { \n  /* background-color: #008bbaa7; Green */\n  /* background-color: #05728ac4; Green */\n  background-color: #1495b2cb; /* Green */\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.edit-btns:hover {\n    background-color: #0abee7db; /* Green */\n  /* background-color: #05728ac4; Green */\n  /* background-color: #36c4b6c4; Green */\n  /* background-color: #96a3965a; Green */\n  color: white;\n}\n\n\n.delete-btns { \n  background-color: #be615ab8;\n  border: none;\n  color: white;\n  /* padding: 15px 32px; */\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  /* padding: 10px 24px; */\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* opacity: .75; */\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.delete-btns:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.submit-btns { \n  /* background-color: #77d78fbc; */\n  background-color: rgba(139, 0, 139, 0.507);\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.submit-btns:hover {\n  background-color: rgba(204, 7, 204, 0.616);\n\n  /* background-color: #41f26dcb; */\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n\n.floating-nav-btns { \n  /* background-color: #d7ca779c; */\n  /* background-color: #f4e1d2; */\n  /* background-color: #618685; */\n  background-color: #a27ec6e4;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 14px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  text-transform: capitalize; \n  font-weight: bold;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n   margin: 0px 20px; \n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n\n\n.floating-nav-btns:hover {\n  /* background-color: #f7e255a9; */\n  /* background-color: #43bcb8da; */\n  background-color: #b076eb;\n  /* background-color: #d11e12b3; */\n  /* color: white; */\n}\n\n.routine-workout-name-block{\n  background-color: #bda5d5be;\n    /* grid:  ; */\n      /* float: center; */\n  /* width: 50%; */\n  /* height: 25%; */\n  padding: 10px;\n  margin: 5px;\n  display: grid;\n  grid-template-columns: 80px 200px 80px;\n  grid-template-rows: auto;\n  /* justify-items: center; */\n  /* align-items: center; */\n  justify-content: center;\n    /* display: flex;\n    justify-content: space-evenly; */\n  /* justify-content: center; */\n  /* text-align: center; */\n\n  \n}\n\n.delete-workout{\n    /* position: relative; */\n    /* float: center; */\n  /* right: 190px; */\n    /* center: 0px; */\n    /* width: 300px; */\n  /* border: 3px solid #73AD21; */\n  /* padding: 10px; */\n}\n\n.workout-page-floating-links{\n    display: grid;\n    grid-template-columns: 40px 240px auto;\n\n    /* grid-column-gap: 50px; */\n      /* grid-gap: 50px 100px; */\n\n    /* padding: 10px; */\n    /* margin: 200px; */\n\n    /* width: 25%;\n  float: left; */\n}\n\n.routine-detail-page{\n    display: grid;\n    /* grid-template-columns: 80px 240px auto 40px; */\n    /* padding: 50px; */\n    /* margin: 50px; */\n    position: relative;\n  }\n\n    /* #update-routine-form{ */\n    /* position: relative; */\n    /* display: grid; */\n    /* grid-template-columns: 10px 220px 220px; */\n/* } */\n\n#new-routine-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n#update-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n\n/*! Style the header with a grey background and some padding */\n.header {\n  overflow: hidden;\n  /* background-color: #f1f1f127; */\n  padding: 60px 10px;\n  text-align: center;\n  width: 100%;\n  /* padding: 20px; */\n}\n\n/* Style the header links */\n.header a {\n  /* float: left; */\n  color: black;\n  /* color: rgb(55, 167, 204); */\n  /* color: rgb(87, 14, 84);\n  */\n  /* color: rgba(43, 10, 30, 0.713); */\n  text-align: center;\n  /* padding: 12px; */\n  text-decoration: none;\n  font-size: 18px;\n  line-height: 25px;\n  border-radius: 4px;\n  /* margin: 1px; */\n}\n\n/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */\n.header a.logo {\n  font-size: 65px;\n  font-weight: bold;\n  text-align: center;\n  /* width: 100%; */\n  padding: 20px 10px;\n  /* background-color: rgba(30, 143, 255, 0.555); */\n}\n\n/* Change the background color on mouse-over */\n.header a:hover {\n  /* background-color: #ddd;\n  color: black; */\n}\n\n/* Style the active/current link*/\n.header a.active {\n  background-color: dodgerblue;\n  color: white;\n}\n\n/* Float the link section to the right */\n.header-right {\n  float: right;\n}\n\n/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */\n@media screen and (max-width: 500px) {\n  .header a {\n    float: none;\n    display: block;\n    text-align: left;\n  }\n  .header-right {\n    float: none;\n  }\n}\n\n/*! Style the navbar links */\n\n.navbar {\n  overflow: hidden;\n  /* background-color: #f1f1f127; */\n  padding: 10px 10px;\n  /* display: grid; */\n  /* grid-template-columns: 140px 140px; */\n\n    /* grid-column-gap: 50px; */\n   /* margin: 72px -10px;  */\n  /* color: red; */\n  /* float: center; */\n  /* background-color: #333; */\n  /* background-color: rgba(113, 104, 197, 0.425); */\n   text-align: center;\n   /* justify-content: space-around; */\n\n}\n\n.navbar a {\n  /* float: left; */\n  /* color: black; */\n  /* color: rgb(55, 167, 204); */\n  /* color: rgb(87, 14, 84);\n  */\n  /* color: rgba(43, 10, 30, 0.713); */\n  /* text-align: left; */\n  /* padding: 12px; */\n  /* text-decoration: none;\n  font-size: 18px;\n  line-height: 25px;\n  border-radius: 4px; */\n  /* margin: 1px; */\n  /* display: block; */\n  /* display: grid; */\n  /* color: #f2f2f2; */\n  /* text-align: center; */\n  /* padding: 14px 16px; */\n  /* text-decoration: none; */\n  \n}\n\n/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the navbar to increase when the font gets bigger */\n.navbar a.logo {\n  /* font-size: 25px;\n  font-weight: bold;\n  float: center; */\n  /* float: left; */\n}\n\n/* Change the background color on mouse-over */\n.navbar a:hover {\n  /* background-color: #ddd;\n  color: black; */\n}\n\n/* Style the active/current link*/\n.navbar a.active {\n  /* background-color: dodgerblue;\n  color: white; */\n}\n\n/* Float the link section to the right */\n.navbar-right {\n  /* float: right; */\n}\n\n/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */\n@media screen and (max-width: 500px) {\n  .navbar a {\n    float: none;\n    display: block;\n    text-align: left;\n  }\n  .navbar-right {\n    float: none;\n  }\n}\n\n/* ! modal */\n.modal-container{\ndisplay: grid;\njustify-content: space-around;\n}\n.popup-content {\n  /* background-color: rgba(107, 7, 7, 0.11); */\n}\n\n#popup-1 {\n  /* background-color: rgba(7, 25, 37, 0.76); */\n  /* background-color: rgb(7, 25, 37); */\n  /* background-color: rgb(36, 79, 107);\n   */\n   background-color: #351853ef;\n  /* background-color: rgba(36, 79, 107, 0.837) */\n  /* background-color: rgba(145, 87, 87, 0.76); */\n  /* background-color: rgba(145, 87, 87, 0.76); */\n  padding: 50px;\n  opacity: 85%;\n}\n.modal {\n  font-size: 12px;\n  /* background-color: rgba(0, 0, 0, 0.11); */\n  /* background-color: rgba(0, 0, 0, 0.11); */\n   /* display: grid; */\n    /* grid-template-columns: 70px 70px; */\n    margin: 0px 50px; \n    width: 100%;\n}\n.modal-button {\n  color: red;\n}\n\n/* .modal > .header {\n  width: 100%;\n  border-bottom: 1px solid gray;\n  font-size: 18px;\n  text-align: center;\n  padding: 5px;\n} */\n.modal > .content {\n  width: 100%;\n  padding: 10px 15px;\n}\n.modal > .actions {\n  /* width: 100%; */\n  padding: 5px 5px;\n  /* margin: auto; */\n  margin: 0px 112px;\n  text-align: left;\n  /* color: green; */\n      /* border: 10px dashed rgb(32, 4, 248); */\n\n}\n.modal > .close {\n  cursor: pointer;\n  position: absolute;\n  display: block;\n  padding: 2px 5px;\n  line-height: 20px;\n  right: -10px;\n  top: -10px;\n  font-size: 24px;\n  background: #ffffff;\n  border-radius: 18px;\n  border: 1px solid #cfcece;\n  float: center;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "/* * { */\n    /* margin: auto; */\n    /* box-sizing: border-box; */\n    \n/* } */\n\nbody {\n    /* border: 10px dashed rgb(248, 4, 65); */\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat,\n      repeat;\n    /* background-size: 3500px 2500px; */\n    background-size: cover;\n    background-color: #25657c;\n  /* background-color: #44798c97; */\n    background-blend-mode: lighten;\n  /* background-blend-mode:color; */\n  /* padding: 10px; */\n  /* margin: 50px; */\n    background-attachment: fixed;\n    background-position: center;\n    /* display: grid; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n}\n\n.app-container {\n    /* border: 10px dashed rgb(32, 4, 248); */\n    /* position: absolute; */\n  /* top: 50%; */\n  /* left: 15%; */\n    width: auto;\n    height: auto;\n  /* margin: -100px 0 0 -100px; */\n  /* background-image: url('./styles/static/free-weights-gym-equipment.jpg'); */\n    /* display: grid; */\n    /* display: inline-grid; */\n      /* grid-template-columns: 120px 120px 250px ; */\n      /* grid-template-rows: auto auto auto auto ; */\n    opacity: 95%;\n    /* grid-gap: 5px 5px; */\n    \n    /* height: auto; */\n    /* width: 1500px; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n    /* grid-template-rows: auto; */\n    /* background: rgba(114, 186, 94, 0.05); */\n    /* background: rgba(161, 10, 55, 0.507); */\n    /* background-attachment: fixed;\n    background-position: center; */\n}\n\n/* #main-container { */\n    /* padding: 250px;\n    margin: 500px;\n    height: auto;\n    width: auto; */\n    /* background: rgb(44, 22, 66); */\n      /* background-color: rgba(255, 192, 203, 0.11); */\n\n    /* opacity: 95%; */\n    /* grid-gap: 50px; */\n    /* border: 10px dashed rgba(8, 230, 93, 0.996); */\n/* } */\n\n/* .btns-all { */\n\n/* } */\n\n/* #btn-toggle-forms { */\n    /* height: 15px;\n    width: 100px; */\n/* } */\n\n\n\n#component-routines-page {\n  /* border: 10px dashed rgba(21, 207, 99, 0.544); */\n  /* margin-top: 75px; */\n  /* display: grid; */\n  /* grid-template-columns: 200px repeat(auto-fill, 100px) 300px; */\n  /* grid-template-columns: 1fr 1fr 1fr; */\n  /* grid-template-columns: 60px 60px; */\n}\n\n#container-all-routines {\n  /* border: 10px dashed rgba(21, 133, 207, 0.544); */\n  /* margin-top: 75px; */\n  /* display: grid; */\n  /* grid-template-columns: 200px repeat(auto-fill, 100px) 300px; */\n  /* grid-template-columns: 1fr 1fr 1fr; */\n  /* grid-template-columns: 60px 60px; */\n}\n\n#page-workout-detail {\n/* margin-top: 75px; */\n/* border: 10px dashed rgba(215, 230, 8, 0.996); */\nmargin: 75px;\n}\n\n/* #routine-workout-cards { */\n  /* display: grid; */\n  /* display: grid; */\n  /* grid-template-columns: 500px 500px; */\n  /* grid-template-rows: 500px 500px; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n  /* border: 10px dashed rgba(230, 115, 8, 0.996); */\n/* } */\n\n#workout-detail-workout-name{\n  font-size: 22px;\n  background-color: #8728e551;\n}\n\n\n/* #workout-card { */\n  /* display: grid; */\n   /* border: 10px dashed rgb(23, 173, 106); */\n  /* display: grid; */\n  /* grid-template-columns: 500px ; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n/* } */\n\n\n#routine-detail-workout-name {\n  font-size: 22px;\n  background-color: #b881f051;\n}\n\n#workoutlist-workout-info {\n      /* background-color: rgba(255, 192, 203, 0.11); */\n      /* display: grid; */\n      /* border: 10px dashed rgb(232, 145, 30); */\n      /* padding: 2%; */\n       /* justify-content: space-evenly; */\n       /* justify-content: space-around; */\n       /* justify-content: center; */\n         /* align-content: center; */\n         /* text-align: center; */\n         /* grid-template-columns: auto auto auto auto;  */\n         /* grid-template-columns: 300px ;  */\n\n           /* grid-template-areas:  */\n    /* 'data data data data btn-edit btn-delete'; */\n  /* grid-column-gap: 10px; - if you want gap between the columns */\n\n}\n\n#workout-info {\n  /* background-color: #d5b9f029; */\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  text-align: center;\n  /* background-color: rgba(226, 226, 132, 0.75); */\n  display: grid;\n  padding: 1%;\n  /* grid-template-columns: auto auto auto auto auto auto auto auto; */\n  /* justify-content: space-evenly;2 */\n}\n\n/* .routine-detail-page-btn{ */\n  /* background:violet; */\n  /* max-width: 80px; */\n  /* max-height: 80px; */\n    /* grid-row: 3 / 3; */\n  /* width: auto; */\n           /* grid-column: 1 / 3;\n            */\n              /* grid-column: 1 / span 1; */\n\n/* } */\n\n#wrapper-btns-routine-workout {\n  /* border: 10px dashed rgba(11, 224, 68, 0.822); */\n  background-color: #8728e551;\n  /* opacity: 80%; */\n  display: grid;\n  /* padding: 5%; */\n  grid-template-columns: 120px 120px;\n  justify-content: space-evenly;\n}\n\n#wrapper-btn-delete-workout {\n        /* border: 10px dashed rgba(224, 206, 11, 0.822); */\n        /* background-color: #8728e551; */\n          background-color: #8728e551;\n        /* opacity: 80%; */\n        display: grid;\n        padding: 2%;\n        grid-template-columns:auto;\n        justify-content: space-evenly;\n}\n\n#routines-list {\n  background-color: rgba(255, 192, 203, 0.11);\n  display: grid;\n  /* grid-template-columns: auto; */\n  /* grid-template-columns: auto auto; */\n  /* grid-template-columns: 650px; */\n  grid-template-columns: 800px;\n  /* grid-template-columns: 75px 50px 100px; */\n  /* grid-template-rows: 250px; */\n  /* grid-template-rows: auto; */\n  /* padding: 30px; */\n          justify-content: space-evenly;\n\n}\n\n\n\n\n/* .all-routine-edit-btns { */\n    /* font-size: 13px; */\n/* } */\n\n\n\n.routine-name-wrapper {\n  /* border : 10px dashed red; */\n    /* background-color: rgb(10, 25, 43); */\n    background-color: rgba(43, 10, 30, 0.713);\n    display: grid;\n    padding: 5px 3px;\n    margin: 3px;\n    /* grid-column-gap: 2em; */\n    /* grid-column-gap: 10px; */\n    grid-template-columns: 200px auto auto ;\n    /* justify-content: space-evenly; */\n    justify-content: space-around;\n    /* justify-content: center; */\n    opacity: 75%;\n      /* float: center; */\n  /* width: 33.33%; */\n    /* width: 100%; \n    height: 400px; \n    border: 1px */\n}\n\n#routine-names {\n    /* color: rgba(222, 73, 85, 0.49); */\n    color: rgb(55, 167, 204);\n    text-decoration: none;\n    /* padding: 40px 60px; */\n    /* font-size: 20px; */\n    /* display: inline-block; */\n    /* vertical-align: middle; */\n    /* text-align: center; */\n    /* display: grid;\n    grid-template-columns: auto auto 50px;\n    grid-template-rows: auto auto 10px;\n    justify-content: space-evenly; */\n\n}\n\n#btn-routine-workout-count {\nfont-size: 14px;\nbackground-color: #cc5f57cb;\nborder: none;\ncolor: white;\n  /* padding: 15px 32px; */\ntext-align: center;\ntext-decoration: none;\ndisplay: inline-block;\n/* font-size: 12px; */\n/* padding: 10px 24px; */\nborder-radius: 8px;\nheight: 40px; \nwidth: 80px;\n/* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /*! center the btn inside of the div  */\n  /* transition: background 0.4s ease-in-out; */\n  /* position: relative;  */\n  margin: 45px -50px; \n  /* width: 100px;  */\n  /* top: 50%;  */\n  /* left: 50%; */\n}\n\n#routine-workout-count:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.btn-delete-routineslist-routine{\n  /* background: red; */\n/* #routine-workout-count { */\nfont-size: 14px;\nbackground-color: #be615ab8;\nborder: none;\ncolor: white;\n/* padding: 15px 32px; */\ntext-align: center;\ntext-decoration: none;\ndisplay: inline-block;\n/* font-size: 12px; */\n/* padding: 8px 20px; */\n/* padding: 10px 24px; */\nborder-radius: 8px;\nheight: 40px;\nwidth: 80px;\n/* transition-duration: 0.4s; */\n/*! center the btn inside of the div  */\n  transition: background 0.4s ease-in-out;\n  /* height:20px;  */\n  /* position:relative;  */\n  margin: 72px -10px; \n  /* width:100px;  */\n  /* top:50%;  */\n  /* left:50%; */\n}\n\n.btn-delete-routineslist-routine:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.routine-workout-list {\n    /* display: grid; */\n    /* display: none; */\n    /* grid-template-columns: auto; */\n    /* grid-template-columns: 550px; */\n    /* grid-template-rows: auto auto auto auto auto; */\n    /* text-align: center; */\n    padding: 2;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n    \n}\n\n\n/* #routines-container { */\n    /* background: rgb(45, 59, 87) */\n/* } */\n\n\n.workout-names {\n  /* font-size: 17px; */\n  font-size: 20px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  padding: 50px;\n  margin: 50px;\n  height: auto;\n  width: auto;\n  padding-top: 50px;\n  padding-bottom: 50px;\n  text-align: center;\n    /* background-color: rgba(114, 68, 156, 0.593); */\n    /* background-color: rgba(100, 84, 115, 0.593); */\n  /* /* display: grid;\n    grid-template-columns: auto auto; */\n}\n\n\n\ninput {\n       background: #b9aaaa61;\n}\n\n::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n  color: black;\n  opacity: 1; /* Firefox */\n}\n\n:-ms-input-placeholder { /* Internet Explorer 10-11 */\n  color: black;\n}\n\n::-ms-input-placeholder { /* Microsoft Edge */\n  color: black;\n}\n\n.hidden {\n    display: none;\n}\n/* \n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87; */\n/* } */\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n\n#new-routine-form {\n  /* margin:auto; */\n    text-align: center;\n    display: grid;\n    grid-template-columns: 100px 180px auto 150px;\n    column-gap: 20px;\n    /* grid-template-columns: 150px 50px; */\n    /* justify-content: space-around; */\n    /* justify-content: space-between; */\n}\n\n#new-routine-form>label {\n    /* color: rgb(139, 139, 89); */\n    /* color: darkmagenta; */\n    color: rgba(139, 0, 139, 0.685);\n    /* color: rgba(238, 69, 196, 0.452);; */\n}\n\n\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}\n\n.edit-btns { \n  /* background-color: #008bbaa7; Green */\n  /* background-color: #05728ac4; Green */\n  background-color: #1495b2cb; /* Green */\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.edit-btns:hover {\n    background-color: #0abee7db; /* Green */\n  /* background-color: #05728ac4; Green */\n  /* background-color: #36c4b6c4; Green */\n  /* background-color: #96a3965a; Green */\n  color: white;\n}\n\n\n.delete-btns { \n  background-color: #be615ab8;\n  border: none;\n  color: white;\n  /* padding: 15px 32px; */\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  /* padding: 10px 24px; */\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* opacity: .75; */\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.delete-btns:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.submit-btns { \n  /* background-color: #77d78fbc; */\n  background-color: rgba(139, 0, 139, 0.507);\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.submit-btns:hover {\n  background-color: rgba(204, 7, 204, 0.616);\n\n  /* background-color: #41f26dcb; */\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n\n.floating-nav-btns { \n  /* background-color: #d7ca779c; */\n  /* background-color: #f4e1d2; */\n  /* background-color: #618685; */\n  background-color: #a27ec6e4;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 14px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  text-transform: capitalize; \n  font-weight: bold;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n   margin: 0px 20px; \n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n\n\n.floating-nav-btns:hover {\n  /* background-color: #f7e255a9; */\n  /* background-color: #43bcb8da; */\n  background-color: #b076eb;\n  /* background-color: #d11e12b3; */\n  /* color: white; */\n}\n\n.routine-workout-name-block{\n  background-color: #bda5d5be;\n    /* grid:  ; */\n      /* float: center; */\n  /* width: 50%; */\n  /* height: 25%; */\n  padding: 10px;\n  margin: 5px;\n  display: grid;\n  grid-template-columns: 80px 200px 80px;\n  grid-template-rows: auto;\n  /* justify-items: center; */\n  /* align-items: center; */\n  justify-content: center;\n    /* display: flex;\n    justify-content: space-evenly; */\n  /* justify-content: center; */\n  /* text-align: center; */\n\n  \n}\n\n.delete-workout{\n    /* position: relative; */\n    /* float: center; */\n  /* right: 190px; */\n    /* center: 0px; */\n    /* width: 300px; */\n  /* border: 3px solid #73AD21; */\n  /* padding: 10px; */\n}\n\n.workout-page-floating-links{\n    display: grid;\n    grid-template-columns: 40px 240px auto;\n\n    /* grid-column-gap: 50px; */\n      /* grid-gap: 50px 100px; */\n\n    /* padding: 10px; */\n    /* margin: 200px; */\n\n    /* width: 25%;\n  float: left; */\n}\n\n.routine-detail-page{\n    display: grid;\n    /* grid-template-columns: 80px 240px auto 40px; */\n    /* padding: 50px; */\n    /* margin: 50px; */\n    position: relative;\n  }\n\n    /* #update-routine-form{ */\n    /* position: relative; */\n    /* display: grid; */\n    /* grid-template-columns: 10px 220px 220px; */\n/* } */\n\n#new-routine-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n#update-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n\n/*! Style the header with a grey background and some padding */\n.header {\n  overflow: hidden;\n  /* background-color: #f1f1f127; */\n  padding: 60px 10px;\n  text-align: center;\n  width: 100%;\n  /* padding: 20px; */\n}\n\n/* Style the header links */\n.header a {\n  /* float: left; */\n  color: black;\n  /* color: rgb(55, 167, 204); */\n  /* color: rgb(87, 14, 84);\n  */\n  /* color: rgba(43, 10, 30, 0.713); */\n  text-align: center;\n  /* padding: 12px; */\n  text-decoration: none;\n  font-size: 18px;\n  line-height: 25px;\n  border-radius: 4px;\n  /* margin: 1px; */\n}\n\n/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */\n.header a.logo {\n  font-size: 65px;\n  font-weight: bold;\n  text-align: center;\n  /* width: 100%; */\n  padding: 20px 10px;\n  /* background-color: rgba(30, 143, 255, 0.555); */\n}\n\n/* Change the background color on mouse-over */\n.header a:hover {\n  /* background-color: #ddd;\n  color: black; */\n}\n\n/* Style the active/current link*/\n.header a.active {\n  background-color: dodgerblue;\n  color: white;\n}\n\n/* Float the link section to the right */\n.header-right {\n  float: right;\n}\n\n/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */\n@media screen and (max-width: 500px) {\n  .header a {\n    float: none;\n    display: block;\n    text-align: left;\n  }\n  .header-right {\n    float: none;\n  }\n}\n\n/*! Style the navbar links */\n\n.navbar {\n  overflow: hidden;\n  /* background-color: #f1f1f127; */\n  padding: 10px 10px;\n  /* display: grid; */\n  /* grid-template-columns: 140px 140px; */\n\n    /* grid-column-gap: 50px; */\n   /* margin: 72px -10px;  */\n  /* color: red; */\n  /* float: center; */\n  /* background-color: #333; */\n  /* background-color: rgba(113, 104, 197, 0.425); */\n   text-align: center;\n   /* justify-content: space-around; */\n\n}\n\n.navbar a {\n  /* float: left; */\n  /* color: black; */\n  /* color: rgb(55, 167, 204); */\n  /* color: rgb(87, 14, 84);\n  */\n  /* color: rgba(43, 10, 30, 0.713); */\n  /* text-align: left; */\n  /* padding: 12px; */\n  /* text-decoration: none;\n  font-size: 18px;\n  line-height: 25px;\n  border-radius: 4px; */\n  /* margin: 1px; */\n  /* display: block; */\n  /* display: grid; */\n  /* color: #f2f2f2; */\n  /* text-align: center; */\n  /* padding: 14px 16px; */\n  /* text-decoration: none; */\n  \n}\n\n/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the navbar to increase when the font gets bigger */\n.navbar a.logo {\n  /* font-size: 25px;\n  font-weight: bold;\n  float: center; */\n  /* float: left; */\n}\n\n/* Change the background color on mouse-over */\n.navbar a:hover {\n  /* background-color: #ddd;\n  color: black; */\n}\n\n/* Style the active/current link*/\n.navbar a.active {\n  /* background-color: dodgerblue;\n  color: white; */\n}\n\n/* Float the link section to the right */\n.navbar-right {\n  /* float: right; */\n}\n\n/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */\n@media screen and (max-width: 500px) {\n  .navbar a {\n    float: none;\n    display: block;\n    text-align: left;\n  }\n  .navbar-right {\n    float: none;\n  }\n}\n\n/* ! modal */\n.modal-container{\ndisplay: grid;\njustify-content: space-around;\n}\n.popup-content {\n  /* background-color: rgba(107, 7, 7, 0.11); */\n}\n\n#popup-1 {\n  /* background-color: rgba(7, 25, 37, 0.76); */\n  /* background-color: rgb(7, 25, 37); */\n  background-color: rgb(28, 44, 54);\n  /* background-color: rgb(36, 79, 107);\n   */\n   /* background-color: #351853ef; */\n   /* background-color: #160542e8; */\n  /* background-color: rgba(36, 79, 107, 0.837) */\n  /* background-color: rgba(145, 87, 87, 0.76); */\n  /* background-color: rgba(145, 87, 87, 0.76); */\n  padding: 50px;\n  opacity: 85%;\n}\n.modal {\n  font-size: 12px;\n  /* background-color: rgba(0, 0, 0, 0.11); */\n  /* background-color: rgba(0, 0, 0, 0.11); */\n   /* display: grid; */\n    /* grid-template-columns: 70px 70px; */\n    margin: 0px 50px; \n    width: 100%;\n}\n.modal-button {\n  color: red;\n}\n\n/* .modal > .header {\n  width: 100%;\n  border-bottom: 1px solid gray;\n  font-size: 18px;\n  text-align: center;\n  padding: 5px;\n} */\n.modal > .content {\n  width: 100%;\n  padding: 10px 15px;\n}\n.modal > .actions {\n  /* width: 100%; */\n  padding: 5px 5px;\n  /* margin: auto; */\n  margin: 0px 112px;\n  text-align: left;\n  /* color: green; */\n      /* border: 10px dashed rgb(32, 4, 248); */\n\n}\n.modal > .close {\n  cursor: pointer;\n  position: absolute;\n  display: block;\n  padding: 2px 5px;\n  line-height: 20px;\n  right: -10px;\n  top: -10px;\n  font-size: 24px;\n  background: #ffffff;\n  border-radius: 18px;\n  border: 1px solid #cfcece;\n  float: center;\n}", "",{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"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","sourcesContent":["/* * { */\n    /* margin: auto; */\n    /* box-sizing: border-box; */\n    \n/* } */\n\nbody {\n    /* border: 10px dashed rgb(248, 4, 65); */\n    background-image: url('./styles/static/free-weights-gym-equipment.jpg');\n    background-repeat: no-repeat,\n      repeat;\n    /* background-size: 3500px 2500px; */\n    background-size: cover;\n    background-color: #25657c;\n  /* background-color: #44798c97; */\n    background-blend-mode: lighten;\n  /* background-blend-mode:color; */\n  /* padding: 10px; */\n  /* margin: 50px; */\n    background-attachment: fixed;\n    background-position: center;\n    /* display: grid; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n}\n\n.app-container {\n    /* border: 10px dashed rgb(32, 4, 248); */\n    /* position: absolute; */\n  /* top: 50%; */\n  /* left: 15%; */\n    width: auto;\n    height: auto;\n  /* margin: -100px 0 0 -100px; */\n  /* background-image: url('./styles/static/free-weights-gym-equipment.jpg'); */\n    /* display: grid; */\n    /* display: inline-grid; */\n      /* grid-template-columns: 120px 120px 250px ; */\n      /* grid-template-rows: auto auto auto auto ; */\n    opacity: 95%;\n    /* grid-gap: 5px 5px; */\n    \n    /* height: auto; */\n    /* width: 1500px; */\n    /* grid-template-columns: 1fr 1fr 1fr; */\n    /* grid-template-rows: auto; */\n    /* background: rgba(114, 186, 94, 0.05); */\n    /* background: rgba(161, 10, 55, 0.507); */\n    /* background-attachment: fixed;\n    background-position: center; */\n}\n\n/* #main-container { */\n    /* padding: 250px;\n    margin: 500px;\n    height: auto;\n    width: auto; */\n    /* background: rgb(44, 22, 66); */\n      /* background-color: rgba(255, 192, 203, 0.11); */\n\n    /* opacity: 95%; */\n    /* grid-gap: 50px; */\n    /* border: 10px dashed rgba(8, 230, 93, 0.996); */\n/* } */\n\n/* .btns-all { */\n\n/* } */\n\n/* #btn-toggle-forms { */\n    /* height: 15px;\n    width: 100px; */\n/* } */\n\n\n\n#component-routines-page {\n  /* border: 10px dashed rgba(21, 207, 99, 0.544); */\n  /* margin-top: 75px; */\n  /* display: grid; */\n  /* grid-template-columns: 200px repeat(auto-fill, 100px) 300px; */\n  /* grid-template-columns: 1fr 1fr 1fr; */\n  /* grid-template-columns: 60px 60px; */\n}\n\n#container-all-routines {\n  /* border: 10px dashed rgba(21, 133, 207, 0.544); */\n  /* margin-top: 75px; */\n  /* display: grid; */\n  /* grid-template-columns: 200px repeat(auto-fill, 100px) 300px; */\n  /* grid-template-columns: 1fr 1fr 1fr; */\n  /* grid-template-columns: 60px 60px; */\n}\n\n#page-workout-detail {\n/* margin-top: 75px; */\n/* border: 10px dashed rgba(215, 230, 8, 0.996); */\nmargin: 75px;\n}\n\n/* #routine-workout-cards { */\n  /* display: grid; */\n  /* display: grid; */\n  /* grid-template-columns: 500px 500px; */\n  /* grid-template-rows: 500px 500px; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n  /* border: 10px dashed rgba(230, 115, 8, 0.996); */\n/* } */\n\n#workout-detail-workout-name{\n  font-size: 22px;\n  background-color: #8728e551;\n}\n\n\n/* #workout-card { */\n  /* display: grid; */\n   /* border: 10px dashed rgb(23, 173, 106); */\n  /* display: grid; */\n  /* grid-template-columns: 500px ; */\n  /* justify-content: space-evenly; */\n  /* column-gap: 10px; */\n/* } */\n\n\n#routine-detail-workout-name {\n  font-size: 22px;\n  background-color: #b881f051;\n}\n\n#workoutlist-workout-info {\n      /* background-color: rgba(255, 192, 203, 0.11); */\n      /* display: grid; */\n      /* border: 10px dashed rgb(232, 145, 30); */\n      /* padding: 2%; */\n       /* justify-content: space-evenly; */\n       /* justify-content: space-around; */\n       /* justify-content: center; */\n         /* align-content: center; */\n         /* text-align: center; */\n         /* grid-template-columns: auto auto auto auto;  */\n         /* grid-template-columns: 300px ;  */\n\n           /* grid-template-areas:  */\n    /* 'data data data data btn-edit btn-delete'; */\n  /* grid-column-gap: 10px; - if you want gap between the columns */\n\n}\n\n#workout-info {\n  /* background-color: #d5b9f029; */\n  font-size: 17px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  text-align: center;\n  /* background-color: rgba(226, 226, 132, 0.75); */\n  display: grid;\n  padding: 1%;\n  /* grid-template-columns: auto auto auto auto auto auto auto auto; */\n  /* justify-content: space-evenly;2 */\n}\n\n/* .routine-detail-page-btn{ */\n  /* background:violet; */\n  /* max-width: 80px; */\n  /* max-height: 80px; */\n    /* grid-row: 3 / 3; */\n  /* width: auto; */\n           /* grid-column: 1 / 3;\n            */\n              /* grid-column: 1 / span 1; */\n\n/* } */\n\n#wrapper-btns-routine-workout {\n  /* border: 10px dashed rgba(11, 224, 68, 0.822); */\n  background-color: #8728e551;\n  /* opacity: 80%; */\n  display: grid;\n  /* padding: 5%; */\n  grid-template-columns: 120px 120px;\n  justify-content: space-evenly;\n}\n\n#wrapper-btn-delete-workout {\n        /* border: 10px dashed rgba(224, 206, 11, 0.822); */\n        /* background-color: #8728e551; */\n          background-color: #8728e551;\n        /* opacity: 80%; */\n        display: grid;\n        padding: 2%;\n        grid-template-columns:auto;\n        justify-content: space-evenly;\n}\n\n#routines-list {\n  background-color: rgba(255, 192, 203, 0.11);\n  display: grid;\n  /* grid-template-columns: auto; */\n  /* grid-template-columns: auto auto; */\n  /* grid-template-columns: 650px; */\n  grid-template-columns: 800px;\n  /* grid-template-columns: 75px 50px 100px; */\n  /* grid-template-rows: 250px; */\n  /* grid-template-rows: auto; */\n  /* padding: 30px; */\n          justify-content: space-evenly;\n\n}\n\n\n\n\n/* .all-routine-edit-btns { */\n    /* font-size: 13px; */\n/* } */\n\n\n\n.routine-name-wrapper {\n  /* border : 10px dashed red; */\n    /* background-color: rgb(10, 25, 43); */\n    background-color: rgba(43, 10, 30, 0.713);\n    display: grid;\n    padding: 5px 3px;\n    margin: 3px;\n    /* grid-column-gap: 2em; */\n    /* grid-column-gap: 10px; */\n    grid-template-columns: 200px auto auto ;\n    /* justify-content: space-evenly; */\n    justify-content: space-around;\n    /* justify-content: center; */\n    opacity: 75%;\n      /* float: center; */\n  /* width: 33.33%; */\n    /* width: 100%; \n    height: 400px; \n    border: 1px */\n}\n\n#routine-names {\n    /* color: rgba(222, 73, 85, 0.49); */\n    color: rgb(55, 167, 204);\n    text-decoration: none;\n    /* padding: 40px 60px; */\n    /* font-size: 20px; */\n    /* display: inline-block; */\n    /* vertical-align: middle; */\n    /* text-align: center; */\n    /* display: grid;\n    grid-template-columns: auto auto 50px;\n    grid-template-rows: auto auto 10px;\n    justify-content: space-evenly; */\n\n}\n\n#btn-routine-workout-count {\nfont-size: 14px;\nbackground-color: #cc5f57cb;\nborder: none;\ncolor: white;\n  /* padding: 15px 32px; */\ntext-align: center;\ntext-decoration: none;\ndisplay: inline-block;\n/* font-size: 12px; */\n/* padding: 10px 24px; */\nborder-radius: 8px;\nheight: 40px; \nwidth: 80px;\n/* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /*! center the btn inside of the div  */\n  /* transition: background 0.4s ease-in-out; */\n  /* position: relative;  */\n  margin: 45px -50px; \n  /* width: 100px;  */\n  /* top: 50%;  */\n  /* left: 50%; */\n}\n\n#routine-workout-count:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.btn-delete-routineslist-routine{\n  /* background: red; */\n/* #routine-workout-count { */\nfont-size: 14px;\nbackground-color: #be615ab8;\nborder: none;\ncolor: white;\n/* padding: 15px 32px; */\ntext-align: center;\ntext-decoration: none;\ndisplay: inline-block;\n/* font-size: 12px; */\n/* padding: 8px 20px; */\n/* padding: 10px 24px; */\nborder-radius: 8px;\nheight: 40px;\nwidth: 80px;\n/* transition-duration: 0.4s; */\n/*! center the btn inside of the div  */\n  transition: background 0.4s ease-in-out;\n  /* height:20px;  */\n  /* position:relative;  */\n  margin: 72px -10px; \n  /* width:100px;  */\n  /* top:50%;  */\n  /* left:50%; */\n}\n\n.btn-delete-routineslist-routine:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.routine-workout-list {\n    /* display: grid; */\n    /* display: none; */\n    /* grid-template-columns: auto; */\n    /* grid-template-columns: 550px; */\n    /* grid-template-rows: auto auto auto auto auto; */\n    /* text-align: center; */\n    padding: 2;\n    border: 2px solid pink;\n    border-radius: 5px;\n    padding: 5px;\n    \n}\n\n\n/* #routines-container { */\n    /* background: rgb(45, 59, 87) */\n/* } */\n\n\n.workout-names {\n  /* font-size: 17px; */\n  font-size: 20px;\n  color:rgba(40, 15, 4, 0.737);\n  font-weight: bold;\n  padding: 50px;\n  margin: 50px;\n  height: auto;\n  width: auto;\n  padding-top: 50px;\n  padding-bottom: 50px;\n  text-align: center;\n    /* background-color: rgba(114, 68, 156, 0.593); */\n    /* background-color: rgba(100, 84, 115, 0.593); */\n  /* /* display: grid;\n    grid-template-columns: auto auto; */\n}\n\n\n\ninput {\n       background: #b9aaaa61;\n}\n\n::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */\n  color: black;\n  opacity: 1; /* Firefox */\n}\n\n:-ms-input-placeholder { /* Internet Explorer 10-11 */\n  color: black;\n}\n\n::-ms-input-placeholder { /* Microsoft Edge */\n  color: black;\n}\n\n.hidden {\n    display: none;\n}\n/* \n.shown {\n    display: block;\n    margin-left: auto;\n    margin-right: auto;\n    opacity: 0.87; */\n/* } */\n\n.delete-workout-link {\n    color: red;\n}\n\n.workout-list {\n    background-color: #25657c;\n}\n\n#new-routine-container {\n    background-color: rgb(44, 22, 66);\n}\n\n\n#new-routine-form {\n  /* margin:auto; */\n    text-align: center;\n    display: grid;\n    grid-template-columns: 100px 180px auto 150px;\n    column-gap: 20px;\n    /* grid-template-columns: 150px 50px; */\n    /* justify-content: space-around; */\n    /* justify-content: space-between; */\n}\n\n#new-routine-form>label {\n    /* color: rgb(139, 139, 89); */\n    /* color: darkmagenta; */\n    color: rgba(139, 0, 139, 0.685);\n    /* color: rgba(238, 69, 196, 0.452);; */\n}\n\n\n\n.input-text {\n    background-color: #25657c;\n    color: rgb(87, 31, 40);\n}\n\n#app-title {\n    color: rgb(55, 167, 204);\n    font-size: 30px;\n    /* position: center; */\n    text-align: center\n}\n\n.edit-forms {\n    padding: 10px;\n    border: 2px dotted rgb(27, 44, 27);\n    border-radius: 5px;\n}\n\n.edit-btns { \n  /* background-color: #008bbaa7; Green */\n  /* background-color: #05728ac4; Green */\n  background-color: #1495b2cb; /* Green */\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.edit-btns:hover {\n    background-color: #0abee7db; /* Green */\n  /* background-color: #05728ac4; Green */\n  /* background-color: #36c4b6c4; Green */\n  /* background-color: #96a3965a; Green */\n  color: white;\n}\n\n\n.delete-btns { \n  background-color: #be615ab8;\n  border: none;\n  color: white;\n  /* padding: 15px 32px; */\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  /* padding: 10px 24px; */\n  border-radius: 12px;\n  /* transition-duration: 0.4s; */\n  transition: background 0.4s ease-in-out;\n  /* opacity: .75; */\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.delete-btns:hover {\n  /* background-color: #ff291aa9; */\n  /* background-color: #d11e12b3;*/\n  background-color: #f2483cc4;\n  color: white;\n  opacity: 1\n}\n\n\n.submit-btns { \n  /* background-color: #77d78fbc; */\n  background-color: rgba(139, 0, 139, 0.507);\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 12px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n.submit-btns:hover {\n  background-color: rgba(204, 7, 204, 0.616);\n\n  /* background-color: #41f26dcb; */\n  /* background-color: #d11e12b3; */\n  color: white;\n}\n\n\n.floating-nav-btns { \n  /* background-color: #d7ca779c; */\n  /* background-color: #f4e1d2; */\n  /* background-color: #618685; */\n  background-color: #a27ec6e4;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 14px;\n  padding: 10px 24px;\n  border-radius: 12px;\n  text-transform: capitalize; \n  font-weight: bold;\n  transition-duration: 0.4s;\n  transition: background 0.4s ease-in-out;\n   margin: 0px 20px; \n  /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */\n}\n\n\n\n.floating-nav-btns:hover {\n  /* background-color: #f7e255a9; */\n  /* background-color: #43bcb8da; */\n  background-color: #b076eb;\n  /* background-color: #d11e12b3; */\n  /* color: white; */\n}\n\n.routine-workout-name-block{\n  background-color: #bda5d5be;\n    /* grid:  ; */\n      /* float: center; */\n  /* width: 50%; */\n  /* height: 25%; */\n  padding: 10px;\n  margin: 5px;\n  display: grid;\n  grid-template-columns: 80px 200px 80px;\n  grid-template-rows: auto;\n  /* justify-items: center; */\n  /* align-items: center; */\n  justify-content: center;\n    /* display: flex;\n    justify-content: space-evenly; */\n  /* justify-content: center; */\n  /* text-align: center; */\n\n  \n}\n\n.delete-workout{\n    /* position: relative; */\n    /* float: center; */\n  /* right: 190px; */\n    /* center: 0px; */\n    /* width: 300px; */\n  /* border: 3px solid #73AD21; */\n  /* padding: 10px; */\n}\n\n.workout-page-floating-links{\n    display: grid;\n    grid-template-columns: 40px 240px auto;\n\n    /* grid-column-gap: 50px; */\n      /* grid-gap: 50px 100px; */\n\n    /* padding: 10px; */\n    /* margin: 200px; */\n\n    /* width: 25%;\n  float: left; */\n}\n\n.routine-detail-page{\n    display: grid;\n    /* grid-template-columns: 80px 240px auto 40px; */\n    /* padding: 50px; */\n    /* margin: 50px; */\n    position: relative;\n  }\n\n    /* #update-routine-form{ */\n    /* position: relative; */\n    /* display: grid; */\n    /* grid-template-columns: 10px 220px 220px; */\n/* } */\n\n#new-routine-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n#update-workout-form {\n    /* text-align: center; */\n    display: grid;\n    grid-template-columns: auto 170px auto 170px auto 170px auto 170px 130px;\n}\n\n\n/*! Style the header with a grey background and some padding */\n.header {\n  overflow: hidden;\n  /* background-color: #f1f1f127; */\n  padding: 60px 10px;\n  text-align: center;\n  width: 100%;\n  /* padding: 20px; */\n}\n\n/* Style the header links */\n.header a {\n  /* float: left; */\n  color: black;\n  /* color: rgb(55, 167, 204); */\n  /* color: rgb(87, 14, 84);\n  */\n  /* color: rgba(43, 10, 30, 0.713); */\n  text-align: center;\n  /* padding: 12px; */\n  text-decoration: none;\n  font-size: 18px;\n  line-height: 25px;\n  border-radius: 4px;\n  /* margin: 1px; */\n}\n\n/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */\n.header a.logo {\n  font-size: 65px;\n  font-weight: bold;\n  text-align: center;\n  /* width: 100%; */\n  padding: 20px 10px;\n  /* background-color: rgba(30, 143, 255, 0.555); */\n}\n\n/* Change the background color on mouse-over */\n.header a:hover {\n  /* background-color: #ddd;\n  color: black; */\n}\n\n/* Style the active/current link*/\n.header a.active {\n  background-color: dodgerblue;\n  color: white;\n}\n\n/* Float the link section to the right */\n.header-right {\n  float: right;\n}\n\n/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */\n@media screen and (max-width: 500px) {\n  .header a {\n    float: none;\n    display: block;\n    text-align: left;\n  }\n  .header-right {\n    float: none;\n  }\n}\n\n/*! Style the navbar links */\n\n.navbar {\n  overflow: hidden;\n  /* background-color: #f1f1f127; */\n  padding: 10px 10px;\n  /* display: grid; */\n  /* grid-template-columns: 140px 140px; */\n\n    /* grid-column-gap: 50px; */\n   /* margin: 72px -10px;  */\n  /* color: red; */\n  /* float: center; */\n  /* background-color: #333; */\n  /* background-color: rgba(113, 104, 197, 0.425); */\n   text-align: center;\n   /* justify-content: space-around; */\n\n}\n\n.navbar a {\n  /* float: left; */\n  /* color: black; */\n  /* color: rgb(55, 167, 204); */\n  /* color: rgb(87, 14, 84);\n  */\n  /* color: rgba(43, 10, 30, 0.713); */\n  /* text-align: left; */\n  /* padding: 12px; */\n  /* text-decoration: none;\n  font-size: 18px;\n  line-height: 25px;\n  border-radius: 4px; */\n  /* margin: 1px; */\n  /* display: block; */\n  /* display: grid; */\n  /* color: #f2f2f2; */\n  /* text-align: center; */\n  /* padding: 14px 16px; */\n  /* text-decoration: none; */\n  \n}\n\n/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the navbar to increase when the font gets bigger */\n.navbar a.logo {\n  /* font-size: 25px;\n  font-weight: bold;\n  float: center; */\n  /* float: left; */\n}\n\n/* Change the background color on mouse-over */\n.navbar a:hover {\n  /* background-color: #ddd;\n  color: black; */\n}\n\n/* Style the active/current link*/\n.navbar a.active {\n  /* background-color: dodgerblue;\n  color: white; */\n}\n\n/* Float the link section to the right */\n.navbar-right {\n  /* float: right; */\n}\n\n/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */\n@media screen and (max-width: 500px) {\n  .navbar a {\n    float: none;\n    display: block;\n    text-align: left;\n  }\n  .navbar-right {\n    float: none;\n  }\n}\n\n/* ! modal */\n.modal-container{\ndisplay: grid;\njustify-content: space-around;\n}\n.popup-content {\n  /* background-color: rgba(107, 7, 7, 0.11); */\n}\n\n#popup-1 {\n  /* background-color: rgba(7, 25, 37, 0.76); */\n  /* background-color: rgb(7, 25, 37); */\n  background-color: rgb(28, 44, 54);\n  /* background-color: rgb(36, 79, 107);\n   */\n   /* background-color: #351853ef; */\n   /* background-color: #160542e8; */\n  /* background-color: rgba(36, 79, 107, 0.837) */\n  /* background-color: rgba(145, 87, 87, 0.76); */\n  /* background-color: rgba(145, 87, 87, 0.76); */\n  padding: 50px;\n  opacity: 85%;\n}\n.modal {\n  font-size: 12px;\n  /* background-color: rgba(0, 0, 0, 0.11); */\n  /* background-color: rgba(0, 0, 0, 0.11); */\n   /* display: grid; */\n    /* grid-template-columns: 70px 70px; */\n    margin: 0px 50px; \n    width: 100%;\n}\n.modal-button {\n  color: red;\n}\n\n/* .modal > .header {\n  width: 100%;\n  border-bottom: 1px solid gray;\n  font-size: 18px;\n  text-align: center;\n  padding: 5px;\n} */\n.modal > .content {\n  width: 100%;\n  padding: 10px 15px;\n}\n.modal > .actions {\n  /* width: 100%; */\n  padding: 5px 5px;\n  /* margin: auto; */\n  margin: 0px 112px;\n  text-align: left;\n  /* color: green; */\n      /* border: 10px dashed rgb(32, 4, 248); */\n\n}\n.modal > .close {\n  cursor: pointer;\n  position: absolute;\n  display: block;\n  padding: 2px 5px;\n  line-height: 20px;\n  right: -10px;\n  top: -10px;\n  font-size: 24px;\n  background: #ffffff;\n  border-radius: 18px;\n  border: 1px solid #cfcece;\n  float: center;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -20495,911 +20495,6 @@ var TextField_TextField = /*#__PURE__*/react["forwardRef"](function TextField(pr
 /* harmony default export */ var esm_TextField_TextField = (styles_withStyles(TextField_styles, {
   name: 'MuiTextField'
 })(TextField_TextField));
-// CONCATENATED MODULE: ./src/actions/addRoutine.js
-var addRoutine = function addRoutine(data) {
-  var WH_URL = "https://be-workout-hero2.herokuapp.com";
-  return function (dispatch) {
-    // fetch('http://localhost:3000/api/v1/routines', {
-    // fetch('https://be-workout-hero2.herokuapp.com/api/v1/routines', 
-    fetch("".concat(WH_URL, "/api/v1/routines"), {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      method: 'POST',
-      body: JSON.stringify(data)
-    }).then(function (res) {
-      return res.json();
-    }).then(function (routine) {
-      return dispatch({
-        type: 'ADD_ROUTINE',
-        payload: routine
-      });
-    });
-  };
-};
-// CONCATENATED MODULE: ./src/forms/StyledSubmitBtns.js
-var StyledSubmitBtns = function StyledSubmitBtns() {
-  return {
-    root: {
-      //   backgroundColor: 'rgba(139, 0, 139, 0.507)',
-      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-      //   border: 'none',
-      color: 'white',
-      //   padding: '15px 32px',
-      //   textAlign: 'center',
-      textDecoration: 'none',
-      display: 'inline-block',
-      fontSize: '12px',
-      //   padding: '10px 24px',
-      borderRadius: '12px',
-      lineHeight: '2.6',
-      textTransform: "capitalize" //   transitionDuration: '0.4s',
-      //   transition: 'background 0.4s ease-in-out',
-      // background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-      // borderRadius: 3,
-      // border: 0,
-      // color: 'white',
-      // height: 48,
-      // padding: '0 30px',
-      // boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-
-    }
-  };
-};
-
-/* harmony default export */ var forms_StyledSubmitBtns = (StyledSubmitBtns);
-// CONCATENATED MODULE: ./src/forms/NewRoutineForm.js
-function NewRoutineForm_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { NewRoutineForm_typeof = function _typeof(obj) { return typeof obj; }; } else { NewRoutineForm_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return NewRoutineForm_typeof(obj); }
-
-function NewRoutineForm_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function NewRoutineForm_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function NewRoutineForm_createClass(Constructor, protoProps, staticProps) { if (protoProps) NewRoutineForm_defineProperties(Constructor.prototype, protoProps); if (staticProps) NewRoutineForm_defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (NewRoutineForm_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function NewRoutineForm_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-
- // import clsx from 'clsx';
-// import { makesStyles} from '@material-ui/core/styles';
-
-var NewRoutineForm_NewRoutineForm = /*#__PURE__*/function (_Component) {
-  _inherits(NewRoutineForm, _Component);
-
-  var _super = _createSuper(NewRoutineForm);
-
-  function NewRoutineForm(props) {
-    var _this;
-
-    NewRoutineForm_classCallCheck(this, NewRoutineForm);
-
-    _this = _super.call(this, props);
-
-    NewRoutineForm_defineProperty(_assertThisInitialized(_this), "handleChange", function (e) {
-      _this.setState(NewRoutineForm_defineProperty({}, e.target.name, e.target.value));
-    });
-
-    NewRoutineForm_defineProperty(_assertThisInitialized(_this), "handleSubmit", function (e) {
-      e.preventDefault();
-
-      _this.props.addRoutine(_this.state);
-
-      _this.setState({
-        name: ''
-      }); // console.log('🚀 ~ file: NewRoutineForm.js ~ line 23 ~ NewRoutineForm ~ this.state', this.state)
-
-    });
-
-    _this.state = {
-      routine_name: ''
-    };
-    return _this;
-  }
-
-  NewRoutineForm_createClass(NewRoutineForm, [{
-    key: "render",
-    value: function render() {
-      // const classes = useStyles();
-      var classes = this.props.classes;
-      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement("form", {
-        id: "new-routine-form",
-        onSubmit: this.handleSubmit
-      }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
-        label: "Routine Name",
-        style: {
-          color: "red",
-          backgroundColor: "lightcoral"
-        },
-        id: "margin-none",
-        value: this.state.name,
-        name: "routine_name",
-        onChange: this.handleChange
-      }), /*#__PURE__*/react_default.a.createElement("button", {
-        className: classes.root,
-        type: "submit"
-      }, "Create Routine")));
-    }
-  }]);
-
-  return NewRoutineForm;
-}(react["Component"]); // export default connect(null, {addRoutine})(NewRoutineForm);
-
-
-/* harmony default export */ var forms_NewRoutineForm = (Object(redux["compose"])(connect_connect(null, {
-  addRoutine: addRoutine
-}), styles_withStyles(forms_StyledSubmitBtns))(NewRoutineForm_NewRoutineForm));
-// CONCATENATED MODULE: ./node_modules/reactjs-popup/dist/reactjs-popup.esm.js
-
-
-
-function reactjs_popup_esm_extends() {
-  reactjs_popup_esm_extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return reactjs_popup_esm_extends.apply(this, arguments);
-}
-
-var reactjs_popup_esm_useOnEscape = function useOnEscape(handler, active) {
-  if (active === void 0) {
-    active = true;
-  }
-
-  Object(react["useEffect"])(function () {
-    if (!active) return;
-
-    var listener = function listener(event) {
-      // check if key is an Escape
-      if (event.key === 'Escape') handler();
-    };
-
-    document.addEventListener('keyup', listener);
-    return function () {
-      if (!active) return;
-      document.removeEventListener('keyup', listener);
-    };
-  }, [handler, active]);
-};
-var reactjs_popup_esm_useRepositionOnResize = function useRepositionOnResize(handler, active) {
-  if (active === void 0) {
-    active = true;
-  }
-
-  Object(react["useEffect"])(function () {
-    if (!active) return;
-
-    var listener = function listener() {
-      handler();
-    };
-
-    window.addEventListener('resize', listener);
-    return function () {
-      if (!active) return;
-      window.removeEventListener('resize', listener);
-    };
-  }, [handler, active]);
-};
-var reactjs_popup_esm_useOnClickOutside = function useOnClickOutside(ref, handler, active) {
-  if (active === void 0) {
-    active = true;
-  }
-
-  Object(react["useEffect"])(function () {
-    if (!active) return;
-
-    var listener = function listener(event) {
-      // Do nothing if clicking ref's element or descendent elements
-      var refs = Array.isArray(ref) ? ref : [ref];
-      var contains = false;
-      refs.forEach(function (r) {
-        if (!r.current || r.current.contains(event.target)) {
-          contains = true;
-          return;
-        }
-      });
-      event.stopPropagation();
-      if (!contains) handler();
-    };
-
-    document.addEventListener('mousedown', listener);
-    document.addEventListener('touchstart', listener);
-    return function () {
-      if (!active) return;
-      document.removeEventListener('mousedown', listener);
-      document.removeEventListener('touchstart', listener);
-    };
-  }, [ref, handler, active]);
-}; // Make sure that user is not able TAB out of the Modal content on Open
-
-var reactjs_popup_esm_useTabbing = function useTabbing(contentRef, active) {
-  if (active === void 0) {
-    active = true;
-  }
-
-  Object(react["useEffect"])(function () {
-    if (!active) return;
-
-    var listener = function listener(event) {
-      // check if key is an Tab
-      if (event.keyCode === 9) {
-        var _contentRef$current;
-
-        var els = contentRef === null || contentRef === void 0 ? void 0 : (_contentRef$current = contentRef.current) === null || _contentRef$current === void 0 ? void 0 : _contentRef$current.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
-        var focusableEls = Array.prototype.slice.call(els);
-
-        if (focusableEls.length === 1) {
-          event.preventDefault();
-          return;
-        }
-
-        var firstFocusableEl = focusableEls[0];
-        var lastFocusableEl = focusableEls[focusableEls.length - 1];
-
-        if (event.shiftKey && document.activeElement === firstFocusableEl) {
-          event.preventDefault();
-          lastFocusableEl.focus();
-        } else if (document.activeElement === lastFocusableEl) {
-          event.preventDefault();
-          firstFocusableEl.focus();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', listener);
-    return function () {
-      if (!active) return;
-      document.removeEventListener('keydown', listener);
-    };
-  }, [contentRef, active]);
-};
-var reactjs_popup_esm_useIsomorphicLayoutEffect = typeof window !== 'undefined' ? react["useLayoutEffect"] : react["useEffect"];
-
-var Style = {
-  popupContent: {
-    tooltip: {
-      position: 'absolute',
-      zIndex: 999
-    },
-    modal: {
-      position: 'relative',
-      margin: 'auto'
-    }
-  },
-  popupArrow: {
-    height: '8px',
-    width: '16px',
-    position: 'absolute',
-    background: 'transparent',
-    color: '#FFF',
-    zIndex: -1
-  },
-  overlay: {
-    tooltip: {
-      position: 'fixed',
-      top: '0',
-      bottom: '0',
-      left: '0',
-      right: '0',
-      zIndex: 999
-    },
-    modal: {
-      position: 'fixed',
-      top: '0',
-      bottom: '0',
-      left: '0',
-      right: '0',
-      display: 'flex',
-      zIndex: 999
-    }
-  }
-};
-
-var POSITION_TYPES = ['top left', 'top center', 'top right', 'right top', 'right center', 'right bottom', 'bottom left', 'bottom center', 'bottom right', 'left top', 'left center', 'left bottom'];
-
-var getCoordinatesForPosition = function getCoordinatesForPosition(triggerBounding, ContentBounding, position, //PopupPosition | PopupPosition[],
-arrow, _ref) {
-  var offsetX = _ref.offsetX,
-      offsetY = _ref.offsetY;
-  var margin = arrow ? 8 : 0;
-  var args = position.split(' '); // the step N 1 : center the popup content => ok
-
-  var CenterTop = triggerBounding.top + triggerBounding.height / 2;
-  var CenterLeft = triggerBounding.left + triggerBounding.width / 2;
-  var height = ContentBounding.height,
-      width = ContentBounding.width;
-  var top = CenterTop - height / 2;
-  var left = CenterLeft - width / 2;
-  var transform = '';
-  var arrowTop = '0%';
-  var arrowLeft = '0%'; // the  step N 2 : => ok
-
-  switch (args[0]) {
-    case 'top':
-      top -= height / 2 + triggerBounding.height / 2 + margin;
-      transform = "rotate(180deg)  translateX(50%)";
-      arrowTop = '100%';
-      arrowLeft = '50%';
-      break;
-
-    case 'bottom':
-      top += height / 2 + triggerBounding.height / 2 + margin;
-      transform = "rotate(0deg) translateY(-100%) translateX(-50%)";
-      arrowLeft = '50%';
-      break;
-
-    case 'left':
-      left -= width / 2 + triggerBounding.width / 2 + margin;
-      transform = " rotate(90deg)  translateY(50%) translateX(-25%)";
-      arrowLeft = '100%';
-      arrowTop = '50%';
-      break;
-
-    case 'right':
-      left += width / 2 + triggerBounding.width / 2 + margin;
-      transform = "rotate(-90deg)  translateY(-150%) translateX(25%)";
-      arrowTop = '50%';
-      break;
-  }
-
-  switch (args[1]) {
-    case 'top':
-      top = triggerBounding.top;
-      arrowTop = triggerBounding.height / 2 + "px";
-      break;
-
-    case 'bottom':
-      top = triggerBounding.top - height + triggerBounding.height;
-      arrowTop = height - triggerBounding.height / 2 + "px";
-      break;
-
-    case 'left':
-      left = triggerBounding.left;
-      arrowLeft = triggerBounding.width / 2 + "px";
-      break;
-
-    case 'right':
-      left = triggerBounding.left - width + triggerBounding.width;
-      arrowLeft = width - triggerBounding.width / 2 + "px";
-      break;
-  }
-
-  top = args[0] === 'top' ? top - offsetY : top + offsetY;
-  left = args[0] === 'left' ? left - offsetX : left + offsetX;
-  return {
-    top: top,
-    left: left,
-    transform: transform,
-    arrowLeft: arrowLeft,
-    arrowTop: arrowTop
-  };
-};
-
-var getTooltipBoundary = function getTooltipBoundary(keepTooltipInside) {
-  // add viewport
-  var boundingBox = {
-    top: 0,
-    left: 0,
-
-    /* eslint-disable-next-line no-undef */
-    width: window.innerWidth,
-
-    /* eslint-disable-next-line no-undef */
-    height: window.innerHeight
-  };
-
-  if (typeof keepTooltipInside === 'string') {
-    /* eslint-disable-next-line no-undef */
-    var selector = document.querySelector(keepTooltipInside);
-
-    if (false) {}
-
-    if (selector !== null) boundingBox = selector.getBoundingClientRect();
-  }
-
-  return boundingBox;
-};
-
-var calculatePosition = function calculatePosition(triggerBounding, ContentBounding, position, arrow, _ref2, keepTooltipInside) {
-  var offsetX = _ref2.offsetX,
-      offsetY = _ref2.offsetY;
-  var bestCoords = {
-    arrowLeft: '0%',
-    arrowTop: '0%',
-    left: 0,
-    top: 0,
-    transform: 'rotate(135deg)'
-  };
-  var i = 0;
-  var wrapperBox = getTooltipBoundary(keepTooltipInside);
-  var positions = Array.isArray(position) ? position : [position]; // keepTooltipInside would be activated if the  keepTooltipInside exist or the position is Array
-
-  if (keepTooltipInside || Array.isArray(position)) positions = [].concat(positions, POSITION_TYPES); // add viewPort for WarpperBox
-  // wrapperBox.top = wrapperBox.top + window.scrollY;
-  // wrapperBox.left = wrapperBox.left + window.scrollX;
-
-  while (i < positions.length) {
-    bestCoords = getCoordinatesForPosition(triggerBounding, ContentBounding, positions[i], arrow, {
-      offsetX: offsetX,
-      offsetY: offsetY
-    });
-    var contentBox = {
-      top: bestCoords.top,
-      left: bestCoords.left,
-      width: ContentBounding.width,
-      height: ContentBounding.height
-    };
-
-    if (contentBox.top <= wrapperBox.top || contentBox.left <= wrapperBox.left || contentBox.top + contentBox.height >= wrapperBox.top + wrapperBox.height || contentBox.left + contentBox.width >= wrapperBox.left + wrapperBox.width) {
-      i++;
-    } else {
-      break;
-    }
-  }
-
-  return bestCoords;
-};
-
-var popupIdCounter = 0;
-
-var getRootPopup = function getRootPopup() {
-  var PopupRoot = document.getElementById('popup-root');
-
-  if (PopupRoot === null) {
-    PopupRoot = document.createElement('div');
-    PopupRoot.setAttribute('id', 'popup-root');
-    document.body.appendChild(PopupRoot);
-  }
-
-  return PopupRoot;
-};
-
-var Popup = /*#__PURE__*/Object(react["forwardRef"])(function (_ref, ref) {
-  var _ref$trigger = _ref.trigger,
-      trigger = _ref$trigger === void 0 ? null : _ref$trigger,
-      _ref$onOpen = _ref.onOpen,
-      onOpen = _ref$onOpen === void 0 ? function () {} : _ref$onOpen,
-      _ref$onClose = _ref.onClose,
-      onClose = _ref$onClose === void 0 ? function () {} : _ref$onClose,
-      _ref$defaultOpen = _ref.defaultOpen,
-      defaultOpen = _ref$defaultOpen === void 0 ? false : _ref$defaultOpen,
-      _ref$open = _ref.open,
-      open = _ref$open === void 0 ? undefined : _ref$open,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$nested = _ref.nested,
-      nested = _ref$nested === void 0 ? false : _ref$nested,
-      _ref$closeOnDocumentC = _ref.closeOnDocumentClick,
-      closeOnDocumentClick = _ref$closeOnDocumentC === void 0 ? true : _ref$closeOnDocumentC,
-      _ref$repositionOnResi = _ref.repositionOnResize,
-      repositionOnResize = _ref$repositionOnResi === void 0 ? true : _ref$repositionOnResi,
-      _ref$closeOnEscape = _ref.closeOnEscape,
-      closeOnEscape = _ref$closeOnEscape === void 0 ? true : _ref$closeOnEscape,
-      _ref$on = _ref.on,
-      on = _ref$on === void 0 ? ['click'] : _ref$on,
-      _ref$contentStyle = _ref.contentStyle,
-      contentStyle = _ref$contentStyle === void 0 ? {} : _ref$contentStyle,
-      _ref$arrowStyle = _ref.arrowStyle,
-      arrowStyle = _ref$arrowStyle === void 0 ? {} : _ref$arrowStyle,
-      _ref$overlayStyle = _ref.overlayStyle,
-      overlayStyle = _ref$overlayStyle === void 0 ? {} : _ref$overlayStyle,
-      _ref$className = _ref.className,
-      className = _ref$className === void 0 ? '' : _ref$className,
-      _ref$position = _ref.position,
-      position = _ref$position === void 0 ? 'bottom center' : _ref$position,
-      _ref$modal = _ref.modal,
-      modal = _ref$modal === void 0 ? false : _ref$modal,
-      _ref$lockScroll = _ref.lockScroll,
-      lockScroll = _ref$lockScroll === void 0 ? false : _ref$lockScroll,
-      _ref$arrow = _ref.arrow,
-      arrow = _ref$arrow === void 0 ? true : _ref$arrow,
-      _ref$offsetX = _ref.offsetX,
-      offsetX = _ref$offsetX === void 0 ? 0 : _ref$offsetX,
-      _ref$offsetY = _ref.offsetY,
-      offsetY = _ref$offsetY === void 0 ? 0 : _ref$offsetY,
-      _ref$mouseEnterDelay = _ref.mouseEnterDelay,
-      mouseEnterDelay = _ref$mouseEnterDelay === void 0 ? 100 : _ref$mouseEnterDelay,
-      _ref$mouseLeaveDelay = _ref.mouseLeaveDelay,
-      mouseLeaveDelay = _ref$mouseLeaveDelay === void 0 ? 100 : _ref$mouseLeaveDelay,
-      _ref$keepTooltipInsid = _ref.keepTooltipInside,
-      keepTooltipInside = _ref$keepTooltipInsid === void 0 ? false : _ref$keepTooltipInsid,
-      children = _ref.children;
-
-  var _useState = Object(react["useState"])(open || defaultOpen),
-      isOpen = _useState[0],
-      setIsOpen = _useState[1];
-
-  var triggerRef = Object(react["useRef"])(null);
-  var contentRef = Object(react["useRef"])(null);
-  var arrowRef = Object(react["useRef"])(null);
-  var focusedElBeforeOpen = Object(react["useRef"])(null);
-  var popupId = Object(react["useRef"])("popup-" + ++popupIdCounter);
-  var isModal = modal ? true : !trigger;
-  var timeOut = Object(react["useRef"])(0);
-  reactjs_popup_esm_useIsomorphicLayoutEffect(function () {
-    if (isOpen) {
-      focusedElBeforeOpen.current = document.activeElement;
-      setPosition();
-      focusContentOnOpen(); // for accessibility
-
-      lockScrolll();
-    } else {
-      resetScroll();
-    }
-
-    return function () {
-      clearTimeout(timeOut.current);
-    };
-  }, [isOpen]); // for uncontrolled popup we need to sync isOpen with open prop
-
-  Object(react["useEffect"])(function () {
-    if (typeof open === 'boolean') {
-      if (open) openPopup();else closePopup();
-    }
-  }, [open, disabled]);
-
-  var openPopup = function openPopup() {
-    if (isOpen || disabled) return;
-    setIsOpen(true);
-    setTimeout(onOpen, 0);
-  };
-
-  var closePopup = function closePopup() {
-    if (!isOpen || disabled) return;
-    setIsOpen(false);
-    if (isModal) focusedElBeforeOpen.current.focus();
-    setTimeout(onClose, 0);
-  };
-
-  var togglePopup = function togglePopup(event) {
-    event === null || event === void 0 ? void 0 : event.stopPropagation();
-    if (!isOpen) openPopup();else closePopup();
-  };
-
-  var onMouseEnter = function onMouseEnter() {
-    clearTimeout(timeOut.current);
-    timeOut.current = setTimeout(openPopup, mouseEnterDelay);
-  };
-
-  var onContextMenu = function onContextMenu(event) {
-    event === null || event === void 0 ? void 0 : event.preventDefault();
-    togglePopup();
-  };
-
-  var onMouseLeave = function onMouseLeave() {
-    clearTimeout(timeOut.current);
-    timeOut.current = setTimeout(closePopup, mouseLeaveDelay);
-  };
-
-  var lockScrolll = function lockScrolll() {
-    if (isModal && lockScroll) document.getElementsByTagName('body')[0].style.overflow = 'hidden'; // migrate to document.body
-  };
-
-  var resetScroll = function resetScroll() {
-    if (isModal && lockScroll) document.getElementsByTagName('body')[0].style.overflow = 'auto';
-  };
-
-  var focusContentOnOpen = function focusContentOnOpen() {
-    var _contentRef$current;
-
-    var focusableEls = contentRef === null || contentRef === void 0 ? void 0 : (_contentRef$current = contentRef.current) === null || _contentRef$current === void 0 ? void 0 : _contentRef$current.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
-    var firstEl = Array.prototype.slice.call(focusableEls)[0];
-    firstEl === null || firstEl === void 0 ? void 0 : firstEl.focus();
-  };
-
-  Object(react["useImperativeHandle"])(ref, function () {
-    return {
-      open: function open() {
-        openPopup();
-      },
-      close: function close() {
-        closePopup();
-      },
-      toggle: function toggle() {
-        togglePopup();
-      }
-    };
-  }); // set Position
-
-  var setPosition = function setPosition() {
-    if (isModal || !isOpen) return;
-    if (!(triggerRef === null || triggerRef === void 0 ? void 0 : triggerRef.current) || !(triggerRef === null || triggerRef === void 0 ? void 0 : triggerRef.current) || !(contentRef === null || contentRef === void 0 ? void 0 : contentRef.current)) return; /// show error as one of ref is undefined
-
-    var trigger = triggerRef.current.getBoundingClientRect();
-    var content = contentRef.current.getBoundingClientRect();
-    var cords = calculatePosition(trigger, content, position, arrow, {
-      offsetX: offsetX,
-      offsetY: offsetY
-    }, keepTooltipInside);
-    contentRef.current.style.top = cords.top + window.scrollY + "px";
-    contentRef.current.style.left = cords.left + window.scrollX + "px";
-
-    if (arrow && !!arrowRef.current) {
-      var _arrowStyle$top, _arrowStyle$left;
-
-      arrowRef.current.style.transform = cords.transform;
-      arrowRef.current.style.setProperty('-ms-transform', cords.transform);
-      arrowRef.current.style.setProperty('-webkit-transform', cords.transform);
-      arrowRef.current.style.top = ((_arrowStyle$top = arrowStyle.top) === null || _arrowStyle$top === void 0 ? void 0 : _arrowStyle$top.toString()) || cords.arrowTop;
-      arrowRef.current.style.left = ((_arrowStyle$left = arrowStyle.left) === null || _arrowStyle$left === void 0 ? void 0 : _arrowStyle$left.toString()) || cords.arrowLeft;
-    }
-  }; // hooks
-
-
-  reactjs_popup_esm_useOnEscape(closePopup, closeOnEscape); // can be optimized if we disabled for hover
-
-  reactjs_popup_esm_useTabbing(contentRef, isOpen && isModal);
-  reactjs_popup_esm_useRepositionOnResize(setPosition, repositionOnResize);
-  reactjs_popup_esm_useOnClickOutside(!!trigger ? [contentRef, triggerRef] : [contentRef], closePopup, closeOnDocumentClick && !nested); // we need to add a ne
-  // render the trigger element and add events
-
-  var renderTrigger = function renderTrigger() {
-    var triggerProps = {
-      key: 'T',
-      ref: triggerRef,
-      'aria-describedby': popupId.current
-    };
-    var onAsArray = Array.isArray(on) ? on : [on];
-
-    for (var i = 0, len = onAsArray.length; i < len; i++) {
-      switch (onAsArray[i]) {
-        case 'click':
-          triggerProps.onClick = togglePopup;
-          break;
-
-        case 'right-click':
-          triggerProps.onContextMenu = onContextMenu;
-          break;
-
-        case 'hover':
-          triggerProps.onMouseEnter = onMouseEnter;
-          triggerProps.onMouseLeave = onMouseLeave;
-          break;
-
-        case 'focus':
-          triggerProps.onFocus = onMouseEnter;
-          triggerProps.onBlur = onMouseLeave;
-          break;
-      }
-    }
-
-    if (typeof trigger === 'function') {
-      var comp = trigger(isOpen);
-      return !!trigger && react_default.a.cloneElement(comp, triggerProps);
-    }
-
-    return !!trigger && react_default.a.cloneElement(trigger, triggerProps);
-  };
-
-  var addWarperAction = function addWarperAction() {
-    var popupContentStyle = isModal ? Style.popupContent.modal : Style.popupContent.tooltip;
-    var childrenElementProps = {
-      className: "popup-content " + (className !== '' ? className.split(' ').map(function (c) {
-        return c + "-content";
-      }).join(' ') : ''),
-      style: reactjs_popup_esm_extends({}, popupContentStyle, contentStyle, {
-        pointerEvents: 'auto'
-      }),
-      ref: contentRef,
-      onClick: function onClick(e) {
-        e.stopPropagation();
-      }
-    };
-
-    if (!modal && on.indexOf('hover') >= 0) {
-      childrenElementProps.onMouseEnter = onMouseEnter;
-      childrenElementProps.onMouseLeave = onMouseLeave;
-    }
-
-    return childrenElementProps;
-  };
-
-  var renderContent = function renderContent() {
-    return react_default.a.createElement("div", Object.assign({}, addWarperAction(), {
-      key: "C",
-      role: isModal ? 'dialog' : 'tooltip',
-      id: popupId.current
-    }), arrow && !isModal && react_default.a.createElement("div", {
-      ref: arrowRef,
-      style: Style.popupArrow
-    }, react_default.a.createElement("svg", {
-      "data-testid": "arrow",
-      className: "popup-arrow " + (className !== '' ? className.split(' ').map(function (c) {
-        return c + "-arrow";
-      }).join(' ') : ''),
-      viewBox: "0 0 32 16",
-      style: reactjs_popup_esm_extends({
-        position: 'absolute'
-      }, arrowStyle)
-    }, react_default.a.createElement("path", {
-      d: "M16 0l16 16H0z",
-      fill: "currentcolor"
-    }))), children && typeof children === 'function' ? children(closePopup, isOpen) : children);
-  };
-
-  var overlay = !(on.indexOf('hover') >= 0);
-  var ovStyle = isModal ? Style.overlay.modal : Style.overlay.tooltip;
-  var content = [overlay && react_default.a.createElement("div", {
-    key: "O",
-    "data-testid": "overlay",
-    "data-popup": isModal ? 'modal' : 'tooltip',
-    className: "popup-overlay " + (className !== '' ? className.split(' ').map(function (c) {
-      return c + "-overlay";
-    }).join(' ') : ''),
-    style: reactjs_popup_esm_extends({}, ovStyle, overlayStyle, {
-      pointerEvents: closeOnDocumentClick && nested || isModal ? 'auto' : 'none'
-    }),
-    onClick: closeOnDocumentClick && nested ? closePopup : undefined,
-    tabIndex: -1
-  }, isModal && renderContent()), !isModal && renderContent()];
-  return react_default.a.createElement(react_default.a.Fragment, null, renderTrigger(), isOpen && react_dom_default.a.createPortal(content, getRootPopup()));
-});
-
-/* harmony default export */ var reactjs_popup_esm = (Popup);
-
-//# sourceMappingURL=reactjs-popup.esm.js.map
-
-// CONCATENATED MODULE: ./src/forms/ModalNewRoutineForm.js
-function ModalNewRoutineForm_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-
-
- // var classes
-
-var ModalNewRoutineForm_ModalNewRoutineForm = function ModalNewRoutineForm(props) {
-  var _ref;
-
-  return (
-    /*#__PURE__*/
-    // classes = props
-    react_default.a.createElement(reactjs_popup_esm, {
-      className: "modal-container",
-      style: {
-        backgroundColor: "pink",
-        justifyContent: "center"
-      },
-      position: "center",
-      trigger: /*#__PURE__*/react_default.a.createElement("button", {
-        style: (_ref = {
-          color: "red",
-          backgroundColor: "#a27ec6e4",
-          border: "none"
-        }, ModalNewRoutineForm_defineProperty(_ref, "color", "white"), ModalNewRoutineForm_defineProperty(_ref, "padding", "15px 32px"), ModalNewRoutineForm_defineProperty(_ref, "textAlign", "center"), ModalNewRoutineForm_defineProperty(_ref, "textDecoration", "none"), ModalNewRoutineForm_defineProperty(_ref, "display", "inline-block"), ModalNewRoutineForm_defineProperty(_ref, "fontSize", "14px"), ModalNewRoutineForm_defineProperty(_ref, "padding", "10px 24px"), ModalNewRoutineForm_defineProperty(_ref, "borderRadius", "12px"), ModalNewRoutineForm_defineProperty(_ref, "textTransform", "capitalize"), ModalNewRoutineForm_defineProperty(_ref, "fontWeight", "bold"), ModalNewRoutineForm_defineProperty(_ref, "transitionDuration", "0.4s"), ModalNewRoutineForm_defineProperty(_ref, "transition", "background 0.4s ease-in-out"), _ref) // className={classes.root}
-        // className='floating-nav-btns'
-
-      }, "Add Routine"),
-      modal: true,
-      nested: true
-    }, function (close) {
-      var _ref2;
-
-      return /*#__PURE__*/react_default.a.createElement("div", {
-        className: "modal"
-      }, /*#__PURE__*/react_default.a.createElement(forms_NewRoutineForm, null), /*#__PURE__*/react_default.a.createElement("div", {
-        className: "actions"
-      }, /*#__PURE__*/react_default.a.createElement("button", {
-        className: "button",
-        style: (_ref2 = {
-          color: "red",
-          backgroundColor: "#be615ab8",
-          border: "none"
-        }, ModalNewRoutineForm_defineProperty(_ref2, "color", "white"), ModalNewRoutineForm_defineProperty(_ref2, "textAlign", "center"), ModalNewRoutineForm_defineProperty(_ref2, "textDecoration", "none"), ModalNewRoutineForm_defineProperty(_ref2, "display", "inline-block"), ModalNewRoutineForm_defineProperty(_ref2, "fontSize", "14px"), ModalNewRoutineForm_defineProperty(_ref2, "padding", "10px 24px"), ModalNewRoutineForm_defineProperty(_ref2, "borderRadius", "12px"), ModalNewRoutineForm_defineProperty(_ref2, "textTransform", "capitalize"), ModalNewRoutineForm_defineProperty(_ref2, "fontWeight", "bold"), ModalNewRoutineForm_defineProperty(_ref2, "transitionDuration", "0.4s"), ModalNewRoutineForm_defineProperty(_ref2, "transition", "background 0.4s ease-in-out"), _ref2),
-        onClick: function onClick() {
-          //   console.log('modal closed ');
-          close();
-        }
-      }, "close")));
-    })
-  );
-}; // export default ModalNewRoutineForm;
-
-
-/* harmony default export */ var forms_ModalNewRoutineForm = (Object(redux["compose"])(connect_connect(), styles_withStyles(forms_StyledSubmitBtns))(ModalNewRoutineForm_ModalNewRoutineForm));
-// CONCATENATED MODULE: ./src/containers/RoutinesPage.js
-function RoutinesPage_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { RoutinesPage_typeof = function _typeof(obj) { return typeof obj; }; } else { RoutinesPage_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return RoutinesPage_typeof(obj); }
-
-function RoutinesPage_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function RoutinesPage_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function RoutinesPage_createClass(Constructor, protoProps, staticProps) { if (protoProps) RoutinesPage_defineProperties(Constructor.prototype, protoProps); if (staticProps) RoutinesPage_defineProperties(Constructor, staticProps); return Constructor; }
-
-function RoutinesPage_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) RoutinesPage_setPrototypeOf(subClass, superClass); }
-
-function RoutinesPage_setPrototypeOf(o, p) { RoutinesPage_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return RoutinesPage_setPrototypeOf(o, p); }
-
-function RoutinesPage_createSuper(Derived) { var hasNativeReflectConstruct = RoutinesPage_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = RoutinesPage_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = RoutinesPage_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return RoutinesPage_possibleConstructorReturn(this, result); }; }
-
-function RoutinesPage_possibleConstructorReturn(self, call) { if (call && (RoutinesPage_typeof(call) === "object" || typeof call === "function")) { return call; } return RoutinesPage_assertThisInitialized(self); }
-
-function RoutinesPage_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function RoutinesPage_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function RoutinesPage_getPrototypeOf(o) { RoutinesPage_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return RoutinesPage_getPrototypeOf(o); }
-
-
-
-
- // import Popup from 'reactjs-popup';
-
- // import 'reactjs-popup/dist/index.css';
-
-var RoutinesPage_RoutinesPage = /*#__PURE__*/function (_Component) {
-  RoutinesPage_inherits(RoutinesPage, _Component);
-
-  var _super = RoutinesPage_createSuper(RoutinesPage);
-
-  function RoutinesPage(props) {
-    var _this;
-
-    RoutinesPage_classCallCheck(this, RoutinesPage);
-
-    // console.log('🚀 ~ file: RoutinesPage.js ~ line 11 ~ RoutinesPage ~ constructor ~ props', props);
-    _this = _super.call(this, props);
-    _this.state = {
-      routines: [],
-      workouts: []
-    };
-    return _this;
-  }
-
-  RoutinesPage_createClass(RoutinesPage, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
-        maxWidth: "lg",
-        id: "component-routines-page"
-      }, /*#__PURE__*/react_default.a.createElement("div", {
-        id: "container-all-routines"
-      }, this.props.routines && this.props.workouts ? /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
-        maxWidth: "lg",
-        id: "routines-list"
-      }, /*#__PURE__*/react_default.a.createElement(components_RoutinesList, {
-        routines: this.props.routines,
-        workouts: this.props.workouts
-      })) : null)));
-    }
-  }]);
-
-  return RoutinesPage;
-}(react["Component"]);
-
-/* harmony default export */ var containers_RoutinesPage = (RoutinesPage_RoutinesPage);
 // CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/useIsFocusVisible.js
 // based on https://github.com/WICG/focus-visible/blob/v4.1.5/src/focus-visible.js
 
@@ -22846,6 +21941,911 @@ var Button_Button = /*#__PURE__*/react["forwardRef"](function Button(props, ref)
 /* harmony default export */ var esm_Button_Button = (styles_withStyles(Button_styles, {
   name: 'MuiButton'
 })(Button_Button));
+// CONCATENATED MODULE: ./src/actions/addRoutine.js
+var addRoutine = function addRoutine(data) {
+  var WH_URL = "https://be-workout-hero2.herokuapp.com";
+  return function (dispatch) {
+    // fetch('http://localhost:3000/api/v1/routines', {
+    // fetch('https://be-workout-hero2.herokuapp.com/api/v1/routines', 
+    fetch("".concat(WH_URL, "/api/v1/routines"), {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify(data)
+    }).then(function (res) {
+      return res.json();
+    }).then(function (routine) {
+      return dispatch({
+        type: 'ADD_ROUTINE',
+        payload: routine
+      });
+    });
+  };
+};
+// CONCATENATED MODULE: ./src/forms/StyledSubmitBtns.js
+var StyledSubmitBtns = function StyledSubmitBtns() {
+  return {
+    root: {
+      //   backgroundColor: 'rgba(139, 0, 139, 0.507)',
+      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+      //   border: 'none',
+      color: 'white',
+      //   padding: '15px 32px',
+      //   textAlign: 'center',
+      textDecoration: 'none',
+      display: 'inline-block',
+      fontSize: '12px',
+      //   padding: '10px 24px',
+      borderRadius: '12px',
+      lineHeight: '2.6',
+      textTransform: "capitalize" //   transitionDuration: '0.4s',
+      //   transition: 'background 0.4s ease-in-out',
+      // background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+      // borderRadius: 3,
+      // border: 0,
+      // color: 'white',
+      // height: 48,
+      // padding: '0 30px',
+      // boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+
+    }
+  };
+};
+
+/* harmony default export */ var forms_StyledSubmitBtns = (StyledSubmitBtns);
+// CONCATENATED MODULE: ./src/forms/NewRoutineForm.js
+function NewRoutineForm_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { NewRoutineForm_typeof = function _typeof(obj) { return typeof obj; }; } else { NewRoutineForm_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return NewRoutineForm_typeof(obj); }
+
+function NewRoutineForm_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function NewRoutineForm_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function NewRoutineForm_createClass(Constructor, protoProps, staticProps) { if (protoProps) NewRoutineForm_defineProperties(Constructor.prototype, protoProps); if (staticProps) NewRoutineForm_defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (NewRoutineForm_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function NewRoutineForm_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+ // import clsx from 'clsx';
+// import { makesStyles} from '@material-ui/core/styles';
+
+var NewRoutineForm_NewRoutineForm = /*#__PURE__*/function (_Component) {
+  _inherits(NewRoutineForm, _Component);
+
+  var _super = _createSuper(NewRoutineForm);
+
+  function NewRoutineForm(props) {
+    var _this;
+
+    NewRoutineForm_classCallCheck(this, NewRoutineForm);
+
+    _this = _super.call(this, props);
+
+    NewRoutineForm_defineProperty(_assertThisInitialized(_this), "handleChange", function (e) {
+      _this.setState(NewRoutineForm_defineProperty({}, e.target.name, e.target.value));
+    });
+
+    NewRoutineForm_defineProperty(_assertThisInitialized(_this), "handleSubmit", function (e) {
+      e.preventDefault();
+
+      _this.props.addRoutine(_this.state);
+
+      _this.setState({
+        name: ''
+      }); // console.log('🚀 ~ file: NewRoutineForm.js ~ line 23 ~ NewRoutineForm ~ this.state', this.state)
+
+    });
+
+    _this.state = {
+      routine_name: ''
+    };
+    return _this;
+  }
+
+  NewRoutineForm_createClass(NewRoutineForm, [{
+    key: "render",
+    value: function render() {
+      // const classes = useStyles();
+      var classes = this.props.classes;
+      return /*#__PURE__*/react_default.a.createElement(react["Fragment"], null, /*#__PURE__*/react_default.a.createElement("form", {
+        id: "new-routine-form",
+        onSubmit: this.handleSubmit
+      }, /*#__PURE__*/react_default.a.createElement("label", null, " "), /*#__PURE__*/react_default.a.createElement(esm_TextField_TextField, {
+        label: "Routine Name",
+        style: {
+          color: "red",
+          backgroundColor: "lightcoral"
+        },
+        id: "margin-none",
+        value: this.state.name,
+        name: "routine_name",
+        onChange: this.handleChange
+      }), /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
+        className: classes.root,
+        type: "submit"
+      }, "Create Routine")));
+    }
+  }]);
+
+  return NewRoutineForm;
+}(react["Component"]); // export default connect(null, {addRoutine})(NewRoutineForm);
+
+
+/* harmony default export */ var forms_NewRoutineForm = (Object(redux["compose"])(connect_connect(null, {
+  addRoutine: addRoutine
+}), styles_withStyles(forms_StyledSubmitBtns))(NewRoutineForm_NewRoutineForm));
+// CONCATENATED MODULE: ./node_modules/reactjs-popup/dist/reactjs-popup.esm.js
+
+
+
+function reactjs_popup_esm_extends() {
+  reactjs_popup_esm_extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return reactjs_popup_esm_extends.apply(this, arguments);
+}
+
+var reactjs_popup_esm_useOnEscape = function useOnEscape(handler, active) {
+  if (active === void 0) {
+    active = true;
+  }
+
+  Object(react["useEffect"])(function () {
+    if (!active) return;
+
+    var listener = function listener(event) {
+      // check if key is an Escape
+      if (event.key === 'Escape') handler();
+    };
+
+    document.addEventListener('keyup', listener);
+    return function () {
+      if (!active) return;
+      document.removeEventListener('keyup', listener);
+    };
+  }, [handler, active]);
+};
+var reactjs_popup_esm_useRepositionOnResize = function useRepositionOnResize(handler, active) {
+  if (active === void 0) {
+    active = true;
+  }
+
+  Object(react["useEffect"])(function () {
+    if (!active) return;
+
+    var listener = function listener() {
+      handler();
+    };
+
+    window.addEventListener('resize', listener);
+    return function () {
+      if (!active) return;
+      window.removeEventListener('resize', listener);
+    };
+  }, [handler, active]);
+};
+var reactjs_popup_esm_useOnClickOutside = function useOnClickOutside(ref, handler, active) {
+  if (active === void 0) {
+    active = true;
+  }
+
+  Object(react["useEffect"])(function () {
+    if (!active) return;
+
+    var listener = function listener(event) {
+      // Do nothing if clicking ref's element or descendent elements
+      var refs = Array.isArray(ref) ? ref : [ref];
+      var contains = false;
+      refs.forEach(function (r) {
+        if (!r.current || r.current.contains(event.target)) {
+          contains = true;
+          return;
+        }
+      });
+      event.stopPropagation();
+      if (!contains) handler();
+    };
+
+    document.addEventListener('mousedown', listener);
+    document.addEventListener('touchstart', listener);
+    return function () {
+      if (!active) return;
+      document.removeEventListener('mousedown', listener);
+      document.removeEventListener('touchstart', listener);
+    };
+  }, [ref, handler, active]);
+}; // Make sure that user is not able TAB out of the Modal content on Open
+
+var reactjs_popup_esm_useTabbing = function useTabbing(contentRef, active) {
+  if (active === void 0) {
+    active = true;
+  }
+
+  Object(react["useEffect"])(function () {
+    if (!active) return;
+
+    var listener = function listener(event) {
+      // check if key is an Tab
+      if (event.keyCode === 9) {
+        var _contentRef$current;
+
+        var els = contentRef === null || contentRef === void 0 ? void 0 : (_contentRef$current = contentRef.current) === null || _contentRef$current === void 0 ? void 0 : _contentRef$current.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
+        var focusableEls = Array.prototype.slice.call(els);
+
+        if (focusableEls.length === 1) {
+          event.preventDefault();
+          return;
+        }
+
+        var firstFocusableEl = focusableEls[0];
+        var lastFocusableEl = focusableEls[focusableEls.length - 1];
+
+        if (event.shiftKey && document.activeElement === firstFocusableEl) {
+          event.preventDefault();
+          lastFocusableEl.focus();
+        } else if (document.activeElement === lastFocusableEl) {
+          event.preventDefault();
+          firstFocusableEl.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', listener);
+    return function () {
+      if (!active) return;
+      document.removeEventListener('keydown', listener);
+    };
+  }, [contentRef, active]);
+};
+var reactjs_popup_esm_useIsomorphicLayoutEffect = typeof window !== 'undefined' ? react["useLayoutEffect"] : react["useEffect"];
+
+var Style = {
+  popupContent: {
+    tooltip: {
+      position: 'absolute',
+      zIndex: 999
+    },
+    modal: {
+      position: 'relative',
+      margin: 'auto'
+    }
+  },
+  popupArrow: {
+    height: '8px',
+    width: '16px',
+    position: 'absolute',
+    background: 'transparent',
+    color: '#FFF',
+    zIndex: -1
+  },
+  overlay: {
+    tooltip: {
+      position: 'fixed',
+      top: '0',
+      bottom: '0',
+      left: '0',
+      right: '0',
+      zIndex: 999
+    },
+    modal: {
+      position: 'fixed',
+      top: '0',
+      bottom: '0',
+      left: '0',
+      right: '0',
+      display: 'flex',
+      zIndex: 999
+    }
+  }
+};
+
+var POSITION_TYPES = ['top left', 'top center', 'top right', 'right top', 'right center', 'right bottom', 'bottom left', 'bottom center', 'bottom right', 'left top', 'left center', 'left bottom'];
+
+var getCoordinatesForPosition = function getCoordinatesForPosition(triggerBounding, ContentBounding, position, //PopupPosition | PopupPosition[],
+arrow, _ref) {
+  var offsetX = _ref.offsetX,
+      offsetY = _ref.offsetY;
+  var margin = arrow ? 8 : 0;
+  var args = position.split(' '); // the step N 1 : center the popup content => ok
+
+  var CenterTop = triggerBounding.top + triggerBounding.height / 2;
+  var CenterLeft = triggerBounding.left + triggerBounding.width / 2;
+  var height = ContentBounding.height,
+      width = ContentBounding.width;
+  var top = CenterTop - height / 2;
+  var left = CenterLeft - width / 2;
+  var transform = '';
+  var arrowTop = '0%';
+  var arrowLeft = '0%'; // the  step N 2 : => ok
+
+  switch (args[0]) {
+    case 'top':
+      top -= height / 2 + triggerBounding.height / 2 + margin;
+      transform = "rotate(180deg)  translateX(50%)";
+      arrowTop = '100%';
+      arrowLeft = '50%';
+      break;
+
+    case 'bottom':
+      top += height / 2 + triggerBounding.height / 2 + margin;
+      transform = "rotate(0deg) translateY(-100%) translateX(-50%)";
+      arrowLeft = '50%';
+      break;
+
+    case 'left':
+      left -= width / 2 + triggerBounding.width / 2 + margin;
+      transform = " rotate(90deg)  translateY(50%) translateX(-25%)";
+      arrowLeft = '100%';
+      arrowTop = '50%';
+      break;
+
+    case 'right':
+      left += width / 2 + triggerBounding.width / 2 + margin;
+      transform = "rotate(-90deg)  translateY(-150%) translateX(25%)";
+      arrowTop = '50%';
+      break;
+  }
+
+  switch (args[1]) {
+    case 'top':
+      top = triggerBounding.top;
+      arrowTop = triggerBounding.height / 2 + "px";
+      break;
+
+    case 'bottom':
+      top = triggerBounding.top - height + triggerBounding.height;
+      arrowTop = height - triggerBounding.height / 2 + "px";
+      break;
+
+    case 'left':
+      left = triggerBounding.left;
+      arrowLeft = triggerBounding.width / 2 + "px";
+      break;
+
+    case 'right':
+      left = triggerBounding.left - width + triggerBounding.width;
+      arrowLeft = width - triggerBounding.width / 2 + "px";
+      break;
+  }
+
+  top = args[0] === 'top' ? top - offsetY : top + offsetY;
+  left = args[0] === 'left' ? left - offsetX : left + offsetX;
+  return {
+    top: top,
+    left: left,
+    transform: transform,
+    arrowLeft: arrowLeft,
+    arrowTop: arrowTop
+  };
+};
+
+var getTooltipBoundary = function getTooltipBoundary(keepTooltipInside) {
+  // add viewport
+  var boundingBox = {
+    top: 0,
+    left: 0,
+
+    /* eslint-disable-next-line no-undef */
+    width: window.innerWidth,
+
+    /* eslint-disable-next-line no-undef */
+    height: window.innerHeight
+  };
+
+  if (typeof keepTooltipInside === 'string') {
+    /* eslint-disable-next-line no-undef */
+    var selector = document.querySelector(keepTooltipInside);
+
+    if (false) {}
+
+    if (selector !== null) boundingBox = selector.getBoundingClientRect();
+  }
+
+  return boundingBox;
+};
+
+var calculatePosition = function calculatePosition(triggerBounding, ContentBounding, position, arrow, _ref2, keepTooltipInside) {
+  var offsetX = _ref2.offsetX,
+      offsetY = _ref2.offsetY;
+  var bestCoords = {
+    arrowLeft: '0%',
+    arrowTop: '0%',
+    left: 0,
+    top: 0,
+    transform: 'rotate(135deg)'
+  };
+  var i = 0;
+  var wrapperBox = getTooltipBoundary(keepTooltipInside);
+  var positions = Array.isArray(position) ? position : [position]; // keepTooltipInside would be activated if the  keepTooltipInside exist or the position is Array
+
+  if (keepTooltipInside || Array.isArray(position)) positions = [].concat(positions, POSITION_TYPES); // add viewPort for WarpperBox
+  // wrapperBox.top = wrapperBox.top + window.scrollY;
+  // wrapperBox.left = wrapperBox.left + window.scrollX;
+
+  while (i < positions.length) {
+    bestCoords = getCoordinatesForPosition(triggerBounding, ContentBounding, positions[i], arrow, {
+      offsetX: offsetX,
+      offsetY: offsetY
+    });
+    var contentBox = {
+      top: bestCoords.top,
+      left: bestCoords.left,
+      width: ContentBounding.width,
+      height: ContentBounding.height
+    };
+
+    if (contentBox.top <= wrapperBox.top || contentBox.left <= wrapperBox.left || contentBox.top + contentBox.height >= wrapperBox.top + wrapperBox.height || contentBox.left + contentBox.width >= wrapperBox.left + wrapperBox.width) {
+      i++;
+    } else {
+      break;
+    }
+  }
+
+  return bestCoords;
+};
+
+var popupIdCounter = 0;
+
+var getRootPopup = function getRootPopup() {
+  var PopupRoot = document.getElementById('popup-root');
+
+  if (PopupRoot === null) {
+    PopupRoot = document.createElement('div');
+    PopupRoot.setAttribute('id', 'popup-root');
+    document.body.appendChild(PopupRoot);
+  }
+
+  return PopupRoot;
+};
+
+var Popup = /*#__PURE__*/Object(react["forwardRef"])(function (_ref, ref) {
+  var _ref$trigger = _ref.trigger,
+      trigger = _ref$trigger === void 0 ? null : _ref$trigger,
+      _ref$onOpen = _ref.onOpen,
+      onOpen = _ref$onOpen === void 0 ? function () {} : _ref$onOpen,
+      _ref$onClose = _ref.onClose,
+      onClose = _ref$onClose === void 0 ? function () {} : _ref$onClose,
+      _ref$defaultOpen = _ref.defaultOpen,
+      defaultOpen = _ref$defaultOpen === void 0 ? false : _ref$defaultOpen,
+      _ref$open = _ref.open,
+      open = _ref$open === void 0 ? undefined : _ref$open,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$nested = _ref.nested,
+      nested = _ref$nested === void 0 ? false : _ref$nested,
+      _ref$closeOnDocumentC = _ref.closeOnDocumentClick,
+      closeOnDocumentClick = _ref$closeOnDocumentC === void 0 ? true : _ref$closeOnDocumentC,
+      _ref$repositionOnResi = _ref.repositionOnResize,
+      repositionOnResize = _ref$repositionOnResi === void 0 ? true : _ref$repositionOnResi,
+      _ref$closeOnEscape = _ref.closeOnEscape,
+      closeOnEscape = _ref$closeOnEscape === void 0 ? true : _ref$closeOnEscape,
+      _ref$on = _ref.on,
+      on = _ref$on === void 0 ? ['click'] : _ref$on,
+      _ref$contentStyle = _ref.contentStyle,
+      contentStyle = _ref$contentStyle === void 0 ? {} : _ref$contentStyle,
+      _ref$arrowStyle = _ref.arrowStyle,
+      arrowStyle = _ref$arrowStyle === void 0 ? {} : _ref$arrowStyle,
+      _ref$overlayStyle = _ref.overlayStyle,
+      overlayStyle = _ref$overlayStyle === void 0 ? {} : _ref$overlayStyle,
+      _ref$className = _ref.className,
+      className = _ref$className === void 0 ? '' : _ref$className,
+      _ref$position = _ref.position,
+      position = _ref$position === void 0 ? 'bottom center' : _ref$position,
+      _ref$modal = _ref.modal,
+      modal = _ref$modal === void 0 ? false : _ref$modal,
+      _ref$lockScroll = _ref.lockScroll,
+      lockScroll = _ref$lockScroll === void 0 ? false : _ref$lockScroll,
+      _ref$arrow = _ref.arrow,
+      arrow = _ref$arrow === void 0 ? true : _ref$arrow,
+      _ref$offsetX = _ref.offsetX,
+      offsetX = _ref$offsetX === void 0 ? 0 : _ref$offsetX,
+      _ref$offsetY = _ref.offsetY,
+      offsetY = _ref$offsetY === void 0 ? 0 : _ref$offsetY,
+      _ref$mouseEnterDelay = _ref.mouseEnterDelay,
+      mouseEnterDelay = _ref$mouseEnterDelay === void 0 ? 100 : _ref$mouseEnterDelay,
+      _ref$mouseLeaveDelay = _ref.mouseLeaveDelay,
+      mouseLeaveDelay = _ref$mouseLeaveDelay === void 0 ? 100 : _ref$mouseLeaveDelay,
+      _ref$keepTooltipInsid = _ref.keepTooltipInside,
+      keepTooltipInside = _ref$keepTooltipInsid === void 0 ? false : _ref$keepTooltipInsid,
+      children = _ref.children;
+
+  var _useState = Object(react["useState"])(open || defaultOpen),
+      isOpen = _useState[0],
+      setIsOpen = _useState[1];
+
+  var triggerRef = Object(react["useRef"])(null);
+  var contentRef = Object(react["useRef"])(null);
+  var arrowRef = Object(react["useRef"])(null);
+  var focusedElBeforeOpen = Object(react["useRef"])(null);
+  var popupId = Object(react["useRef"])("popup-" + ++popupIdCounter);
+  var isModal = modal ? true : !trigger;
+  var timeOut = Object(react["useRef"])(0);
+  reactjs_popup_esm_useIsomorphicLayoutEffect(function () {
+    if (isOpen) {
+      focusedElBeforeOpen.current = document.activeElement;
+      setPosition();
+      focusContentOnOpen(); // for accessibility
+
+      lockScrolll();
+    } else {
+      resetScroll();
+    }
+
+    return function () {
+      clearTimeout(timeOut.current);
+    };
+  }, [isOpen]); // for uncontrolled popup we need to sync isOpen with open prop
+
+  Object(react["useEffect"])(function () {
+    if (typeof open === 'boolean') {
+      if (open) openPopup();else closePopup();
+    }
+  }, [open, disabled]);
+
+  var openPopup = function openPopup() {
+    if (isOpen || disabled) return;
+    setIsOpen(true);
+    setTimeout(onOpen, 0);
+  };
+
+  var closePopup = function closePopup() {
+    if (!isOpen || disabled) return;
+    setIsOpen(false);
+    if (isModal) focusedElBeforeOpen.current.focus();
+    setTimeout(onClose, 0);
+  };
+
+  var togglePopup = function togglePopup(event) {
+    event === null || event === void 0 ? void 0 : event.stopPropagation();
+    if (!isOpen) openPopup();else closePopup();
+  };
+
+  var onMouseEnter = function onMouseEnter() {
+    clearTimeout(timeOut.current);
+    timeOut.current = setTimeout(openPopup, mouseEnterDelay);
+  };
+
+  var onContextMenu = function onContextMenu(event) {
+    event === null || event === void 0 ? void 0 : event.preventDefault();
+    togglePopup();
+  };
+
+  var onMouseLeave = function onMouseLeave() {
+    clearTimeout(timeOut.current);
+    timeOut.current = setTimeout(closePopup, mouseLeaveDelay);
+  };
+
+  var lockScrolll = function lockScrolll() {
+    if (isModal && lockScroll) document.getElementsByTagName('body')[0].style.overflow = 'hidden'; // migrate to document.body
+  };
+
+  var resetScroll = function resetScroll() {
+    if (isModal && lockScroll) document.getElementsByTagName('body')[0].style.overflow = 'auto';
+  };
+
+  var focusContentOnOpen = function focusContentOnOpen() {
+    var _contentRef$current;
+
+    var focusableEls = contentRef === null || contentRef === void 0 ? void 0 : (_contentRef$current = contentRef.current) === null || _contentRef$current === void 0 ? void 0 : _contentRef$current.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]');
+    var firstEl = Array.prototype.slice.call(focusableEls)[0];
+    firstEl === null || firstEl === void 0 ? void 0 : firstEl.focus();
+  };
+
+  Object(react["useImperativeHandle"])(ref, function () {
+    return {
+      open: function open() {
+        openPopup();
+      },
+      close: function close() {
+        closePopup();
+      },
+      toggle: function toggle() {
+        togglePopup();
+      }
+    };
+  }); // set Position
+
+  var setPosition = function setPosition() {
+    if (isModal || !isOpen) return;
+    if (!(triggerRef === null || triggerRef === void 0 ? void 0 : triggerRef.current) || !(triggerRef === null || triggerRef === void 0 ? void 0 : triggerRef.current) || !(contentRef === null || contentRef === void 0 ? void 0 : contentRef.current)) return; /// show error as one of ref is undefined
+
+    var trigger = triggerRef.current.getBoundingClientRect();
+    var content = contentRef.current.getBoundingClientRect();
+    var cords = calculatePosition(trigger, content, position, arrow, {
+      offsetX: offsetX,
+      offsetY: offsetY
+    }, keepTooltipInside);
+    contentRef.current.style.top = cords.top + window.scrollY + "px";
+    contentRef.current.style.left = cords.left + window.scrollX + "px";
+
+    if (arrow && !!arrowRef.current) {
+      var _arrowStyle$top, _arrowStyle$left;
+
+      arrowRef.current.style.transform = cords.transform;
+      arrowRef.current.style.setProperty('-ms-transform', cords.transform);
+      arrowRef.current.style.setProperty('-webkit-transform', cords.transform);
+      arrowRef.current.style.top = ((_arrowStyle$top = arrowStyle.top) === null || _arrowStyle$top === void 0 ? void 0 : _arrowStyle$top.toString()) || cords.arrowTop;
+      arrowRef.current.style.left = ((_arrowStyle$left = arrowStyle.left) === null || _arrowStyle$left === void 0 ? void 0 : _arrowStyle$left.toString()) || cords.arrowLeft;
+    }
+  }; // hooks
+
+
+  reactjs_popup_esm_useOnEscape(closePopup, closeOnEscape); // can be optimized if we disabled for hover
+
+  reactjs_popup_esm_useTabbing(contentRef, isOpen && isModal);
+  reactjs_popup_esm_useRepositionOnResize(setPosition, repositionOnResize);
+  reactjs_popup_esm_useOnClickOutside(!!trigger ? [contentRef, triggerRef] : [contentRef], closePopup, closeOnDocumentClick && !nested); // we need to add a ne
+  // render the trigger element and add events
+
+  var renderTrigger = function renderTrigger() {
+    var triggerProps = {
+      key: 'T',
+      ref: triggerRef,
+      'aria-describedby': popupId.current
+    };
+    var onAsArray = Array.isArray(on) ? on : [on];
+
+    for (var i = 0, len = onAsArray.length; i < len; i++) {
+      switch (onAsArray[i]) {
+        case 'click':
+          triggerProps.onClick = togglePopup;
+          break;
+
+        case 'right-click':
+          triggerProps.onContextMenu = onContextMenu;
+          break;
+
+        case 'hover':
+          triggerProps.onMouseEnter = onMouseEnter;
+          triggerProps.onMouseLeave = onMouseLeave;
+          break;
+
+        case 'focus':
+          triggerProps.onFocus = onMouseEnter;
+          triggerProps.onBlur = onMouseLeave;
+          break;
+      }
+    }
+
+    if (typeof trigger === 'function') {
+      var comp = trigger(isOpen);
+      return !!trigger && react_default.a.cloneElement(comp, triggerProps);
+    }
+
+    return !!trigger && react_default.a.cloneElement(trigger, triggerProps);
+  };
+
+  var addWarperAction = function addWarperAction() {
+    var popupContentStyle = isModal ? Style.popupContent.modal : Style.popupContent.tooltip;
+    var childrenElementProps = {
+      className: "popup-content " + (className !== '' ? className.split(' ').map(function (c) {
+        return c + "-content";
+      }).join(' ') : ''),
+      style: reactjs_popup_esm_extends({}, popupContentStyle, contentStyle, {
+        pointerEvents: 'auto'
+      }),
+      ref: contentRef,
+      onClick: function onClick(e) {
+        e.stopPropagation();
+      }
+    };
+
+    if (!modal && on.indexOf('hover') >= 0) {
+      childrenElementProps.onMouseEnter = onMouseEnter;
+      childrenElementProps.onMouseLeave = onMouseLeave;
+    }
+
+    return childrenElementProps;
+  };
+
+  var renderContent = function renderContent() {
+    return react_default.a.createElement("div", Object.assign({}, addWarperAction(), {
+      key: "C",
+      role: isModal ? 'dialog' : 'tooltip',
+      id: popupId.current
+    }), arrow && !isModal && react_default.a.createElement("div", {
+      ref: arrowRef,
+      style: Style.popupArrow
+    }, react_default.a.createElement("svg", {
+      "data-testid": "arrow",
+      className: "popup-arrow " + (className !== '' ? className.split(' ').map(function (c) {
+        return c + "-arrow";
+      }).join(' ') : ''),
+      viewBox: "0 0 32 16",
+      style: reactjs_popup_esm_extends({
+        position: 'absolute'
+      }, arrowStyle)
+    }, react_default.a.createElement("path", {
+      d: "M16 0l16 16H0z",
+      fill: "currentcolor"
+    }))), children && typeof children === 'function' ? children(closePopup, isOpen) : children);
+  };
+
+  var overlay = !(on.indexOf('hover') >= 0);
+  var ovStyle = isModal ? Style.overlay.modal : Style.overlay.tooltip;
+  var content = [overlay && react_default.a.createElement("div", {
+    key: "O",
+    "data-testid": "overlay",
+    "data-popup": isModal ? 'modal' : 'tooltip',
+    className: "popup-overlay " + (className !== '' ? className.split(' ').map(function (c) {
+      return c + "-overlay";
+    }).join(' ') : ''),
+    style: reactjs_popup_esm_extends({}, ovStyle, overlayStyle, {
+      pointerEvents: closeOnDocumentClick && nested || isModal ? 'auto' : 'none'
+    }),
+    onClick: closeOnDocumentClick && nested ? closePopup : undefined,
+    tabIndex: -1
+  }, isModal && renderContent()), !isModal && renderContent()];
+  return react_default.a.createElement(react_default.a.Fragment, null, renderTrigger(), isOpen && react_dom_default.a.createPortal(content, getRootPopup()));
+});
+
+/* harmony default export */ var reactjs_popup_esm = (Popup);
+
+//# sourceMappingURL=reactjs-popup.esm.js.map
+
+// CONCATENATED MODULE: ./src/forms/ModalNewRoutineForm.js
+function ModalNewRoutineForm_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+ // var classes
+
+var ModalNewRoutineForm_ModalNewRoutineForm = function ModalNewRoutineForm(props) {
+  var _ref;
+
+  return (
+    /*#__PURE__*/
+    // classes = props
+    react_default.a.createElement(reactjs_popup_esm, {
+      className: "modal-container",
+      style: {
+        backgroundColor: "pink",
+        justifyContent: "center"
+      },
+      position: "center",
+      trigger: /*#__PURE__*/react_default.a.createElement("button", {
+        style: (_ref = {
+          color: "red",
+          backgroundColor: "#a27ec6e4",
+          border: "none"
+        }, ModalNewRoutineForm_defineProperty(_ref, "color", "white"), ModalNewRoutineForm_defineProperty(_ref, "padding", "15px 32px"), ModalNewRoutineForm_defineProperty(_ref, "textAlign", "center"), ModalNewRoutineForm_defineProperty(_ref, "textDecoration", "none"), ModalNewRoutineForm_defineProperty(_ref, "display", "inline-block"), ModalNewRoutineForm_defineProperty(_ref, "fontSize", "14px"), ModalNewRoutineForm_defineProperty(_ref, "padding", "10px 24px"), ModalNewRoutineForm_defineProperty(_ref, "borderRadius", "12px"), ModalNewRoutineForm_defineProperty(_ref, "textTransform", "capitalize"), ModalNewRoutineForm_defineProperty(_ref, "fontWeight", "bold"), ModalNewRoutineForm_defineProperty(_ref, "transitionDuration", "0.4s"), ModalNewRoutineForm_defineProperty(_ref, "transition", "background 0.4s ease-in-out"), _ref) // className={classes.root}
+        // className='floating-nav-btns'
+
+      }, "Add Routine"),
+      modal: true,
+      nested: true
+    }, function (close) {
+      var _ref2;
+
+      return /*#__PURE__*/react_default.a.createElement("div", {
+        className: "modal"
+      }, /*#__PURE__*/react_default.a.createElement(forms_NewRoutineForm, null), /*#__PURE__*/react_default.a.createElement("div", {
+        className: "actions"
+      }, /*#__PURE__*/react_default.a.createElement("button", {
+        className: "button",
+        style: (_ref2 = {
+          color: "red",
+          backgroundColor: "#be615ab8",
+          border: "none"
+        }, ModalNewRoutineForm_defineProperty(_ref2, "color", "white"), ModalNewRoutineForm_defineProperty(_ref2, "textAlign", "center"), ModalNewRoutineForm_defineProperty(_ref2, "textDecoration", "none"), ModalNewRoutineForm_defineProperty(_ref2, "display", "inline-block"), ModalNewRoutineForm_defineProperty(_ref2, "fontSize", "14px"), ModalNewRoutineForm_defineProperty(_ref2, "padding", "10px 24px"), ModalNewRoutineForm_defineProperty(_ref2, "borderRadius", "12px"), ModalNewRoutineForm_defineProperty(_ref2, "textTransform", "capitalize"), ModalNewRoutineForm_defineProperty(_ref2, "fontWeight", "bold"), ModalNewRoutineForm_defineProperty(_ref2, "transitionDuration", "0.4s"), ModalNewRoutineForm_defineProperty(_ref2, "transition", "background 0.4s ease-in-out"), _ref2),
+        onClick: function onClick() {
+          //   console.log('modal closed ');
+          close();
+        }
+      }, "close")));
+    })
+  );
+}; // export default ModalNewRoutineForm;
+
+
+/* harmony default export */ var forms_ModalNewRoutineForm = (Object(redux["compose"])(connect_connect(), styles_withStyles(forms_StyledSubmitBtns))(ModalNewRoutineForm_ModalNewRoutineForm));
+// CONCATENATED MODULE: ./src/containers/RoutinesPage.js
+function RoutinesPage_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { RoutinesPage_typeof = function _typeof(obj) { return typeof obj; }; } else { RoutinesPage_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return RoutinesPage_typeof(obj); }
+
+function RoutinesPage_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function RoutinesPage_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function RoutinesPage_createClass(Constructor, protoProps, staticProps) { if (protoProps) RoutinesPage_defineProperties(Constructor.prototype, protoProps); if (staticProps) RoutinesPage_defineProperties(Constructor, staticProps); return Constructor; }
+
+function RoutinesPage_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) RoutinesPage_setPrototypeOf(subClass, superClass); }
+
+function RoutinesPage_setPrototypeOf(o, p) { RoutinesPage_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return RoutinesPage_setPrototypeOf(o, p); }
+
+function RoutinesPage_createSuper(Derived) { var hasNativeReflectConstruct = RoutinesPage_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = RoutinesPage_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = RoutinesPage_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return RoutinesPage_possibleConstructorReturn(this, result); }; }
+
+function RoutinesPage_possibleConstructorReturn(self, call) { if (call && (RoutinesPage_typeof(call) === "object" || typeof call === "function")) { return call; } return RoutinesPage_assertThisInitialized(self); }
+
+function RoutinesPage_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function RoutinesPage_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function RoutinesPage_getPrototypeOf(o) { RoutinesPage_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return RoutinesPage_getPrototypeOf(o); }
+
+
+
+
+ // import Popup from 'reactjs-popup';
+
+ // import 'reactjs-popup/dist/index.css';
+
+var RoutinesPage_RoutinesPage = /*#__PURE__*/function (_Component) {
+  RoutinesPage_inherits(RoutinesPage, _Component);
+
+  var _super = RoutinesPage_createSuper(RoutinesPage);
+
+  function RoutinesPage(props) {
+    var _this;
+
+    RoutinesPage_classCallCheck(this, RoutinesPage);
+
+    // console.log('🚀 ~ file: RoutinesPage.js ~ line 11 ~ RoutinesPage ~ constructor ~ props', props);
+    _this = _super.call(this, props);
+    _this.state = {
+      routines: [],
+      workouts: []
+    };
+    return _this;
+  }
+
+  RoutinesPage_createClass(RoutinesPage, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
+        maxWidth: "lg",
+        id: "component-routines-page"
+      }, /*#__PURE__*/react_default.a.createElement("div", {
+        id: "container-all-routines"
+      }, this.props.routines && this.props.workouts ? /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
+        maxWidth: "lg",
+        id: "routines-list"
+      }, /*#__PURE__*/react_default.a.createElement(components_RoutinesList, {
+        routines: this.props.routines,
+        workouts: this.props.workouts
+      })) : null)));
+    }
+  }]);
+
+  return RoutinesPage;
+}(react["Component"]);
+
+/* harmony default export */ var containers_RoutinesPage = (RoutinesPage_RoutinesPage);
 // CONCATENATED MODULE: ./src/actions/updateRoutine.js
 var updateRoutine = function updateRoutine(data) {
   console.log('updateRoutine -> data', data);
