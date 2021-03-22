@@ -162,7 +162,7 @@ class UpdateWorkoutForm extends Component {
                             onChange={this.handleChange}/> */}
 
                             <Button 
-                                className={classes.root}  type="submit">Update Workout 
+                                className={classes.root}  type="submit">Update Exercise 
                             </Button>
                         </form>
                     </Box>
