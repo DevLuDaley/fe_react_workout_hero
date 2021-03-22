@@ -59,25 +59,19 @@ class NewRoutineWorkoutForm extends Component {
         // Parameters: {"routineId"=>"6", "workout_name"=>"Chips", "workout_type"=>"Cardio-Lifting", "distance"=>"3", "duration"=>"14", "routine_id"=>"6", "workout"=>{"workout_type"=>"Cardio-Lifting", "workout_name"=>"Chips", "distance"=>"3", "duration"=>"14"}}
 
         const newWorkoutPayload = {workout: this.state, routineId: routineId}
-        this.props.addRoutineWorkout(newWorkoutPayload)
-        // this.props.addRoutineWorkout(this.state)
-        // debugger
-            this.setState({
-              // id: '',
-      workout_name: "",
-      workout_type: "",
-      distance: "",
-      duration: "",
-      routines: [],
-      }
-      )
-      //! formData object/hash
-        // let formData  = { 
-        //   [e.target.drill_name]: this.state.drill_name,
-        //   [e.target.reps]: this.state.reps,
-        //   [e.target.sets]: this.state.sets,
-        //   id: this.props.workout['id']
-        //  }
+
+        var shouldCreate = confirm('To create this exercise press \'OK\'. Otherwise press \'Cancel\'');
+
+            if (shouldCreate) {
+              this.props.addRoutineWorkout(newWorkoutPayload)
+              this.setState({
+                workout_name: "",
+                workout_type: "",
+                distance: "",
+                duration: "",
+                routines: [],
+              })
+            }
     }
     render() { 
               const workoutCategories = [
