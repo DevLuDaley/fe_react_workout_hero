@@ -9,7 +9,11 @@ import Container from '@material-ui/core/Container';
 // import { connect } from 'react-redux'
 import UpdateRoutineForm from '../forms/UpdateRoutineForm'
 import NewRoutineWorkoutForm from '../forms/NewRoutineWorkoutForm'
+
+import ModalUpdateRoutineForm from '../forms/ModalUpdateRoutineForm'
+import ModalAddRoutineWorkoutForm from '../forms/ModalAddRoutineWorkoutForm'
 import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
+
 
 const Routine = (props) => {
     const handleDeleteWorkout = (e) => {
@@ -19,7 +23,7 @@ const Routine = (props) => {
 
       let routineString = (/\d{1,5}/.exec(targetId))
       let workoutString = (/\d{1,5}$/.exec(targetId))
-      
+
       let workoutIdString = workoutString[0] //.toString()
       let workoutId = parseInt(workoutIdString) //.toString()
       let routineId = routineString[0].toString()
@@ -30,7 +34,7 @@ const Routine = (props) => {
         "workout_id_to_delete": workoutId
         // "workout_id_to_delete": clickedWorkout.id
       }
-      
+
       props.deleteRoutineWorkout(outgoingPayload)
         }
     }
@@ -40,10 +44,10 @@ const Routine = (props) => {
 
         <section className="routine-detail-page">
             {/* <Switch>
-                <Link 
+                <Link
                     to={'/routines'}>
-                    <button 
-                        className='floating-nav-btns'> Return to Routines 
+                    <button
+                        className='floating-nav-btns'> Return to Routines
                     </button>
                 </Link>
             </Switch> */}
@@ -54,27 +58,39 @@ const Routine = (props) => {
                         props.routines.map(routine =>
                             routine.id == props.match.params.id ?
                                 <section key={routine.id}>
-                                    <br></br>
-                                        <h1>{routine.routine_name} </h1>
-                                    <br></br>
-                                        <h1> Update Routine </h1>
-                                    {
-                                        props.routines ?
-                                            <UpdateRoutineForm 
-                                                routines={props.routines}
-                                                routineToUpdate={props.routines.find(
-                                                routine => routine.id == props.match.params.id)}
-                                            />
-                                        : null
-                                    }
-                                        <h1> Add a new Workout</h1>
-                                            {<NewRoutineWorkoutForm
-                                                routines={props.routines}
-                                                currentRoutine={props.routines.find(
-                                                    routine => routine.id == props.match.params.id)}
-                                            />}
+                                        <h1 id="detail-page-routine-name">{routine.routine_name} </h1>
 
-                                    <h3 key={routine.id}>Workouts List: </h3>
+                                    <div id="block-update-routine-btns">
+                                        {
+                                            props.routines ?
+                                                <ModalUpdateRoutineForm
+                                                    routines={props.routines}
+                                                    routineToUpdate={props.routines.find(
+                                                    routine => routine.id == props.match.params.id)}
+                                                />
+                                                /* { <UpdateRoutineForm
+                                                    routines={props.routines}
+                                                    routineToUpdate={props.routines.find(
+                                                    routine => routine.id == props.match.params.id)}
+                                                /> }*/
+                                            : null
+                                        }
+
+                                                {
+                                                    <ModalAddRoutineWorkoutForm
+                                                    routines={props.routines}
+                                                    currentRoutine={props.routines.find(
+                                                        routine => routine.id == props.match.params.id)}
+                                                />}
+                                                {/* {
+                                                    <NewRoutineWorkoutForm
+                                                    routines={props.routines}
+                                                    currentRoutine={props.routines.find(
+                                                        routine => routine.id == props.match.params.id)}
+                                                />} */}
+
+                                    </div>
+                                    <h2 key={routine.id} id="detail-page-workouts-list-title">Exercise List</h2>
                                     <section id="routine-workout-cards">
                                         {
                                             routine.workouts.length > 0 ?
@@ -84,14 +100,13 @@ const Routine = (props) => {
                                                         <section id="routine-detail-workout-name">
                                                                 <p>{workout.workout_name}</p>
                                                         </section>
-                                                            <br></br>
+
                                                             <p>Category: {workout.workout_type}</p>
-                                                            <br></br>
+
                                                             <p>Distance: {workout.distance} </p>
-                                                            <br></br>
+
                                                             <p>Duration: {workout.duration}</p>
-                                                            <br></br>
-                                                            <br></br>
+
                                                         <section id="wrapper-btns-routine-workout">
                                                             <Link
                                                                 key={"routine-url-key-" + routine.id}
@@ -100,15 +115,15 @@ const Routine = (props) => {
                                                                         className="edit-btns"> edit
                                                                     </button>
                                                             </Link>
-                                                            <button 
-                                                                className="delete-btns routine-detail-page-btn" 
-                                                                onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete 
+                                                            <button
+                                                                className="delete-btns routine-detail-page-btn"
+                                                                onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete
                                                             </button>
                                                         </section>
 
                                                         </section>
                                                     </div>
-                                                    ) 
+                                                    )
                                             : <p> No Workouts Created Yet </p>
                                         }
                                     </section>
