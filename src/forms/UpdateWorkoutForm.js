@@ -62,7 +62,7 @@ class UpdateWorkoutForm extends Component {
         return (
             <Grid>
             {
-                 this.props.detail ?
+                 this.props ?
                     <Box>
                         <form onSubmit={this.handleSubmit} id='update-workout-form'>
 
