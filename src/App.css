@@ -405,6 +405,18 @@ input {
     background-color: rgb(44, 22, 66);
 }
 
+
+#new-routine-form {
+  /* margin:auto; */
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100px 180px auto 150px;
+    column-gap: 20px;
+    /* grid-template-columns: 150px 50px; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+}
+
 #new-routine-form>label {
     /* color: rgb(139, 139, 89); */
     /* color: darkmagenta; */
@@ -412,12 +424,7 @@ input {
     /* color: rgba(238, 69, 196, 0.452);; */
 }
 
-#new-routine-form {
-  /* margin:auto; */
-    /* text-align: center; */
-    display: grid;
-    grid-template-columns: auto 180px auto 240px;
-}
+
 
 .input-text {
     background-color: #25657c;
@@ -768,6 +775,10 @@ input {
 }
 
 /* ! modal */
+.modal-container{
+display: grid;
+justify-content: space-around;
+}
 .popup-content {
   /* background-color: rgba(107, 7, 7, 0.11); */
 }
@@ -775,7 +786,9 @@ input {
 #popup-1 {
   /* background-color: rgba(7, 25, 37, 0.76); */
   /* background-color: rgb(7, 25, 37); */
-  background-color: rgb(36, 79, 107);
+  /* background-color: rgb(36, 79, 107);
+   */
+   background-color: #351853ef;
   /* background-color: rgba(36, 79, 107, 0.837) */
   /* background-color: rgba(145, 87, 87, 0.76); */
   /* background-color: rgba(145, 87, 87, 0.76); */
@@ -785,9 +798,10 @@ input {
 .modal {
   font-size: 12px;
   /* background-color: rgba(0, 0, 0, 0.11); */
-  background-color: rgba(0, 0, 0, 0.11);
+  /* background-color: rgba(0, 0, 0, 0.11); */
    /* display: grid; */
     /* grid-template-columns: 70px 70px; */
+    margin: 0px 50px; 
     width: 100%;
 }
 .modal-button {
@@ -805,12 +819,16 @@ input {
   width: 100%;
   padding: 10px 15px;
 }
-/* .modal > .actions {
-  width: 100%;
-  padding: 10px 5px;
-  margin: auto;
-  text-align: center;
-} */
+.modal > .actions {
+  /* width: 100%; */
+  padding: 5px 5px;
+  /* margin: auto; */
+  margin: 0px 112px;
+  text-align: left;
+  /* color: green; */
+      /* border: 10px dashed rgb(32, 4, 248); */
+
+}
 .modal > .close {
   cursor: pointer;
   position: absolute;

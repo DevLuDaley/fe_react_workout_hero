@@ -9,14 +9,16 @@ import StyledSubmitBtns from './StyledSubmitBtns'
 
 import NewRoutineForm from './NewRoutineForm'
 
-var classes
+// var classes
 
 const ModalNewRoutineForm = (props) => (
     // classes = props
 
   <Popup 
     className="modal-container"
-  // style={{color:"red"}}
+    style={{backgroundColor:"pink",
+    justifyContent:"center"}}
+    position="center"
     trigger={
 
         <button style={{
