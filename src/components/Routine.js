@@ -34,8 +34,12 @@ const Routine = (props) => {
         "workout_id_to_delete": workoutId
         // "workout_id_to_delete": clickedWorkout.id
       }
+      
+      var shouldDelete = confirm('To delete this workout press \'OK\'. Otherwise press \'Cancel\'');
 
+          if (shouldDelete) {
       props.deleteRoutineWorkout(outgoingPayload)
+        }
         }
     }
 
