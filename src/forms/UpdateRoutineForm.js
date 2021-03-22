@@ -39,6 +39,7 @@ class UpdateRoutineForm extends Component {
         }
 
         handleChange = (e) => {
+            console.log("YO Lu!!!!");
             this.setState({
                 [e.target.name]: e.target.value
             })
@@ -46,8 +47,14 @@ class UpdateRoutineForm extends Component {
 
         handleSubmit = (e) => {
         e.preventDefault()
-        this.props.updateRoutine(this.state)
-        this.setState({ routine_name: '' })
+
+        var shouldUpdate = confirm('To update this routine press \'OK\'. Otherwise press \'Cancel\'');
+
+            if (shouldUpdate) {
+                this.props.updateRoutine(this.state)
+                this.setState({ routine_name: '' })
+            }
+        
         }
 
         render() {
