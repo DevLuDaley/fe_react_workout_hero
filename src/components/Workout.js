@@ -62,7 +62,7 @@ const routine = props.routines.find(routine => routine.id == routineId)
                   {workout.workout_name}
                 
                 </section>
-                    <ul id="workout-info" style={{"textDecoration":"none"}}>
+                    <ul id="workout-info">
                       <li>id: {workout.id}</li>
                   
                       <li>category: {workout.workout_type}</li>

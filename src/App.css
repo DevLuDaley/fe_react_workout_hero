@@ -112,7 +112,8 @@ margin: 75px;
 
 #workout-detail-workout-name{
   font-size: 22px;
-  background-color: #8728e551;
+  /* background-color: #8728e551; */
+  background-color: #d5b9f029;
 }
 
 
@@ -212,7 +213,8 @@ margin: 75px;
 #wrapper-btn-delete-workout {
         /* border: 10px dashed rgba(224, 206, 11, 0.822); */
         /* background-color: #8728e551; */
-          background-color: #8728e551;
+          /* background-color: #8728e551; */
+          background-color: #d5b9f029;
         /* opacity: 80%; */
         display: grid;
         padding: 2%;
@@ -846,22 +848,6 @@ justify-content: space-around;
   /* background-color: rgba(7, 25, 37, 0.76); */
   /* background-color: rgb(7, 25, 37); */
   background-color: rgb(28, 44, 54);
-  /* background-color: rgb(36, 79, 107);
-   */
-   /* background-color: #351853ef; */
-   /* background-color: #160542e8; */
-  /* background-color: rgba(36, 79, 107, 0.837) */
-  /* background-color: rgba(145, 87, 87, 0.76); */
-  /* background-color: rgba(145, 87, 87, 0.76); */
-  padding: 50px;
-  opacity: 85%;
-}
-
-#popup-4 {
-  /* background-color: rgba(7, 25, 37, 0.76); */
-  /* background-color: rgb(7, 25, 37); */
-  /* background-color: rgb(28, 44, 54); */
-  background-color: rgb(45, 87, 112);
   /* background-color: rgb(36, 79, 107);
    */
    /* background-color: #351853ef; */
