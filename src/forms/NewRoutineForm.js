@@ -25,9 +25,13 @@ class NewRoutineForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        this.props.addRoutine(this.state)
 
-        
+        var shouldCreate = confirm('To create this routine press \'OK\'. Otherwise press \'Cancel\'');
+      // setConfirmOpen(true)  
+      if (shouldCreate) {
+        this.props.addRoutine(this.state)
+    }
+
         this.setState({ 
             name: ''
         })
