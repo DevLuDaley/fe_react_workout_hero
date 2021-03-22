@@ -1,23 +1,17 @@
-// react/redux imports
+//! react/redux imports
 import React, { Fragment, useState } from 'react'
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux'
 
-// Material-ui imports
+//! Material-ui imports
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 
-// local file imports
+//! local file imports
 import deleteRoutine from '../actions/deleteRoutine'
-// import updateRoutine from '../actions/updateRoutine'
 import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
 
-
-
-
 const RoutinesList = (props) =>  {
-
-  
   
   const handleDeleteRoutine = (e) => {
     if (props.routines){
