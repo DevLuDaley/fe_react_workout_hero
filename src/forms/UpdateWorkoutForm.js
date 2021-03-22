@@ -34,7 +34,12 @@ class UpdateWorkoutForm extends Component {
 
         handleSubmit = (e) => {
         e.preventDefault()
-        this.props.updateWorkout(this.state)
+
+        var shouldUpdate = confirm('To update this routine press \'OK\'. Otherwise press \'Cancel\'');
+
+            if (shouldUpdate) {
+                this.props.updateWorkout(this.state)
+            }
         }
 
         render() {
