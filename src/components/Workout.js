@@ -73,7 +73,7 @@ const routine = props.routines.find(routine => routine.id == routineId)
                 <br></br>
               </section>
               </div>
-  <section id="wrapper-btn-delete-workout"><button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns delete-workout'> delete workout </button></section>
+  <section id="wrapper-btn-delete-workout"><button onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`} className='delete-btns delete-workout'> Delete Exercise </button></section>
                           </div>
                     </Box>
         </Container>
