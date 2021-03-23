@@ -1,24 +1,29 @@
-import React, { Fragment, useState, useEffect } from 'react';
+/* eslint-disable eqeqeq */
+import React from 'react';
 // import {Redirect} from 'react-router-dom'
 import { Switch, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+import Container from '@material-ui/core/Container';
+
 // import { connect } from 'react-redux'
 import UpdateRoutineForm from '../forms/UpdateRoutineForm'
 import NewRoutineWorkoutForm from '../forms/NewRoutineWorkoutForm'
+
+import ModalUpdateRoutineForm from '../forms/ModalUpdateRoutineForm'
+import ModalAddRoutineWorkoutForm from '../forms/ModalAddRoutineWorkoutForm'
 import deleteRoutineWorkout from '../actions/deleteRoutineWorkout'
+
 
 const Routine = (props) => {
     const handleDeleteWorkout = (e) => {
-        // console.log("PROPS", props);
 
         if (props.routines && props.workouts){
     let targetId = e.target.id
-    //   console.log('🚀 ~ file: RoutinesList.js ~ line 41 ~ handleDeleteWorkout ~ targetId', targetId);
 
       let routineString = (/\d{1,5}/.exec(targetId))
       let workoutString = (/\d{1,5}$/.exec(targetId))
-      // let workoutId = workoutString[0].toString()
+
       let workoutIdString = workoutString[0] //.toString()
       let workoutId = parseInt(workoutIdString) //.toString()
       let routineId = routineString[0].toString()
@@ -29,115 +34,114 @@ const Routine = (props) => {
         "workout_id_to_delete": workoutId
         // "workout_id_to_delete": clickedWorkout.id
       }
-      // debugger
+      
+      var shouldDelete = confirm('To delete this workout press \'OK\'. Otherwise press \'Cancel\'');
+
+          if (shouldDelete) {
       props.deleteRoutineWorkout(outgoingPayload)
-    //   console.log('🚀 ~ file: RoutinesList.js ~ line 59 ~ handleDeleteWorkout ~ outgoingPayload', outgoingPayload);
+        }
         }
     }
 
     return(
-    <Fragment>
-    <section className="routine-detail-page">
+    <Container maxWidth="md">
 
-                        <Switch>
-                       <Link to={'/routines'}> <button className='floating-nav-btns'> Return to Routines </button> </Link>
-                        </Switch>
-        {
-            props.routines ?
-            <section>
-            {/* Routine Info: */}
+        <section className="routine-detail-page">
+            {/* <Switch>
+                <Link
+                    to={'/routines'}>
+                    <button
+                        className='floating-nav-btns'> Return to Routines
+                    </button>
+                </Link>
+            </Switch> */}
             {
-                props.routines.map(routine =>
-                    routine.id == props.match.params.id ?
-            <section key={routine.id}>
-                <br></br>
-                    <h1>{routine.routine_name} </h1>
-                <br></br>
-                {/* id: {routine.id} */}
-
-                {/* <p>{filtered.name}</p> */}
-            <h1> Update Routine </h1>
-        {
-            props.routines ?
-
-        <UpdateRoutineForm routines={props.routines}
-                routineToUpdate={props.routines.find(routine =>
-             routine.id == props.match.params.id)}
-        />
-        : null
-        }
-                <br></br>
-                <br></br>
-                <h1> Add a new Workout</h1>
-                    {<NewRoutineWorkoutForm
-                        routines={props.routines}
-                        currentRoutine={props.routines.find(
-                            routine => routine.id == props.match.params.id)}
-                    />}
-                <br></br>
-                <br></br>
-
-                    <h3 key={routine.id}>Workouts List: </h3>
-                    <section id="routine-workout-cards">
+                props.routines ?
+                    <section>
                     {
+                        props.routines.map(routine =>
+                            routine.id == props.match.params.id ?
+                                <section key={routine.id}>
+                                        <h1 id="detail-page-routine-name">{routine.routine_name} </h1>
 
-                    routine.workouts.length > 0 ?
+                                    <div id="block-update-routine-btns">
+                                        {
+                                            props.routines ?
+                                                <ModalUpdateRoutineForm
+                                                    routines={props.routines}
+                                                    routineToUpdate={props.routines.find(
+                                                    routine => routine.id == props.match.params.id)}
+                                                />
+                                                /* { <UpdateRoutineForm
+                                                    routines={props.routines}
+                                                    routineToUpdate={props.routines.find(
+                                                    routine => routine.id == props.match.params.id)}
+                                                /> }*/
+                                            : null
+                                        }
 
-                        routine.workouts.map(workout =>
-                            <div key={workout.id} id="workoutlist-workout-info">
-                                {/* id: {workout.id}
-                                <br></br> */}
+                                                {
+                                                    <ModalAddRoutineWorkoutForm
+                                                    routines={props.routines}
+                                                    currentRoutine={props.routines.find(
+                                                        routine => routine.id == props.match.params.id)}
+                                                />}
+                                                {/* {
+                                                    <NewRoutineWorkoutForm
+                                                    routines={props.routines}
+                                                    currentRoutine={props.routines.find(
+                                                        routine => routine.id == props.match.params.id)}
+                                                />} */}
 
-<section id="workout-info">
-                           <section id="routine-detail-workout-name">
+                                    </div>
+                                    <h2 key={routine.id} id="detail-page-workouts-list-title">Exercise List</h2>
+                                    <section id="routine-workout-cards">
+                                        {
+                                            routine.workouts.length > 0 ?
+                                                routine.workouts.map(workout =>
+                                                    <div key={workout.id} id="workoutlist-workout-info">
+                                                        <section id="workout-info">
+                                                        <section id="routine-detail-workout-name">
+                                                                <p>{workout.workout_name}</p>
+                                                        </section>
 
-                                        <p>{workout.workout_name}</p>
-                           </section>
-                                    <br></br>
-                                    <p>category: {workout.workout_type}</p>
-                                    <br></br>
-                                    <p>distance: {workout.distance} </p>
-                                    {/* ? workout.distance + " miles" : "please enter distance"}  */}
-                                    <br></br>
-                                    <p>duration: {workout.duration}</p>
-                                     {/* ? workout.duration + " minutes" : "please enter duration"} */}
-                                    <br></br>
-                                    <br></br>
-<section id="wrapper-btns-routine-workout">
+                                                            <p>Category: {workout.workout_type}</p>
 
-    <Link key={"routine-url-key-" + routine.id} to={`${window.location.pathname}/workouts/${workout.id}`}>
-                                         <button className="edit-btns"> edit </button>
-                                         </Link>
+                                                            <p>Distance: {workout.distance} </p>
 
-                                          <button className="delete-btns routine-detail-page-btn" onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete </button>
-</section>
+                                                            <p>Duration: {workout.duration}</p>
 
-</section>
-                            </div>
-                        ) : <p> No Workouts Created Yet </p>
-                        }
-                        </section>
+                                                        <section id="wrapper-btns-routine-workout">
+                                                            <Link
+                                                                key={"routine-url-key-" + routine.id}
+                                                                to={`${window.location.pathname}/workouts/${workout.id}`}>
+                                                                    <button
+                                                                        className="edit-btns"> edit
+                                                                    </button>
+                                                            </Link>
+                                                            <button
+                                                                className="delete-btns routine-detail-page-btn"
+                                                                onClick={handleDeleteWorkout} id={`routine-${routine.id}-btn-delete-workout-${workout.id}`}> delete
+                                                            </button>
+                                                        </section>
+
+                                                        </section>
+                                                    </div>
+                                                    )
+                                            : <p> No Workouts Created Yet </p>
+                                        }
+                                    </section>
+                                </section>
+                            : null )
+                    }
+
                     </section>
-                        : null )
+                :'no routine here bub'
             }
 
-            </section>
-            :
-            'no routine here bub'
-        }
-
-    </section>
-
-        </Fragment>
+        </section>
+    </Container>
     )
 }
-    // const mapStateToProps = (state, ownProps) => {
-    //     const { routines1 } = state
-    //     const { routines } = ownProps
-    //     return {
-    //         routinesArr: routines
-    //     }
-    // }
-    // export default connect(mapStateToProps)(Routine);
-    // export default Routine;
+
     export default connect(null, {deleteRoutineWorkout}) (Routine);

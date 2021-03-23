@@ -1,15 +1,16 @@
-import React, { Component, Fragment } from 'react'
+/* eslint-disable eqeqeq */
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {Route, Switch} from 'react-router-dom'
-//import {Route, Switch, useLocation, withRouter} from 'react-router-dom'
-// import { createBrowserHistory } from "history";
-import {updateRoutine} from '../actions/updateRoutine'
-import {routinesReducer} from '../reducers/routinesReducer'
-import { TextField, MenuItem, Button } from '@material-ui/core';
+
+import { TextField, Button, Container } from '@material-ui/core';
+// import {  MenuItem, FormControl } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import { compose } from 'redux';
+
 import StyledSubmitBtns from './StyledSubmitBtns'
 // import styleSubmitBtns from './NewRoutineForm'
+import {updateRoutine} from '../actions/updateRoutine'
+// import {routinesReducer} from '../reducers/routinesReducer'
 
 class UpdateRoutineForm extends Component {
     constructor(props) {
@@ -38,6 +39,7 @@ class UpdateRoutineForm extends Component {
         }
 
         handleChange = (e) => {
+            console.log("YO Lu!!!!");
             this.setState({
                 [e.target.name]: e.target.value
             })
@@ -45,16 +47,23 @@ class UpdateRoutineForm extends Component {
 
         handleSubmit = (e) => {
         e.preventDefault()
-        this.props.updateRoutine(this.state)
-        this.setState({ routine_name: '' })
+
+        var shouldUpdate = confirm('To update this routine press \'OK\'. Otherwise press \'Cancel\'');
+
+            if (shouldUpdate) {
+                this.props.updateRoutine(this.state)
+                this.setState({ routine_name: '' })
+            }
+        
         }
 
         render() {
             const {classes} = this.props
         return (
-            <Fragment>
+            <Container maxWidth="sm">
+
             {
-                this.props.routines && this.props.routineToUpdate ?
+                this.props.routines ?
                     <section>
                         {/* {this.routineInfo} */}
                         <form onSubmit={this.handleSubmit} id='update-routine-form'>
@@ -69,9 +78,12 @@ class UpdateRoutineForm extends Component {
 
                            <label> </label>
                             <TextField
-                                label="Name"
                                 id="margin-none"
+                                label="Name"
                                 name="routine_name" 
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
                                 value={this.state.routine_name} 
                                 // defaultValue="Default Value"
                                 onChange={this.handleChange}
@@ -95,7 +107,7 @@ class UpdateRoutineForm extends Component {
                     :
                     <p>NOTHING TO SEE HERE</p>
                 }
-        </Fragment>
+        </Container>
         );
     }
 }

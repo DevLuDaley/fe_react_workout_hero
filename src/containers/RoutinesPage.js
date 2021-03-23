@@ -1,47 +1,53 @@
 import React, { Component } from 'react'
-// import fetchRoutines from '../actions/fetchRoutines'
+
+import Container from '@material-ui/core/Container';
+
+
 import RoutinesList from '../components/RoutinesList';
 import NewRoutineForm from '../forms/NewRoutineForm';
-// import OldRoutineForm from '../forms/OldRoutineForm';
-// import Routine from '../components/Routine';
-// import '../App.css'
+// import Popup from 'reactjs-popup';
+import ModalNewRoutineForm from '../forms/ModalNewRoutineForm'
+// import 'reactjs-popup/dist/index.css';
 
 
 class RoutinesPage extends Component {
     constructor(props) {
-        console.log('🚀 ~ file: RoutinesPage.js ~ line 11 ~ RoutinesPage ~ constructor ~ props', props);
+        // console.log('🚀 ~ file: RoutinesPage.js ~ line 11 ~ RoutinesPage ~ constructor ~ props', props);
         super(props)
         this.state = {routines: [], workouts: []}
     }
 
-
-
-    //   componentDidMount(){
-    //     // this.props.fetchRoutines()
-    // }
-  render() { 
+  render() {
             return (
             <>
-                {/* <OldRoutineForm routines={this.props.routines}/> */}
-<section id="comp-routines-page">
-    
-                    <NewRoutineForm routines={this.props.routines}/>
-    {
+                    {/* <OldRoutineForm routines={this.props.routines}/> */}
+                <Container maxWidth="lg" id="component-routines-page">
+                    {/* <ModalNewRoutineForm/> */}
+                    {/* <Popup
+                    trigger={
+                        <button> Trigger</button>
+                        }
+                    position="left center"
+                    >
+                        <div>
+                        <NewRoutineForm routines={this.props.routines}/>
+                        </div>
+                    </Popup> */}
+
+                    {/* <NewRoutineForm routines={this.props.routines}/> */}
+
+               <div id='container-all-routines'>
+                    {
                         this.props.routines && this.props.workouts ?
-    
-    <section id="routines-list">
-                        <RoutinesList routines={this.props.routines} workouts={this.props.workouts}/>
-    
-    </section> 
-                    : null 
-    }
-</section>
-                {/* <Routine/> */}
-                {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.props', this.props)}
-                {console.log('🚀 ~ file: RoutinesPage.js ~ line 26 ~ RoutinesPage ~ render ~ this.state', this.state)}
+                            <Container maxWidth="lg" id="routines-list">
+                                <RoutinesList routines={this.props.routines} workouts={this.props.workouts}/>
+                            </Container>
+                        : null
+                    }
+               </div>
+                </Container>
             </>
             );
     }
 }
- 
 export default RoutinesPage;
