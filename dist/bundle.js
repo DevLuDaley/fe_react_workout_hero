@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "c8a48d47ee214c4ff540";
+/******/ 	var hotCurrentHash = "ec7934a260e291bfc2b6";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -22055,16 +22055,15 @@ var NewRoutineForm_NewRoutineForm = /*#__PURE__*/function (_Component) {
 
     NewRoutineForm_defineProperty(_assertThisInitialized(_this), "handleSubmit", function (e) {
       e.preventDefault();
-      var shouldCreate = confirm('To create this routine press \'OK\'. Otherwise press \'Cancel\''); // setConfirmOpen(true)  
+      var shouldCreate = confirm('To create this routine press \'OK\'. Otherwise press \'Cancel\'');
 
       if (shouldCreate) {
         _this.props.addRoutine(_this.state);
+
+        _this.setState({
+          name: ''
+        });
       }
-
-      _this.setState({
-        name: ''
-      }); // console.log('🚀 ~ file: NewRoutineForm.js ~ line 23 ~ NewRoutineForm ~ this.state', this.state)
-
     });
 
     _this.state = {
