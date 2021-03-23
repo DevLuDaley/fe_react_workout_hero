@@ -27,15 +27,13 @@ class NewRoutineForm extends Component {
         e.preventDefault()
 
         var shouldCreate = confirm('To create this routine press \'OK\'. Otherwise press \'Cancel\'');
-      // setConfirmOpen(true)  
-      if (shouldCreate) {
-        this.props.addRoutine(this.state)
-    }
 
-        this.setState({ 
-            name: ''
-        })
-        // console.log('🚀 ~ file: NewRoutineForm.js ~ line 23 ~ NewRoutineForm ~ this.state', this.state)
+            if (shouldCreate) {
+                this.props.addRoutine(this.state)
+                this.setState({ 
+                    name: ''
+                })
+            }
     }
 
     render() {
