@@ -285,7 +285,8 @@ margin: 75px;
 
 #btn-routine-workout-count {
 font-size: 14px;
-background-color: #cc5f57cb;
+background-color: #be615ab8;
+/* background-color: #cc5f57cb; */
 border: none;
 color: white;
   /* padding: 15px 32px; */
@@ -322,6 +323,7 @@ width: 80px;
 /* #routine-workout-count { */
 font-size: 14px;
 background-color: #be615ab8;
+/* background-color: #cc5f57cb; */
 border: none;
 color: white;
 /* padding: 15px 32px; */
@@ -345,13 +347,11 @@ width: 80px;
   /* left:50%; */
 }
 
-.btn-delete-routineslist-routine:hover {
-  /* background-color: #ff291aa9; */
-  /* background-color: #d11e12b3;*/
+/* .btn-delete-routineslist-routine:hover {
   background-color: #f2483cc4;
   color: white;
-  opacity: 1
-}
+  opacity: 1;
+} */
 
 
 .routine-workout-list {
@@ -576,13 +576,9 @@ input {
 
 
 
-.floating-nav-btns:hover {
-  /* background-color: #f7e255a9; */
-  /* background-color: #43bcb8da; */
+/* .floating-nav-btns:hover {
   background-color: #b076eb;
-  /* background-color: #d11e12b3; */
-  /* color: white; */
-}
+} */
 
 .routine-workout-name-block{
   background-color: #bda5d5be;
