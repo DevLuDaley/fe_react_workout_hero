@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "7e89c556796bcfbb835d";
+/******/ 	var hotCurrentHash = "1baa5a4173a48a960959";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -22734,7 +22734,6 @@ function ModalNewRoutineForm_defineProperty(obj, key, value) { if (key in obj) {
 
 
 
-
  // var classes
 
 var ModalNewRoutineForm_ModalNewRoutineForm = function ModalNewRoutineForm(props) {
@@ -22752,20 +22751,10 @@ var ModalNewRoutineForm_ModalNewRoutineForm = function ModalNewRoutineForm(props
       position: "center",
       trigger: /*#__PURE__*/react_default.a.createElement("button", {
         style: (_ref = {
-          // color: "red",
+          color: "red",
           backgroundColor: "#a27ec6e4",
-          border: "none",
-          color: "white",
-          padding: "15px 32px",
-          textAlign: "center",
-          textDecoration: "none",
-          display: "inline-block",
-          fontSize: "14px"
-        }, ModalNewRoutineForm_defineProperty(_ref, "padding", "10px 24px"), ModalNewRoutineForm_defineProperty(_ref, "borderRadius", "12px"), ModalNewRoutineForm_defineProperty(_ref, "textTransform", "capitalize"), ModalNewRoutineForm_defineProperty(_ref, "fontWeight", "bold"), ModalNewRoutineForm_defineProperty(_ref, "transitionDuration", "0.4s"), ModalNewRoutineForm_defineProperty(_ref, "transition", "background 0.4s ease-in-out"), ModalNewRoutineForm_defineProperty(_ref, ':hover', {
-          backgroundColor: "#f00",
-          color: "pink",
-          opacity: 1
-        }), _ref) // className={classes.root}
+          border: "none"
+        }, ModalNewRoutineForm_defineProperty(_ref, "color", "white"), ModalNewRoutineForm_defineProperty(_ref, "padding", "15px 32px"), ModalNewRoutineForm_defineProperty(_ref, "textAlign", "center"), ModalNewRoutineForm_defineProperty(_ref, "textDecoration", "none"), ModalNewRoutineForm_defineProperty(_ref, "display", "inline-block"), ModalNewRoutineForm_defineProperty(_ref, "fontSize", "14px"), ModalNewRoutineForm_defineProperty(_ref, "padding", "10px 24px"), ModalNewRoutineForm_defineProperty(_ref, "borderRadius", "12px"), ModalNewRoutineForm_defineProperty(_ref, "textTransform", "capitalize"), ModalNewRoutineForm_defineProperty(_ref, "fontWeight", "bold"), ModalNewRoutineForm_defineProperty(_ref, "transitionDuration", "0.4s"), ModalNewRoutineForm_defineProperty(_ref, "transition", "background 0.4s ease-in-out"), _ref) // className={classes.root}
         // className='floating-nav-btns'
 
       }, "Add Routine"),
