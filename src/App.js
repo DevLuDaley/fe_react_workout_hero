@@ -18,7 +18,7 @@ function App() {
         // border= '30px dashed rgb(248, 4, 65)'
         // backgroundColor='yellow'
       >
-<Header/>
+          <Header/>
           <Container className="app-container">
             {/* APP CONTAINER */}
             <MainContainer id="main-container"/>
