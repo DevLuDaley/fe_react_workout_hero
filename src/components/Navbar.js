@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Link } from 'react-router-dom'
+import { Switch, Link, BrowserRouter } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -51,15 +51,17 @@ const Navbar = (props) => {
                 </Link>
             </Switch> */}
 
-        <Switch>
-            <Link 
-                to={'/routines'}>
-                <button
-                    className='floating-nav-btns'>
-                    View Routines 
-                </button>
-            </Link>
-        </Switch>
+        <BrowserRouter>
+          <Switch>
+              <Link 
+                  to={'/routines'}>
+                  <button
+                      className='floating-nav-btns'>
+                      View Routines 
+                  </button>
+              </Link>
+          </Switch>
+        </BrowserRouter>
           <ModalNewRoutineForm className={classes.root}/>
           </div>
         </div>
